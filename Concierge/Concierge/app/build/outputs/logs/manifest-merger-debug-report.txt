@@ -1,0 +1,660 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:2:1-464:12
+INJECTED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:2:1-464:12
+INJECTED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:2:1-464:12
+INJECTED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:2:1-464:12
+MERGED from [com.android.support:design:25.0.1] /root/.gradle/caches/transforms-1/files-1.1/design-25.0.1.aar/e19e0e897321fbf67613f71291502eaa/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:appcompat-v7:25.0.1] /root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.0.1.aar/7293e3046def308dc4617d99cb1b94f4/AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.android.gms:play-services-auth:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-auth-15.0.1.aar/c8cb6c88b91471cd1dab5f626c909dbf/AndroidManifest.xml:17:1-39:12
+MERGED from [com.android.support:transition:25.0.1] /root/.gradle/caches/transforms-1/files-1.1/transition-25.0.1.aar/5a81700a21b6b7f6efe4f1127180fdea/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-15.0.1.aar/445a7e8b190f9a1af1fdd7cb6a479ba8/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-auth-base:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-15.0.1.aar/2ff6470846969dcddd1344be377e3d29/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/641877f571458573285476c7f9fb91a3/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/946a0fd5c0e32b45e0917be1510aea82/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/4e104d277828ea407fd3784b463ada1b/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/23992e5af5cb77a377c8cc7ca2969a7a/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:animated-vector-drawable:25.0.1] /root/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.0.1.aar/92a85b6acf8e453a04f1bb4e1053b147/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:support-vector-drawable:25.0.1] /root/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.0.1.aar/9deec00c2e4ce5ccc7ec1fd5e10eafb2/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:recyclerview-v7:25.0.1] /root/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.0.1.aar/6e8d28f78ec983d772c7ee218765b45a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/813b9d473d8595432f3c9c4234e57f95/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/1d44a6c752dc0c33f387e4d7d6693336/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/54f0aa265ef336a40b87af9c8ca17481/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/c4e16cbff6686c1f07ba082111bc3d06/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/bab1a0f999138eb6809c34fdea5b9ef6/AndroidManifest.xml:17:1-31:12
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /root/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/b33ef1d14e35e565a5c9ca433c273428/AndroidManifest.xml:17:1-30:12
+INJECTED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:2:1-464:12
+INJECTED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:2:1-464:12
+INJECTED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:2:1-464:12
+	package
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:3:5-39
+		INJECTED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml
+		INJECTED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:2:1-464:12
+		INJECTED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:2:1-464:12
+		INJECTED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:6:5-67
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:6:22-64
+uses-permission#android.permission.READ_SYNC_SETTINGS
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:9:5-77
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:9:22-74
+uses-permission#android.permission.WRITE_SYNC_SETTINGS
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:10:5-78
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:10:22-75
+uses-permission#android.permission.AUTHENTICATE_ACCOUNTS
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:11:5-80
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:11:22-77
+application
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:13:5-462:19
+MERGED from [com.android.support:design:25.0.1] /root/.gradle/caches/transforms-1/files-1.1/design-25.0.1.aar/e19e0e897321fbf67613f71291502eaa/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:design:25.0.1] /root/.gradle/caches/transforms-1/files-1.1/design-25.0.1.aar/e19e0e897321fbf67613f71291502eaa/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:25.0.1] /root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.0.1.aar/7293e3046def308dc4617d99cb1b94f4/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:25.0.1] /root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.0.1.aar/7293e3046def308dc4617d99cb1b94f4/AndroidManifest.xml:25:5-20
+MERGED from [com.google.android.gms:play-services-auth:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-auth-15.0.1.aar/c8cb6c88b91471cd1dab5f626c909dbf/AndroidManifest.xml:22:5-37:19
+MERGED from [com.google.android.gms:play-services-auth:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-auth-15.0.1.aar/c8cb6c88b91471cd1dab5f626c909dbf/AndroidManifest.xml:22:5-37:19
+MERGED from [com.android.support:transition:25.0.1] /root/.gradle/caches/transforms-1/files-1.1/transition-25.0.1.aar/5a81700a21b6b7f6efe4f1127180fdea/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:transition:25.0.1] /root/.gradle/caches/transforms-1/files-1.1/transition-25.0.1.aar/5a81700a21b6b7f6efe4f1127180fdea/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/641877f571458573285476c7f9fb91a3/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/641877f571458573285476c7f9fb91a3/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/946a0fd5c0e32b45e0917be1510aea82/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/946a0fd5c0e32b45e0917be1510aea82/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/4e104d277828ea407fd3784b463ada1b/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/4e104d277828ea407fd3784b463ada1b/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/23992e5af5cb77a377c8cc7ca2969a7a/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/23992e5af5cb77a377c8cc7ca2969a7a/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:animated-vector-drawable:25.0.1] /root/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.0.1.aar/92a85b6acf8e453a04f1bb4e1053b147/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.0.1] /root/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.0.1.aar/92a85b6acf8e453a04f1bb4e1053b147/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:25.0.1] /root/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.0.1.aar/9deec00c2e4ce5ccc7ec1fd5e10eafb2/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-vector-drawable:25.0.1] /root/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.0.1.aar/9deec00c2e4ce5ccc7ec1fd5e10eafb2/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-media-compat:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/813b9d473d8595432f3c9c4234e57f95/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/813b9d473d8595432f3c9c4234e57f95/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/1d44a6c752dc0c33f387e4d7d6693336/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/1d44a6c752dc0c33f387e4d7d6693336/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/54f0aa265ef336a40b87af9c8ca17481/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/54f0aa265ef336a40b87af9c8ca17481/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/c4e16cbff6686c1f07ba082111bc3d06/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/c4e16cbff6686c1f07ba082111bc3d06/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/bab1a0f999138eb6809c34fdea5b9ef6/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/bab1a0f999138eb6809c34fdea5b9ef6/AndroidManifest.xml:25:5-29:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /root/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/b33ef1d14e35e565a5c9ca433c273428/AndroidManifest.xml:24:5-28:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /root/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/b33ef1d14e35e565a5c9ca433c273428/AndroidManifest.xml:24:5-28:19
+	android:supportsRtl
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:17:9-35
+	android:label
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:16:9-41
+	android:icon
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:15:9-43
+	android:allowBackup
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:14:9-35
+	android:theme
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:18:9-40
+activity#com.handsriver.concierge.login.LoginActivity
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:19:9-25:20
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:19:19-54
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:20:13-24:29
+action#android.intent.action.MAIN
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:21:17-69
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:21:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:23:17-77
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:23:27-74
+activity#com.handsriver.concierge.settings.SettingsActivity
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:26:9-33:20
+	android:parentActivityName
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:29:13-86
+	android:label
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:28:13-45
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:27:13-54
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:30:13-32:80
+	android:value
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:32:17-77
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:31:17-63
+activity#com.handsriver.concierge.home.MainActivity
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:34:9-40:20
+	android:parentActivityName
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:36:13-86
+	android:windowSoftInputMode
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:35:13-52
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:34:19-52
+provider#com.handsriver.concierge.database.StubProviderApartments
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:42:9-45:49
+	android:authorities
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:43:13-70
+	android:label
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:45:13-47
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:44:13-84
+provider#com.handsriver.concierge.database.StubProviderPorters
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:47:9-50:46
+	android:authorities
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:48:13-67
+	android:label
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:50:13-44
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:49:13-81
+provider#com.handsriver.concierge.database.StubProviderPortersTablet
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:52:9-55:53
+	android:authorities
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:53:13-74
+	android:label
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:55:13-51
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:54:13-87
+provider#com.handsriver.concierge.database.StubProviderResidents
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:57:9-60:48
+	android:authorities
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:58:13-69
+	android:label
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:60:13-46
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:59:13-83
+provider#com.handsriver.concierge.database.StubProviderResidentsTablet
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:62:9-65:54
+	android:authorities
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:63:13-76
+	android:label
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:65:13-52
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:64:13-89
+provider#com.handsriver.concierge.database.StubProviderBlacklist
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:67:9-70:48
+	android:authorities
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:68:13-69
+	android:label
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:70:13-46
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:69:13-83
+provider#com.handsriver.concierge.database.StubProviderSuppliers
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:72:9-75:48
+	android:authorities
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:73:13-69
+	android:label
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:75:13-46
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:74:13-83
+provider#com.handsriver.concierge.database.StubProviderVisitsVehicles
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:77:9-80:53
+	android:authorities
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:78:13-74
+	android:label
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:80:13-51
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:79:13-88
+provider#com.handsriver.concierge.database.StubProviderParcels
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:82:9-85:46
+	android:authorities
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:83:13-67
+	android:label
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:85:13-44
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:84:13-81
+provider#com.handsriver.concierge.database.StubProviderPayments
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:87:9-90:47
+	android:authorities
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:88:13-68
+	android:label
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:90:13-45
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:89:13-82
+provider#com.handsriver.concierge.database.StubProviderParkings
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:92:9-95:47
+	android:authorities
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:93:13-68
+	android:label
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:95:13-45
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:94:13-82
+provider#com.handsriver.concierge.database.StubProviderWarehouses
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:97:9-100:49
+	android:authorities
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:98:13-70
+	android:label
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:100:13-47
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:99:13-84
+provider#com.handsriver.concierge.database.StubProviderTimekeeping
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:102:9-105:50
+	android:authorities
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:103:13-71
+	android:label
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:105:13-48
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:104:13-85
+provider#com.handsriver.concierge.database.StubProviderVisitsSuppliers
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:107:9-110:55
+	android:authorities
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:108:13-75
+	android:label
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:110:13-53
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:109:13-89
+provider#com.handsriver.concierge.database.StubProviderVisitsOthersGateways
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:112:9-115:60
+	android:authorities
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:113:13-81
+	android:label
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:115:13-58
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:114:13-94
+provider#com.handsriver.concierge.database.StubProviderTimekeepingOthersGateways
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:117:9-120:65
+	android:authorities
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:118:13-86
+	android:label
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:120:13-63
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:119:13-99
+provider#com.handsriver.concierge.database.StubProviderTimekeepingExitOthersGateways
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:122:9-125:70
+	android:authorities
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:123:13-90
+	android:label
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:125:13-68
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:124:13-103
+provider#com.handsriver.concierge.database.StubProviderVisitsSuppliersOthersGateways
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:127:9-130:71
+	android:authorities
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:128:13-90
+	android:label
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:130:13-69
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:129:13-103
+provider#com.handsriver.concierge.database.StubProviderVisitsSuppliersExitOthersGateways
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:132:9-135:75
+	android:authorities
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:133:13-94
+	android:label
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:135:13-73
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:134:13-107
+provider#com.handsriver.concierge.database.StubProviderCodeAuth
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:137:9-140:47
+	android:authorities
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:138:13-78
+	android:label
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:140:13-45
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:139:13-82
+provider#com.handsriver.concierge.database.StubProviderWhitelist
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:142:9-145:53
+	android:authorities
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:143:13-69
+	android:label
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:145:13-51
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:144:13-83
+provider#com.handsriver.concierge.database.StubProviderVisitsVehiclesDelete
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:147:9-150:59
+	android:authorities
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:148:13-81
+	android:label
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:150:13-57
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:149:13-94
+provider#com.handsriver.concierge.database.StubProviderParcelsDelete
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:152:9-155:52
+	android:authorities
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:153:13-74
+	android:label
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:155:13-50
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:154:13-87
+provider#com.handsriver.concierge.database.StubProviderPaymentsDelete
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:157:9-160:53
+	android:authorities
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:158:13-75
+	android:label
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:160:13-51
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:159:13-88
+provider#com.handsriver.concierge.database.StubProviderTimekeepingDelete
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:162:9-165:56
+	android:authorities
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:163:13-78
+	android:label
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:165:13-54
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:164:13-91
+provider#com.handsriver.concierge.database.StubProviderFineAlertAutomatic
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:167:9-170:57
+	android:authorities
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:168:13-86
+	android:label
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:170:13-55
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:169:13-92
+provider#com.handsriver.concierge.database.StubProviderAlertAutomatic
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:172:9-175:53
+	android:authorities
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:173:13-82
+	android:label
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:175:13-51
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:174:13-88
+provider#com.handsriver.concierge.database.StubProviderUpdateGooglePlayServices
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:177:9-180:63
+	android:authorities
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:178:13-83
+	android:label
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:180:13-61
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:179:13-98
+service#com.handsriver.concierge.sync.ConciergeAuthenticatorService
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:182:9-189:19
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:182:18-68
+intent-filter#action:name:android.accounts.AccountAuthenticator
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:183:13-185:29
+action#android.accounts.AccountAuthenticator
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:184:17-80
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:184:25-77
+meta-data#android.accounts.AccountAuthenticator
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:186:13-188:57
+	android:resource
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:188:17-54
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:187:17-69
+service#com.handsriver.concierge.sync.ApartmentsSyncService
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:191:9-199:19
+	android:exported
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:192:13-36
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:191:18-60
+intent-filter#action:name:android.content.SyncAdapter
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:193:13-195:29
+action#android.content.SyncAdapter
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:194:17-70
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:194:25-67
+meta-data#android.content.SyncAdapter
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:196:13-198:67
+	android:resource
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:198:17-64
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:197:17-59
+service#com.handsriver.concierge.sync.PortersSyncService
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:201:9-209:19
+	android:exported
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:202:13-36
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:201:18-57
+service#com.handsriver.concierge.sync.PortersTabletSyncService
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:211:9-219:19
+	android:exported
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:212:13-36
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:211:18-63
+service#com.handsriver.concierge.sync.ResidentsSyncService
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:221:9-229:19
+	android:exported
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:222:13-36
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:221:18-59
+service#com.handsriver.concierge.sync.ResidentsTabletSyncService
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:231:9-239:19
+	android:exported
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:232:13-36
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:231:18-65
+service#com.handsriver.concierge.sync.BlacklistSyncService
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:241:9-249:19
+	android:exported
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:242:13-36
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:241:18-59
+service#com.handsriver.concierge.sync.SuppliersSyncService
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:251:9-259:19
+	android:exported
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:252:13-36
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:251:18-59
+service#com.handsriver.concierge.sync.VisitsVehiclesSyncService
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:261:9-269:19
+	android:exported
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:262:13-36
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:261:18-64
+service#com.handsriver.concierge.sync.ParcelsSyncService
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:9-279:19
+	android:exported
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:272:13-36
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:18-57
+service#com.handsriver.concierge.sync.PaymentsSyncService
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:281:9-289:19
+	android:exported
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:282:13-36
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:281:18-58
+service#com.handsriver.concierge.sync.ParkingsSyncService
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:291:9-299:19
+	android:exported
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:292:13-36
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:291:18-58
+service#com.handsriver.concierge.sync.WarehousesSyncService
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:301:9-309:19
+	android:exported
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:302:13-36
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:301:18-60
+service#com.handsriver.concierge.sync.TimekeepingSyncService
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:311:9-319:19
+	android:exported
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:312:13-36
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:311:18-61
+service#com.handsriver.concierge.sync.VisitsSuppliersSyncService
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:321:9-329:19
+	android:exported
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:322:13-36
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:321:18-65
+service#com.handsriver.concierge.sync.VisitsOthersGatewaysSyncService
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:331:9-339:19
+	android:exported
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:332:13-36
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:331:18-70
+service#com.handsriver.concierge.sync.TimekeepingOthersGatewaysSyncService
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:341:9-349:19
+	android:exported
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:342:13-36
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:341:18-75
+service#com.handsriver.concierge.sync.TimekeepingExitOthersGatewaysSyncService
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:351:9-359:19
+	android:exported
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:352:13-36
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:351:18-79
+service#com.handsriver.concierge.sync.VisitsSuppliersOthersGatewaysSyncService
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:362:9-370:19
+	android:exported
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:363:13-36
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:362:18-79
+service#com.handsriver.concierge.sync.CodeAuthSyncService
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:372:9-380:19
+	android:exported
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:373:13-36
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:372:18-58
+service#com.handsriver.concierge.sync.WhitelistSyncService
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:382:9-390:19
+	android:exported
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:383:13-36
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:382:18-59
+service#com.handsriver.concierge.sync.VisitsVehiclesDeleteSyncService
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:392:9-400:19
+	android:exported
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:393:13-36
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:392:18-70
+service#com.handsriver.concierge.sync.ParcelsDeleteSyncService
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:402:9-410:19
+	android:exported
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:403:13-36
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:402:18-63
+service#com.handsriver.concierge.sync.PaymentsDeleteSyncService
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:412:9-420:19
+	android:exported
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:413:13-36
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:412:18-64
+service#com.handsriver.concierge.sync.TimekeepingDeleteSyncService
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:422:9-430:19
+	android:exported
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:423:13-36
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:422:18-67
+service#com.handsriver.concierge.sync.FineAlertAutomaticSyncService
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:432:9-440:19
+	android:exported
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:433:13-36
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:432:18-68
+service#com.handsriver.concierge.sync.AlertAutomaticSyncService
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:442:9-450:19
+	android:exported
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:443:13-36
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:442:18-64
+service#com.handsriver.concierge.sync.UpdateGooglePlayServicesSyncService
+ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:452:9-460:19
+	android:exported
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:453:13-36
+	android:name
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:452:18-74
+uses-sdk
+INJECTED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml
+INJECTED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:design:25.0.1] /root/.gradle/caches/transforms-1/files-1.1/design-25.0.1.aar/e19e0e897321fbf67613f71291502eaa/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:25.0.1] /root/.gradle/caches/transforms-1/files-1.1/design-25.0.1.aar/e19e0e897321fbf67613f71291502eaa/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.0.1] /root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.0.1.aar/7293e3046def308dc4617d99cb1b94f4/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:25.0.1] /root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.0.1.aar/7293e3046def308dc4617d99cb1b94f4/AndroidManifest.xml:21:5-23:78
+MERGED from [com.google.android.gms:play-services-auth:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-auth-15.0.1.aar/c8cb6c88b91471cd1dab5f626c909dbf/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-auth-15.0.1.aar/c8cb6c88b91471cd1dab5f626c909dbf/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:25.0.1] /root/.gradle/caches/transforms-1/files-1.1/transition-25.0.1.aar/5a81700a21b6b7f6efe4f1127180fdea/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:25.0.1] /root/.gradle/caches/transforms-1/files-1.1/transition-25.0.1.aar/5a81700a21b6b7f6efe4f1127180fdea/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-15.0.1.aar/445a7e8b190f9a1af1fdd7cb6a479ba8/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-15.0.1.aar/445a7e8b190f9a1af1fdd7cb6a479ba8/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-15.0.1.aar/2ff6470846969dcddd1344be377e3d29/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-15.0.1.aar/2ff6470846969dcddd1344be377e3d29/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/641877f571458573285476c7f9fb91a3/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/641877f571458573285476c7f9fb91a3/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/946a0fd5c0e32b45e0917be1510aea82/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/946a0fd5c0e32b45e0917be1510aea82/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/4e104d277828ea407fd3784b463ada1b/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/4e104d277828ea407fd3784b463ada1b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/23992e5af5cb77a377c8cc7ca2969a7a/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/23992e5af5cb77a377c8cc7ca2969a7a/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:animated-vector-drawable:25.0.1] /root/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.0.1.aar/92a85b6acf8e453a04f1bb4e1053b147/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:25.0.1] /root/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.0.1.aar/92a85b6acf8e453a04f1bb4e1053b147/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.0.1] /root/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.0.1.aar/9deec00c2e4ce5ccc7ec1fd5e10eafb2/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-vector-drawable:25.0.1] /root/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.0.1.aar/9deec00c2e4ce5ccc7ec1fd5e10eafb2/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:recyclerview-v7:25.0.1] /root/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.0.1.aar/6e8d28f78ec983d772c7ee218765b45a/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:25.0.1] /root/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.0.1.aar/6e8d28f78ec983d772c7ee218765b45a/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-media-compat:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/813b9d473d8595432f3c9c4234e57f95/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/813b9d473d8595432f3c9c4234e57f95/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/1d44a6c752dc0c33f387e4d7d6693336/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/1d44a6c752dc0c33f387e4d7d6693336/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/54f0aa265ef336a40b87af9c8ca17481/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/54f0aa265ef336a40b87af9c8ca17481/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/c4e16cbff6686c1f07ba082111bc3d06/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/c4e16cbff6686c1f07ba082111bc3d06/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/bab1a0f999138eb6809c34fdea5b9ef6/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/bab1a0f999138eb6809c34fdea5b9ef6/AndroidManifest.xml:21:5-23:58
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /root/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/b33ef1d14e35e565a5c9ca433c273428/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /root/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/b33ef1d14e35e565a5c9ca433c273428/AndroidManifest.xml:20:5-22:41
+INJECTED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml
+INJECTED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:25.0.1] /root/.gradle/caches/transforms-1/files-1.1/design-25.0.1.aar/e19e0e897321fbf67613f71291502eaa/AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml
+		INJECTED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml
+		ADDED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml
+		INJECTED from /home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-auth-15.0.1.aar/c8cb6c88b91471cd1dab5f626c909dbf/AndroidManifest.xml:23:9-27:75
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-auth-15.0.1.aar/c8cb6c88b91471cd1dab5f626c909dbf/AndroidManifest.xml:25:13-46
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-auth-15.0.1.aar/c8cb6c88b91471cd1dab5f626c909dbf/AndroidManifest.xml:26:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-auth-15.0.1.aar/c8cb6c88b91471cd1dab5f626c909dbf/AndroidManifest.xml:27:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-auth-15.0.1.aar/c8cb6c88b91471cd1dab5f626c909dbf/AndroidManifest.xml:24:13-93
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-auth-15.0.1.aar/c8cb6c88b91471cd1dab5f626c909dbf/AndroidManifest.xml:33:9-36:110
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-auth-15.0.1.aar/c8cb6c88b91471cd1dab5f626c909dbf/AndroidManifest.xml:35:13-36
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-auth-15.0.1.aar/c8cb6c88b91471cd1dab5f626c909dbf/AndroidManifest.xml:36:13-107
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-auth-15.0.1.aar/c8cb6c88b91471cd1dab5f626c909dbf/AndroidManifest.xml:34:13-89
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/641877f571458573285476c7f9fb91a3/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/641877f571458573285476c7f9fb91a3/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/641877f571458573285476c7f9fb91a3/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/641877f571458573285476c7f9fb91a3/AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/4e104d277828ea407fd3784b463ada1b/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/4e104d277828ea407fd3784b463ada1b/AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:15.0.1] /root/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/4e104d277828ea407fd3784b463ada1b/AndroidManifest.xml:24:13-58
+meta-data#android.support.VERSION
+ADDED from [com.android.support:support-v4:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/23992e5af5cb77a377c8cc7ca2969a7a/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/813b9d473d8595432f3c9c4234e57f95/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/813b9d473d8595432f3c9c4234e57f95/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/1d44a6c752dc0c33f387e4d7d6693336/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/1d44a6c752dc0c33f387e4d7d6693336/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/54f0aa265ef336a40b87af9c8ca17481/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/54f0aa265ef336a40b87af9c8ca17481/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/c4e16cbff6686c1f07ba082111bc3d06/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/c4e16cbff6686c1f07ba082111bc3d06/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/bab1a0f999138eb6809c34fdea5b9ef6/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/bab1a0f999138eb6809c34fdea5b9ef6/AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:support-v4:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/23992e5af5cb77a377c8cc7ca2969a7a/AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:support-v4:26.1.0] /root/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/23992e5af5cb77a377c8cc7ca2969a7a/AndroidManifest.xml:27:13-51
+meta-data#android.arch.lifecycle.VERSION
+ADDED from [android.arch.lifecycle:runtime:1.0.0] /root/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/b33ef1d14e35e565a5c9ca433c273428/AndroidManifest.xml:25:9-27:47
+	android:value
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /root/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/b33ef1d14e35e565a5c9ca433c273428/AndroidManifest.xml:27:13-44
+	android:name
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /root/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/b33ef1d14e35e565a5c9ca433c273428/AndroidManifest.xml:26:13-58

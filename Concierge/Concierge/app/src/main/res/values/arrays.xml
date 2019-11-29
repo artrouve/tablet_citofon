@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="paymentType">
+        <item>Efectivo</item>
+        <item>Tarjeta de Débito</item>
+        <item>Tarjeta de Crédito</item>
+        <item>Cheque</item>
+        <item>Transferencia</item>
+        <item>Depósito</item>
+    </string-array>
+</resources>

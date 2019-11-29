@@ -1,0 +1,283 @@
+<resources>
+    <string name="app_name">Concierge</string>
+    <string name="settings">Opciones</string>
+    <string name="sync">Sincronizar</string>
+    <string name="logo">Logo</string>
+    <string name="titlePasswordSetting">Configuración del Sistema</string>
+    <string name="messagePasswordSetting">A continuación ingrese la contraseña de administrador para configurar el equipo. Cualquier cambio erróneo en la configuración puede hacer que el equipo deje de funcionar de forma correcta.</string>
+    <string name="errorPasswordSetting">La contraseña que ha ingresado es incorrecta. Favor ingresar nuevamente.</string>
+    <string name="errorTitlePasswordSetting">Se ha producido un Error</string>
+    <string name="retry">Reintentar</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="textLogin">Seleccione su usuario e ingrese la contraseña correspondiente</string>
+    <string name="login">Ingreso de Usuario</string>
+    <string name="password">Cambiar Contraseña</string>
+    <string name="showPassword">Cambiar Contraseña</string>
+    <string name="passwordText">Ingrese su nueva contraseña y repita el procedimiento donde se le indique para poder realizar el cambio solicitado</string>
+    <string name="passwordAlert">Las contraseñas no coinciden, vuelva a ingresarlas correctamente</string>
+    <string name="passwordAlert2">La contraseña tiene que tener al menos 6 caracteres</string>
+
+    <string name="prevPassword">Ingrese la nueva contraseña</string>
+    <string name="prevRepPassword">Ingrese nuevamente la nueva contraseña</string>
+    <string name="porterPassword">Contraseña de Conserjes desde la Tablet</string>
+
+
+    <string name="pref_general_conf">Configuración Edificio</string>
+    <string name="pref_general_parking">Configuración Estacionamiento</string>
+    <string name="pref_general_parcels">Configuración Encomiendas</string>
+    <string name="pref_general_visits">Configuración Visitas</string>
+    <string name="pref_apikey_label">API-KEY</string>
+    <string name="pref_apikey_key" translatable="false">api-key</string>
+
+    <string name="pref_id_building_label">ID Building</string>
+    <string name="pref_id_building_key" translatable="false">id_building</string>
+
+    <string name="pref_id_gateway_label">ID Gateway</string>
+    <string name="pref_id_gateway_key" translatable="false">id_gateway</string>
+
+    <string name="pref_id_parking_label">Estacionamientos (Ej: 1,2,3,&#8230;)</string>
+    <string name="pref_id_parking_key" translatable="false">parking</string>
+
+    <string name="pref_id_automatic_fine_label">Multar al Marcar Salida</string>
+    <string name="pref_id_automatic_fine_key" translatable="false">automatic_fine</string>
+
+    <string name="pref_id_max_time_parking_label">Máximo Horas Estacionamiento (0 Desactivado)</string>
+    <string name="pref_id_max_time_parking_key">max_hours_parking</string>
+
+    <string name="pref_id_mark_exit_label">Se marca la salida de vehículos</string>
+    <string name="pref_id_mark_exit_key">mark_exit</string>
+
+    <string name="pref_id_info_exit_parcel_label">Se registra datos quién retira encomienda</string>
+    <string name="pref_id_info_exit_parcel_key">info_exit_parcel</string>
+
+    <string name="pref_id_URL_label">URL WebServices</string>
+    <string name="pref_id_URL_key">url_base</string>
+
+    <string name="pref_send_email_visits_label">Notificar Visitas por email</string>
+    <string name="pref_send_email_visits_key">send_email_visits</string>
+
+    <string name="pref_send_email_fine_label">Notificar Multas por email</string>
+    <string name="pref_send_email_fine_key">send_email_fine</string>
+
+    <string name="pref_send_email_alert_label">Notificar Alertas de multas por email</string>
+    <string name="pref_send_email_alert_key">send_email_alert</string>
+
+    <string name="pref_automatic_fine_label">Multas automáticas</string>
+    <string name="pref_automatic_fine_key">automatic_fine_alert</string>
+
+    <string name="pref_send_email_field_label">Email CC (Ej: email1,email2,&#8230;)</string>
+    <string name="pref_send_email_field_key">emails_cc_fine_alert</string>
+
+    <string name="pref_id_time_delay_parking_label">Tiempo antes de cursar multas en minutos</string>
+    <string name="pref_id_time_delay_parking_key">delay_hours_parking</string>
+
+    <string name="sync_account_type">handsriver.com</string>
+    <string name="content_authority_apartments">com.handsriver.concierge.apartments</string>
+    <string name="content_authority_porters">com.handsriver.concierge.porters</string>
+    <string name="content_authority_porters_tablet">com.handsriver.concierge.porters.tablet</string>
+    <string name="content_authority_residents">com.handsriver.concierge.residents</string>
+    <string name="content_authority_residents_tablet">com.handsriver.concierge.residents.tablet</string>
+    <string name="content_authority_blacklist">com.handsriver.concierge.blacklist</string>
+    <string name="content_authority_whitelist">com.handsriver.concierge.whitelist</string>
+    <string name="content_authority_suppliers">com.handsriver.concierge.suppliers</string>
+    <string name="content_authority_visits_vehicles">com.handsriver.concierge.visitsvehicles</string>
+    <string name="content_authority_visits_vehicles_delete">com.handsriver.concierge.visitsvehicles.delete</string>
+    <string name="content_authority_parcels">com.handsriver.concierge.parcels</string>
+    <string name="content_authority_parcels_delete">com.handsriver.concierge.parcels.delete</string>
+    <string name="content_authority_payments">com.handsriver.concierge.payments</string>
+    <string name="content_authority_payments_delete">com.handsriver.concierge.payments.delete</string>
+    <string name="content_authority_parkings">com.handsriver.concierge.parkings</string>
+    <string name="content_authority_warehouses">com.handsriver.concierge.warehouses</string>
+    <string name="content_authority_timekeeping">com.handsriver.concierge.timekeeping</string>
+    <string name="content_authority_timekeeping_delete">com.handsriver.concierge.timekeeping.delete</string>
+    <string name="content_authority_visits_suppliers">com.handsriver.concierge.visitssuppliers</string>
+    <string name="content_authority_visits_others_gateways">com.handsriver.concierge.visits.othersgateways</string>
+    <string name="content_authority_timekeeping_others_gateways">com.handsriver.concierge.timekeeping.othersgateways</string>
+    <string name="content_authority_timekeeping_exit_others_gateways">com.handsriver.concierge.timekeeping.exitothersgateways</string>
+    <string name="content_authority_visits_suppliers_others_gateways">com.handsriver.concierge.visitssuppliers.othersgateways</string>
+    <string name="content_authority_visits_suppliers_exit_others_gateways">com.handsriver.concierge.visitssuppliers.exitothersgateways</string>
+    <string name="content_authority_residents_codeauth">com.handsriver.concierge.residents.codeauth</string>
+    <string name="content_authority_vehicle_fine_alert_automatic">com.handsriver.concierge.vehicle.automaticFineAlert</string>
+    <string name="content_authority_vehicle_alert_automatic">com.handsriver.concierge.vehicle.automaticAlert</string>
+    <string name="content_authority_update_google_play_service">com.handsriver.concierge.updateGooglePlayService</string>
+
+    <string name="text_button">Ingresar</string>
+
+    <string name="updateGooglePlayServices">Actualizar Google Play Service</string>
+
+    <string name="home">Inicio</string>
+
+    <string name="visits">Visitas</string>
+    <string name="numberParking">Número de Estacionamiento</string>
+    <string name="addVisit">Agregar Visita</string>
+    <string name="visitsList">Lista de Visitas</string>
+    <string name="visitsvehicles">Visitas y Vehículos</string>
+    <string name="visits_other_gateways">Visitas de otros dispositivos</string>
+    <string name="visits_register">Registar Visitas</string>
+    <string name="visits_register_bar">\u0020\u0020Registar Visitas</string>
+    <string name="visits_search">Buscar Visitas</string>
+    <string name="rut">RUT</string>
+    <string name="documentNumber">Número Documento</string>
+    <string name="documentNumberList">Número Documento:\u0020</string>
+    <string name="entryList">Entrada:\u0020</string>
+    <string name="genderList">Sexo:\u0020</string>
+    <string name="nationalityList">Nacionalidad:\u0020</string>
+    <string name="birthdateList">Fecha Nacimiento:\u0020</string>
+    <string name="titleDetailVisit">Detalle de Visita</string>
+    <string name="warningBlacklist">Advertencia</string>
+    <string name="whitelist">Persona con permiso para ingresar</string>
+    <string name="whitelistTitle">Lista Blanca</string>
+    <string name="blacklist">Lista Negra</string>
+    <string name="textBlacklist">Se esta registrando una persona que se encuentra en Lista Negra, ¿Desea registrarla de igual forma?</string>
+    <string name="textWhitelist">Se esta registrando una persona que tiene permiso para ingresar sin la necesidad de avisar al departamento. Revise los datos mostrados a continuación:</string>
+    <string name="warningObservations">Observaciones</string>
+    <string name="messageRegister">Consulte con el departamento los siguientes datos de las visitas que han sido registradas:</string>
+    <string name="deleteVisitsVehicles">Mantener Datos Visitas y Vehículos 7 días</string>
+    <string name="fineAlertAutomatic">Multas automáticas</string>
+    <string name="alertAutomatic">Alertas automáticas</string>
+
+    <string name="fullname">Nombre Completo</string>
+    <string name="fullNameList">Nombre Completo:\u0020</string>
+
+    <string name="vehicles">Vehículos</string>
+    <string name="vehicle">Vehículo</string>
+    <string name="vehicleList">Patente:\u0020</string>
+    <string name="titleDetailVehicle">Detalle de Vehículo</string>
+    <string name="parkingNumberList">Estacionamiento:\u0020</string>
+    <string name="parkingNumber">Estacionamiento</string>
+    <string name="exitDateList">Salida:\u0020</string>
+    <string name="fineDateList">Multa:\u0020</string>
+    <string name="markExitVehicle">Salida</string>
+    <string name="markExitVehicleQuestion">¿Desea marcar la salida del vehículo?</string>
+    <string name="markFineVehicleQuestion">¿Desea marcar la multa del vehículo?</string>
+    <string name="markFineVehicle">Multar</string>
+
+    <string name="vehicles_search">Buscar Vehículo</string>
+    <string name="license_plate">Patente</string>
+
+    <string name="parcels">Encomiendas</string>
+    <string name="parcel">Encomienda</string>
+    <string name="parcels_register">Registrar Encomienda</string>
+    <string name="parcels_register_bar">\u0020\u0020Registrar Encomienda</string>
+    <string name="parcels_search">Buscar Encomienda</string>
+    <string name="titleDetailParcel">Detalle de Encomienda</string>
+    <string name="markExitParcel">Retirar</string>
+    <string name="markExitParcelQuestion">¿Desea marcar el retiro de la encomienda? Ingrese los datos requeridos a continuación de forma manual o escaneé el documento de identidad:</string>
+    <string name="textUniqueParcels">A continuación se muestra el número de encomienda. Anótelo en la encomienda como referencia:</string>
+    <string name="messageParcel">Verifique la información que se muestra a continuación con la encomienda recibida:</string>
+    <string name="accept">Aceptar</string>
+    <string name="idParcel">Identificador:\u0020</string>
+    <string name="fullNameExitParcel">Nombre Receptor:\u0020</string>
+    <string name="documentNumberExitParcel">Nº Doc. Receptor:\u0020</string>
+    <string name="register">Registrar</string>
+    <string name="deleteParcels">Mantener Datos Encomiendas 7 Días</string>
+
+
+    <string name="suppliers">Proveedores</string>
+    <string name="visits_suppliers">Visitas de Proveedores</string>
+    <string name="visits_suppliers_others_gateways">Visitas de Proveedores de otros dispositivos</string>
+    <string name="visits_suppliers_exit_other_gateways">Salida Visitas de Proveedores de otros dispositivos</string>
+    <string name="supplier">Proveedor</string>
+    <string name="supplierName">Nombre de Proveedor</string>
+    <string name="suppliers_register">Registrar Proveedor</string>
+    <string name="suppliers_register_bar">\u0020\u0020Registrar Proveedor</string>
+    <string name="suppliers_search">Buscar Proveedor</string>
+    <string name="nameSupplierList">Proveedor:\u0020</string>
+    <string name="titleDetailSuppliers">Detalle de Proveedor</string>
+    <string name="markExitSuppleir">Salida</string>
+    <string name="markExitSuppleirQuestion">¿Desea marcar la salida del proveedor?</string>
+    <string name="messageRegisterSupplier">Revise la información mostrada a continuación de los registros realizados para el proveedor:</string>
+
+    <string name="timekeeping">Reloj Control</string>
+    <string name="timekeeping_other_gateways">Reloj Control de otros dispositivos</string>
+    <string name="timekeeping_exit_other_gateways">Salida Reloj Control de otros dispositivos</string>
+    <string name="timekeepingScanner">Escaneé su carnet de identidad</string>
+    <string name="timekeepingManual">Ó ingrese su RUT y su contraseña</string>
+    <string name="entryTitle">Confirmar Entrada</string>
+    <string name="exitTitle">Confirmar Salida</string>
+    <string name="entry_porter">Registrar Entrada</string>
+    <string name="exit_porter">Registrar Salida</string>
+    <string name="search_entry_exit">Buscar Entrada/Salida</string>
+    <string name="titleDetailTimekeeping">Detalle de Registro</string>
+    <string name="differentList">Duración:\u0020</string>
+    <string name="porters">Conserjes</string>
+    <string name="messageEntryPorter">Revise la información que se muestra a continuación antes de confirmar su ingreso:</string>
+    <string name="messageExitPorter">Revise la información que se muestra a continuación antes de confirmar su salida:</string>
+    <string name="deleteTimekeeping">Mantener Datos Entradas/Salidas Personal 7 Días</string>
+
+
+    <string name="rutList">RUT:\u0020</string>
+    <string name="entry_register">Registrar Entrada</string>
+    <string name="entry_register_bar">\u0020\u0020Registrar Entrada</string>
+    <string name="exit_register">Registrar Salida</string>
+    <string name="exit_register_bar">\u0020\u0020Registrar Salida</string>
+
+    <string name="exit">Salir</string>
+
+    <string name="closeDrawer">Navigation View</string>
+    <string name="openDrawer">Navigation View Closed</string>
+
+    <string name="apartment">Departamento</string>
+    <string name="apartments">Departamentos</string>
+    <string name="apartment_number">Número Departamento</string>
+    <string name="apartmentList">Departamento:\u0020</string>
+
+
+    <string name="confirm">Confirmar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="confirmInfo">Confirmar Información</string>
+
+    <string name="fullNameVar">fullName</string>
+    <string name="rutVar">rut</string>
+    <string name="porterIdServerVar">porterIdServer</string>
+    <string name="resident">Residente</string>
+    <string name="residentName">Nombre del Residente</string>
+    <string name="residentList">Residente:\u0020</string>
+    <string name="observations">Observaciones</string>
+    <string name="observationsList">Observaciones:\u0020</string>
+
+    <string name="residents">Residentes</string>
+    <string name="codeAuth">Generación Dispositivos Móviles</string>
+    <string name="edit">Editar</string>
+    <string name="editResident">Edición de Residente</string>
+    <string name="code">Enviar Código</string>
+    <string name="residentsTablet">Residentes de la Tablet</string>
+    <string name="registerResident">Registrar Residentes</string>
+    <string name="registerResident_bar">\u0020\u0020Registrar Residente</string>
+    <string name="searchResident">Buscar Residentes</string>
+    <string name="searchParking">Buscar Estacionamiento</string>
+    <string name="searchWarehouse">Buscar Bodega</string>
+    <string name="warehouseList">Bodega:\u0020</string>
+    <string name="parkings">Estacionamientos</string>
+    <string name="warehouses">Bodegas</string>
+    <string name="email">Correo Electrónico</string>
+    <string name="emailList">Correo Electrónico:\u0020</string>
+    <string name="messageResident">Verifique la información que se muestra a continuación sobre el registro del residente:</string>
+    <string name="messageResidentCodeAuth">Verifique la información que se muestra a continuación antes de mandar el código:</string>
+    <string name="messageEditResident">Verifique la información que se muestra a continuación sobre el residente:</string>
+
+
+    <string name="payments">Pagos</string>
+    <string name="payment">Pago</string>
+    <string name="paymentsRegister">Registrar Pago</string>
+    <string name="paymentsRegister_bar">\u0020\u0020Registrar Pago</string>
+    <string name="searchPayments">Buscar Pagos</string>
+    <string name="messagePayment">Revise la información que se despliega a continuación antes de confirmar el pago:</string>
+    <string name="deletePayments">Mantener Datos Pagos 7 Días</string>
+
+    <string name="paymentType">Tipo de Pago</string>
+    <string name="documentNumberPayment">Documento Medio de Pago (Nº Cheque, Nº Transacción Débito o Crédito, Nº Transferencia, Otros)</string>
+    <string name="documentNumberPaymentHint">Número Documento</string>
+    <string name="documentNumberPaymentBuilding">Documento Comunidad</string>
+    <string name="documentNumberPaymentBuildingList">Documento Comunidad:\u0020</string>
+    <string name="documentNumberPaymentBuildingHint">Documento Recibo</string>
+    <string name="amount">Monto Pagado</string>
+    <string name="paymentTypeList">Tipo de Pago:\u0020</string>
+    <string name="registerDateList">Fecha de Registro:\u0020</string>
+    <string name="titleDetailPayments">Detalle de Pago</string>
+    <string name="documentNumberPaymentList">Número Documento:\u0020</string>
+    <string name="documentNumberBuildingPaymentList">Número Recibo Comunidad:\u0020</string>
+    <string name="amountList">Monto Pagado:\u0020</string>
+    <string name="porterList">Responsable:\u0020</string>
+
+</resources>

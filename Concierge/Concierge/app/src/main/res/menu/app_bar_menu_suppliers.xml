@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group>
+        <item
+            android:id="@+id/registerSuppliersSave"
+            android:title="@string/suppliers_register_bar"
+            android:icon="@drawable/ic_save"
+            app:showAsAction="ifRoom|withText"
+            android:orderInCategory="0" />
+    </group>
+
+</menu>

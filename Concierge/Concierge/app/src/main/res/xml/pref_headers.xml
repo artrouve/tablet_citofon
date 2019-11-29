@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- These settings headers are only used on tablets. -->
+
+    <header
+        android:fragment="com.handsriver.concierge.settings.SettingsActivity$GeneralPreferenceFragment"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/pref_general_conf" />
+
+    <header
+        android:fragment="com.handsriver.concierge.settings.SettingsActivity$ParkingPreferenceFragment"
+        android:icon="@drawable/ic_vehicles"
+        android:title="@string/pref_general_parking" />
+
+    <header
+        android:fragment="com.handsriver.concierge.settings.SettingsActivity$VisitsPreferenceFragment"
+        android:icon="@drawable/ic_visits"
+        android:title="@string/pref_general_visits" />
+
+    <header
+        android:fragment="com.handsriver.concierge.settings.SettingsActivity$ParcelPreferenceFragment"
+        android:icon="@drawable/ic_parcels"
+        android:title="@string/pref_general_parcels" />
+
+
+
+</preference-headers>

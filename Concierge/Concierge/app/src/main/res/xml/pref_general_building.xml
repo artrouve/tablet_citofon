@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <EditTextPreference
+            android:title="@string/pref_apikey_label"
+            android:key="@string/pref_apikey_key"
+            android:inputType="text"
+            android:singleLine="true"/>
+
+        <EditTextPreference
+            android:title="@string/pref_id_building_label"
+            android:key="@string/pref_id_building_key"
+            android:inputType="number"
+            android:numeric="integer"
+            android:singleLine="true" />
+
+        <EditTextPreference
+            android:title="@string/pref_id_gateway_label"
+            android:key="@string/pref_id_gateway_key"
+            android:inputType="number"
+            android:numeric="integer"
+            android:singleLine="true" />
+
+        <EditTextPreference
+            android:title="@string/pref_id_URL_label"
+            android:key="@string/pref_id_URL_key"
+            android:inputType="text"
+            android:singleLine="true" />
+
+</PreferenceScreen>

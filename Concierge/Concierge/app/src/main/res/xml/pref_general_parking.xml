@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <EditTextPreference
+            android:title="@string/pref_id_parking_label"
+            android:key="@string/pref_id_parking_key"
+            android:inputType="text"
+            android:singleLine="true" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:title="@string/pref_id_mark_exit_label"
+            android:key="@string/pref_id_mark_exit_key"
+            android:disableDependentsState="false"/>
+
+        <SwitchPreference
+            android:dependency="@string/pref_id_mark_exit_key"
+            android:defaultValue="false"
+            android:title="@string/pref_id_automatic_fine_label"
+            android:key="@string/pref_id_automatic_fine_key" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:dependency="@string/pref_id_mark_exit_key"
+            android:title="@string/pref_automatic_fine_label"
+            android:key="@string/pref_automatic_fine_key"/>
+
+        <SwitchPreference
+            android:dependency="@string/pref_automatic_fine_key"
+            android:defaultValue="false"
+            android:title="@string/pref_send_email_alert_label"
+            android:key="@string/pref_send_email_alert_key"/>
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:title="@string/pref_send_email_fine_label"
+            android:key="@string/pref_send_email_fine_key"/>
+
+
+        <EditTextPreference
+            android:title="@string/pref_send_email_field_label"
+            android:key="@string/pref_send_email_field_key"
+            android:inputType="text"
+            android:singleLine="true" />
+
+
+        <EditTextPreference
+            android:title="@string/pref_id_max_time_parking_label"
+            android:key="@string/pref_id_max_time_parking_key"
+            android:defaultValue="0"
+            android:inputType="number"
+            android:numeric="integer"
+            android:singleLine="true"
+            android:maxLength="4"/>
+
+        <EditTextPreference
+            android:title="@string/pref_id_time_delay_parking_label"
+            android:key="@string/pref_id_time_delay_parking_key"
+            android:defaultValue="0"
+            android:inputType="number"
+            android:numeric="integer"
+            android:singleLine="true"
+            android:maxLength="4"/>
+
+</PreferenceScreen>

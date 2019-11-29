@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    android:id="@+id/linearResident">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:paddingLeft="84dp"
+        android:paddingRight="84dp"
+        android:text="@string/apartment"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="36dp"
+            app:srcCompat="@drawable/ic_apartments"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <AutoCompleteTextView android:id="@+id/autoApartment"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:inputType="textCapCharacters"
+                android:cursorVisible="false"
+                android:imeOptions="actionDone"
+                android:textSize="18sp"
+                android:hint="@string/apartment_number"
+                android:maxLines="1"
+                android:digits="0,1,2,3,4,5,6,7,8,9,*,qwertyuiopasdfghjklñzxcvbnmQWERTYUIOPASDFGHJKLÑZXCVBNM"
+                android:maxLength="10"
+                android:singleLine="true"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="84dp"
+        android:background="?android:attr/dividerVertical" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:paddingLeft="84dp"
+        android:paddingRight="84dp"
+        android:paddingTop="10dp"
+        android:text="@string/resident"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="36dp"
+            app:srcCompat="@drawable/ic_person"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/fullnameResidentInput"
+                android:layout_width="500dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/fullname"
+                android:inputType="textCapWords"
+                android:cursorVisible="false"
+                android:imeOptions="actionDone"
+                android:textSize="18sp"
+                android:maxLines="1"
+                android:digits="qwertyuiopasdfghjklñzxcvbnmQWERTYUIOPASDFGHJKLÑZXCVBNM "
+                android:maxLength="44"
+                android:singleLine="true"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/emailResidentInput"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:cursorVisible="false"
+                android:imeOptions="actionDone"
+                android:textSize="18sp"
+                android:maxLines="1"
+                android:maxLength="60"
+                android:singleLine="true"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
