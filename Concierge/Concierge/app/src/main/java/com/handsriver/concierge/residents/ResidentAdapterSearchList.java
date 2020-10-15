@@ -81,11 +81,39 @@ public class ResidentAdapterSearchList extends BaseAdapter implements Filterable
         TextView textViewFullName = (TextView) view.findViewById(R.id.textViewfullNameList);
         TextView textViewEmail = (TextView) view.findViewById(R.id.textViewEmailList);
         TextView textViewApartment = (TextView) view.findViewById(R.id.textViewApartmentList);
+
+        TextView textViewMobile = (TextView) view.findViewById(R.id.textViewMobileList);
+        TextView textViewPhone = (TextView) view.findViewById(R.id.textViewPhoneList);
+        TextView textViewRut = (TextView) view.findViewById(R.id.textViewRutList);
+
+
+
         Button button = (Button) view.findViewById(R.id.buttonRegisterVisitResident);
         Button buttonEdit = (Button) view.findViewById(R.id.buttonEditResident);
         Button buttonCode = (Button) view.findViewById(R.id.buttonGenerateCodeResident);
 
         textViewFullName.setText(resident.getFullName());
+
+        if (resident.getMobile() != null && resident.getMobile().length() > 0){
+            textViewMobile.setText(resident.getMobile());
+        }
+        else{
+            textViewMobile.setText(NO_AVAILABLE);
+        }
+
+        if (resident.getPhone() != null && resident.getPhone().length() > 0){
+            textViewPhone.setText(resident.getPhone());
+        }
+        else{
+            textViewPhone.setText(NO_AVAILABLE);
+        }
+
+        if (resident.getRut() != null && resident.getRut().length() > 0){
+            textViewRut.setText(resident.getRut());
+        }
+        else{
+            textViewRut.setText(NO_AVAILABLE);
+        }
 
         if (resident.getEmail() != null && resident.getEmail().length() > 0){
             textViewEmail.setText(resident.getEmail());
@@ -123,7 +151,6 @@ public class ResidentAdapterSearchList extends BaseAdapter implements Filterable
                 String apartment = resident.getApartmentNumber();
                 String fullName = resident.getFullName();
                 String email = resident.getEmail();
-
                 if (email == null){
                     email = "";
                 }
@@ -133,12 +160,45 @@ public class ResidentAdapterSearchList extends BaseAdapter implements Filterable
                     }
                 }
 
+                String mobile = resident.getMobile();
+                if (mobile == null){
+                    mobile = "";
+                }
+                else{
+                    if (mobile.equals(NO_AVAILABLE)){
+                        mobile = "";
+                    }
+                }
+
+                String phone = resident.getPhone();
+                if (phone == null){
+                    phone = "";
+                }
+                else{
+                    if (phone.equals(NO_AVAILABLE)){
+                        phone = "";
+                    }
+                }
+
+                String rut = resident.getRut();
+                if (rut == null){
+                    rut = "";
+                }
+                else{
+                    if (rut.equals(NO_AVAILABLE)){
+                        rut = "";
+                    }
+                }
 
                 Bundle args = new Bundle();
                 args.putLong("id",resident.getId());
                 args.putString("apartment",apartment);
                 args.putString("fullName",fullName);
                 args.putString("email",email);
+
+                args.putString("rut",rut);
+                args.putString("mobile",mobile);
+                args.putString("phone",phone);
 
                 FragmentManager fm = ((AppCompatActivity) mContext).getSupportFragmentManager();
                 DialogResidentsEdit dialog = new DialogResidentsEdit();

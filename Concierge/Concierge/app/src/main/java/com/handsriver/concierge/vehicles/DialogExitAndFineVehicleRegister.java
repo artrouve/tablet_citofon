@@ -40,6 +40,7 @@ public class DialogExitAndFineVehicleRegister extends DialogFragment {
     String button;
     String apartmentNumber;
     String licensePlate;
+    VehiclePlateDetectedOper PlatesDetected;
     boolean isFined;
 
     @Override
@@ -59,6 +60,7 @@ public class DialogExitAndFineVehicleRegister extends DialogFragment {
         button = getArguments().getString("button");
         apartmentNumber = getArguments().getString("apartmentNumber");
         licensePlate = getArguments().getString("licensePlate");
+        PlatesDetected = (VehiclePlateDetectedOper) getArguments().getSerializable("platesDetected");
 
         builder.setTitle(R.string.confirmInfo);
 
@@ -73,6 +75,12 @@ public class DialogExitAndFineVehicleRegister extends DialogFragment {
                     Calendar calendar = Calendar.getInstance();
                     SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.US);
                     String exit = df.format(calendar.getTime());
+
+                    if((PlatesDetected).getItemSelected()!=null){
+                        exit = PlatesDetected.getItemSelected().getDate();
+                    }
+
+
 
                     int porterIdServer;
                     int hours;
@@ -93,6 +101,8 @@ public class DialogExitAndFineVehicleRegister extends DialogFragment {
                     Intent intent = new Intent();
                     intent.putExtra("button",button);
 
+                    //SE DEBE ELIMINAR LA PATENTE DETECTADA DEL TOTAL DE REGISTROS
+                    PlatesDetected.DeleteFromSharedPreferences(PlatesDetected.getItemSelected());
                     getTargetFragment().onActivityResult(getTargetRequestCode(), Activity.RESULT_OK, intent);
 
                 }

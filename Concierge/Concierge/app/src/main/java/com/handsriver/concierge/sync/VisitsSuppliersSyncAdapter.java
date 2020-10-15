@@ -101,6 +101,7 @@ public class VisitsSuppliersSyncAdapter extends AbstractThreadedSyncAdapter {
                         SupplierVisitsEntry.COLUMN_ENTRY,
                         SupplierVisitsEntry.COLUMN_SUPPLIER_ID,
                         SupplierVisitsEntry.COLUMN_EXIT_SUPPLIER,
+                        SupplierVisitsEntry.COLUMN_EXIT_OBS,
                         SupplierVisitsEntry.COLUMN_ENTRY_PORTER_ID,
                         SupplierVisitsEntry.COLUMN_EXIT_PORTER_ID,
                         SupplierVisitsEntry.COLUMN_LICENSE_PLATE
@@ -125,6 +126,8 @@ public class VisitsSuppliersSyncAdapter extends AbstractThreadedSyncAdapter {
                         suppliersVisitsJson.put(SupplierVisitsEntry.COLUMN_ENTRY,suppliers_visits.getString(suppliers_visits.getColumnIndex(SupplierVisitsEntry.COLUMN_ENTRY)));
                         suppliersVisitsJson.put(SupplierVisitsEntry.COLUMN_SUPPLIER_ID,suppliers_visits.getLong(suppliers_visits.getColumnIndex(SupplierVisitsEntry.COLUMN_SUPPLIER_ID)));
                         suppliersVisitsJson.put(SupplierVisitsEntry.COLUMN_EXIT_SUPPLIER,(suppliers_visits.isNull(suppliers_visits.getColumnIndex(SupplierVisitsEntry.COLUMN_EXIT_SUPPLIER))) ? JSONObject.NULL : suppliers_visits.getString(suppliers_visits.getColumnIndex(SupplierVisitsEntry.COLUMN_EXIT_SUPPLIER)));
+                        suppliersVisitsJson.put(SupplierVisitsEntry.COLUMN_EXIT_OBS,(suppliers_visits.isNull(suppliers_visits.getColumnIndex(SupplierVisitsEntry.COLUMN_EXIT_OBS))) ? JSONObject.NULL : suppliers_visits.getString(suppliers_visits.getColumnIndex(SupplierVisitsEntry.COLUMN_EXIT_OBS)));
+
                         suppliersVisitsJson.put(SupplierVisitsEntry.COLUMN_ENTRY_PORTER_ID,suppliers_visits.getLong(suppliers_visits.getColumnIndex(SupplierVisitsEntry.COLUMN_ENTRY_PORTER_ID)));
                         suppliersVisitsJson.put(SupplierVisitsEntry.COLUMN_EXIT_PORTER_ID,(suppliers_visits.isNull(suppliers_visits.getColumnIndex(SupplierVisitsEntry.COLUMN_EXIT_PORTER_ID))) ? JSONObject.NULL : suppliers_visits.getLong(suppliers_visits.getColumnIndex(SupplierVisitsEntry.COLUMN_EXIT_PORTER_ID)));
                         suppliersVisitsJson.put(SupplierVisitsEntry.COLUMN_LICENSE_PLATE,(suppliers_visits.isNull(suppliers_visits.getColumnIndex(SupplierVisitsEntry.COLUMN_LICENSE_PLATE))) ? JSONObject.NULL : suppliers_visits.getString(suppliers_visits.getColumnIndex(SupplierVisitsEntry.COLUMN_LICENSE_PLATE)));
@@ -142,6 +145,7 @@ public class VisitsSuppliersSyncAdapter extends AbstractThreadedSyncAdapter {
                         SupplierVisitsEntry.COLUMN_SUPPLIER_ID,
                         SupplierVisitsEntry.COLUMN_EXIT_SUPPLIER,
                         SupplierVisitsEntry.COLUMN_EXIT_PORTER_ID,
+                        SupplierVisitsEntry.COLUMN_EXIT_OBS,
                         SupplierVisitsEntry.COLUMN_SUPPLIER_VISIT_ID_SERVER
                 };
 
@@ -160,6 +164,7 @@ public class VisitsSuppliersSyncAdapter extends AbstractThreadedSyncAdapter {
                         suppliersVisitsUpdateJson.put(SupplierVisitsEntry.COLUMN_ENTRY,suppliers_visits_update.getString(suppliers_visits_update.getColumnIndex(SupplierVisitsEntry.COLUMN_ENTRY)));
                         suppliersVisitsUpdateJson.put(SupplierVisitsEntry.COLUMN_SUPPLIER_ID,suppliers_visits_update.getLong(suppliers_visits_update.getColumnIndex(SupplierVisitsEntry.COLUMN_SUPPLIER_ID)));
                         suppliersVisitsUpdateJson.put(SupplierVisitsEntry.COLUMN_EXIT_SUPPLIER,(suppliers_visits_update.isNull(suppliers_visits_update.getColumnIndex(SupplierVisitsEntry.COLUMN_EXIT_SUPPLIER))) ? JSONObject.NULL : suppliers_visits_update.getString(suppliers_visits_update.getColumnIndex(SupplierVisitsEntry.COLUMN_EXIT_SUPPLIER)));
+                        suppliersVisitsUpdateJson.put(SupplierVisitsEntry.COLUMN_EXIT_OBS,(suppliers_visits_update.isNull(suppliers_visits_update.getColumnIndex(SupplierVisitsEntry.COLUMN_EXIT_OBS))) ? JSONObject.NULL : suppliers_visits_update.getString(suppliers_visits_update.getColumnIndex(SupplierVisitsEntry.COLUMN_EXIT_OBS)));
                         suppliersVisitsUpdateJson.put(SupplierVisitsEntry.COLUMN_EXIT_PORTER_ID,(suppliers_visits_update.isNull(suppliers_visits_update.getColumnIndex(SupplierVisitsEntry.COLUMN_EXIT_PORTER_ID))) ? JSONObject.NULL : suppliers_visits_update.getLong(suppliers_visits_update.getColumnIndex(SupplierVisitsEntry.COLUMN_EXIT_PORTER_ID)));
                         suppliersVisitsUpdateJson.put(SupplierVisitsEntry.COLUMN_SUPPLIER_VISIT_ID_SERVER,(suppliers_visits_update.isNull(suppliers_visits_update.getColumnIndex(SupplierVisitsEntry.COLUMN_SUPPLIER_VISIT_ID_SERVER))) ? JSONObject.NULL : suppliers_visits_update.getLong(suppliers_visits_update.getColumnIndex(SupplierVisitsEntry.COLUMN_SUPPLIER_VISIT_ID_SERVER)));
 

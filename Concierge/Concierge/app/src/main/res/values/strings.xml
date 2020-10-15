@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Concierge</string>
+    <string name="app_name">Citofon</string>
     <string name="settings">Opciones</string>
     <string name="sync">Sincronizar</string>
     <string name="logo">Logo</string>
@@ -53,8 +53,16 @@
     <string name="pref_id_URL_label">URL WebServices</string>
     <string name="pref_id_URL_key">url_base</string>
 
+    <string name="pref_id_URL_ANPR_label">URL ANPR Services</string>
+    <string name="pref_id_URL_ANPR_key">url_anpr_base</string>
+
     <string name="pref_send_email_visits_label">Notificar Visitas por email</string>
     <string name="pref_send_email_visits_key">send_email_visits</string>
+
+    <string name="pref_OPTIONAL_FILED_VISITS_label">Visitas Campo Opcional</string>
+    <string name="pref_OPTIONAL_FILED_VISITS_key">optional_field_visits</string>
+
+
 
     <string name="pref_send_email_fine_label">Notificar Multas por email</string>
     <string name="pref_send_email_fine_key">send_email_fine</string>
@@ -120,6 +128,8 @@
     <string name="documentNumber">Número Documento</string>
     <string name="documentNumberList">Número Documento:\u0020</string>
     <string name="entryList">Entrada:\u0020</string>
+    <string name="exitList">Salida:\u0020</string>
+    <string name="exitListBtn">Salida\u0020</string>
     <string name="genderList">Sexo:\u0020</string>
     <string name="nationalityList">Nacionalidad:\u0020</string>
     <string name="birthdateList">Fecha Nacimiento:\u0020</string>
@@ -138,6 +148,7 @@
 
     <string name="fullname">Nombre Completo</string>
     <string name="fullNameList">Nombre Completo:\u0020</string>
+    <string name="markExitVisitQuestion">¿Desea marcar la salida de la visita?</string>
 
     <string name="vehicles">Vehículos</string>
     <string name="vehicle">Vehículo</string>
@@ -154,6 +165,9 @@
 
     <string name="vehicles_search">Buscar Vehículo</string>
     <string name="license_plate">Patente</string>
+    <string name="platesDetectionReceived">PatentesDeteccionRecividas</string>
+
+
 
     <string name="parcels">Encomiendas</string>
     <string name="parcel">Encomienda</string>
@@ -219,8 +233,14 @@
 
     <string name="apartment">Departamento</string>
     <string name="apartments">Departamentos</string>
-    <string name="apartment_number">Número Departamento</string>
+    <string name="apartment_number">Departamento</string>
     <string name="apartmentList">Departamento:\u0020</string>
+
+
+    <string name="plates_detected">Patentes Detectadas</string>
+    <string name="plates_detected_selected_show">Patente Detectada</string>
+    <string name="plates_detected_selected_confirm">Seleccionar</string>
+    <string name="plates_detected_selected_cancel">Cancelar</string>
 
 
     <string name="confirm">Confirmar</string>

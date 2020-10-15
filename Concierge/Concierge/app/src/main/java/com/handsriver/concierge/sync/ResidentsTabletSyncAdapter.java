@@ -94,7 +94,11 @@ public class ResidentsTabletSyncAdapter extends AbstractThreadedSyncAdapter {
                         ResidentEntry._ID,
                         ResidentEntry.COLUMN_APARTMENT_ID,
                         ResidentEntry.COLUMN_FULL_NAME,
-                        ResidentEntry.COLUMN_EMAIL
+                        ResidentEntry.COLUMN_EMAIL,
+                        ResidentEntry.COLUMN_MOBILE,
+                        ResidentEntry.COLUMN_PHONE,
+                        ResidentEntry.COLUMN_RUT,
+
 
                 };
 
@@ -110,6 +114,11 @@ public class ResidentsTabletSyncAdapter extends AbstractThreadedSyncAdapter {
                         residentJson.put(IS_UPDATE_COL,false);
                         residentJson.put(ResidentEntry.COLUMN_FULL_NAME,residents.getString(residents.getColumnIndex(ResidentEntry.COLUMN_FULL_NAME)));
                         residentJson.put(ResidentEntry.COLUMN_EMAIL,(residents.isNull(residents.getColumnIndex(ResidentEntry.COLUMN_EMAIL))) ? JSONObject.NULL : residents.getString(residents.getColumnIndex(ResidentEntry.COLUMN_EMAIL)));
+
+                        residentJson.put(ResidentEntry.COLUMN_MOBILE,(residents.isNull(residents.getColumnIndex(ResidentEntry.COLUMN_EMAIL))) ? JSONObject.NULL : residents.getString(residents.getColumnIndex(ResidentEntry.COLUMN_MOBILE)));
+                        residentJson.put(ResidentEntry.COLUMN_PHONE,(residents.isNull(residents.getColumnIndex(ResidentEntry.COLUMN_EMAIL))) ? JSONObject.NULL : residents.getString(residents.getColumnIndex(ResidentEntry.COLUMN_PHONE)));
+                        residentJson.put(ResidentEntry.COLUMN_RUT,(residents.isNull(residents.getColumnIndex(ResidentEntry.COLUMN_EMAIL))) ? JSONObject.NULL : residents.getString(residents.getColumnIndex(ResidentEntry.COLUMN_RUT)));
+
                         residentJson.put(ResidentEntry.COLUMN_APARTMENT_ID,residents.getLong(residents.getColumnIndex(ResidentEntry.COLUMN_APARTMENT_ID)));
 
                         residentsArrayJson.put(residentJson);
@@ -120,6 +129,9 @@ public class ResidentsTabletSyncAdapter extends AbstractThreadedSyncAdapter {
                 String[] projection_u = {
                         ResidentEntry._ID,
                         ResidentEntry.COLUMN_EMAIL,
+                        ResidentEntry.COLUMN_MOBILE,
+                        ResidentEntry.COLUMN_PHONE,
+                        ResidentEntry.COLUMN_RUT,
                         ResidentEntry.COLUMN_RESIDENT_ID_SERVER
                 };
 
@@ -135,6 +147,11 @@ public class ResidentsTabletSyncAdapter extends AbstractThreadedSyncAdapter {
                         residentUpdateJson.put(ID_RESIDENT,residents_update.getLong(residents_update.getColumnIndex(ResidentEntry._ID)));
                         residentUpdateJson.put(IS_UPDATE_COL,true);
                         residentUpdateJson.put(ResidentEntry.COLUMN_EMAIL,(residents_update.isNull(residents_update.getColumnIndex(ResidentEntry.COLUMN_EMAIL))) ? JSONObject.NULL : residents_update.getString(residents_update.getColumnIndex(ResidentEntry.COLUMN_EMAIL)));
+
+                        residentUpdateJson.put(ResidentEntry.COLUMN_MOBILE,(residents_update.isNull(residents_update.getColumnIndex(ResidentEntry.COLUMN_EMAIL))) ? JSONObject.NULL : residents_update.getString(residents_update.getColumnIndex(ResidentEntry.COLUMN_MOBILE)));
+                        residentUpdateJson.put(ResidentEntry.COLUMN_PHONE,(residents_update.isNull(residents_update.getColumnIndex(ResidentEntry.COLUMN_EMAIL))) ? JSONObject.NULL : residents_update.getString(residents_update.getColumnIndex(ResidentEntry.COLUMN_PHONE)));
+                        residentUpdateJson.put(ResidentEntry.COLUMN_RUT,(residents_update.isNull(residents_update.getColumnIndex(ResidentEntry.COLUMN_EMAIL))) ? JSONObject.NULL : residents_update.getString(residents_update.getColumnIndex(ResidentEntry.COLUMN_RUT)));
+
                         residentUpdateJson.put(ResidentEntry.COLUMN_RESIDENT_ID_SERVER,residents_update.getLong(residents_update.getColumnIndex(ResidentEntry.COLUMN_RESIDENT_ID_SERVER)));
 
                         residentsArrayJson.put(residentUpdateJson);

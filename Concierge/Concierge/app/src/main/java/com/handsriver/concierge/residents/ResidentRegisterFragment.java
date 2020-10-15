@@ -46,6 +46,10 @@ public class ResidentRegisterFragment extends Fragment {
     AutoCompleteTextView autoCompleteApartment;
     TextInputEditText textFullname;
     TextInputEditText textEmail;
+    TextInputEditText textPhone;
+    TextInputEditText textMobile;
+    TextInputEditText textRut;
+
     ArrayList<String> autoCompleteApartmentContent;
     ArrayAdapter<String> autoCompleteApartmentAdapter;
     StringBuilder ocr;
@@ -97,6 +101,11 @@ public class ResidentRegisterFragment extends Fragment {
 
         textFullname = (TextInputEditText) rootView.findViewById(R.id.fullnameResidentInput);
         textEmail = (TextInputEditText) rootView.findViewById(R.id.emailResidentInput);
+
+        textMobile = (TextInputEditText) rootView.findViewById(R.id.mobileResidentInput);
+        textPhone = (TextInputEditText) rootView.findViewById(R.id.phoneResidentInput);
+        textRut = (TextInputEditText) rootView.findViewById(R.id.rutResidentInput);
+
 
         autoCompleteApartment = (AutoCompleteTextView) rootView.findViewById(R.id.autoApartment);
         autoCompleteApartment.setThreshold(1);
@@ -161,6 +170,28 @@ public class ResidentRegisterFragment extends Fragment {
             }
         });
 
+        textPhone.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                return Utility.isScannerOCR(v,keyCode,event);
+            }
+        });
+
+        textMobile.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                return Utility.isScannerOCR(v,keyCode,event);
+            }
+        });
+
+        textRut.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                return Utility.isScannerOCR(v,keyCode,event);
+            }
+        });
+
+
         linearResident = (LinearLayout) rootView.findViewById(R.id.linearResident);
         linearResident.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -197,12 +228,20 @@ public class ResidentRegisterFragment extends Fragment {
         String fullName = textFullname.getText().toString();
         String email = textEmail.getText().toString();
 
+        String phone = textPhone.getText().toString();
+        String mobile = textMobile.getText().toString();
+        String rut = textRut.getText().toString();
+
         if (apartment.length()>0 && fullName.length() > 0 && Utility.isValidEmail(email))
         {
             Bundle args = new Bundle();
             args.putString("apartment",apartment);
             args.putString("fullName",fullName);
             args.putString("email",email);
+
+            args.putString("phone",phone);
+            args.putString("mobile",mobile);
+            args.putString("rut",rut);
 
             DialogResidentsRegister dialog = new DialogResidentsRegister();
             dialog.setArguments(args);

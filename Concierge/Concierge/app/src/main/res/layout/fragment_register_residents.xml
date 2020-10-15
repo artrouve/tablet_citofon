@@ -121,5 +121,93 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:paddingLeft="80dp"
+        android:paddingRight="24dp"
+        android:gravity="center_vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/rutResidentInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Rut/Pasaporte"
+                android:inputType="textCapCharacters"
+                android:cursorVisible="false"
+                android:imeOptions="actionDone"
+                android:textSize="18sp"
+                android:maxLines="1"
+                android:digits="0,1,2,3,4,5,6,7,8,9,*,qwertyuiopasdfghjklñzxcvbnmQWERTYUIOPASDFGHJKLÑZXCVBNM.-"
+                android:maxLength="15"
+                android:singleLine="true"/>
+
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:paddingLeft="80dp"
+        android:paddingRight="24dp"
+        android:gravity="center_vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/mobileResidentInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Fono 1"
+                android:inputType="textCapCharacters"
+                android:cursorVisible="false"
+                android:imeOptions="actionDone"
+                android:textSize="18sp"
+                android:maxLines="1"
+                android:digits="0,1,2,3,4,5,6,7,8,9,*,qwertyuiopasdfghjklñzxcvbnmQWERTYUIOPASDFGHJKLÑZXCVBNM"
+                android:maxLength="15"
+                android:singleLine="true"/>
+
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:paddingLeft="80dp"
+        android:paddingRight="24dp"
+        android:gravity="center_vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/phoneResidentInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Fono 2"
+                android:inputType="textCapCharacters"
+                android:cursorVisible="false"
+                android:imeOptions="actionDone"
+                android:textSize="18sp"
+                android:maxLines="1"
+                android:digits="0,1,2,3,4,5,6,7,8,9,*,qwertyuiopasdfghjklñzxcvbnmQWERTYUIOPASDFGHJKLÑZXCVBNM"
+                android:maxLength="15"
+                android:singleLine="true"/>
+
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+
 </LinearLayout>
 

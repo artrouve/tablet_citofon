@@ -57,6 +57,9 @@ public class SearchResidentsListFragment extends Fragment{
         final String query = "SELECT " + ResidentEntry.TABLE_NAME + "." + ResidentEntry._ID + "," +
                 ResidentEntry.COLUMN_FULL_NAME + "," +
                 ResidentEntry.COLUMN_EMAIL + "," +
+                ResidentEntry.COLUMN_MOBILE + "," +
+                ResidentEntry.COLUMN_PHONE + "," +
+                ResidentEntry.COLUMN_RUT + "," +
                 ResidentEntry.COLUMN_IS_SYNC + "," +
                 ResidentEntry.COLUMN_IS_UPDATE + "," +
                 ApartmentEntry.TABLE_NAME + "." + ApartmentEntry.COLUMN_APARTMENT_NUMBER +
@@ -79,6 +82,11 @@ public class SearchResidentsListFragment extends Fragment{
                 resident.setId(c.getLong(c.getColumnIndex(ResidentEntry._ID)));
                 resident.setFullName(c.getString(c.getColumnIndex(ResidentEntry.COLUMN_FULL_NAME)));
                 resident.setEmail(c.getString(c.getColumnIndex(ResidentEntry.COLUMN_EMAIL)));
+
+                resident.setMobile(c.getString(c.getColumnIndex(ResidentEntry.COLUMN_MOBILE)));
+                resident.setPhone(c.getString(c.getColumnIndex(ResidentEntry.COLUMN_PHONE)));
+                resident.setRut(c.getString(c.getColumnIndex(ResidentEntry.COLUMN_RUT)));
+
                 resident.setIsSync(c.getString(c.getColumnIndex(ResidentEntry.COLUMN_IS_SYNC)));
                 resident.setIsUpdate(c.getString(c.getColumnIndex(ResidentEntry.COLUMN_IS_UPDATE)));
                 resident.setApartmentNumber(c.getString(c.getColumnIndex(ApartmentEntry.COLUMN_APARTMENT_NUMBER)));

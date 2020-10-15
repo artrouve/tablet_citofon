@@ -8,13 +8,17 @@ import android.os.Parcelable;
  */
 
 public class Visit implements Parcelable {
+    private String id;
     private String documentNumber;
     private String fullName;
     private String nationality;
     private String gender;
     private String birthdate;
     private String entry;
+    private String exitDate;
     private String apartmentNumber;
+    private String optional;
+
 
     public static final Parcelable.Creator<Visit> CREATOR = new Parcelable.Creator<Visit>(){
         @Override
@@ -28,6 +32,9 @@ public class Visit implements Parcelable {
         }
     };
 
+    public void setId(String id){
+        this.id = id;
+    }
     public void setDocumentNumber(String documentNumber) {
         this.documentNumber = documentNumber;
     }
@@ -52,8 +59,20 @@ public class Visit implements Parcelable {
         this.entry = entry;
     }
 
+    public void setExitDate(String exitDate) {
+        this.exitDate = exitDate;
+    }
+
     public void setApartmentNumber(String apartmentNumber) {
         this.apartmentNumber = apartmentNumber;
+    }
+
+    public void setOptional(String optional) {
+        this.optional = optional;
+    }
+
+    public String getId() {
+        return id;
     }
 
     public String getDocumentNumber() {
@@ -80,10 +99,17 @@ public class Visit implements Parcelable {
         return entry;
     }
 
+    public String getExitDate() {
+        return exitDate;
+    }
+
     public String getApartmentNumber() {
         return apartmentNumber;
     }
 
+    public String getOptional() {
+        return optional;
+    }
 
     @Override
     public int describeContents() {
@@ -99,5 +125,7 @@ public class Visit implements Parcelable {
         dest.writeString(birthdate);
         dest.writeString(entry);
         dest.writeString(apartmentNumber);
+        dest.writeString(optional);
+
     }
 }

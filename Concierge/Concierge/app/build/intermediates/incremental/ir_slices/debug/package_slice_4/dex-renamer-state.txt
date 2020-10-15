@@ -1,4 +1,0 @@
-#Mon Nov 11 14:38:37 CLST 2019
-base.0=/home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/transforms/dexMerger/debug/22
-path.0=classes.dex
-renamed.0=classes.dex

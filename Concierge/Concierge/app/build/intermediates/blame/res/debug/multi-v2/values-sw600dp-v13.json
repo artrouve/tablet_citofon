@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "outputFile": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "/root/.gradle/caches/transforms-1/files-1.1/design-25.0.1.aar/e19e0e897321fbf67613f71291502eaa/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "/home/alain/.gradle/caches/transforms-1/files-1.1/design-25.0.1.aar/9facd99c24daa16dd5d064ba10a61bf7/res/values-sw600dp-v13/values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.0.1.aar/7293e3046def308dc4617d99cb1b94f4/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "/home/alain/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.0.1.aar/204b62cdf66e03dfeb9b99904016c671/res/values-sw600dp-v13/values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

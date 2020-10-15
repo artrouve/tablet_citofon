@@ -243,6 +243,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void onItemSelected(Visit visit) {
 
         Bundle args = new Bundle();
+
+        args.putString("id",visit.getId());
         args.putString("fullname",visit.getFullName());
         args.putString("documentNumber",visit.getDocumentNumber());
         args.putString("nationality",visit.getNationality());
@@ -250,6 +252,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         args.putString("birthdate",visit.getBirthdate());
         args.putString("entry",visit.getEntry());
         args.putString("apartmentNumber",visit.getApartmentNumber());
+        args.putString("exitDate",visit.getExitDate());
+        args.putString("optional",visit.getOptional());
 
         DetailSearchVisitsListFragment detailFragment = new DetailSearchVisitsListFragment();
         detailFragment.setArguments(args);

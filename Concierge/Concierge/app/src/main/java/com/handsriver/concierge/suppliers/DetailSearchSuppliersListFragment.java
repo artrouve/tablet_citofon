@@ -5,8 +5,11 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.TextInputEditText;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SimpleCursorAdapter;
+import android.view.KeyCharacterMap;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -14,13 +17,16 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.handsriver.concierge.R;
 import com.handsriver.concierge.database.ConciergeContract.SupplierVisitsEntry;
 import com.handsriver.concierge.database.ConciergeDbHelper;
 import com.handsriver.concierge.database.DatabaseManager;
 import com.handsriver.concierge.database.SelectToDBRaw;
+import com.handsriver.concierge.utilities.FormatICAO9303;
 import com.handsriver.concierge.utilities.Utility;
+import com.handsriver.concierge.visits.Visit;
 
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
@@ -34,13 +40,16 @@ public class DetailSearchSuppliersListFragment extends Fragment {
     TextView textViewNameSupplier;
     TextView textViewEntry;
     TextView textViewExitSupplier;
+    TextView textViewObsExitSupplier;
     TextView textViewLicensePlateSupplier;
+    TextInputEditText textInputObsExitSupplier;
     ListView viewVisitsSupplier;
     String gateway_id;
     String supplier_id;
     String nameSupplier;
     String entry;
     String exitSupplier;
+    String obsExitSupplier;
     String licensePlate;
     SimpleCursorAdapter visitsSuppliersAdapter;
     Button buttonExitSupplier;
@@ -66,6 +75,8 @@ public class DetailSearchSuppliersListFragment extends Fragment {
         gateway_id = args.getString("gatewayId");
         supplier_id = args.getString("supplierId");
         nameSupplier = args.getString("nameSupplier",NO_AVAILABLE);
+        obsExitSupplier = args.getString("obsExitSupplier");
+
         entry = Utility.changeDateFormat(args.getString("entry"),"ENTRY");
 
         String [] args1 = new String[]{gateway_id,supplier_id,Utility.changeDateFormatDatabase(entry)};
@@ -124,6 +135,8 @@ public class DetailSearchSuppliersListFragment extends Fragment {
 
         rootView = inflater.inflate(R.layout.detail_suppliers, container, false);
 
+        textInputObsExitSupplier = (TextInputEditText) rootView.findViewById(R.id.exitObsSupplierInput);
+
         viewVisitsSupplier = (ListView) rootView.findViewById(R.id.listViewVisitsSuppliers);
         viewVisitsSupplier.setAdapter(visitsSuppliersAdapter);
 
@@ -142,6 +155,7 @@ public class DetailSearchSuppliersListFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Bundle args = new Bundle();
+                args.putString("obsExitSupplier",textInputObsExitSupplier.getText().toString());
                 args.putStringArrayList("visitsIdsList",visitsSupplierIds);
 
                 DialogExitSuppliersRegister dialog = new DialogExitSuppliersRegister();
@@ -155,6 +169,7 @@ public class DetailSearchSuppliersListFragment extends Fragment {
 
         if (exitSupplier.equals(NO_AVAILABLE))
         {
+            textInputObsExitSupplier.setVisibility(View.VISIBLE);
             buttonExitSupplier.setVisibility(View.VISIBLE);
         }
 
@@ -164,6 +179,11 @@ public class DetailSearchSuppliersListFragment extends Fragment {
         textViewNameSupplier.setText(nameSupplier);
         textViewExitSupplier = (TextView) rootView.findViewById(R.id.textViewDetailExitSupplier);
         textViewExitSupplier.setText(exitSupplier);
+
+        textViewObsExitSupplier = (TextView) rootView.findViewById(R.id.textViewDetailExitObsSupplier);
+        textViewObsExitSupplier.setText(obsExitSupplier);
+
+
         textViewLicensePlateSupplier = (TextView) rootView.findViewById(R.id.textViewLicensePlateSupplier);
         textViewLicensePlateSupplier.setText(licensePlate);
 
@@ -175,7 +195,23 @@ public class DetailSearchSuppliersListFragment extends Fragment {
             }
         });
 
+        textInputObsExitSupplier.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keycode, KeyEvent event) {
+                return isScannerOCR(v,keycode,event);
+            }
+        });
+
         return rootView;
+    }
+
+    private boolean isScannerOCR(View v, int keycode, KeyEvent event){
+
+        if (event.getDeviceId() == KeyCharacterMap.VIRTUAL_KEYBOARD) {
+            return false;
+        }
+        return true;
+
     }
 
     @Override
@@ -185,9 +221,11 @@ public class DetailSearchSuppliersListFragment extends Fragment {
                 if (resultCode == Activity.RESULT_OK){
                     getExitDateAndLicensePlate();
                     textViewExitSupplier.setText(exitSupplier);
+                    textViewObsExitSupplier.setText(obsExitSupplier);
 
                     if (!exitSupplier.equals(NO_AVAILABLE))
                     {
+                        textInputObsExitSupplier.setVisibility(View.GONE);
                         buttonExitSupplier.setVisibility(View.GONE);
                     }
                 }
@@ -197,7 +235,7 @@ public class DetailSearchSuppliersListFragment extends Fragment {
 
     public void getExitDateAndLicensePlate (){
 
-        final String query1 = "SELECT " + SupplierVisitsEntry.COLUMN_EXIT_SUPPLIER + "," + SupplierVisitsEntry.COLUMN_LICENSE_PLATE +
+        final String query1 = "SELECT " + SupplierVisitsEntry.COLUMN_EXIT_SUPPLIER + "," + SupplierVisitsEntry.COLUMN_LICENSE_PLATE + "," + SupplierVisitsEntry.COLUMN_EXIT_OBS +
                 " FROM " + SupplierVisitsEntry.TABLE_NAME +
                 " WHERE " + SupplierVisitsEntry.COLUMN_GATEWAY_ID + " = ? AND " + SupplierVisitsEntry.COLUMN_SUPPLIER_ID + " = ? AND " + SupplierVisitsEntry.COLUMN_ENTRY + " = ?" +
                 " GROUP BY " + SupplierVisitsEntry.COLUMN_ENTRY + "," + SupplierVisitsEntry.COLUMN_SUPPLIER_ID + "," + SupplierVisitsEntry.COLUMN_GATEWAY_ID  + "," + SupplierVisitsEntry.COLUMN_LICENSE_PLATE;
@@ -231,6 +269,17 @@ public class DetailSearchSuppliersListFragment extends Fragment {
                 {
                     licensePlate = c1.getString(1);
                 }
+
+                if (c1.getString(2) == null || c1.getString(2).isEmpty())
+                {
+                    obsExitSupplier = NO_AVAILABLE;
+                }
+                else
+                {
+                    obsExitSupplier = c1.getString(2);
+                }
+
+
             }
         }
     }

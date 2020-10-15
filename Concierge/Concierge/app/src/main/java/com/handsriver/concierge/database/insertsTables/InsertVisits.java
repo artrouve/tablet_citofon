@@ -29,6 +29,7 @@ public class InsertVisits extends AsyncTask<Void,Void,Void> {
 
     private static final String TAG = "InsertVisits";
     private static final int IS_SYNC = 0;
+    private static final int IS_UPDATE = 0;
 
 
     public InsertVisits(String nullColumnHack, ArrayList<Visit> visitList, String entry, int apartmentId, int gatewayId, int porterId){
@@ -51,6 +52,7 @@ public class InsertVisits extends AsyncTask<Void,Void,Void> {
                 values.put(VisitEntry.COLUMN_FULL_NAME,visit.getFullName());
                 values.put(VisitEntry.COLUMN_DOCUMENT_NUMBER,visit.getDocumentNumber());
                 values.put(VisitEntry.COLUMN_BIRTHDATE,visit.getBirthdate());
+                values.put(VisitEntry.COLUMN_OPTIONAL,visit.getOptional());
                 values.put(VisitEntry.COLUMN_GENDER,visit.getGender());
                 values.put(VisitEntry.COLUMN_NATIONALITY,visit.getNationality());
                 values.put(VisitEntry.COLUMN_ENTRY,entry);
@@ -58,6 +60,7 @@ public class InsertVisits extends AsyncTask<Void,Void,Void> {
                 values.put(VisitEntry.COLUMN_GATEWAY_ID,gatewayId);
                 values.put(VisitEntry.COLUMN_APARTMENT_ID, apartmentId);
                 values.put(VisitEntry.COLUMN_IS_SYNC,IS_SYNC);
+                values.put(VisitEntry.COLUMN_IS_UPDATE,IS_UPDATE);
 
                 db.insert(tableName,nullColumnHack,values);
             }

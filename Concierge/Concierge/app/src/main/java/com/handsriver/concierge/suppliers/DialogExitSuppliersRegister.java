@@ -27,7 +27,7 @@ import java.util.Locale;
 
 public class DialogExitSuppliersRegister extends DialogFragment {
     ArrayList<String> arrayIdsvisits;
-
+    String obsExitSupplier;
     public static final String PREFS_NAME = "PorterPrefs";
     public static final int DEF_VALUE = 0;
 
@@ -45,7 +45,7 @@ public class DialogExitSuppliersRegister extends DialogFragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
         arrayIdsvisits = getArguments().getStringArrayList("visitsIdsList");
-
+        obsExitSupplier = getArguments().getString("obsExitSupplier");
         builder.setTitle(R.string.confirmInfo);
         builder.setMessage(R.string.markExitSuppleirQuestion)
                 .setPositiveButton(R.string.confirm, new DialogInterface.OnClickListener() {
@@ -58,7 +58,7 @@ public class DialogExitSuppliersRegister extends DialogFragment {
                         SharedPreferences porterPrefs = getActivity().getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
                         porterIdServer = porterPrefs.getInt(getString(R.string.porterIdServerVar),DEF_VALUE);
 
-                        UpdateExitSuppliersVisit updateSupplierVisits = new UpdateExitSuppliersVisit(exit,porterIdServer,arrayIdsvisits,getContext());
+                        UpdateExitSuppliersVisit updateSupplierVisits = new UpdateExitSuppliersVisit(exit,obsExitSupplier,porterIdServer,arrayIdsvisits,getContext());
                         updateSupplierVisits.execute();
 
                         getTargetFragment().onActivityResult(getTargetRequestCode(),Activity.RESULT_OK,getActivity().getIntent());

@@ -65,6 +65,8 @@ public class SearchVisitsListFragment extends Fragment{
                 VisitEntry.COLUMN_GENDER + "," +
                 VisitEntry.COLUMN_BIRTHDATE + "," +
                 VisitEntry.COLUMN_ENTRY + "," +
+                VisitEntry.COLUMN_EXIT_DATE + "," +
+                VisitEntry.COLUMN_OPTIONAL + "," +
                 ApartmentEntry.TABLE_NAME + "." + ApartmentEntry.COLUMN_APARTMENT_NUMBER +
                 " FROM " + VisitEntry.TABLE_NAME + "," + ApartmentEntry.TABLE_NAME +
                 " WHERE " + ApartmentEntry.TABLE_NAME + "." + ApartmentEntry.COLUMN_APARTMENT_ID_SERVER + " = " + VisitEntry.TABLE_NAME + "." + VisitEntry.COLUMN_APARTMENT_ID +
@@ -82,12 +84,15 @@ public class SearchVisitsListFragment extends Fragment{
 
             while (c.moveToNext()){
                 Visit visit = new Visit();
+                visit.setId(c.getString(c.getColumnIndex(VisitEntry._ID)));
                 visit.setFullName(c.getString(c.getColumnIndex(VisitEntry.COLUMN_FULL_NAME)));
                 visit.setDocumentNumber(c.getString(c.getColumnIndex(VisitEntry.COLUMN_DOCUMENT_NUMBER)));
                 visit.setNationality(c.getString(c.getColumnIndex(VisitEntry.COLUMN_NATIONALITY)));
                 visit.setGender(c.getString(c.getColumnIndex(VisitEntry.COLUMN_GENDER)));
                 visit.setBirthdate(c.getString(c.getColumnIndex(VisitEntry.COLUMN_BIRTHDATE)));
+                visit.setOptional(c.getString(c.getColumnIndex(VisitEntry.COLUMN_OPTIONAL)));
                 visit.setEntry(c.getString(c.getColumnIndex(VisitEntry.COLUMN_ENTRY)));
+                visit.setExitDate(c.getString(c.getColumnIndex(VisitEntry.COLUMN_EXIT_DATE)));
                 visit.setApartmentNumber(c.getString(c.getColumnIndex(ApartmentEntry.COLUMN_APARTMENT_NUMBER)));
                 mVisits.add(visit);
 

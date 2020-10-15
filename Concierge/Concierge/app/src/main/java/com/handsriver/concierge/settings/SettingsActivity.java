@@ -161,6 +161,8 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_id_gateway_key)));
             bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_id_building_key)));
             bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_id_URL_key)));
+            bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_id_URL_ANPR_key)));
+
         }
 
         @Override
@@ -305,6 +307,10 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             super.onCreate(savedInstanceState);
             addPreferencesFromResource(R.xml.pref_general_visits);
             setHasOptionsMenu(true);
+            bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_OPTIONAL_FILED_VISITS_key)));
+
+
+
         }
 
         @Override

@@ -60,5 +60,55 @@
                 android:textStyle="bold"
                 android:layout_height="wrap_content"/>
         </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="Rut/Pasaporte"/>
+
+            <TextView
+                android:id="@+id/textViewRutDialog"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="20dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="Fono 1"/>
+
+            <TextView
+                android:id="@+id/textViewMobileDialog"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="20dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="Fono 2"/>
+
+            <TextView
+                android:id="@+id/textViewPhoneDialog"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="20dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+
+
     </TableLayout>
 </LinearLayout>

@@ -73,6 +73,8 @@ public class VisitAdapterSearchList extends BaseAdapter implements Filterable {
         TextView textViewEntryList = (TextView) view.findViewById(R.id.textViewEntryList);
         TextView textViewfullNameList = (TextView) view.findViewById(R.id.textViewfullNameList);
         TextView textViewApartmentList = (TextView) view.findViewById(R.id.textViewApartmentList);
+
+
         textViewEntryList.setText(Utility.changeDateFormat(visit.getEntry(),"ENTRY"));
         if (visit.getFullName() == null){
             textViewfullNameList.setText(NO_AVAILABLE);

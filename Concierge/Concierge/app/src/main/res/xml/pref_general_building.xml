@@ -27,4 +27,11 @@
             android:inputType="text"
             android:singleLine="true" />
 
+        <EditTextPreference
+            android:title="@string/pref_id_URL_ANPR_label"
+            android:key="@string/pref_id_URL_ANPR_key"
+            android:inputType="text"
+            android:singleLine="true" />
+
+
 </PreferenceScreen>

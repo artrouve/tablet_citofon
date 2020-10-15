@@ -21,6 +21,12 @@ public class InsertResidents extends AsyncTask<Void,Void,Void> {
     private String nullColumnHack;
     private String email;
     private String fullName;
+
+    private String mobile;
+    private String phone;
+    private String rut;
+
+
     private int apartmentId;
     private Context mContext;
 
@@ -32,9 +38,13 @@ public class InsertResidents extends AsyncTask<Void,Void,Void> {
 
 
 
-    public InsertResidents(String nullColumnHack, String email, String fullName, int apartmentId, Context mContext){
+    public InsertResidents(String nullColumnHack, String email, String fullName, String mobile, String phone,String rut, int apartmentId, Context mContext){
         this.nullColumnHack = nullColumnHack;
         this.email = email;
+        this.mobile = mobile;
+        this.phone = phone;
+        this.rut = rut;
+
         this.apartmentId = apartmentId;
         this.fullName = fullName;
         this.mContext = mContext;
@@ -49,6 +59,12 @@ public class InsertResidents extends AsyncTask<Void,Void,Void> {
             values.put(ResidentEntry.COLUMN_APARTMENT_ID,apartmentId);
             values.put(ResidentEntry.COLUMN_FULL_NAME,fullName);
             values.put(ResidentEntry.COLUMN_EMAIL,email);
+
+            values.put(ResidentEntry.COLUMN_MOBILE,mobile);
+            values.put(ResidentEntry.COLUMN_PHONE,phone);
+            values.put(ResidentEntry.COLUMN_RUT,rut);
+
+
             values.put(ResidentEntry.COLUMN_IS_SYNC,IS_SYNC);
             values.put(ResidentEntry.COLUMN_IS_UPDATE,IS_UPDATE);
             values.put(ResidentEntry.COLUMN_REQUEST_CODE,REQUEST_CODE);

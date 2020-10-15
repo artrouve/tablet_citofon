@@ -41,9 +41,18 @@ public class DialogResidentsEdit extends DialogFragment{
     TextView textViewApartment;
     TextView textViewFullName;
     EditText textViewEmail;
+    EditText textViewRut;
+    EditText textViewMobile;
+    EditText textViewPhone;
+
+
     String apartment;
     String fullName;
     String email;
+    String rut;
+    String mobile;
+    String phone;
+
     long id;
 
     public static final String PREFS_NAME = "PorterPrefs";
@@ -75,14 +84,27 @@ public class DialogResidentsEdit extends DialogFragment{
         textViewFullName = (TextView) content.findViewById(R.id.textViewFullNameDialog);
         textViewEmail = (EditText) content.findViewById(R.id.textViewEmailDialog);
 
+        textViewMobile = (EditText) content.findViewById(R.id.textViewMobileDialog);
+        textViewPhone = (EditText) content.findViewById(R.id.textViewPhoneDialog);
+        textViewRut = (EditText) content.findViewById(R.id.textViewRutDialog);
+
+
+
         apartment = getArguments().getString("apartment");
         fullName = getArguments().getString("fullName");
         email = getArguments().getString("email");
+        rut = getArguments().getString("rut");
+        mobile = getArguments().getString("mobile");
+        phone = getArguments().getString("phone");
+
         id = getArguments().getLong("id");
 
         textViewApartment.setText(apartment);
         textViewFullName.setText(fullName);
         textViewEmail.setText(email);
+        textViewRut.setText(rut);
+        textViewMobile.setText(mobile);
+        textViewPhone.setText(phone);
 
         builder.setPositiveButton(R.string.edit, null);
 
@@ -98,7 +120,11 @@ public class DialogResidentsEdit extends DialogFragment{
 
                     String email = textViewEmail.getText().toString();
 
-                    UpdateResidents residents = new UpdateResidents(email,id,getContext());
+                    String mobile = textViewMobile.getText().toString();
+                    String rut = textViewRut.getText().toString();
+                    String phone = textViewPhone.getText().toString();
+
+                    UpdateResidents residents = new UpdateResidents(email,mobile,phone,rut,id,getContext());
                     residents.execute();
 
                     alertDialog.dismiss();

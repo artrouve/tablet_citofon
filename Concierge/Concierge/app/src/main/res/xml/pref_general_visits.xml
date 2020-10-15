@@ -7,4 +7,15 @@
             android:key="@string/pref_send_email_visits_key"
             android:disableDependentsState="true"/>
 
+
+
+        <EditTextPreference
+            android:title="@string/pref_OPTIONAL_FILED_VISITS_label"
+            android:key="@string/pref_OPTIONAL_FILED_VISITS_key"
+            android:defaultValue=""
+            android:inputType="text"
+            android:singleLine="true"
+            android:maxLength="15"/>
+
+
 </PreferenceScreen>

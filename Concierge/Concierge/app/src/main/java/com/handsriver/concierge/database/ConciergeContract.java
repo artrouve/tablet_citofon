@@ -91,6 +91,9 @@ public class ConciergeContract {
         public static final String COLUMN_SUPPLIER_ID = "supplier_id";
         public static final String COLUMN_ENTRY_PORTER_ID = "entry_porter_id";
         public static final String COLUMN_EXIT_PORTER_ID = "exit_porter_id";
+
+        public static final String COLUMN_EXIT_OBS = "exit_obs";
+
         public static final String COLUMN_SUPPLIER_VISIT_ID_SERVER = "supplier_visit_id_server";
         public static final String COLUMN_IS_SYNC = "is_sync";
         public static final String COLUMN_IS_UPDATE = "is_update";
@@ -134,18 +137,24 @@ public class ConciergeContract {
          /*
         * COLUMNS TABLE VISITS
         * */
+
         public static final String COLUMN_DOCUMENT_NUMBER = "document_number";
         public static final String COLUMN_FULL_NAME = "full_name";
         public static final String COLUMN_NATIONALITY = "nationality";
         public static final String COLUMN_GENDER = "gender";
         public static final String COLUMN_BIRTHDATE = "birthdate";
+        public static final String COLUMN_OPTIONAL = "optional";
         public static final String COLUMN_OCR = "ocr";
         public static final String COLUMN_ENTRY = "entry";
+        public static final String COLUMN_EXIT_DATE = "exit_date";
+        public static final String COLUMN_EXIT_PORTER_ID = "exit_porter_id";
+
         public static final String COLUMN_GATEWAY_ID = "gateway_id";
         public static final String COLUMN_APARTMENT_ID = "apartment_id";
         public static final String COLUMN_PORTER_ID = "porter_id";
         public static final String COLUMN_VISIT_ID_SERVER = "visit_id_server";
         public static final String COLUMN_IS_SYNC = "is_sync";
+        public static final String COLUMN_IS_UPDATE = "is_update";
 
     }
 
@@ -203,6 +212,11 @@ public class ConciergeContract {
         * */
         public static final String COLUMN_FULL_NAME = "full_name";
         public static final String COLUMN_EMAIL = "email";
+
+        public static final String COLUMN_PHONE = "phone";
+        public static final String COLUMN_MOBILE = "mobile";
+        public static final String COLUMN_RUT = "rut";
+
         public static final String COLUMN_APARTMENT_ID = "apartment_id";
         public static final String COLUMN_TOKEN = "token";
         public static final String COLUMN_PUSH_NOTIFICATIONS = "push_notifications";

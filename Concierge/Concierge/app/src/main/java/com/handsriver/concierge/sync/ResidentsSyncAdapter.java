@@ -182,6 +182,10 @@ public class ResidentsSyncAdapter extends AbstractThreadedSyncAdapter {
         final String APARTMENT_ID = "apartment_id";
         final String EMAIL = "email";
 
+        final String MOBILE = "mobile";
+        final String PHONE = "phone";
+        final String RUT = "rut";
+
 
         try {
             JSONArray residentsArray = new JSONArray(residentJsonStr);
@@ -194,6 +198,9 @@ public class ResidentsSyncAdapter extends AbstractThreadedSyncAdapter {
                 long id_resident;
                 String full_name;
                 String email;
+                String mobile;
+                String phone;
+                String rut;
                 String token;
                 int push_notifications;
 
@@ -203,12 +210,21 @@ public class ResidentsSyncAdapter extends AbstractThreadedSyncAdapter {
                 id_resident = residentJson.getLong(ID_RESIDENT);
                 full_name = residentJson.getString(FULL_NAME);
                 email = (residentJson.isNull(EMAIL)) ? null : residentJson.getString(EMAIL);
+                mobile = (residentJson.isNull(MOBILE)) ? "" : residentJson.getString(MOBILE);
+                phone = (residentJson.isNull(PHONE)) ? "" : residentJson.getString(PHONE);
+                rut = (residentJson.isNull(RUT)) ? "" : residentJson.getString(RUT);
+
                 token = (residentJson.isNull(ResidentEntry.COLUMN_TOKEN)) ? null : residentJson.getString(ResidentEntry.COLUMN_TOKEN);
 
                 ContentValues residentValues = new ContentValues();
 
                 residentValues.put(ResidentEntry.COLUMN_FULL_NAME, full_name);
                 residentValues.put(ResidentEntry.COLUMN_EMAIL, email);
+
+                residentValues.put(ResidentEntry.COLUMN_MOBILE, mobile);
+                residentValues.put(ResidentEntry.COLUMN_PHONE, phone);
+                residentValues.put(ResidentEntry.COLUMN_RUT, rut);
+
                 residentValues.put(ResidentEntry.COLUMN_APARTMENT_ID, apartment_id);
                 residentValues.put(ResidentEntry.COLUMN_RESIDENT_ID_SERVER, id_resident);
                 residentValues.put(ResidentEntry.COLUMN_TOKEN,token);

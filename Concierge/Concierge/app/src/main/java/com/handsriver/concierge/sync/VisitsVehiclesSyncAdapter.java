@@ -107,6 +107,7 @@ public class VisitsVehiclesSyncAdapter extends AbstractThreadedSyncAdapter {
                         VisitEntry.COLUMN_FULL_NAME,
                         VisitEntry.COLUMN_GENDER,
                         VisitEntry.COLUMN_BIRTHDATE,
+                        VisitEntry.COLUMN_OPTIONAL,
                         VisitEntry.COLUMN_NATIONALITY,
                 };
 
@@ -130,10 +131,43 @@ public class VisitsVehiclesSyncAdapter extends AbstractThreadedSyncAdapter {
                         visitsJson.put(VisitEntry.COLUMN_FULL_NAME,(visits.isNull(visits.getColumnIndex(VisitEntry.COLUMN_FULL_NAME))) ? JSONObject.NULL : visits.getString(visits.getColumnIndex(VisitEntry.COLUMN_FULL_NAME)));
                         visitsJson.put(VisitEntry.COLUMN_GENDER,(visits.isNull(visits.getColumnIndex(VisitEntry.COLUMN_GENDER))) ? JSONObject.NULL : visits.getString(visits.getColumnIndex(VisitEntry.COLUMN_GENDER)));
                         visitsJson.put(VisitEntry.COLUMN_BIRTHDATE,(visits.isNull(visits.getColumnIndex(VisitEntry.COLUMN_BIRTHDATE))) ? JSONObject.NULL : visits.getString(visits.getColumnIndex(VisitEntry.COLUMN_BIRTHDATE)));
+                        visitsJson.put(VisitEntry.COLUMN_OPTIONAL,(visits.isNull(visits.getColumnIndex(VisitEntry.COLUMN_OPTIONAL))) ? JSONObject.NULL : visits.getString(visits.getColumnIndex(VisitEntry.COLUMN_OPTIONAL)));
                         visitsJson.put(VisitEntry.COLUMN_NATIONALITY,(visits.isNull(visits.getColumnIndex(VisitEntry.COLUMN_NATIONALITY))) ? JSONObject.NULL : visits.getString(visits.getColumnIndex(VisitEntry.COLUMN_NATIONALITY)));
                         visitsArrayJson.put(visitsJson);
                     }
                     visits.close();
+                }
+
+
+
+                String[] projection_vi_u = {
+                        VisitEntry._ID,
+                        VisitEntry.COLUMN_VISIT_ID_SERVER,
+                        VisitEntry.COLUMN_EXIT_PORTER_ID,
+                        VisitEntry.COLUMN_EXIT_DATE,
+
+                };
+
+                String selection_vi_u = VisitEntry.COLUMN_IS_SYNC + " = ? AND " + VisitEntry.COLUMN_GATEWAY_ID + " = ? AND " + VisitEntry.COLUMN_IS_UPDATE + " = ? AND " + VisitEntry.COLUMN_EXIT_DATE + " IS NOT NULL";
+                String [] selectionArgs_vi_u = {IS_SYNC,String.valueOf(gatewayId),NOT_UPDATE};
+
+                Cursor visit_update = null;
+
+                visit_update = db.query(VisitEntry.TABLE_NAME,projection_vi_u,selection_vi_u,selectionArgs_vi_u,null,null,null,null);
+
+
+                if (visit_update != null && visit_update.getCount()>0){
+                    while (visit_update.moveToNext()){
+                        JSONObject visitJson = new JSONObject();
+                        visitJson.put(ID_VISIT,visit_update.getLong(visit_update.getColumnIndex(VisitEntry._ID)));
+                        visitJson.put(IS_UPDATE,true);
+                        visitJson.put(VisitEntry.COLUMN_EXIT_DATE,(visit_update.isNull(visit_update.getColumnIndex(VisitEntry.COLUMN_EXIT_DATE))) ? JSONObject.NULL : visit_update.getString(visit_update.getColumnIndex(VisitEntry.COLUMN_EXIT_DATE)));
+                        visitJson.put(VisitEntry.COLUMN_EXIT_PORTER_ID,(visit_update.isNull(visit_update.getColumnIndex(VisitEntry.COLUMN_EXIT_PORTER_ID))) ? JSONObject.NULL : visit_update.getLong(visit_update.getColumnIndex(VisitEntry.COLUMN_EXIT_PORTER_ID)));
+                        visitJson.put(VisitEntry.COLUMN_VISIT_ID_SERVER,visit_update.getLong(visit_update.getColumnIndex(VisitEntry.COLUMN_VISIT_ID_SERVER)));
+
+                        visitsArrayJson.put(visitJson);
+                    }
+                    visit_update.close();
                 }
 
 
@@ -245,7 +279,7 @@ public class VisitsVehiclesSyncAdapter extends AbstractThreadedSyncAdapter {
                         urlConnectionHttps.setRequestProperty("api-key",API_KEY);
                         urlConnectionHttps.setDoOutput(true);
                         urlConnectionHttps.setDoInput(true);
-                        urlConnectionHttps.setConnectTimeout(5000);
+                        urlConnectionHttps.setConnectTimeout(15000);
                         urlConnectionHttps.connect();
 
                         OutputStream dataOutputStream = new BufferedOutputStream(urlConnectionHttps.getOutputStream());
@@ -342,8 +376,10 @@ public class VisitsVehiclesSyncAdapter extends AbstractThreadedSyncAdapter {
 
 
         final String VISITS_RETURN = "visits_return";
+        final String VISITS_UPDATE_RETURN = "visit_update_return";
         final String VEHICLE_RETURN = "vehicle_return";
         final String VEHICLE_UPDATE_RETURN = "vehicle_update_return";
+
         final String ID_VISIT = "id_visit";
         final String INSERT_DATA = "insert_data";
         final String ID_VEHICLE = "id_vehicle";
@@ -353,8 +389,11 @@ public class VisitsVehiclesSyncAdapter extends AbstractThreadedSyncAdapter {
         try {
             JSONObject returnJson = new JSONObject(visitsVehiclesJsonStr);
             JSONArray visitsReturn = (returnJson.isNull(VISITS_RETURN)) ? null : returnJson.getJSONArray(VISITS_RETURN);
+            JSONArray visitsUpdateReturn = (returnJson.isNull(VISITS_UPDATE_RETURN)) ? null : returnJson.getJSONArray(VISITS_UPDATE_RETURN);
             JSONArray vehicleReturn = (returnJson.isNull(VEHICLE_RETURN)) ? null : returnJson.getJSONArray(VEHICLE_RETURN);
             JSONArray vehiclesUpdateReturn = (returnJson.isNull(VEHICLE_UPDATE_RETURN)) ? null : returnJson.getJSONArray(VEHICLE_UPDATE_RETURN);
+
+
 
             Vector<ContentValues> vectorVisitsReturn;
             if (visitsReturn != null){
@@ -452,7 +491,38 @@ public class VisitsVehiclesSyncAdapter extends AbstractThreadedSyncAdapter {
                 vectorVehiclesUpdateReturn = null;
             }
 
-            UpdateSyncVisitsVehicles.run(vectorVisitsReturn,vectorVehiclesReturn,vectorVehiclesUpdateReturn,isMarkExit,hours);
+
+            Vector<ContentValues> vectorVisitsUpdateReturn;
+            if (visitsUpdateReturn != null){
+                vectorVisitsUpdateReturn = new Vector<ContentValues>(visitsUpdateReturn.length());
+
+                for(int i = 0; i < visitsUpdateReturn.length(); i++) {
+
+                    long id_visit;
+                    boolean update_data;
+
+                    JSONObject returnVisitUpdateJson = visitsUpdateReturn.getJSONObject(i);
+
+                    id_visit = returnVisitUpdateJson.getLong(ID_VISIT);
+                    update_data = returnVisitUpdateJson.getBoolean(UPDATE_DATA);
+
+                    ContentValues visitsUpdateValues = new ContentValues();
+                    if (update_data){
+                        visitsUpdateValues.put(VisitEntry.COLUMN_IS_UPDATE, IS_UPDATE);
+                    }
+                    else{
+                        visitsUpdateValues.put(VisitEntry.COLUMN_IS_UPDATE, NOT_UPDATE);
+                    }
+                    visitsUpdateValues.put(VisitEntry._ID, id_visit);
+
+                    vectorVisitsUpdateReturn.add(visitsUpdateValues);
+                }
+            }
+            else{
+                vectorVisitsUpdateReturn = null;
+            }
+
+            UpdateSyncVisitsVehicles.run(vectorVisitsReturn,vectorVehiclesReturn,vectorVehiclesUpdateReturn,vectorVisitsUpdateReturn,isMarkExit,hours);
 
         } catch (JSONException e) {
             Log.e(LOG_TAG, e.getMessage(), e);

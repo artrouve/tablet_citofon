@@ -9,6 +9,7 @@ public class SupplierVisit {
     private String nameSupplier;
     private String gatewayId;
     private String supplierId;
+    private String exitObsSupplier;
     private String exitSupplier;
 
     public String getEntrySupplier() {
@@ -34,6 +35,15 @@ public class SupplierVisit {
     public void setGatewayId(String gatewayId) {
         this.gatewayId = gatewayId;
     }
+
+    public String getExitObsSupplier() {
+        return exitObsSupplier;
+    }
+
+    public void setExitObsSupplier(String exitObsSupplier) {
+        this.exitObsSupplier = exitObsSupplier;
+    }
+
 
     public String getSupplierId() {
         return supplierId;

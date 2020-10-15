@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/alain/Escritorio/separacion CONCIERGE/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
+            "outputFile": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
             "map": [
                 {
-                    "source": "/root/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/813b9d473d8595432f3c9c4234e57f95/res/values-v21/values-v21.xml",
+                    "source": "/home/alain/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/7076e12f553b0464eb4bebcc254eabfb/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,5,8,11",
                         "startColumns": "4,4,4,4",
@@ -23,26 +23,7 @@
                     }
                 },
                 {
-                    "source": "/root/.gradle/caches/transforms-1/files-1.1/design-25.0.1.aar/e19e0e897321fbf67613f71291502eaa/res/values-v21/values-v21.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "4",
-                        "endColumns": "12",
-                        "endOffsets": "244"
-                    },
-                    "to": {
-                        "startLines": "311",
-                        "startColumns": "4",
-                        "startOffsets": "22639",
-                        "endLines": "313",
-                        "endColumns": "12",
-                        "endOffsets": "22828"
-                    }
-                },
-                {
-                    "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.0.1.aar/7293e3046def308dc4617d99cb1b94f4/res/values-v21/values-v21.xml",
+                    "source": "/home/alain/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.0.1.aar/204b62cdf66e03dfeb9b99904016c671/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,23,24,25,26,28,30,31,32,33,34,36,38,40,42,44,46,47,52,54,56,57,58,60,62,63,64,65,66,67,111,114,158,161,164,166,168,170,173,175,178,179,180,183,184,185,186,187,188,191,192,194,196,198,200,204,206,207,208,209,211,215,217,219,220,221,222,223,225,226,227,237,238,239,251,263,264,265,268,271,272,275,276,279,282",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -61,7 +42,7 @@
                     }
                 },
                 {
-                    "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/bab1a0f999138eb6809c34fdea5b9ef6/res/values-v21/values-v21.xml",
+                    "source": "/home/alain/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/9ce3a25132a763a61895dde734b6056d/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "6,7,8,9,10,13",
                         "startColumns": "4,4,4,4,4,4",
@@ -77,6 +58,25 @@
                         "endLines": "279,280,287,291,305,310",
                         "endColumns": "115,125,125,127,12,12",
                         "endOffsets": "20562,20688,21145,21441,22296,22634"
+                    }
+                },
+                {
+                    "source": "/home/alain/.gradle/caches/transforms-1/files-1.1/design-25.0.1.aar/9facd99c24daa16dd5d064ba10a61bf7/res/values-v21/values-v21.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "244"
+                    },
+                    "to": {
+                        "startLines": "311",
+                        "startColumns": "4",
+                        "startOffsets": "22639",
+                        "endLines": "313",
+                        "endColumns": "12",
+                        "endOffsets": "22828"
                     }
                 }
             ]

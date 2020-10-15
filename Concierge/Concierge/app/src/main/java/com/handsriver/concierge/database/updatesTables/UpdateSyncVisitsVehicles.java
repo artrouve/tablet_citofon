@@ -25,7 +25,7 @@ public class UpdateSyncVisitsVehicles {
     private static final String IS_UPDATE = "1";
     private static final String NOT_UPDATE = "0";
 
-    public static void run(Vector<ContentValues> vectorVisitsReturn, Vector<ContentValues> vectorVehiclesReturn, Vector<ContentValues> vectorVehiclesUpdateReturn, Boolean isMarkExit, int hours) {
+    public static void run(Vector<ContentValues> vectorVisitsReturn, Vector<ContentValues> vectorVehiclesReturn, Vector<ContentValues> vectorVehiclesUpdateReturn,Vector<ContentValues> vectorVisitsUpdateReturn, Boolean isMarkExit, int hours) {
         SQLiteDatabase db;
         String tableNameVisit = VisitEntry.TABLE_NAME;
         String tableNameVehicle = VehicleEntry.TABLE_NAME;
@@ -40,6 +40,20 @@ public class UpdateSyncVisitsVehicles {
                     }
                 }
             }
+
+            if (vectorVisitsUpdateReturn != null) {
+                for (ContentValues visits_update:vectorVisitsUpdateReturn){
+                    if (visits_update.getAsString(VisitEntry.COLUMN_IS_UPDATE).equals(IS_UPDATE)){
+
+                        String whereClause = VisitEntry._ID + " = ? AND " + VisitEntry.COLUMN_EXIT_DATE + " IS NULL AND " + VisitEntry.COLUMN_IS_UPDATE + " = ? ";
+                        String [] whereArgs = {visits_update.getAsString(VisitEntry._ID),NOT_UPDATE};
+                        visits_update.put(VisitEntry.COLUMN_IS_UPDATE,IS_UPDATE);
+                        db.update(tableNameVisit,visits_update,whereClause,whereArgs);
+
+                    }
+                }
+            }
+
 
             if (vectorVehiclesReturn != null){
                 for (ContentValues vehicles:vectorVehiclesReturn){

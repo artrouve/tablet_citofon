@@ -21,15 +21,17 @@ import java.util.ArrayList;
 public class UpdateExitSuppliersVisit extends AsyncTask<Void,Void,Integer> {
     private SQLiteDatabase db;
     private String exit;
+    private String obsExitSupplier;
     private int porterId;
     private ArrayList<String> arrayIdsVisit;
     private Context mContext;
 
     private static final String TAG = "UpdateExitSupplierVisit";
 
-    public UpdateExitSuppliersVisit(String exit, int porterId, ArrayList<String> arrayIdsVisit, Context mContext){
+    public UpdateExitSuppliersVisit(String exit,String obsExitSupplier ,int porterId, ArrayList<String> arrayIdsVisit, Context mContext){
         this.exit = exit;
         this.porterId = porterId;
+        this.obsExitSupplier = obsExitSupplier;
         this.arrayIdsVisit = arrayIdsVisit;
         this.mContext = mContext;
     }
@@ -43,6 +45,7 @@ public class UpdateExitSuppliersVisit extends AsyncTask<Void,Void,Integer> {
             ContentValues values = new ContentValues();
             for (String ids:arrayIdsVisit){
                 values.put(SupplierVisitsEntry.COLUMN_EXIT_SUPPLIER,exit);
+                values.put(SupplierVisitsEntry.COLUMN_EXIT_OBS,obsExitSupplier);
                 values.put(SupplierVisitsEntry.COLUMN_EXIT_PORTER_ID, porterId);
 
                 String whereClause = SupplierVisitsEntry._ID + " = ?";

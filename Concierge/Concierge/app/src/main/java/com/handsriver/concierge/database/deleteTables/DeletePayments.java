@@ -25,7 +25,7 @@ public class DeletePayments{
         db = DatabaseManager.getInstance().openDatabase();
         try {
 
-            String whereClause = PaymentEntry.COLUMN_IS_SYNC + " = ? AND " + PaymentEntry.COLUMN_DATE_REGISTER + " < '" + Utility.getDateSimpleForServer7Days()+"'";
+            String whereClause = PaymentEntry.COLUMN_IS_SYNC + " = ? AND " + PaymentEntry.COLUMN_DATE_REGISTER + " < '" + Utility.getDateSimpleForServer365Days()+"'";
 
             Log.e(TAG, "whereClause:" + whereClause);
 

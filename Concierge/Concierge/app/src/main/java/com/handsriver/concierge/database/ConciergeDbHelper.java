@@ -7,6 +7,7 @@ import android.view.MotionEvent;
 
 import com.handsriver.concierge.database.ConciergeContract.*;
 import com.handsriver.concierge.database.InsertUpdateTables.IUPortersPasswordDataType;
+import com.handsriver.concierge.suppliers.SupplierVisit;
 
 
 /**
@@ -15,7 +16,7 @@ import com.handsriver.concierge.database.InsertUpdateTables.IUPortersPasswordDat
 
 public class ConciergeDbHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 3;
 
     static final String DATABASE_NAME = "concierge.db";
 
@@ -154,13 +155,17 @@ public class ConciergeDbHelper extends SQLiteOpenHelper {
                 VisitEntry.COLUMN_NATIONALITY + " TEXT, " +
                 VisitEntry.COLUMN_GENDER + " TEXT, " +
                 VisitEntry.COLUMN_BIRTHDATE + " DATETIME, " +
+                VisitEntry.COLUMN_OPTIONAL + " TEXT, " +
                 VisitEntry.COLUMN_OCR + " TEXT, " +
                 VisitEntry.COLUMN_ENTRY + " DATETIME NOT NULL, " +
+                VisitEntry.COLUMN_EXIT_DATE + " DATETIME, " +
                 VisitEntry.COLUMN_GATEWAY_ID + " INTEGER NOT NULL, " +
                 VisitEntry.COLUMN_APARTMENT_ID + " INTEGER NOT NULL, " +
                 VisitEntry.COLUMN_PORTER_ID + " INTEGER NOT NULL, " +
+                VisitEntry.COLUMN_EXIT_PORTER_ID + " INTEGER , " +
                 VisitEntry.COLUMN_VISIT_ID_SERVER + " INTEGER UNIQUE, " +
                 VisitEntry.COLUMN_IS_SYNC + " INTEGER NOT NULL, " +
+                VisitEntry.COLUMN_IS_UPDATE + " INTEGER NOT NULL DEFAULT 0, " +
                 "FOREIGN KEY (" + VisitEntry.COLUMN_APARTMENT_ID + ") REFERENCES " +
                 ApartmentEntry.TABLE_NAME + " (" + ApartmentEntry.COLUMN_APARTMENT_ID_SERVER + "), " +
                 "FOREIGN KEY (" + VisitEntry.COLUMN_PORTER_ID + ") REFERENCES " +
@@ -194,6 +199,7 @@ public class ConciergeDbHelper extends SQLiteOpenHelper {
                 SupplierVisitsEntry.COLUMN_LICENSE_PLATE + " TEXT, " +
                 SupplierVisitsEntry.COLUMN_ENTRY + " DATETIME NOT NULL, " +
                 SupplierVisitsEntry.COLUMN_EXIT_SUPPLIER + " DATETIME, " +
+                SupplierVisitsEntry.COLUMN_EXIT_OBS + " TEXT, " +
                 SupplierVisitsEntry.COLUMN_GATEWAY_ID + " INTEGER NOT NULL, " +
                 SupplierVisitsEntry.COLUMN_SUPPLIER_ID + " INTEGER NOT NULL, " +
                 SupplierVisitsEntry.COLUMN_ENTRY_PORTER_ID + " INTEGER NOT NULL, " +
@@ -269,6 +275,9 @@ public class ConciergeDbHelper extends SQLiteOpenHelper {
                 ResidentEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 ResidentEntry.COLUMN_FULL_NAME + " TEXT NOT NULL, " +
                 ResidentEntry.COLUMN_EMAIL + " TEXT, " +
+                ResidentEntry.COLUMN_PHONE + " TEXT, " +
+                ResidentEntry.COLUMN_MOBILE + " TEXT, " +
+                ResidentEntry.COLUMN_RUT + " TEXT, " +
                 ResidentEntry.COLUMN_RESIDENT_ID_SERVER + " INTEGER UNIQUE, " +
                 ResidentEntry.COLUMN_APARTMENT_ID + " INTEGER NOT NULL, " +
                 ResidentEntry.COLUMN_TOKEN + " TEXT, " +
@@ -506,6 +515,64 @@ public class ConciergeDbHelper extends SQLiteOpenHelper {
 
             final String SQL_ALTER_TABLE_VEHICLES_ADD_SEND_ALERT_FINE = "ALTER TABLE " + VehicleEntry.TABLE_NAME + " ADD " + VehicleEntry.COLUMN_IS_SEND_ALERT_FINE + " INTEGER;";
             db.execSQL(SQL_ALTER_TABLE_VEHICLES_ADD_SEND_ALERT_FINE);
+
+
+            /*************************************************************************/
+
+            /*
+             * Se añade los siguientes cambios:
+             *   - se agerga columna opcional a la tabla de visitas
+             * */
+
+            //ALTER TABLE visits ADD optional TEXT after birthdate;
+            //alter table visits add column `optional` varchar(255) CHARACTER SET utf8 DEFAULT NULL after birthdate;
+            final String SQL_ALTER_TABLE_VISITS_ADD_OPTIONAL = "ALTER TABLE " + VisitEntry.TABLE_NAME + " ADD " + VisitEntry.COLUMN_OPTIONAL + " TEXT;";
+            db.execSQL(SQL_ALTER_TABLE_VISITS_ADD_OPTIONAL);
+
+
+            //ALTER TABLE resident ADD phone TEXT after email;
+            //ALTER TABLE resident ADD mobile TEXT after phone;
+            //ALTER TABLE resident ADD rut TEXT after mobilel;
+            final String SQL_ALTER_TABLE_RESIDENT_ADD_PHONE = "ALTER TABLE " + ResidentEntry.TABLE_NAME + " ADD " + ResidentEntry.COLUMN_PHONE + " TEXT;";
+            db.execSQL(SQL_ALTER_TABLE_RESIDENT_ADD_PHONE);
+
+            final String SQL_ALTER_TABLE_RESIDENT_ADD_MOBILE = "ALTER TABLE " + ResidentEntry.TABLE_NAME + " ADD " + ResidentEntry.COLUMN_MOBILE + " TEXT;";
+            db.execSQL(SQL_ALTER_TABLE_RESIDENT_ADD_MOBILE);
+
+            final String SQL_ALTER_TABLE_RESIDENT_ADD_RUT = "ALTER TABLE " + ResidentEntry.TABLE_NAME + " ADD " + ResidentEntry.COLUMN_RUT + " TEXT;";
+            db.execSQL(SQL_ALTER_TABLE_RESIDENT_ADD_RUT);
+
+
+        }
+
+        if(oldVersion == 2){
+
+
+            /*************************************************************************/
+
+            /*
+             * Se añade los siguientes cambios:
+             *   - se agerga columna exit_date a la tabla de visitas
+             *   - se agerga columna exit_porter_id a la tabla de visitas
+             *   - se agerga columna is_update a la tabla de visitas
+
+             * */
+
+            final String SQL_ALTER_TABLE_VISITS_ADD_EXIT = "ALTER TABLE " + VisitEntry.TABLE_NAME + " ADD " + VisitEntry.COLUMN_EXIT_DATE +  " DATETIME;";
+            db.execSQL(SQL_ALTER_TABLE_VISITS_ADD_EXIT);
+
+            final String SQL_ALTER_TABLE_VISITS_ADD_EXIT_PORTER_ID = "ALTER TABLE " + VisitEntry.TABLE_NAME + " ADD " + VisitEntry.COLUMN_EXIT_PORTER_ID +  " INTEGER;";
+            db.execSQL(SQL_ALTER_TABLE_VISITS_ADD_EXIT_PORTER_ID);
+
+            final String SQL_ALTER_TABLE_VISITS_ADD_IS_UPDATE = "ALTER TABLE " + VisitEntry.TABLE_NAME + " ADD " + VisitEntry.COLUMN_IS_UPDATE +  " INTEGER NOT NULL DEFAULT 0;";
+            db.execSQL(SQL_ALTER_TABLE_VISITS_ADD_IS_UPDATE);
+
+            final String SQL_ALTER_TABLE_VISITS_SUPPLIERS_ADD_EXIT_OBS = "ALTER TABLE " + SupplierVisitsEntry.TABLE_NAME + " ADD " + SupplierVisitsEntry.COLUMN_EXIT_OBS +  " TEXT;";
+            db.execSQL(SQL_ALTER_TABLE_VISITS_SUPPLIERS_ADD_EXIT_OBS);
+
+
+
+
         }
 
     }

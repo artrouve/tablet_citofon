@@ -17,8 +17,12 @@ import android.view.inputmethod.InputMethodManager;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
@@ -155,9 +159,20 @@ public class Utility {
         Calendar calendar = Calendar.getInstance();
 
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
+        calendar.add(Calendar.DAY_OF_MONTH, -90);
+        return df.format(calendar.getTime());
+    }
+
+    public static String getDateSimpleForServer365Days(){
+        //365, solo para los pagos
+        Calendar calendar = Calendar.getInstance();
+
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
         calendar.add(Calendar.DAY_OF_MONTH, -365);
         return df.format(calendar.getTime());
     }
+
+
 
     public static String getDateSimpleForServer1Days(){
         Calendar calendar = Calendar.getInstance();
@@ -198,6 +213,45 @@ public class Utility {
         return hash;
 
     }
+
+    public static byte[] object2Bytes( Object o ){
+        try{
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            ObjectOutputStream oos = new ObjectOutputStream( baos );
+            oos.writeObject( o );
+            return baos.toByteArray();
+
+        }
+        catch (IOException e){
+
+            return null;
+        }
+
+
+    }
+
+    public static Object bytes2Object( byte raw[] )
+            throws IOException, ClassNotFoundException {
+
+        try{
+            ByteArrayInputStream bais = new ByteArrayInputStream( raw );
+            ObjectInputStream ois = new ObjectInputStream( bais );
+            Object o = ois.readObject();
+            return o;
+
+        }
+        catch (IOException e){
+
+            return null;
+        }
+
+
+
+    }
+
+
+
+
 /*
     public static String encrypt(String plaintext) {
 

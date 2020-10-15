@@ -43,10 +43,19 @@ public class DialogResidentsRegister extends DialogFragment{
     TextView textViewApartment;
     TextView textViewFullName;
     TextView textViewEmail;
+
+    TextView textViewPhone;
+    TextView textViewMobile;
+    TextView textViewRut;
+
+
     TableRow rowEmail;
     String apartment;
     String fullName;
     String email;
+    String mobile;
+    String phone;
+    String rut;
 
     public static final String PREFS_NAME = "PorterPrefs";
     public static final int DEF_VALUE = 0;
@@ -76,14 +85,29 @@ public class DialogResidentsRegister extends DialogFragment{
         textViewApartment = (TextView) content.findViewById(R.id.textViewApartmentDialog);
         textViewFullName = (TextView) content.findViewById(R.id.textViewFullNameDialog);
         textViewEmail = (TextView) content.findViewById(R.id.textViewEmailDialog);
+
+        textViewPhone = (TextView) content.findViewById(R.id.textViewPhoneDialog);
+        textViewMobile = (TextView) content.findViewById(R.id.textViewMobileDialog);
+        textViewRut = (TextView) content.findViewById(R.id.textViewRutDialog);
+
+
         rowEmail = (TableRow) content.findViewById(R.id.emailRow);
 
         apartment = getArguments().getString("apartment");
         fullName = getArguments().getString("fullName");
         email = getArguments().getString("email");
+        mobile = getArguments().getString("mobile");
+        phone = getArguments().getString("phone");
+        rut = getArguments().getString("rut");
 
         textViewApartment.setText(apartment);
         textViewFullName.setText(fullName);
+
+        textViewMobile.setText(mobile);
+        textViewPhone.setText(phone);
+        textViewRut.setText(rut);
+
+
         if (email.length() > 0) {
             rowEmail.setVisibility(View.VISIBLE);
             textViewEmail.setText(email);
@@ -96,6 +120,10 @@ public class DialogResidentsRegister extends DialogFragment{
                 String fullName = textViewFullName.getText().toString();
                 String apartment = textViewApartment.getText().toString();
                 String email = textViewEmail.getText().toString();
+                String mobile = textViewMobile.getText().toString();
+                String phone = textViewPhone.getText().toString();
+                String rut = textViewRut.getText().toString();
+
 
                 String[] projection = {
                         ApartmentEntry.COLUMN_APARTMENT_ID_SERVER
@@ -117,7 +145,7 @@ public class DialogResidentsRegister extends DialogFragment{
                         int apartmentId = c.getInt(0);
 
                         try {
-                            InsertResidents residents = new InsertResidents(null,email,fullName,apartmentId,getContext());
+                            InsertResidents residents = new InsertResidents(null,email,fullName, mobile, phone, rut,apartmentId,getContext());
                             residents.execute().get();
 
                         }catch (Exception e){

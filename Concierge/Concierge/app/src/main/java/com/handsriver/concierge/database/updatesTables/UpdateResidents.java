@@ -19,6 +19,9 @@ import com.handsriver.concierge.sync.ConfigureSyncAccount;
 public class UpdateResidents extends AsyncTask<Void,Void,Void> {
     private SQLiteDatabase db;
     private String email;
+    private String mobile;
+    private String phone;
+    private String rut;
     private long id;
     private Context mContext;
 
@@ -26,8 +29,11 @@ public class UpdateResidents extends AsyncTask<Void,Void,Void> {
     private static final int IS_UPDATE = 1;
 
 
-    public UpdateResidents(String email, long id, Context mContext){
+    public UpdateResidents(String email,String mobile,String phone,String rut, long id, Context mContext){
         this.email = email;
+        this.mobile = mobile;
+        this.phone = phone;
+        this.rut = rut;
         this.id = id;
         this.mContext = mContext;
     }
@@ -39,6 +45,10 @@ public class UpdateResidents extends AsyncTask<Void,Void,Void> {
         try {
             ContentValues values = new ContentValues();
             values.put(ResidentEntry.COLUMN_EMAIL,email);
+            values.put(ResidentEntry.COLUMN_MOBILE,mobile);
+            values.put(ResidentEntry.COLUMN_PHONE,phone);
+            values.put(ResidentEntry.COLUMN_RUT,rut);
+
             values.put(ResidentEntry.COLUMN_IS_UPDATE,IS_UPDATE);
 
             String whereClause = ResidentEntry._ID + " = ? ";

@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingTop="10dp"
     android:id="@+id/linearVisit">
+
+    <LinearLayout
+        android:layout_width="600dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
 
     <TextView
         android:layout_width="match_parent"
@@ -34,7 +41,7 @@
             android:layout_height="wrap_content">
 
             <AutoCompleteTextView android:id="@+id/autoApartment"
-                android:layout_width="200dp"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:inputType="textCapCharacters"
                 android:cursorVisible="false"
@@ -86,7 +93,7 @@
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/vehicleInput"
-                android:layout_width="200dp"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/license_plate"
                 android:inputType="textCapCharacters"
@@ -117,7 +124,7 @@
 
             <Spinner
                 android:id="@+id/spinnerParkingLots"
-                android:layout_width="165dp"
+                android:layout_width="100dp"
                 android:layout_height="45dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="20dp"
@@ -165,7 +172,7 @@
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/rutInput"
-                android:layout_width="200dp"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/rut"
                 android:digits="1234567890K.-"
@@ -203,13 +210,49 @@
 
     </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:paddingLeft="80dp"
+            android:paddingRight="24dp"
+            android:gravity="center_vertical">
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/optionalTextLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/visitsOptionalValueInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:inputType="text"
+                    android:cursorVisible="false"
+                    android:imeOptions="actionDone"
+                    android:textSize="18sp"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+
+        </LinearLayout>
+
+
     <LinearLayout
         android:id="@+id/visitButtonListLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:baselineAligned="false"
         android:orientation="horizontal"
-        android:layout_marginStart="556dp"
+        android:layout_marginStart="450dp"
         android:paddingBottom="5dp"
         android:gravity="center_vertical">
 
@@ -243,7 +286,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="84dp"
-        android:layout_marginRight="84dp"
+        android:layout_marginRight="0dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/border">
@@ -254,5 +297,46 @@
 
     </LinearLayout>
 
+</LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:paddingLeft="5dp"
+            android:text="@string/plates_detected"/>
+
+        <ProgressBar
+            android:id="@+id/indeterminatePlatesBar"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/border">
+
+            <ListView android:id="@+id/platesLists"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:listSelector="#C31818"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
 </LinearLayout>
 

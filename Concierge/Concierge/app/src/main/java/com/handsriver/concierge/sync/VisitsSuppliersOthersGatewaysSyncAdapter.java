@@ -233,6 +233,7 @@ public class VisitsSuppliersOthersGatewaysSyncAdapter extends AbstractThreadedSy
                 String license_plate;
                 String entry;
                 String exit_supplier;
+                String obs_exit_supplier;
                 long entry_porter_id;
                 long exit_porter_id;
                 long gateway_id;
@@ -249,8 +250,10 @@ public class VisitsSuppliersOthersGatewaysSyncAdapter extends AbstractThreadedSy
                 license_plate = (suppliersVisitsOthersGatewaysJson.isNull(SupplierVisitsEntry.COLUMN_LICENSE_PLATE)) ? null : suppliersVisitsOthersGatewaysJson.getString(SupplierVisitsEntry.COLUMN_LICENSE_PLATE);
                 entry = suppliersVisitsOthersGatewaysJson.getString(SupplierVisitsEntry.COLUMN_ENTRY);
                 exit_supplier = (suppliersVisitsOthersGatewaysJson.isNull(SupplierVisitsEntry.COLUMN_EXIT_SUPPLIER)) ? null : suppliersVisitsOthersGatewaysJson.getString(SupplierVisitsEntry.COLUMN_EXIT_SUPPLIER);
+                obs_exit_supplier = (suppliersVisitsOthersGatewaysJson.isNull(SupplierVisitsEntry.COLUMN_EXIT_OBS)) ? null : suppliersVisitsOthersGatewaysJson.getString(SupplierVisitsEntry.COLUMN_EXIT_OBS);
                 gateway_id = suppliersVisitsOthersGatewaysJson.getLong(SupplierVisitsEntry.COLUMN_GATEWAY_ID);
                 supplier_id = suppliersVisitsOthersGatewaysJson.getLong(SupplierVisitsEntry.COLUMN_SUPPLIER_ID);
+
                 entry_porter_id = suppliersVisitsOthersGatewaysJson.getLong(SupplierVisitsEntry.COLUMN_ENTRY_PORTER_ID);
 
 
@@ -265,6 +268,7 @@ public class VisitsSuppliersOthersGatewaysSyncAdapter extends AbstractThreadedSy
                 supplierVisitValues.put(SupplierVisitsEntry.COLUMN_LICENSE_PLATE, license_plate);
                 supplierVisitValues.put(SupplierVisitsEntry.COLUMN_ENTRY, entry);
                 supplierVisitValues.put(SupplierVisitsEntry.COLUMN_EXIT_SUPPLIER, exit_supplier);
+                supplierVisitValues.put(SupplierVisitsEntry.COLUMN_EXIT_OBS, obs_exit_supplier);
                 supplierVisitValues.put(SupplierVisitsEntry.COLUMN_GATEWAY_ID, gateway_id);
                 supplierVisitValues.put(SupplierVisitsEntry.COLUMN_SUPPLIER_ID, supplier_id);
                 supplierVisitValues.put(SupplierVisitsEntry.COLUMN_ENTRY_PORTER_ID, entry_porter_id);

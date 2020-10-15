@@ -33,6 +33,11 @@ import com.handsriver.concierge.database.insertsTables.InsertVisits;
 import com.handsriver.concierge.sync.ConfigureSyncAccount;
 import com.handsriver.concierge.utilities.LicensePlateCheck;
 
+import com.handsriver.concierge.utilities.Utility;
+import com.handsriver.concierge.vehicles.VehiclePlateDetected;
+import com.handsriver.concierge.vehicles.VehiclePlateDetectedOper;
+
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -58,6 +63,7 @@ public class DialogVisitsRegister extends DialogFragment {
     String licensePlate;
     String parkingLotsSelected;
     Boolean notificationVisits;
+    VehiclePlateDetectedOper PlatesDetected;
 
     VisitsAdapterDialog visitsAdapter;
 
@@ -103,8 +109,14 @@ public class DialogVisitsRegister extends DialogFragment {
         licensePlate = getArguments().getString("licensePlate");
         parkingLotsSelected = getArguments().getString("spinnerParkingSelected");
 
+        PlatesDetected = (VehiclePlateDetectedOper) getArguments().getSerializable("platesDetected");
+
         LicensePlateCheck check = new LicensePlateCheck(textViewAlertDialog,textViewLicensePlate,indeterminateBar);
         check.execute(licensePlate);
+
+
+
+
 
         textViewApartment.setText(apartment);
         if (licensePlate.length() > 0) {
@@ -136,6 +148,11 @@ public class DialogVisitsRegister extends DialogFragment {
 
                 SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.US);
                 String entry = df.format(calendar.getTime());
+                if((PlatesDetected).getItemSelected()!=null){
+
+                    entry = PlatesDetected.getItemSelected().getDate();
+                }
+
 
                 String licensePlate = textViewLicensePlate.getText().toString();
 
@@ -176,6 +193,9 @@ public class DialogVisitsRegister extends DialogFragment {
                     SendEmailNotifications notifications = new SendEmailNotifications(arrayVisit,apartmentNumber,licensePlate,entry,getContext());
                     notifications.execute();
                 }
+
+                //SE DEBE ELIMINAR LA PATENTE DETECTADA DEL TOTAL DE REGISTROS
+                PlatesDetected.DeleteFromSharedPreferences(PlatesDetected.getItemSelected());
 
                 HomeFragment fragmentHome = new HomeFragment();
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_main,fragmentHome).commit();

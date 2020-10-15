@@ -12,6 +12,7 @@ public class Vehicle {
     private String fineDate;
     private String parkingNumber;
     private String apartmentNumber;
+    private String visitName;
 
     public String getLicensePlate() {
         return licensePlate;
@@ -60,6 +61,15 @@ public class Vehicle {
     public void setApartmentNumber(String apartmentNumber) {
         this.apartmentNumber = apartmentNumber;
     }
+
+    public String getVisitName() {
+        return visitName;
+    }
+
+    public void setVisitName(String visitName) {
+        this.visitName = visitName;
+    }
+
 
     public String getId() {
         return id;

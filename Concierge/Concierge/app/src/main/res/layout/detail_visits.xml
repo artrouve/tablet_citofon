@@ -20,7 +20,7 @@
 
     <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:stretchColumns="1"
         android:padding="24dp">
         <TableRow>
@@ -37,6 +37,22 @@
                 android:textSize="16sp"
                 android:textStyle="bold"/>
         </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/exitList"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/textViewDetailExit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        </TableRow>
+
         <TableRow>
             <TextView
                 android:layout_width="wrap_content"
@@ -121,6 +137,44 @@
                 android:textSize="16sp"
                 android:textStyle="bold"/>
         </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/textViewDetailOptionalField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/textViewDetailOptionalValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        </TableRow>
+
     </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/visitButtonListLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingTop="0dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:gravity="end">
+
+        <Button
+            android:id="@+id/buttonExitVisit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/exitListBtn"
+            android:visibility="gone"
+
+            style="@style/Widget.AppCompat.Button.Colored"/>
+
+    </LinearLayout>
 
 </LinearLayout>

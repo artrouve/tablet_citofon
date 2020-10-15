@@ -8,6 +8,10 @@ public class Resident {
     private long id;
     private String fullName;
     private String email;
+    private String mobile;
+    private String phone;
+    private String rut;
+
     private String isSync;
     private String isUpdate;
     private String apartmentNumber;
@@ -25,8 +29,32 @@ public class Resident {
         return email;
     }
 
+    public String getMobile() {
+        return mobile;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public String getRut() {
+        return rut;
+    }
+
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public void setRut(String rut) {
+        this.rut = rut;
     }
 
     public String getIsSync() {

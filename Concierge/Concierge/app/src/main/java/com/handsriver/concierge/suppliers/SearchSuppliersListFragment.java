@@ -65,6 +65,7 @@ public class SearchSuppliersListFragment extends Fragment {
                 SupplierEntry.TABLE_NAME + "." + SupplierEntry.COLUMN_NAME_SUPPLIER + "," +
                 SupplierVisitsEntry.COLUMN_GATEWAY_ID + "," +
                 SupplierVisitsEntry.COLUMN_SUPPLIER_ID + "," +
+                SupplierVisitsEntry.COLUMN_EXIT_OBS + "," +
                 SupplierVisitsEntry.COLUMN_EXIT_SUPPLIER +
                 " FROM " + SupplierVisitsEntry.TABLE_NAME + "," + SupplierEntry.TABLE_NAME +
                 " WHERE " + SupplierVisitsEntry.TABLE_NAME + "." + SupplierVisitsEntry.COLUMN_SUPPLIER_ID + " = " + SupplierEntry.TABLE_NAME + "." + SupplierEntry.COLUMN_SUPPLIER_ID_SERVER +
@@ -87,6 +88,7 @@ public class SearchSuppliersListFragment extends Fragment {
                 visit.setGatewayId(c.getString(c.getColumnIndex(SupplierVisitsEntry.COLUMN_GATEWAY_ID)));
                 visit.setSupplierId(c.getString(c.getColumnIndex(SupplierVisitsEntry.COLUMN_SUPPLIER_ID)));
                 visit.setExitSupplier(c.getString(c.getColumnIndex(SupplierVisitsEntry.COLUMN_EXIT_SUPPLIER)));
+                visit.setExitObsSupplier(c.getString(c.getColumnIndex(SupplierVisitsEntry.COLUMN_EXIT_OBS)));
                 mVisit.add(visit);
             }
             c.close();
