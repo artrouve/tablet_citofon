@@ -62,76 +62,84 @@ public class GetPlateDetection extends AsyncTask<String,Void,Boolean>
         HttpURLConnection urlConnection = null;
         BufferedReader reader = null;
 
-        try{
-            String idGateway = params[0];
-            String urlParameters = "idGateway="+idGateway;
-            byte[] postData = urlParameters.getBytes( StandardCharsets.UTF_8 );
-            int postDataLength = postData.length;
-            //String BASE_URL = "https://salpr.citofon.cl/ftp/getPlates.php";
-            String BASE_URL = "https://salpr.citofon.cl/ftp/getPlate.php";
+        //DETECCION DE PATENTES:
+        if(true){
+
+            try{
+                String idGateway = params[0];
+                String urlParameters = "idGateway="+idGateway;
+                byte[] postData = urlParameters.getBytes( StandardCharsets.UTF_8 );
+                int postDataLength = postData.length;
+                //String BASE_URL = "https://salpr.citofon.cl/ftp/getPlates.php";
+                String BASE_URL = "https://salpr.citofon.cl/ftp/getPlate.php";
 
 
 
-            Uri buildUri = Uri.parse(BASE_URL).buildUpon().build();
-            URL url = new URL(buildUri.toString());
+                Uri buildUri = Uri.parse(BASE_URL).buildUpon().build();
+                URL url = new URL(buildUri.toString());
 
-            urlConnection = (HttpURLConnection) url.openConnection();
-            urlConnection.setRequestMethod("POST");
-            urlConnection.setRequestProperty("Content-Type","application/x-www-form-urlencoded");
-            urlConnection.setConnectTimeout(5000);
-            urlConnection.setReadTimeout(4000);
-            urlConnection.setDoInput(true);
-            urlConnection.setDoOutput(true);
+                urlConnection = (HttpURLConnection) url.openConnection();
+                urlConnection.setRequestMethod("POST");
+                urlConnection.setRequestProperty("Content-Type","application/x-www-form-urlencoded");
+                urlConnection.setConnectTimeout(4000);
+                urlConnection.setReadTimeout(4000);
+                urlConnection.setDoInput(true);
+                urlConnection.setDoOutput(true);
 
-            DataOutputStream wr = new DataOutputStream(urlConnection.getOutputStream());
-            wr.write(postData);
-            wr.flush();
-            wr.close();
+                DataOutputStream wr = new DataOutputStream(urlConnection.getOutputStream());
+                wr.write(postData);
+                wr.flush();
+                wr.close();
 
-            InputStreamReader inputStream = new InputStreamReader(urlConnection.getInputStream(),"UTF-8");
-            if (inputStream == null) {
-                // Nothing to do.
+                InputStreamReader inputStream = new InputStreamReader(urlConnection.getInputStream(),"UTF-8");
+                if (inputStream == null) {
+                    // Nothing to do.
+                    return false;
+                }
+                reader = new BufferedReader(inputStream);
+
+                String line;
+                String json = "";
+
+
+                while ((line = reader.readLine()) != null) {
+
+                    json = json + line;
+
+
+                }
+
+                JSONObject Json = new JSONObject(json);
+
+                int i =  0;
+                for(i=0;i<Json.getJSONArray("patentes").length();i++){
+
+
+                    String url_ = Json.getJSONArray("patentes").get(i).toString().split(";")[2];
+                    String plate = Json.getJSONArray("patentes").get(i).toString().split(";")[0];
+                    String datetime = Json.getJSONArray("patentes").get(i).toString().split(";")[1];
+
+                    SharedPreferences plateDetectionPref = this.context.getSharedPreferences(this.DetectedPlate.PREFS_PLATE_DETECTION_NAME, Context.MODE_PRIVATE);
+
+                    String platesDetection = plateDetectionPref.getString(this.context.getString(R.string.platesDetectionReceived), "");
+                    platesDetection = plate + "@" + datetime + "@" + url_ + ";" + platesDetection ;
+
+                    SharedPreferences.Editor editor = plateDetectionPref.edit();
+                    editor.putString(this.context.getString(R.string.platesDetectionReceived),platesDetection);
+                    editor.apply();
+
+                }
+                return true;
+
+            }catch (Exception e) {
+                Log.e("LicensePlate", "Error ", e);
                 return false;
             }
-            reader = new BufferedReader(inputStream);
 
-            String line;
-            String json = "";
-
-
-            while ((line = reader.readLine()) != null) {
-
-                json = json + line;
-
-
-            }
-
-            JSONObject Json = new JSONObject(json);
-
-            int i =  0;
-            for(i=0;i<Json.getJSONArray("patentes").length();i++){
-
-
-                String url_ = Json.getJSONArray("patentes").get(0).toString().split(";")[2];
-                String plate = Json.getJSONArray("patentes").get(0).toString().split(";")[0];
-                String datetime = Json.getJSONArray("patentes").get(0).toString().split(";")[1];
-
-                SharedPreferences plateDetectionPref = this.context.getSharedPreferences(this.DetectedPlate.PREFS_PLATE_DETECTION_NAME, Context.MODE_PRIVATE);
-
-                String platesDetection = plateDetectionPref.getString(this.context.getString(R.string.platesDetectionReceived), "");
-                platesDetection = plate + "@" + datetime + "@" + url_ + ";" + platesDetection ;
-
-                SharedPreferences.Editor editor = plateDetectionPref.edit();
-                editor.putString(this.context.getString(R.string.platesDetectionReceived),platesDetection);
-                editor.apply();
-
-            }
-            return true;
-
-        }catch (Exception e) {
-            Log.e("LicensePlate", "Error ", e);
-            return false;
         }
+        return false;
+
+
 
     }
 

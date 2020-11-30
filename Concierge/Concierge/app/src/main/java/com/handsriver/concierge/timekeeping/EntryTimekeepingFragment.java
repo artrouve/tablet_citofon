@@ -182,6 +182,7 @@ public class EntryTimekeepingFragment extends Fragment {
 
                     if (rut == null) {
                         Toast.makeText(getActivity().getApplicationContext(), "Lectura Errónea, Favor Escanear Nuevamente", Toast.LENGTH_LONG).show();
+                        ocr.setLength(0);
                     } else if (rut.equals(INVALID)){
                         Toast.makeText(getActivity().getApplicationContext(), "Documento Inválido", Toast.LENGTH_LONG).show();
                     } else {
@@ -206,7 +207,10 @@ public class EntryTimekeepingFragment extends Fragment {
     private boolean porterVerified(String rut){
 
         String[] projection = {
-                PorterEntry.COLUMN_RUT
+
+                PorterEntry.COLUMN_RUT,
+                PorterEntry.COLUMN_ACTIVE,
+
         };
 
         Cursor porters;
@@ -220,7 +224,9 @@ public class EntryTimekeepingFragment extends Fragment {
         if (porters != null) {
             while (porters.moveToNext()){
                 String rutFormat = porters.getString(porters.getColumnIndex(PorterEntry.COLUMN_RUT)).replace(".","").replace("-","");
-                if (rut.equals(rutFormat)){
+                Integer isActive = porters.getInt(porters.getColumnIndex(PorterEntry.COLUMN_ACTIVE));
+
+                if (rut.equals(rutFormat) && isActive == 1){
                     return true;
                 }
             }
@@ -236,7 +242,7 @@ public class EntryTimekeepingFragment extends Fragment {
                 PorterEntry.COLUMN_RUT,
                 PorterEntry.COLUMN_PASSWORD
         };
-        String selection = PorterEntry.COLUMN_RUT + " = ?";
+        String selection = PorterEntry.COLUMN_RUT + " = ?  AND active = 1 ";
         String [] selectionArgs = {rut};
 
         Cursor porter;

@@ -200,6 +200,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                         markAutoFine.setChecked(false);
                         SwitchPreference markAlertFine = (SwitchPreference) findPreference(getString(R.string.pref_send_email_fine_key));
                         markAlertFine.setChecked(false);
+
                     }
 
                     return true;

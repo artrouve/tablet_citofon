@@ -45,292 +45,329 @@ public class FormatICAO9303 {
 
     public static Visit formatDocument(String ocrEntry) {
 
-        String ocr = ocrEntry.replace("\n","");
-        Integer lenghtOcr = ocr.length();
-        String typeDocument = ocr.substring(0,1);
-        String typeDocumentCHL = ocr.substring(0,5);
+        try {
 
 
-        if(lenghtOcr == 72){
-            if(typeDocument.equals("V")){
-                return formatVisa72(ocr);
-            }
-            else if(typeDocument.equals("I")){
-                return formatTravelDocument72(ocr);
-            }
-            else{
+            String ocr = ocrEntry.replace("\n", "");
+            Integer lenghtOcr = ocr.length();
+            String typeDocument = ocr.substring(0, 1);
+            String typeDocumentCHL = ocr.substring(0, 5);
+
+
+            if (lenghtOcr == 72) {
+                if (typeDocument.equals("V")) {
+                    return formatVisa72(ocr);
+                } else if (typeDocument.equals("I")) {
+                    return formatTravelDocument72(ocr);
+                } else {
+                    return null;
+                }
+            } else if (lenghtOcr == 88) {
+                if (typeDocument.equals("P")) {
+                    return formatPassport(ocr);
+                } else if (typeDocument.equals("V")) {
+                    return formatVisa88(ocr);
+                } else {
+                    return null;
+                }
+            } else if (lenghtOcr == 90) {
+                if (typeDocumentCHL.equals("INCHL") || typeDocumentCHL.equals("IECHL")) {
+                    return formatTravelDocumentChileNew(ocr);
+                } else if (typeDocumentCHL.equals("IDCHL")) {
+                    return formatTravelDocumentChileOld(ocr);
+                } else if (typeDocument.equals("I")) {
+                    return formatTravelDocument90(ocr);
+                } else {
+                    return null;
+                }
+            } else {
                 return null;
             }
         }
-        else if(lenghtOcr == 88) {
-            if(typeDocument.equals("P")){
-                return formatPassport(ocr);
-            }
-            else if(typeDocument.equals("V")){
-                return formatVisa88(ocr);
-            }
-            else{
-                return null;
-            }
-        }
-        else if(lenghtOcr == 90) {
-            if(typeDocumentCHL.equals("INCHL") || typeDocumentCHL.equals("IECHL")){
-                return formatTravelDocumentChileNew(ocr);
-            }
-            else if(typeDocumentCHL.equals("IDCHL")) {
-                return formatTravelDocumentChileOld(ocr);
-            }
-            else if(typeDocument.equals("I")) {
-                return formatTravelDocument90(ocr);
-            }
-            else{
-                return null;
-            }
-        }
-        else {
+        catch (Exception e){
             return null;
         }
     }
 
     private static Visit formatPassport (String ocr){
+        try {
 
-        String fullName = ocr.substring(5,44).replace("<"," ").trim().replaceAll("\\s+", " ");
-        String documentNumber = ocr.substring(44,53).replace("<","");
-        int checkDocumentNumber = Integer.parseInt(ocr.substring(53,54));
-        String nacionality = ocr.substring(54,57);
-        String birthdate = ocr.substring(57,63);
-        int checkBirthdate = Integer.parseInt(ocr.substring(63,64));
-        String gender = ocr.substring(64,65);
-        String secondLine = ocr.substring(44,54).concat(ocr.substring(57,64)).concat(ocr.substring(65,87));
-        int checkSecondLine = Integer.parseInt(ocr.substring(87,88));
-        Boolean isCheckDocumentNumber;
-        Boolean isCheckBirthdate;
-        Boolean isCheckSecondLine;
 
-        isCheckDocumentNumber = checkInfo(documentNumber,checkDocumentNumber);
-        isCheckBirthdate = checkInfo(birthdate,checkBirthdate);
-        isCheckSecondLine = checkInfo(secondLine,checkSecondLine);
+            String fullName = ocr.substring(5, 44).replace("<", " ").trim().replaceAll("\\s+", " ");
+            String documentNumber = ocr.substring(44, 53).replace("<", "");
+            int checkDocumentNumber = Integer.parseInt(ocr.substring(53, 54));
+            String nacionality = ocr.substring(54, 57);
+            String birthdate = ocr.substring(57, 63);
+            int checkBirthdate = Integer.parseInt(ocr.substring(63, 64));
+            String gender = ocr.substring(64, 65);
+            String secondLine = ocr.substring(44, 54).concat(ocr.substring(57, 64)).concat(ocr.substring(65, 87));
+            int checkSecondLine = Integer.parseInt(ocr.substring(87, 88));
+            Boolean isCheckDocumentNumber;
+            Boolean isCheckBirthdate;
+            Boolean isCheckSecondLine;
 
-        if (isCheckDocumentNumber && isCheckBirthdate && isCheckSecondLine){
-            Visit visit = new Visit();
-            visit.setDocumentNumber(documentNumber);
-            visit.setFullName(fullName);
-            visit.setNationality(nacionality);
-            visit.setBirthdate(birthdateFormat(birthdate));
-            visit.setGender(gender);
+            isCheckDocumentNumber = checkInfo(documentNumber, checkDocumentNumber);
+            isCheckBirthdate = checkInfo(birthdate, checkBirthdate);
+            isCheckSecondLine = checkInfo(secondLine, checkSecondLine);
 
-            return visit;
+            if (isCheckDocumentNumber && isCheckBirthdate && isCheckSecondLine) {
+                Visit visit = new Visit();
+                visit.setDocumentNumber(documentNumber);
+                visit.setFullName(fullName);
+                visit.setNationality(nacionality);
+                visit.setBirthdate(birthdateFormat(birthdate));
+                visit.setGender(gender);
+
+                return visit;
+            } else {
+                return null;
+            }
         }
-        else{
+        catch (Exception e){
             return null;
         }
     }
 
     private static Visit formatVisa88(String ocr){
-        String fullName = ocr.substring(5,44).replace("<"," ").trim().replaceAll("\\s+", " ");
-        String documentNumber = ocr.substring(44,53).replace("<","");
-        int checkDocumentNumber = Integer.parseInt(ocr.substring(53,54));
-        String nacionality = ocr.substring(54,57);
-        String birthdate = ocr.substring(57,63);
-        int checkBirthdate = Integer.parseInt(ocr.substring(63,64));
-        String gender = ocr.substring(64,65);
-        Boolean isCheckDocumentNumber;
-        Boolean isCheckBirthdate;
+        try {
+            String fullName = ocr.substring(5, 44).replace("<", " ").trim().replaceAll("\\s+", " ");
+            String documentNumber = ocr.substring(44, 53).replace("<", "");
+            int checkDocumentNumber = Integer.parseInt(ocr.substring(53, 54));
+            String nacionality = ocr.substring(54, 57);
+            String birthdate = ocr.substring(57, 63);
+            int checkBirthdate = Integer.parseInt(ocr.substring(63, 64));
+            String gender = ocr.substring(64, 65);
+            Boolean isCheckDocumentNumber;
+            Boolean isCheckBirthdate;
 
-        isCheckDocumentNumber = checkInfo(documentNumber,checkDocumentNumber);
-        isCheckBirthdate = checkInfo(birthdate,checkBirthdate);
+            isCheckDocumentNumber = checkInfo(documentNumber, checkDocumentNumber);
+            isCheckBirthdate = checkInfo(birthdate, checkBirthdate);
 
-        if (isCheckDocumentNumber && isCheckBirthdate){
-            Visit visit = new Visit();
-            visit.setDocumentNumber(documentNumber);
-            visit.setFullName(fullName);
-            visit.setNationality(nacionality);
-            visit.setBirthdate(birthdateFormat(birthdate));
-            visit.setGender(gender);
+            if (isCheckDocumentNumber && isCheckBirthdate) {
+                Visit visit = new Visit();
+                visit.setDocumentNumber(documentNumber);
+                visit.setFullName(fullName);
+                visit.setNationality(nacionality);
+                visit.setBirthdate(birthdateFormat(birthdate));
+                visit.setGender(gender);
 
-            return visit;
+                return visit;
+            } else {
+                return null;
+            }
         }
-        else{
+        catch (Exception e){
             return null;
         }
     }
 
     private static Visit formatVisa72(String ocr){
-        String fullName = ocr.substring(5,36).replace("<"," ").trim().replaceAll("\\s+", " ");
-        String documentNumber = ocr.substring(36,45).replace("<","");
-        int checkDocumentNumber = Integer.parseInt(ocr.substring(45,46));
-        String nacionality = ocr.substring(46,49);
-        String birthdate = ocr.substring(49,55);
-        int checkBirthdate = Integer.parseInt(ocr.substring(55,56));
-        String gender = ocr.substring(56,57);
-        Boolean isCheckDocumentNumber;
-        Boolean isCheckBirthdate;
+        try {
 
-        isCheckDocumentNumber = checkInfo(documentNumber,checkDocumentNumber);
-        isCheckBirthdate = checkInfo(birthdate,checkBirthdate);
+            String fullName = ocr.substring(5, 36).replace("<", " ").trim().replaceAll("\\s+", " ");
+            String documentNumber = ocr.substring(36, 45).replace("<", "");
+            int checkDocumentNumber = Integer.parseInt(ocr.substring(45, 46));
+            String nacionality = ocr.substring(46, 49);
+            String birthdate = ocr.substring(49, 55);
+            int checkBirthdate = Integer.parseInt(ocr.substring(55, 56));
+            String gender = ocr.substring(56, 57);
+            Boolean isCheckDocumentNumber;
+            Boolean isCheckBirthdate;
 
-        if (isCheckDocumentNumber && isCheckBirthdate){
-            Visit visit = new Visit();
-            visit.setDocumentNumber(documentNumber);
-            visit.setFullName(fullName);
-            visit.setNationality(nacionality);
-            visit.setBirthdate(birthdateFormat(birthdate));
-            visit.setGender(gender);
+            isCheckDocumentNumber = checkInfo(documentNumber, checkDocumentNumber);
+            isCheckBirthdate = checkInfo(birthdate, checkBirthdate);
 
-            return visit;
+            if (isCheckDocumentNumber && isCheckBirthdate) {
+                Visit visit = new Visit();
+                visit.setDocumentNumber(documentNumber);
+                visit.setFullName(fullName);
+                visit.setNationality(nacionality);
+                visit.setBirthdate(birthdateFormat(birthdate));
+                visit.setGender(gender);
+
+                return visit;
+            } else {
+                return null;
+            }
         }
-        else{
+        catch (Exception e){
             return null;
         }
     }
 
     private static Visit formatTravelDocument72(String ocr){
-        String fullName = ocr.substring(5,36).replace("<"," ").trim().replaceAll("\\s+", " ");
-        String documentNumber = ocr.substring(36,45).replace("<","");
-        int checkDocumentNumber = Integer.parseInt(ocr.substring(45,46));
-        String nacionality = ocr.substring(46,49);
-        String birthdate = ocr.substring(49,55);
-        int checkBirthdate = Integer.parseInt(ocr.substring(55,56));
-        String gender = ocr.substring(56,57);
-        String secondLine = ocr.substring(36,46).concat(ocr.substring(49,56)).concat(ocr.substring(57,71));
-        int checkSecondLine = Integer.parseInt(ocr.substring(71,72));
-        Boolean isCheckDocumentNumber;
-        Boolean isCheckBirthdate;
-        Boolean isCheckSecondLine;
+        try {
 
-        isCheckDocumentNumber = checkInfo(documentNumber,checkDocumentNumber);
-        isCheckBirthdate = checkInfo(birthdate,checkBirthdate);
-        isCheckSecondLine = checkInfo(secondLine,checkSecondLine);
 
-        if (isCheckDocumentNumber && isCheckBirthdate && isCheckSecondLine){
-            Visit visit = new Visit();
-            visit.setDocumentNumber(documentNumber);
-            visit.setFullName(fullName);
-            visit.setNationality(nacionality);
-            visit.setBirthdate(birthdateFormat(birthdate));
-            visit.setGender(gender);
+            String fullName = ocr.substring(5, 36).replace("<", " ").trim().replaceAll("\\s+", " ");
+            String documentNumber = ocr.substring(36, 45).replace("<", "");
+            int checkDocumentNumber = Integer.parseInt(ocr.substring(45, 46));
+            String nacionality = ocr.substring(46, 49);
+            String birthdate = ocr.substring(49, 55);
+            int checkBirthdate = Integer.parseInt(ocr.substring(55, 56));
+            String gender = ocr.substring(56, 57);
+            String secondLine = ocr.substring(36, 46).concat(ocr.substring(49, 56)).concat(ocr.substring(57, 71));
+            int checkSecondLine = Integer.parseInt(ocr.substring(71, 72));
+            Boolean isCheckDocumentNumber;
+            Boolean isCheckBirthdate;
+            Boolean isCheckSecondLine;
 
-            return visit;
+            isCheckDocumentNumber = checkInfo(documentNumber, checkDocumentNumber);
+            isCheckBirthdate = checkInfo(birthdate, checkBirthdate);
+            isCheckSecondLine = checkInfo(secondLine, checkSecondLine);
+
+            if (isCheckDocumentNumber && isCheckBirthdate && isCheckSecondLine) {
+                Visit visit = new Visit();
+                visit.setDocumentNumber(documentNumber);
+                visit.setFullName(fullName);
+                visit.setNationality(nacionality);
+                visit.setBirthdate(birthdateFormat(birthdate));
+                visit.setGender(gender);
+
+                return visit;
+            } else {
+                return null;
+            }
+
         }
-        else{
+        catch (Exception e){
             return null;
         }
     }
 
     private static Visit formatTravelDocument90(String ocr){
-        String fullName = ocr.substring(60,90).replace("<"," ").trim().replaceAll("\\s+", " ");
-        String documentNumber = ocr.substring(5,14).replace("<","");
-        int checkDocumentNumber = Integer.parseInt(ocr.substring(14,15));
+        try {
 
-        String nacionality = ocr.substring(45,48);
 
-        String birthdate = ocr.substring(30,36);
-        int checkBirthdate = Integer.parseInt(ocr.substring(36,37));
+            String fullName = ocr.substring(60, 90).replace("<", " ").trim().replaceAll("\\s+", " ");
+            String documentNumber = ocr.substring(5, 14).replace("<", "");
+            int checkDocumentNumber = Integer.parseInt(ocr.substring(14, 15));
 
-        String gender = ocr.substring(37,38);
+            String nacionality = ocr.substring(45, 48);
 
-        String firstAndSecondLine = ocr.substring(5,37).concat(ocr.substring(38,45)).concat(ocr.substring(48,59));
-        int checkFirstAndSecondLine = Integer.parseInt(ocr.substring(59,60));
+            String birthdate = ocr.substring(30, 36);
+            int checkBirthdate = Integer.parseInt(ocr.substring(36, 37));
 
-        Boolean isCheckDocumentNumber;
-        Boolean isCheckBirthdate;
-        Boolean isCheckFirstAndSecondLine;
+            String gender = ocr.substring(37, 38);
 
-        isCheckDocumentNumber = checkInfo(documentNumber,checkDocumentNumber);
-        isCheckBirthdate = checkInfo(birthdate,checkBirthdate);
-        isCheckFirstAndSecondLine = checkInfo(firstAndSecondLine,checkFirstAndSecondLine);
+            String firstAndSecondLine = ocr.substring(5, 37).concat(ocr.substring(38, 45)).concat(ocr.substring(48, 59));
+            int checkFirstAndSecondLine = Integer.parseInt(ocr.substring(59, 60));
 
-        if (isCheckDocumentNumber && isCheckBirthdate && isCheckFirstAndSecondLine){
-            Visit visit = new Visit();
-            visit.setDocumentNumber(documentNumber);
-            visit.setFullName(fullName);
-            visit.setNationality(nacionality);
-            visit.setBirthdate(birthdateFormat(birthdate));
-            visit.setGender(gender);
+            Boolean isCheckDocumentNumber;
+            Boolean isCheckBirthdate;
+            Boolean isCheckFirstAndSecondLine;
 
-            return visit;
+            isCheckDocumentNumber = checkInfo(documentNumber, checkDocumentNumber);
+            isCheckBirthdate = checkInfo(birthdate, checkBirthdate);
+            isCheckFirstAndSecondLine = checkInfo(firstAndSecondLine, checkFirstAndSecondLine);
+
+            if (isCheckDocumentNumber && isCheckBirthdate && isCheckFirstAndSecondLine) {
+                Visit visit = new Visit();
+                visit.setDocumentNumber(documentNumber);
+                visit.setFullName(fullName);
+                visit.setNationality(nacionality);
+                visit.setBirthdate(birthdateFormat(birthdate));
+                visit.setGender(gender);
+
+                return visit;
+            } else {
+                return null;
+            }
         }
-        else{
+        catch (Exception e){
             return null;
         }
     }
 
     private static Visit formatTravelDocumentChileNew(String ocr){
-        String fullName = ocr.substring(60,90).replace("<"," ").trim().replaceAll("\\s+", " ");
-        String documentNumber = ocr.substring(5,14).replace("<","");
-        String rut = ocr.substring(48,59).replace("<","");
-        int checkDocumentNumber = Integer.parseInt(ocr.substring(14,15));
+        try {
 
-        String nacionality = ocr.substring(45,48);
 
-        String birthdate = ocr.substring(30,36);
-        int checkBirthdate = Integer.parseInt(ocr.substring(36,37));
+            String fullName = ocr.substring(60, 90).replace("<", " ").trim().replaceAll("\\s+", " ");
+            String documentNumber = ocr.substring(5, 14).replace("<", "");
+            String rut = ocr.substring(48, 59).replace("<", "");
+            int checkDocumentNumber = Integer.parseInt(ocr.substring(14, 15));
 
-        String gender = ocr.substring(37,38);
+            String nacionality = ocr.substring(45, 48);
 
-        String firstAndSecondLine = ocr.substring(5,37).concat(ocr.substring(38,45)).concat(ocr.substring(48,59));
-        int checkFirstAndSecondLine = Integer.parseInt(ocr.substring(59,60));
+            String birthdate = ocr.substring(30, 36);
+            int checkBirthdate = Integer.parseInt(ocr.substring(36, 37));
 
-        Boolean isCheckDocumentNumber;
-        Boolean isCheckBirthdate;
-        Boolean isCheckFirstAndSecondLine;
+            String gender = ocr.substring(37, 38);
 
-        isCheckDocumentNumber = checkInfo(documentNumber,checkDocumentNumber);
-        isCheckBirthdate = checkInfo(birthdate,checkBirthdate);
-        isCheckFirstAndSecondLine = checkInfo(firstAndSecondLine,checkFirstAndSecondLine);
+            String firstAndSecondLine = ocr.substring(5, 37).concat(ocr.substring(38, 45)).concat(ocr.substring(48, 59));
+            int checkFirstAndSecondLine = Integer.parseInt(ocr.substring(59, 60));
 
-        if (isCheckDocumentNumber && isCheckBirthdate && isCheckFirstAndSecondLine){
-            Visit visit = new Visit();
-            visit.setDocumentNumber(rutFormat(rut));
-            visit.setFullName(fullName);
-            visit.setNationality(nacionality);
-            visit.setBirthdate(birthdateFormat(birthdate));
-            visit.setGender(gender);
+            Boolean isCheckDocumentNumber;
+            Boolean isCheckBirthdate;
+            Boolean isCheckFirstAndSecondLine;
 
-            return visit;
+            isCheckDocumentNumber = checkInfo(documentNumber, checkDocumentNumber);
+            isCheckBirthdate = checkInfo(birthdate, checkBirthdate);
+            isCheckFirstAndSecondLine = checkInfo(firstAndSecondLine, checkFirstAndSecondLine);
+
+            if (isCheckDocumentNumber && isCheckBirthdate && isCheckFirstAndSecondLine) {
+                Visit visit = new Visit();
+                visit.setDocumentNumber(rutFormat(rut));
+                visit.setFullName(fullName);
+                visit.setNationality(nacionality);
+                visit.setBirthdate(birthdateFormat(birthdate));
+                visit.setGender(gender);
+
+                return visit;
+            } else {
+                return null;
+            }
         }
-        else{
+        catch (Exception e){
             return null;
         }
     }
 
     private static Visit formatTravelDocumentChileOld(String ocr){
-        String fullName = ocr.substring(60,90).replace("<"," ").trim().replaceAll("\\s+", " ");
-        String documentNumber = ocr.substring(5,14).replace("<","");
-        int checkDocumentNumber = Integer.parseInt(ocr.substring(14,15));
+        try {
 
-        String nacionality = ocr.substring(45,48);
 
-        String birthdate = ocr.substring(30,36);
-        int checkBirthdate = Integer.parseInt(ocr.substring(36,37));
+            String fullName = ocr.substring(60, 90).replace("<", " ").trim().replaceAll("\\s+", " ");
+            String documentNumber = ocr.substring(5, 14).replace("<", "");
+            int checkDocumentNumber = Integer.parseInt(ocr.substring(14, 15));
 
-        String gender = ocr.substring(37,38);
+            String nacionality = ocr.substring(45, 48);
 
-        String firstAndSecondLine = ocr.substring(5,37).concat(ocr.substring(38,45)).concat(ocr.substring(48,59));
-        int checkFirstAndSecondLine = Integer.parseInt(ocr.substring(59,60));
+            String birthdate = ocr.substring(30, 36);
+            int checkBirthdate = Integer.parseInt(ocr.substring(36, 37));
 
-        Boolean isCheckDocumentNumber;
-        Boolean isCheckBirthdate;
-        Boolean isCheckFirstAndSecondLine;
+            String gender = ocr.substring(37, 38);
 
-        isCheckDocumentNumber = checkInfo(documentNumber,checkDocumentNumber);
-        isCheckBirthdate = checkInfo(birthdate,checkBirthdate);
-        isCheckFirstAndSecondLine = checkInfo(firstAndSecondLine,checkFirstAndSecondLine);
+            String firstAndSecondLine = ocr.substring(5, 37).concat(ocr.substring(38, 45)).concat(ocr.substring(48, 59));
+            int checkFirstAndSecondLine = Integer.parseInt(ocr.substring(59, 60));
 
-        if (isCheckDocumentNumber && isCheckBirthdate && isCheckFirstAndSecondLine){
+            Boolean isCheckDocumentNumber;
+            Boolean isCheckBirthdate;
+            Boolean isCheckFirstAndSecondLine;
 
-            Visit visit = new Visit();
-            visit.setDocumentNumber(rutFormat(documentNumber));
-            visit.setFullName(fullName);
-            visit.setNationality(nacionality);
-            visit.setBirthdate(birthdateFormat(birthdate));
-            visit.setGender(gender);
+            isCheckDocumentNumber = checkInfo(documentNumber, checkDocumentNumber);
+            isCheckBirthdate = checkInfo(birthdate, checkBirthdate);
+            isCheckFirstAndSecondLine = checkInfo(firstAndSecondLine, checkFirstAndSecondLine);
 
-            return visit;
+            if (isCheckDocumentNumber && isCheckBirthdate && isCheckFirstAndSecondLine) {
+
+                Visit visit = new Visit();
+                visit.setDocumentNumber(rutFormat(documentNumber));
+                visit.setFullName(fullName);
+                visit.setNationality(nacionality);
+                visit.setBirthdate(birthdateFormat(birthdate));
+                visit.setGender(gender);
+
+                return visit;
+            } else {
+                return null;
+            }
         }
-        else{
+        catch (Exception e){
             return null;
         }
+
     }
 
     private static boolean checkInfo(String value, int check)
@@ -482,61 +519,83 @@ public class FormatICAO9303 {
     }
 
     public static String returnRut(String ocrEntry){
-        String ocr = ocrEntry.replace("\n","");
-        Integer lenghtOcr = ocr.length();
-        String typeDocumentCHL = ocr.substring(0,5);
         String INVALID = "INVALID";
 
-        if(lenghtOcr == 90) {
-            if(typeDocumentCHL.equals("INCHL") || typeDocumentCHL.equals("IECHL")){
-                return returnRUTNew(ocr);
+        try{
+
+            String ocr = ocrEntry.replace("\n","");
+            Integer lenghtOcr = ocr.length();
+            String typeDocumentCHL = ocr.substring(0,5);
+
+
+            if(lenghtOcr == 90) {
+                if(typeDocumentCHL.equals("INCHL") || typeDocumentCHL.equals("IECHL")){
+                    return returnRUTNew(ocr);
+                }
+                else if(typeDocumentCHL.equals("IDCHL")) {
+                    return returnRUTOld(ocr);
+                }
+                else{
+                    return INVALID;
+                }
             }
-            else if(typeDocumentCHL.equals("IDCHL")) {
-                return returnRUTOld(ocr);
-            }
-            else{
+            else {
                 return INVALID;
             }
+
         }
-        else {
+        catch (Exception e){
             return INVALID;
         }
     }
 
     private static String returnRUTNew(String ocr){
-        String rut = ocr.substring(48,59).replace("<","");
 
-        String firstAndSecondLine = ocr.substring(5,37).concat(ocr.substring(38,45)).concat(ocr.substring(48,59));
-        int checkFirstAndSecondLine = Integer.parseInt(ocr.substring(59,60));
+        try {
+            String rut = ocr.substring(48, 59).replace("<", "");
 
-        Boolean isCheckFirstAndSecondLine;
-        isCheckFirstAndSecondLine = checkInfo(firstAndSecondLine,checkFirstAndSecondLine);
+            String firstAndSecondLine = ocr.substring(5, 37).concat(ocr.substring(38, 45)).concat(ocr.substring(48, 59));
+            int checkFirstAndSecondLine = Integer.parseInt(ocr.substring(59, 60));
 
-        if (isCheckFirstAndSecondLine){
-            return rut;
+            Boolean isCheckFirstAndSecondLine;
+            isCheckFirstAndSecondLine = checkInfo(firstAndSecondLine, checkFirstAndSecondLine);
+
+            if (isCheckFirstAndSecondLine) {
+                return rut;
+            } else {
+                return null;
+            }
         }
-        else{
+        catch (Exception e){
             return null;
         }
     }
 
     private static String returnRUTOld(String ocr){
-        String documentNumber = ocr.substring(5,14).replace("<","");
-        int checkDocumentNumber = Integer.parseInt(ocr.substring(14,15));
 
-        String firstAndSecondLine = ocr.substring(5,37).concat(ocr.substring(38,45)).concat(ocr.substring(48,59));
-        int checkFirstAndSecondLine = Integer.parseInt(ocr.substring(59,60));
+        try {
 
-        Boolean isCheckDocumentNumber;
-        Boolean isCheckFirstAndSecondLine;
 
-        isCheckDocumentNumber = checkInfo(documentNumber,checkDocumentNumber);
-        isCheckFirstAndSecondLine = checkInfo(firstAndSecondLine,checkFirstAndSecondLine);
+            String documentNumber = ocr.substring(5, 14).replace("<", "");
+            int checkDocumentNumber = Integer.parseInt(ocr.substring(14, 15));
 
-        if (isCheckDocumentNumber && isCheckFirstAndSecondLine){
-            return documentNumber;
+            String firstAndSecondLine = ocr.substring(5, 37).concat(ocr.substring(38, 45)).concat(ocr.substring(48, 59));
+            int checkFirstAndSecondLine = Integer.parseInt(ocr.substring(59, 60));
+
+            Boolean isCheckDocumentNumber;
+            Boolean isCheckFirstAndSecondLine;
+
+            isCheckDocumentNumber = checkInfo(documentNumber, checkDocumentNumber);
+            isCheckFirstAndSecondLine = checkInfo(firstAndSecondLine, checkFirstAndSecondLine);
+
+            if (isCheckDocumentNumber && isCheckFirstAndSecondLine) {
+                return documentNumber;
+            } else {
+                return null;
+            }
+
         }
-        else{
+        catch (Exception e){
             return null;
         }
     }

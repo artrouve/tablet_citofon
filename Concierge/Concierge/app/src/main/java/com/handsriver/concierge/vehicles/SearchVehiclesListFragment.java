@@ -144,6 +144,10 @@ public class SearchVehiclesListFragment extends Fragment {
             }
         });
 
+        VehiclePlateDetectedOper DetectedPlate;
+        DetectedPlate = new VehiclePlateDetectedOper(getActivity());
+        DetectedPlate.ExitVehicles();
+
         return rootView;
     }
 

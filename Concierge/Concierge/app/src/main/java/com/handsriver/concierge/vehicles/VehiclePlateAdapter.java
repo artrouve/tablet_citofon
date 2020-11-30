@@ -71,9 +71,6 @@ public class VehiclePlateAdapter extends ArrayAdapter<VehiclePlateDetected> {
         }
 
 
-        ImageView imagePlate = (ImageView) convertView.findViewById(R.id.plateImageView);
-        Picasso.get().load(urlBase+vehicleDetected.getUrlImage()).networkPolicy(NetworkPolicy.NO_CACHE).memoryPolicy(MemoryPolicy.NO_CACHE).into(imagePlate);
-
         //TextView textViewFullName = (TextView) convertView.findViewById(R.id.textViewfullName);
         TextView textViewPlate = (TextView) convertView.findViewById(R.id.textViewPLATE);
         textViewPlate.setText(vehicleDetected.getLicensePlate());
@@ -121,6 +118,13 @@ public class VehiclePlateAdapter extends ArrayAdapter<VehiclePlateDetected> {
             }
         });
 
+        try{
+            ImageView imagePlate = (ImageView) convertView.findViewById(R.id.plateImageView);
+            Picasso.get().load(urlBase+vehicleDetected.getUrlImage()).networkPolicy(NetworkPolicy.NO_CACHE).memoryPolicy(MemoryPolicy.NO_CACHE).into(imagePlate);
+        }
+        catch (Exception e){
+
+        }
 
 
         return convertView;

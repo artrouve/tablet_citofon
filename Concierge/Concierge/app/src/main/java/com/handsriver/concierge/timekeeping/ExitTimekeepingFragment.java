@@ -218,7 +218,8 @@ public class ExitTimekeepingFragment extends Fragment {
 
         String[] projection = {
                 PorterEntry.COLUMN_RUT,
-                PorterEntry.COLUMN_PORTER_ID_SERVER
+                PorterEntry.COLUMN_PORTER_ID_SERVER,
+                PorterEntry.COLUMN_ACTIVE
         };
 
         Cursor porters;
@@ -233,7 +234,9 @@ public class ExitTimekeepingFragment extends Fragment {
             while (porters.moveToNext()){
                 String rutFormat = porters.getString(porters.getColumnIndex(PorterEntry.COLUMN_RUT)).replace(".","").replace("-","");
                 String porterId = porters.getString(porters.getColumnIndex(PorterEntry.COLUMN_PORTER_ID_SERVER));
-                if (rut.equals(rutFormat)){
+                Integer isActive = porters.getInt(porters.getColumnIndex(PorterEntry.COLUMN_ACTIVE));
+
+                if (rut.equals(rutFormat) && isActive == 1){
                     return porterId;
                 }
             }
@@ -248,7 +251,7 @@ public class ExitTimekeepingFragment extends Fragment {
                 PorterEntry.COLUMN_RUT,
                 PorterEntry.COLUMN_PASSWORD
         };
-        String selection = PorterEntry.COLUMN_RUT + " = ?";
+        String selection = PorterEntry.COLUMN_RUT + " = ? AND active = 1 ";
         String [] selectionArgs = {rut};
 
         Cursor porter;

@@ -83,7 +83,7 @@ public class DetailSearchVehiclesListFragment extends Fragment {
         //SE BUSCAN LAS PATENTES DETECTADAS GUARDADAS EN PREFERENCIAS Y SE MARCA LA SALIDA EN EL CASO QUE
         //SEA POSIBLE MARCARLA
         DetectedPlate = new VehiclePlateDetectedOper(getActivity());
-        DetectedPlate.ExitVehicles();
+        DetectedPlate.getDetectedVehicles();
         vehiclePlateAdapter = new VehiclePlateAdapter(getContext(),DetectedPlate.getItemsPlateDetected());
 
 
@@ -152,7 +152,6 @@ public class DetailSearchVehiclesListFragment extends Fragment {
 
             DetectedPlate = new VehiclePlateDetectedOper(getActivity());
             DetectedPlate.getDetectedVehicles();
-            DetectedPlate.ExitVehicles();
 
             DetectedPlateAux = new VehiclePlateDetectedOper(getActivity());
             DetectedPlateAux.getDetectedVehicles();

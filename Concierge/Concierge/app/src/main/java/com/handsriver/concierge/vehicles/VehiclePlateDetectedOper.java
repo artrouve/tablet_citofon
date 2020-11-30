@@ -44,15 +44,34 @@ public class VehiclePlateDetectedOper implements Serializable {
 
     public void getDetectedVehicles(){
 
-        //SE CONSUME EL SERVICIO PARA OBTENER LAS PATENTES
+        this.itemsPlateDetected = new ArrayList<VehiclePlateDetected>();
 
+        //OBTAIN PLATES DETECTED
+        SharedPreferences plateDetectionPref = context.getSharedPreferences(PREFS_PLATE_DETECTION_NAME, Context.MODE_PRIVATE);
+        String platesDetection = plateDetectionPref.getString(context.getString(R.string.platesDetectionReceived), "");
 
+        if (platesDetection.length() > 0){
+            List<String> plates_detected = Arrays.asList(platesDetection.split("\\s*;\\s*"));
+            plates_detected = new ArrayList<String>(plates_detected);
+            for (String elements_plate:plates_detected) {
+
+                List<String> items_plate_detected =  Arrays.asList(elements_plate.split("\\s*@\\s*"));
+
+                VehiclePlateDetected newplatedetected = new VehiclePlateDetected();
+
+                newplatedetected.setLicensePlate(items_plate_detected.get(0));
+                newplatedetected.setDate(items_plate_detected.get(1));
+                newplatedetected.setUrlImage(items_plate_detected.get(2));
+
+                this.itemsPlateDetected.add(newplatedetected);
+            }
+        }
 
     }
 
     public void ExitVehicles(){
 
-        itemsPlateDetected = new ArrayList<VehiclePlateDetected>();
+        this.itemsPlateDetected = new ArrayList<VehiclePlateDetected>();
 
         //OBTAIN PLATES DETECTED
         SharedPreferences plateDetectionPref = context.getSharedPreferences(PREFS_PLATE_DETECTION_NAME, Context.MODE_PRIVATE);
@@ -77,7 +96,7 @@ public class VehiclePlateDetectedOper implements Serializable {
                 if(newplatedetected.getLicensePlate() == "noPlate"){
                     //SE TRATA DE UNA PATENTE NO DETECTADA POR ENDE EL TRATO ES DIFERENTE
                     //SE AGREGA AL LISTADO
-                    itemsPlateDetected.add(newplatedetected);
+                    this.itemsPlateDetected.add(newplatedetected);
 
                 }
                 else{
@@ -151,7 +170,7 @@ public class VehiclePlateDetectedOper implements Serializable {
                         }
                         else{
                             //ES UN POTENCIAL REGISTRO DE INGRESO, PUESTO QUE NO TIENE ENTRADA REGISTRADA SIN SALIDA
-                            itemsPlateDetected.add(newplatedetected);
+                            this.itemsPlateDetected.add(newplatedetected);
                         }
 
 
@@ -159,7 +178,7 @@ public class VehiclePlateDetectedOper implements Serializable {
                     }
                     else{
                         //ES UN POTENCIAL REGISTRO DE INGRESO, PUESTO QUE NO TIENE ENTRADA REGISTRADA SIN SALIDA
-                        itemsPlateDetected.add(newplatedetected);
+                        this.itemsPlateDetected.add(newplatedetected);
                     }
                 }
             }
