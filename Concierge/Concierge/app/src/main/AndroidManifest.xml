@@ -76,6 +76,11 @@
             android:label="@string/suppliers"/>
 
         <provider
+            android:authorities="com.handsriver.concierge.commonspaces"
+            android:name="com.handsriver.concierge.database.StubProviderCommonspaces"
+            android:label="@string/commonspaces"/>
+
+        <provider
             android:authorities="com.handsriver.concierge.visitsvehicles"
             android:name="com.handsriver.concierge.database.StubProviderVisitsVehicles"
             android:label="@string/visitsvehicles"/>
@@ -111,6 +116,12 @@
             android:label="@string/visits_suppliers"/>
 
         <provider
+            android:authorities="com.handsriver.concierge.visitscommonspaces"
+            android:name="com.handsriver.concierge.database.StubProviderVisitsCommonspaces"
+            android:label="@string/visits_commonspaces"/>
+
+
+        <provider
             android:authorities="com.handsriver.concierge.visits.othersgateways"
             android:name="com.handsriver.concierge.database.StubProviderVisitsOthersGateways"
             android:label="@string/visits_other_gateways"/>
@@ -134,6 +145,17 @@
             android:authorities="com.handsriver.concierge.visitssuppliers.exitothersgateways"
             android:name="com.handsriver.concierge.database.StubProviderVisitsSuppliersExitOthersGateways"
             android:label="@string/visits_suppliers_exit_other_gateways"/>
+
+        <provider
+            android:authorities="com.handsriver.concierge.visitscommonspaces.othersgateways"
+            android:name="com.handsriver.concierge.database.StubProviderVisitsCommonspacesOthersGateways"
+            android:label="@string/visits_commonspaces_others_gateways"/>
+
+        <provider
+            android:authorities="com.handsriver.concierge.visitscommonspaces.exitothersgateways"
+            android:name="com.handsriver.concierge.database.StubProviderVisitsCommonspacesExitOthersGateways"
+            android:label="@string/visits_commonspaces_exit_other_gateways"/>
+
 
         <provider
             android:authorities="com.handsriver.concierge.residents.codeauth"
@@ -259,6 +281,17 @@
                 android:resource="@xml/sync_adapter_suppliers" />
         </service>
 
+        <service android:name=".sync.CommonspacesSyncService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/sync_adapter_commonspaces" />
+        </service>
+
+
         <service android:name=".sync.VisitsVehiclesSyncService"
             android:exported="true">
             <intent-filter>
@@ -329,6 +362,17 @@
                 android:resource="@xml/sync_adapter_visits_suppliers" />
         </service>
 
+        <service android:name=".sync.VisitsCommonspacesSyncService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/sync_adapter_visits_commonspaces" />
+        </service>
+
+
         <service android:name=".sync.VisitsOthersGatewaysSyncService"
             android:exported="true">
             <intent-filter>
@@ -368,6 +412,16 @@
             <meta-data
                 android:name="android.content.SyncAdapter"
                 android:resource="@xml/sync_adapter_visits_suppliers_others_gateways" />
+        </service>
+
+        <service android:name=".sync.VisitsCommonspacesOthersGatewaysSyncService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/sync_adapter_visits_commonspaces_others_gateways" />
         </service>
 
         <service android:name=".sync.CodeAuthSyncService"

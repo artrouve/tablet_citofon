@@ -16,7 +16,7 @@ import com.handsriver.concierge.suppliers.SupplierVisit;
 
 public class ConciergeDbHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 3;
+    private static final int DATABASE_VERSION = 4;
 
     static final String DATABASE_NAME = "concierge.db";
 
@@ -39,6 +39,76 @@ public class ConciergeDbHelper extends SQLiteOpenHelper {
             PorterEntry.COLUMN_PORTER_ID_SERVER +
             ");";
 
+
+    private final String SQL_CREATE_COMMONSPACES_TABLE = "CREATE TABLE " + CommonspaceEntry.TABLE_NAME + " (" +
+            CommonspaceEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+            CommonspaceEntry.COLUMN_NAME_COMMONSPACE + " TEXT NOT NULL, " +
+            CommonspaceEntry.COLUMN_COMMONSPACE_ID_SERVER + " INTEGER UNIQUE, " +
+            CommonspaceEntry.COLUMN_AFORO + " INTEGER, " +
+            CommonspaceEntry.COLUMN_ACTIVE + " INTEGER NOT NULL " +
+            ");";
+
+    private final String SQL_CREATE_NAME_COMMONSPACE_COMMONSPACES_INDEX = "CREATE INDEX name_commonspace_commonspaces_idx ON " + CommonspaceEntry.TABLE_NAME + " (" +
+            CommonspaceEntry.COLUMN_NAME_COMMONSPACE +
+            ");";
+
+    private final String SQL_CREATE_COMMONSPACE_ID_SERVER_COMMONSPACES_INDEX = "CREATE UNIQUE INDEX commonspace_id_server_commonspaces_idx ON " + CommonspaceEntry.TABLE_NAME + " (" +
+            CommonspaceEntry.COLUMN_COMMONSPACE_ID_SERVER +
+            ");";
+
+
+
+    private final String SQL_CREATE_COMMONSPACES_VISITS_TABLE = "CREATE TABLE " + CommonspaceVisitsEntry.TABLE_NAME + " (" +
+            CommonspaceVisitsEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+            CommonspaceVisitsEntry.COLUMN_DOCUMENT_NUMBER + " TEXT, " +
+            CommonspaceVisitsEntry.COLUMN_FULL_NAME + " TEXT, " +
+            CommonspaceVisitsEntry.COLUMN_NATIONALITY + " TEXT, " +
+            CommonspaceVisitsEntry.COLUMN_GENDER + " TEXT, " +
+            CommonspaceVisitsEntry.COLUMN_BIRTHDATE + " DATETIME, " +
+            CommonspaceVisitsEntry.COLUMN_OCR + " TEXT, " +
+            CommonspaceVisitsEntry.COLUMN_LICENSE_PLATE + " TEXT, " +
+            CommonspaceVisitsEntry.COLUMN_ENTRY + " DATETIME NOT NULL, " +
+            CommonspaceVisitsEntry.COLUMN_EXIT_VISIT + " DATETIME, " +
+            CommonspaceVisitsEntry.COLUMN_APARTMENT_ID + " INTEGER NOT NULL, " +
+            CommonspaceVisitsEntry.COLUMN_OBS + " TEXT, " +
+            CommonspaceVisitsEntry.COLUMN_GATEWAY_ID + " INTEGER NOT NULL, " +
+            CommonspaceVisitsEntry.COLUMN_COMMONSPACE_ID + " INTEGER NOT NULL, " +
+            CommonspaceVisitsEntry.COLUMN_ENTRY_PORTER_ID + " INTEGER NOT NULL, " +
+            CommonspaceVisitsEntry.COLUMN_EXIT_PORTER_ID + " INTEGER, " +
+            CommonspaceVisitsEntry.COLUMN_COMMONSPACE_VISIT_ID_SERVER + " INTEGER UNIQUE, " +
+            CommonspaceVisitsEntry.COLUMN_IS_SYNC + " INTEGER NOT NULL, " +
+            CommonspaceVisitsEntry.COLUMN_IS_UPDATE + " INTEGER NOT NULL, " +
+            "FOREIGN KEY (" + CommonspaceVisitsEntry.COLUMN_APARTMENT_ID + ") REFERENCES " +
+            ApartmentEntry.TABLE_NAME + " (" + ApartmentEntry.COLUMN_APARTMENT_ID_SERVER + "), " +
+            "FOREIGN KEY (" + CommonspaceVisitsEntry.COLUMN_COMMONSPACE_ID + ") REFERENCES " +
+            CommonspaceEntry.TABLE_NAME + " (" + CommonspaceEntry.COLUMN_COMMONSPACE_ID_SERVER + "), " +
+            "FOREIGN KEY (" + CommonspaceVisitsEntry.COLUMN_ENTRY_PORTER_ID + ") REFERENCES " +
+            PorterEntry.TABLE_NAME + " (" + PorterEntry.COLUMN_PORTER_ID_SERVER + "), " +
+            "FOREIGN KEY (" + CommonspaceVisitsEntry.COLUMN_EXIT_PORTER_ID + ") REFERENCES " +
+            PorterEntry.TABLE_NAME + " (" + PorterEntry.COLUMN_PORTER_ID_SERVER + ") " +
+            ");";
+
+    private final String SQL_CREATE_ENTRY_COMMONSPACEVISITS_INDEX = "CREATE INDEX entry_commonspacevisits_idx ON " + CommonspaceVisitsEntry.TABLE_NAME + " (" +
+            CommonspaceVisitsEntry.COLUMN_ENTRY +
+            " DESC);";
+
+    private final String SQL_CREATE_COMMONSPACE_ID_COMMONSPACEVISITS_INDEX = "CREATE INDEX commonspace_id_commonspacevisits_idx ON " + CommonspaceVisitsEntry.TABLE_NAME + " (" +
+            CommonspaceVisitsEntry.COLUMN_COMMONSPACE_ID +
+            ");";
+
+    private final String SQL_CREATE_COMMONSPACE_VISIT_ID_SERVER_COMMONSPACEVISITS_INDEX = "CREATE UNIQUE INDEX commonspace_visit_id_server_commonspacevisits_idx ON " + CommonspaceVisitsEntry.TABLE_NAME + " (" +
+            CommonspaceVisitsEntry.COLUMN_COMMONSPACE_VISIT_ID_SERVER +
+            ");";
+
+    private final String SQL_CREATE_APARTMENT_ID_COMMONSPACEVISITS_INDEX = "CREATE INDEX apartment_id_commonspacevisits_idx ON " + CommonspaceVisitsEntry.TABLE_NAME + " (" +
+            CommonspaceVisitsEntry.COLUMN_APARTMENT_ID +
+            ");";
+
+
+
+
+
+
     @Override
     public void onCreate(SQLiteDatabase db) {
 
@@ -56,6 +126,9 @@ public class ConciergeDbHelper extends SQLiteOpenHelper {
         final String SQL_CREATE_SUPPLIER_ID_SERVER_SUPPLIERS_INDEX = "CREATE UNIQUE INDEX supplier_id_server_suppliers_idx ON " + SupplierEntry.TABLE_NAME + " (" +
                 SupplierEntry.COLUMN_SUPPLIER_ID_SERVER +
                 ");";
+
+
+
 
         final String SQL_CREATE_APARTMENTS_TABLE = "CREATE TABLE " + ApartmentEntry.TABLE_NAME + " (" +
                 ApartmentEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -226,6 +299,10 @@ public class ConciergeDbHelper extends SQLiteOpenHelper {
         final String SQL_CREATE_SUPPLIER_VISIT_ID_SERVER_SUPPLIERVISITS_INDEX = "CREATE UNIQUE INDEX supplier_visit_id_server_suppliervisits_idx ON " + SupplierVisitsEntry.TABLE_NAME + " (" +
                 SupplierVisitsEntry.COLUMN_SUPPLIER_VISIT_ID_SERVER +
                 ");";
+
+
+
+
 
         final String SQL_CREATE_PARCELS_TABLE = "CREATE TABLE " + ParcelEntry.TABLE_NAME + " (" +
                 ParcelEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -420,11 +497,14 @@ public class ConciergeDbHelper extends SQLiteOpenHelper {
 
         db.execSQL(SQL_CREATE_PORTERS_TABLE);
         db.execSQL(SQL_CREATE_SUPPLIERS_TABLE);
+        db.execSQL(SQL_CREATE_COMMONSPACES_TABLE);
+
         db.execSQL(SQL_CREATE_APARTMENTS_TABLE);
         db.execSQL(SQL_CREATE_TIMEKEEPING_TABLE);
         db.execSQL(SQL_CREATE_VEHICLES_TABLE);
         db.execSQL(SQL_CREATE_VISITS_TABLE);
         db.execSQL(SQL_CREATE_SUPPLIERS_VISITS_TABLE);
+        db.execSQL(SQL_CREATE_COMMONSPACES_VISITS_TABLE);
         db.execSQL(SQL_CREATE_PARCELS_TABLE);
         db.execSQL(SQL_CREATE_RESIDENTS_TABLE);
         db.execSQL(SQL_CREATE_BLACKLIST_TABLE);
@@ -475,6 +555,15 @@ public class ConciergeDbHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_CREATE_APARTMENT_ID_WAREHOUSES_INDEX);
         db.execSQL(SQL_CREATE_WAREHOUSE_NUMBER_WAREHOUSES_INDEX);
         db.execSQL(SQL_CREATE_WAREHOUSE_ID_SERVER_WAREHOUSES_INDEX);
+
+        db.execSQL(SQL_CREATE_NAME_COMMONSPACE_COMMONSPACES_INDEX);
+        db.execSQL(SQL_CREATE_COMMONSPACE_ID_SERVER_COMMONSPACES_INDEX);
+
+        db.execSQL(SQL_CREATE_ENTRY_COMMONSPACEVISITS_INDEX);
+        db.execSQL(SQL_CREATE_COMMONSPACE_ID_COMMONSPACEVISITS_INDEX);
+        db.execSQL(SQL_CREATE_COMMONSPACE_VISIT_ID_SERVER_COMMONSPACEVISITS_INDEX);
+        db.execSQL(SQL_CREATE_APARTMENT_ID_COMMONSPACEVISITS_INDEX);
+
 
 
     }
@@ -547,7 +636,6 @@ public class ConciergeDbHelper extends SQLiteOpenHelper {
 
         if(oldVersion == 2){
 
-
             /*************************************************************************/
 
             /*
@@ -571,9 +659,32 @@ public class ConciergeDbHelper extends SQLiteOpenHelper {
             db.execSQL(SQL_ALTER_TABLE_VISITS_SUPPLIERS_ADD_EXIT_OBS);
 
 
+            db.execSQL(SQL_CREATE_COMMONSPACES_TABLE);
+            db.execSQL(SQL_CREATE_COMMONSPACES_VISITS_TABLE);
+            db.execSQL(SQL_CREATE_NAME_COMMONSPACE_COMMONSPACES_INDEX);
+            db.execSQL(SQL_CREATE_COMMONSPACE_ID_SERVER_COMMONSPACES_INDEX);
 
+            db.execSQL(SQL_CREATE_ENTRY_COMMONSPACEVISITS_INDEX);
+            db.execSQL(SQL_CREATE_COMMONSPACE_ID_COMMONSPACEVISITS_INDEX);
+            db.execSQL(SQL_CREATE_COMMONSPACE_VISIT_ID_SERVER_COMMONSPACEVISITS_INDEX);
+            db.execSQL(SQL_CREATE_APARTMENT_ID_COMMONSPACEVISITS_INDEX);
 
         }
+
+        if(oldVersion == 3){
+
+            db.execSQL(SQL_CREATE_COMMONSPACES_TABLE);
+            db.execSQL(SQL_CREATE_COMMONSPACES_VISITS_TABLE);
+            db.execSQL(SQL_CREATE_NAME_COMMONSPACE_COMMONSPACES_INDEX);
+            db.execSQL(SQL_CREATE_COMMONSPACE_ID_SERVER_COMMONSPACES_INDEX);
+
+            db.execSQL(SQL_CREATE_ENTRY_COMMONSPACEVISITS_INDEX);
+            db.execSQL(SQL_CREATE_COMMONSPACE_ID_COMMONSPACEVISITS_INDEX);
+            db.execSQL(SQL_CREATE_COMMONSPACE_VISIT_ID_SERVER_COMMONSPACEVISITS_INDEX);
+            db.execSQL(SQL_CREATE_APARTMENT_ID_COMMONSPACEVISITS_INDEX);
+
+        }
+
 
     }
 }

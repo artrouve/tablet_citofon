@@ -88,6 +88,7 @@
     <string name="content_authority_blacklist">com.handsriver.concierge.blacklist</string>
     <string name="content_authority_whitelist">com.handsriver.concierge.whitelist</string>
     <string name="content_authority_suppliers">com.handsriver.concierge.suppliers</string>
+    <string name="content_authority_commonspaces">com.handsriver.concierge.commonspaces</string>
     <string name="content_authority_visits_vehicles">com.handsriver.concierge.visitsvehicles</string>
     <string name="content_authority_visits_vehicles_delete">com.handsriver.concierge.visitsvehicles.delete</string>
     <string name="content_authority_parcels">com.handsriver.concierge.parcels</string>
@@ -99,11 +100,15 @@
     <string name="content_authority_timekeeping">com.handsriver.concierge.timekeeping</string>
     <string name="content_authority_timekeeping_delete">com.handsriver.concierge.timekeeping.delete</string>
     <string name="content_authority_visits_suppliers">com.handsriver.concierge.visitssuppliers</string>
+    <string name="content_authority_visits_commonspaces">com.handsriver.concierge.visitscommonspaces</string>
     <string name="content_authority_visits_others_gateways">com.handsriver.concierge.visits.othersgateways</string>
     <string name="content_authority_timekeeping_others_gateways">com.handsriver.concierge.timekeeping.othersgateways</string>
     <string name="content_authority_timekeeping_exit_others_gateways">com.handsriver.concierge.timekeeping.exitothersgateways</string>
     <string name="content_authority_visits_suppliers_others_gateways">com.handsriver.concierge.visitssuppliers.othersgateways</string>
     <string name="content_authority_visits_suppliers_exit_others_gateways">com.handsriver.concierge.visitssuppliers.exitothersgateways</string>
+    <string name="content_authority_visits_commonspaces_others_gateways">com.handsriver.concierge.visitscommonspaces.othersgateways</string>
+    <string name="content_authority_visits_commonspaces_exit_others_gateways">com.handsriver.concierge.visitscommonspaces.exitothersgateways</string>
+
     <string name="content_authority_residents_codeauth">com.handsriver.concierge.residents.codeauth</string>
     <string name="content_authority_vehicle_fine_alert_automatic">com.handsriver.concierge.vehicle.automaticFineAlert</string>
     <string name="content_authority_vehicle_alert_automatic">com.handsriver.concierge.vehicle.automaticAlert</string>
@@ -201,6 +206,26 @@
     <string name="markExitSuppleir">Salida</string>
     <string name="markExitSuppleirQuestion">¿Desea marcar la salida del proveedor?</string>
     <string name="messageRegisterSupplier">Revise la información mostrada a continuación de los registros realizados para el proveedor:</string>
+
+
+    <string name="commonspaces">Espacios Comunes</string>
+    <string name="visits_commonspaces">Visitas a Espacio Común</string>
+    <string name="visits_commonspaces_others_gateways">Visitas a Espacios Comunes de otros dispositivos</string>
+    <string name="visits_commonspaces_exit_other_gateways">Salida Visitas a Espacios Comunes de otros dispositivos</string>
+    <string name="commonspace">Espacio Común</string>
+    <string name="commonspacesName">Nombre Espacio Común</string>
+    <string name="commonspacesAforo">Aforo</string>
+    <string name="commonspacesvisits_register">Registrar Visita E.C.</string>
+    <string name="commonspacesvisits_name">Nombre:</string>
+    <string name="commonspacesvisits_documentnomber">Documento:</string>
+    <string name="commonspacesvisits_register_bar">\u0020\u0020Registrar Visita E.C.</string>
+    <string name="commonspacesvisits_search">Buscar Visita E.C.</string>
+    <string name="nameCommonspaceList">Espacio Común:</string>
+    <string name="titleDetailCommonspace">Detalle de Visita</string>
+    <string name="markExitCommonspace">Salida</string>
+    <string name="markExitCommonspaceQuestion">¿Desea marcar la salida de la visita?</string>
+    <string name="messageRegisterCommonspace">Revise la información mostrada a continuación de los registros realizados para el Espacio Común:</string>
+
 
     <string name="timekeeping">Reloj Control</string>
     <string name="timekeeping_other_gateways">Reloj Control de otros dispositivos</string>

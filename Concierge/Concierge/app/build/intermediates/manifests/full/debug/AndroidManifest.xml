@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.handsriver.concierge"
-    android:versionCode="6"
-    android:versionName="2.2.4" >
+    android:versionCode="8"
+    android:versionName="2.3.2" >
 
     <uses-sdk
         android:minSdkVersion="19"
@@ -23,7 +23,6 @@
         android:label="@string/app_name"
         android:largeHeap="true"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity android:name="com.handsriver.concierge.login.LoginActivity" >
             <intent-filter>
@@ -78,6 +77,10 @@
             android:authorities="com.handsriver.concierge.suppliers"
             android:label="@string/suppliers" />
         <provider
+            android:name="com.handsriver.concierge.database.StubProviderCommonspaces"
+            android:authorities="com.handsriver.concierge.commonspaces"
+            android:label="@string/commonspaces" />
+        <provider
             android:name="com.handsriver.concierge.database.StubProviderVisitsVehicles"
             android:authorities="com.handsriver.concierge.visitsvehicles"
             android:label="@string/visitsvehicles" />
@@ -106,6 +109,10 @@
             android:authorities="com.handsriver.concierge.visitssuppliers"
             android:label="@string/visits_suppliers" />
         <provider
+            android:name="com.handsriver.concierge.database.StubProviderVisitsCommonspaces"
+            android:authorities="com.handsriver.concierge.visitscommonspaces"
+            android:label="@string/visits_commonspaces" />
+        <provider
             android:name="com.handsriver.concierge.database.StubProviderVisitsOthersGateways"
             android:authorities="com.handsriver.concierge.visits.othersgateways"
             android:label="@string/visits_other_gateways" />
@@ -125,6 +132,14 @@
             android:name="com.handsriver.concierge.database.StubProviderVisitsSuppliersExitOthersGateways"
             android:authorities="com.handsriver.concierge.visitssuppliers.exitothersgateways"
             android:label="@string/visits_suppliers_exit_other_gateways" />
+        <provider
+            android:name="com.handsriver.concierge.database.StubProviderVisitsCommonspacesOthersGateways"
+            android:authorities="com.handsriver.concierge.visitscommonspaces.othersgateways"
+            android:label="@string/visits_commonspaces_others_gateways" />
+        <provider
+            android:name="com.handsriver.concierge.database.StubProviderVisitsCommonspacesExitOthersGateways"
+            android:authorities="com.handsriver.concierge.visitscommonspaces.exitothersgateways"
+            android:label="@string/visits_commonspaces_exit_other_gateways" />
         <provider
             android:name="com.handsriver.concierge.database.StubProviderCodeAuth"
             android:authorities="com.handsriver.concierge.residents.codeauth"
@@ -249,6 +264,17 @@
                 android:resource="@xml/sync_adapter_suppliers" />
         </service>
         <service
+            android:name="com.handsriver.concierge.sync.CommonspacesSyncService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/sync_adapter_commonspaces" />
+        </service>
+        <service
             android:name="com.handsriver.concierge.sync.VisitsVehiclesSyncService"
             android:exported="true" >
             <intent-filter>
@@ -326,6 +352,17 @@
                 android:resource="@xml/sync_adapter_visits_suppliers" />
         </service>
         <service
+            android:name="com.handsriver.concierge.sync.VisitsCommonspacesSyncService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/sync_adapter_visits_commonspaces" />
+        </service>
+        <service
             android:name="com.handsriver.concierge.sync.VisitsOthersGatewaysSyncService"
             android:exported="true" >
             <intent-filter>
@@ -368,6 +405,17 @@
             <meta-data
                 android:name="android.content.SyncAdapter"
                 android:resource="@xml/sync_adapter_visits_suppliers_others_gateways" />
+        </service>
+        <service
+            android:name="com.handsriver.concierge.sync.VisitsCommonspacesOthersGatewaysSyncService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/sync_adapter_visits_commonspaces_others_gateways" />
         </service>
         <service
             android:name="com.handsriver.concierge.sync.CodeAuthSyncService"

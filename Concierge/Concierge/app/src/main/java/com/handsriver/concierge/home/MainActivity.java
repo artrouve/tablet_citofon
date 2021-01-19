@@ -19,6 +19,11 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.handsriver.concierge.R;
+import com.handsriver.concierge.commonspaces.CommonspaceVisit;
+import com.handsriver.concierge.commonspaces.CommonspacesvisitRegisterFragment;
+import com.handsriver.concierge.commonspaces.DetailSearchCommonspacesvisitsListFragment;
+import com.handsriver.concierge.commonspaces.SearchCommonspacesvisitsFragment;
+import com.handsriver.concierge.commonspaces.SearchCommonspacesvisitsListFragment;
 import com.handsriver.concierge.parcels.DetailSearchParcelsListFragment;
 import com.handsriver.concierge.parcels.Parcel;
 import com.handsriver.concierge.parcels.ParcelsRegisterFragment;
@@ -61,6 +66,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         SearchVehiclesListFragment.Callback,
         SearchParcelsListFragment.Callback,
         SearchSuppliersListFragment.Callback,
+        SearchCommonspacesvisitsListFragment.Callback,
         SearchTimekeepingListFragment.Callback,
         SearchPaymentsListFragment.Callback{
 
@@ -171,6 +177,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             getSupportFragmentManager().beginTransaction().replace(R.id.frame_main,fragmentSearchSuppliers).commit();
             toolbar.setTitle(getString(R.string.suppliers_search));
             return true;
+
+        } else if (id == R.id.register_visitscommonspaces) {
+            CommonspacesvisitRegisterFragment fragmentRegisterCommonspacesvisit = new CommonspacesvisitRegisterFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.frame_main,fragmentRegisterCommonspacesvisit).commit();
+            toolbar.setTitle(getString(R.string.commonspacesvisits_register));
+            return true;
+
+        } else if (id == R.id.search_commonspacesvisits) {
+            SearchCommonspacesvisitsFragment fragmentSearchCommonspacesvisits = new SearchCommonspacesvisitsFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.frame_main,fragmentSearchCommonspacesvisits).commit();
+            toolbar.setTitle(getString(R.string.commonspacesvisits_search));
+            return true;
+
 
         } else if (id == R.id.entryPorter) {
             EntryTimekeepingFragment fragmentEntryTimekeeping = new EntryTimekeepingFragment();
@@ -309,6 +328,27 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         getSupportFragmentManager().beginTransaction().replace(R.id.detail_suppliers,detailFragment).commit();
     }
+
+    @Override
+    public void onItemSelectedCommonspacevisit(CommonspaceVisit visit) {
+
+        Bundle args = new Bundle();
+        args.putString("id",visit.getId());
+        args.putString("commonspace",visit.getCommonspaceName());
+        args.putString("name",visit.getFullName());
+        args.putString("document_number",visit.getDocumentNumber());
+        args.putString("entry",visit.getEntry());
+        args.putString("apartmentNumber",visit.getApartmentNumber());
+        args.putString("exitDate",visit.getExitDate());
+
+
+        DetailSearchCommonspacesvisitsListFragment detailFragment = new DetailSearchCommonspacesvisitsListFragment();
+        detailFragment.setArguments(args);
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.detail_commonspacevisits,detailFragment).commit();
+    }
+
+
 
     @Override
     public void onItemSelectedTimekeeping(Timekeeping timekeeping) {

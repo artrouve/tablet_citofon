@@ -76,6 +76,27 @@
             </menu>
         </item>
     </group>
+
+    <group
+        android:id="@+id/groupCommonspaces">
+        <item
+            android:id="@+id/action_commonspaces"
+            android:title="@string/commonspaces">
+            <menu>
+                <item
+                    android:id="@+id/register_visitscommonspaces"
+                    android:icon="@drawable/ic_commonspaces"
+                    android:title="@string/commonspacesvisits_register"
+                    android:checkable="true"/>
+                <item
+                    android:id="@+id/search_commonspacesvisits"
+                    android:icon="@drawable/ic_search"
+                    android:title="@string/commonspacesvisits_search"
+                    android:checkable="true"/>
+            </menu>
+        </item>
+    </group>
+
     <group
         android:id="@+id/groupTimekeeping">
         <item

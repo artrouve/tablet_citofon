@@ -233,6 +233,7 @@ public class SuppliersRegisterFragment extends Fragment {
 
                     if (newVisit == null)
                     {
+                        ocr.setLength(0);
                         Toast.makeText(getActivity().getApplicationContext(), "Lectura Errónea, Favor Escanear Nuevamente", Toast.LENGTH_LONG).show();
                     }
                     else

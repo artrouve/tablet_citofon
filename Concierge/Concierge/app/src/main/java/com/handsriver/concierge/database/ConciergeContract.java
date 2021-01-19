@@ -99,6 +99,56 @@ public class ConciergeContract {
         public static final String COLUMN_IS_UPDATE = "is_update";
     }
 
+    public static final class CommonspaceEntry implements BaseColumns{
+
+        /*
+         * TABLE NAME
+         * */
+        public static final String TABLE_NAME = "commonspaces";
+
+        /*
+         * COLUMNS TABLE COMMONSPACES
+         * */
+        public static final String COLUMN_NAME_COMMONSPACE = "name_commonspace";
+        public static final String COLUMN_AFORO = "aforo";
+        public static final String COLUMN_COMMONSPACE_ID_SERVER = "commonspace_id_server";
+        public static final String COLUMN_ACTIVE = "active";
+
+    }
+
+    public static final class CommonspaceVisitsEntry implements BaseColumns{
+
+        /*
+         * TABLE NAME
+         * */
+        public static final String TABLE_NAME = "commonspaces_visits";
+
+        /*
+         * COLUMNS TABLE COMMONSPACES_VISITS
+         * */
+        public static final String COLUMN_DOCUMENT_NUMBER = "document_number";
+        public static final String COLUMN_FULL_NAME = "full_name";
+        public static final String COLUMN_NATIONALITY = "nationality";
+        public static final String COLUMN_GENDER = "gender";
+        public static final String COLUMN_BIRTHDATE = "birthdate";
+        public static final String COLUMN_OCR = "ocr";
+        public static final String COLUMN_OBS = "obs";
+        public static final String COLUMN_LICENSE_PLATE = "license_plate";
+        public static final String COLUMN_ENTRY = "entry";
+        public static final String COLUMN_EXIT_VISIT = "exit_visit";
+        public static final String COLUMN_GATEWAY_ID = "gateway_id";
+        public static final String COLUMN_COMMONSPACE_ID = "commonspace_id";
+        public static final String COLUMN_ENTRY_PORTER_ID = "entry_porter_id";
+        public static final String COLUMN_EXIT_PORTER_ID = "exit_porter_id";
+        public static final String COLUMN_APARTMENT_ID = "apartment_id";
+
+        public static final String COLUMN_COMMONSPACE_VISIT_ID_SERVER = "commonspace_visit_id_server";
+        public static final String COLUMN_IS_SYNC = "is_sync";
+        public static final String COLUMN_IS_UPDATE = "is_update";
+    }
+
+
+
     public static final class VehicleEntry implements BaseColumns{
 
         /*
