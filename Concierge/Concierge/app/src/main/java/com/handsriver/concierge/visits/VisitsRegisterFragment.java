@@ -151,10 +151,9 @@ public class VisitsRegisterFragment extends Fragment{
             parkingAdapter = new ArrayAdapter<String>(getActivity(),R.layout.spinner_item,items);
         }
 
-
-
-
     }
+
+
 
 
     @Nullable
@@ -166,14 +165,20 @@ public class VisitsRegisterFragment extends Fragment{
 
         rootView.setFocusableInTouchMode(true);
         rootView.requestFocus();
+
         rootView.setOnKeyListener(new View.OnKeyListener() {
 
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
+                
+
                 return isScannerOCR(v,keyCode,event);
             }
 
         });
+
+
+
 
 
         String[] projection = {
@@ -216,7 +221,6 @@ public class VisitsRegisterFragment extends Fragment{
         textLicensePlate.setText("");
 
 
-
        if (parkingLots.length() > 0){
             spinnerParkingLots.setVisibility(View.VISIBLE);
             textViewParkingLots.setVisibility(View.VISIBLE);
@@ -233,12 +237,23 @@ public class VisitsRegisterFragment extends Fragment{
                 return isScannerOCR(v,keycode,event);
             }
         });
+
+        textFullName.addTextChangedListener(inputAutomaticDocument);
         textFullName.setOnKeyListener(new View.OnKeyListener() {
+
             @Override
             public boolean onKey(View v, int keycode, KeyEvent event) {
                 return isScannerOCR(v,keycode,event);
             }
+
+
         });
+
+
+
+
+
+
 
         textOptionalValue.setOnKeyListener(new View.OnKeyListener() {
             @Override
@@ -439,7 +454,55 @@ public class VisitsRegisterFragment extends Fragment{
         return super.onOptionsItemSelected(item);
     }
 
+    private TextWatcher inputAutomaticDocument = new TextWatcher() {
+        public void afterTextChanged(Editable s) { }
+        public void beforeTextChanged(CharSequence s, int start, int count, int after)
+        { }
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            String string_scan = s.toString();
+            if(!string_scan.equals("")){
+
+                char ini = string_scan.charAt(0);
+                if(ini == '_'){
+
+                    string_scan = string_scan.substring(1,string_scan.length());
+                    Visit newVisit = FormatICAO9303.formatDocument(string_scan);
+
+                    if (newVisit == null)
+                    {
+
+                        Toast.makeText(getActivity().getApplicationContext(), "Lectura Errónea, Favor Escanear Nuevamente", Toast.LENGTH_LONG).show();
+                    }
+                    else
+                    {
+                        newVisit.setOptional(textOptionalValue.getText().toString());
+                        Utility.hideKeyboard(rootView,getContext());
+                        textFullName.setText("");
+
+                        if(whitelistVerified(newVisit.getDocumentNumber())){
+                            dialogWhitelist(newVisit,AUTOMATIC);
+                        }else{
+                            if(blacklistVerified(newVisit.getDocumentNumber())){
+                                dialogBlacklist(newVisit,AUTOMATIC);
+                            }
+                            else{
+                                visitsAdapter.add(newVisit);
+                            }
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+    };
+
+
     private boolean isScannerOCR(View v, int keycode, KeyEvent event){
+
 
         if (event.getDeviceId() == KeyCharacterMap.VIRTUAL_KEYBOARD) {
             return false;
@@ -448,6 +511,10 @@ public class VisitsRegisterFragment extends Fragment{
             if (event.getAction() == KeyEvent.ACTION_DOWN && keycode != KeyEvent.KEYCODE_SHIFT_LEFT)
             {
 
+                if(v instanceof TextView)
+                {
+                    ((TextView)v).setText("");
+                }
 
                 ocr.append((char)event.getUnicodeChar());
                 if (keycode == KeyEvent.KEYCODE_ENTER)
@@ -716,6 +783,9 @@ public class VisitsRegisterFragment extends Fragment{
         dialog.setTargetFragment(VisitsRegisterFragment.this,0);
         dialog.show(getFragmentManager(), "dialog");
     }
+
+
+
 
 
 }

@@ -5,27 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:baselineAligned="false"
-    android:divider="?android:attr/dividerHorizontal"
-    android:orientation="horizontal"
+    android:divider="?android:attr/dividerVertical"
+    android:orientation="vertical"
     android:id="@+id/linearSearchVisit">
 
     <fragment
         android:id="@+id/fragmentVisitsList"
         android:name="com.handsriver.concierge.visits.SearchVisitsListFragment"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="2"
         tools:layout="@android:layout/list_content" />
 
     <View
-        android:layout_width="1dp"
-        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:background="#b9b9b9" />
 
     <FrameLayout
         android:id="@+id/detail_visits"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="2" />
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3" />
 
 </LinearLayout>

@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Jan 13 10:44:59 CLST 2021
+#Fri Mar 19 03:04:37 CLST 2021
 0.baseType=DIRECTORY
 0.base=/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/transforms/dexMerger/debug/0
 0.path=classes.dex

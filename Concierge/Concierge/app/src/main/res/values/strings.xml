@@ -121,7 +121,7 @@
     <string name="home">Inicio</string>
 
     <string name="visits">Visitas</string>
-    <string name="numberParking">Número de Estacionamiento</string>
+    <string name="numberParking">Estacionamiento</string>
     <string name="addVisit">Agregar Visita</string>
     <string name="visitsList">Lista de Visitas</string>
     <string name="visitsvehicles">Visitas y Vehículos</string>
@@ -312,16 +312,16 @@
 
     <string name="paymentType">Tipo de Pago</string>
     <string name="documentNumberPayment">Documento Medio de Pago (Nº Cheque, Nº Transacción Débito o Crédito, Nº Transferencia, Otros)</string>
-    <string name="documentNumberPaymentHint">Número Documento</string>
+    <string name="documentNumberPaymentHint">Número Cheque/Transacción</string>
     <string name="documentNumberPaymentBuilding">Documento Comunidad</string>
     <string name="documentNumberPaymentBuildingList">Documento Comunidad:\u0020</string>
-    <string name="documentNumberPaymentBuildingHint">Documento Recibo</string>
+    <string name="documentNumberPaymentBuildingHint">Número Recibo</string>
     <string name="amount">Monto Pagado</string>
     <string name="paymentTypeList">Tipo de Pago:\u0020</string>
     <string name="registerDateList">Fecha de Registro:\u0020</string>
     <string name="titleDetailPayments">Detalle de Pago</string>
     <string name="documentNumberPaymentList">Número Documento:\u0020</string>
-    <string name="documentNumberBuildingPaymentList">Número Recibo Comunidad:\u0020</string>
+    <string name="documentNumberBuildingPaymentList">Número Recibo:\u0020</string>
     <string name="amountList">Monto Pagado:\u0020</string>
     <string name="porterList">Responsable:\u0020</string>
 

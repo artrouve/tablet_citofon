@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center_vertical"
+        android:stretchColumns="1"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fullNameList"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/textViewFullNameSupplier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/documentNumberList"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/textViewDocumentNumberSupplier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nationalityList"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/textViewNationalitySupplier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/birthdateList"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/textViewBirthdateSupplier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+    </TableRow>
+</TableLayout>

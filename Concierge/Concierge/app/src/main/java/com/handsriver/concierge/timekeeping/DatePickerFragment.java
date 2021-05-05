@@ -50,7 +50,14 @@ public class DatePickerFragment extends DialogFragment implements DatePickerDial
         });
 
         dialog.getDatePicker().setCalendarViewShown(false);
-        dialog.getDatePicker().findViewById(Resources.getSystem().getIdentifier("day", "id", "android")).setVisibility(View.GONE);
+
+
+        try{
+            dialog.getDatePicker().findViewById(Resources.getSystem().getIdentifier("day", "id", "android")).setVisibility(View.GONE);
+        }
+        catch (Exception e){
+
+        }
 
         return dialog;
     }

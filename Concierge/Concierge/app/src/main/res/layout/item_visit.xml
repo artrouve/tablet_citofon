@@ -10,8 +10,8 @@
         android:layout_height="70dp"
         android:gravity="center_vertical"
         android:stretchColumns="1"
-        android:paddingLeft="24dp"
-        android:paddingRight="24dp">
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
         <TableRow>
 
             <TextView
@@ -24,7 +24,8 @@
                 android:id="@+id/textViewfullName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="5dp"
+                android:maxLength="17"
                 android:text="@string/fullname"
                 android:textSize="16sp"
                 android:textStyle="bold"/>
@@ -41,7 +42,7 @@
                 android:id="@+id/textViewRUT"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="5dp"
                 android:text="@string/rut"
                 android:textSize="16sp"
                 android:textStyle="bold"/>
@@ -51,7 +52,7 @@
 
     <ImageButton
         android:id="@+id/buttonDeleteVisitList"
-        android:layout_width="wrap_content"
+        android:layout_width="25dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"

@@ -34,7 +34,7 @@
             android:layout_height="wrap_content">
 
             <AutoCompleteTextView android:id="@+id/autoApartment"
-                android:layout_width="200dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textCapCharacters"
                 android:cursorVisible="false"
@@ -80,7 +80,7 @@
             app:srcCompat="@drawable/ic_person"/>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="12dp"
             android:orientation="vertical">
@@ -93,7 +93,7 @@
 
             <Spinner
                 android:id="@+id/residentsSpinner"
-                android:layout_width="400dp"
+                android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_gravity="center_vertical"
                 android:spinnerMode="dropdown"

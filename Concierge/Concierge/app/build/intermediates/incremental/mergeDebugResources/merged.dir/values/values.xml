@@ -732,7 +732,7 @@
     <string name="deleteVisitsVehicles">Mantener Datos Visitas y Vehículos 7 días</string>
     <string name="differentList">Duración:\u0020</string>
     <string name="documentNumber">Número Documento</string>
-    <string name="documentNumberBuildingPaymentList">Número Recibo Comunidad:\u0020</string>
+    <string name="documentNumberBuildingPaymentList">Número Recibo:\u0020</string>
     <string name="documentNumberExitParcel">Nº Doc. Receptor:\u0020</string>
     <string name="documentNumberList">Número Documento:\u0020</string>
     <string name="documentNumberPayment">Documento Medio de Pago (Nº Cheque, Nº Transacción Débito o Crédito, Nº Transferencia, Otros)</string>
@@ -798,7 +798,7 @@
     <string name="nameCommonspaceList">Espacio Común:</string>
     <string name="nameSupplierList">Proveedor:\u0020</string>
     <string name="nationalityList">Nacionalidad:\u0020</string>
-    <string name="numberParking">Número de Estacionamiento</string>
+    <string name="numberParking">Estacionamiento</string>
     <string name="observations">Observaciones</string>
     <string name="observationsList">Observaciones:\u0020</string>
     <string name="openDrawer">Navigation View Closed</string>

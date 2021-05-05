@@ -125,7 +125,9 @@ public class VehiclePlateDetectedOper implements Serializable {
 
                         Exception ex = e;
                         Log.e("Error", e.toString());
+
                         c = null;
+
                     }
                     Vehicle vehicle = new Vehicle();
                     Integer DEF_PORTER_ID = 0;
@@ -173,8 +175,7 @@ public class VehiclePlateDetectedOper implements Serializable {
                             this.itemsPlateDetected.add(newplatedetected);
                         }
 
-
-
+                        c.close();
                     }
                     else{
                         //ES UN POTENCIAL REGISTRO DE INGRESO, PUESTO QUE NO TIENE ENTRADA REGISTRADA SIN SALIDA

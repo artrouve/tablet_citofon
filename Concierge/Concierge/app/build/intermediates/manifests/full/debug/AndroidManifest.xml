@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="19"
-        android:targetSdkVersion="25" />
+        android:targetSdkVersion="27" />
 
     <!-- This permission is necessary in order for Sunshine to perform network access. -->
     <uses-permission android:name="android.permission.INTERNET" />

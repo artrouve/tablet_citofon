@@ -6,26 +6,26 @@
     android:layout_height="match_parent"
     android:baselineAligned="false"
     android:divider="?android:attr/dividerHorizontal"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:id="@+id/linearSearchPayments">
 
     <fragment
         android:id="@+id/fragmentPaymentsList"
         android:name="com.handsriver.concierge.payments.SearchPaymentsListFragment"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="2"
         tools:layout="@android:layout/list_content" />
 
     <View
-        android:layout_width="1dp"
-        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
         android:background="#b9b9b9" />
 
     <FrameLayout
         android:id="@+id/detail_payment"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="2" />
 
 </LinearLayout>

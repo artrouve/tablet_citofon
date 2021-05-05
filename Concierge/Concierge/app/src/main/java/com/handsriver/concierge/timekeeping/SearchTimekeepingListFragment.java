@@ -125,9 +125,11 @@ public class SearchTimekeepingListFragment extends Fragment {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 if (hasFocus){
+
                     DialogFragment newFragment = new DatePickerFragment();
                     newFragment.show(getFragmentManager(), "timePicker");
                     searchTimekeeping.clearFocus();
+
                 }
             }
         });
