@@ -94,6 +94,7 @@ public class ParcelsSyncAdapter extends AbstractThreadedSyncAdapter {
                         ParcelEntry._ID,
                         ParcelEntry.COLUMN_APARTMENT_ID,
                         ParcelEntry.COLUMN_OBSERVATIONS,
+                        ParcelEntry.COLUMN_PARCELTYPE_ID,
                         ParcelEntry.COLUMN_FULL_NAME,
                         ParcelEntry.COLUMN_ENTRY_PARCEL,
                         ParcelEntry.COLUMN_ENTRY_PARCEL_PORTER_ID,
@@ -116,6 +117,7 @@ public class ParcelsSyncAdapter extends AbstractThreadedSyncAdapter {
                         parcelJson.put(ID_PARCEL,parcels.getLong(parcels.getColumnIndex(ParcelEntry._ID)));
                         parcelJson.put(IS_UPDATE,false);
                         parcelJson.put(ParcelEntry.COLUMN_APARTMENT_ID,parcels.getLong(parcels.getColumnIndex(ParcelEntry.COLUMN_APARTMENT_ID)));
+                        parcelJson.put(ParcelEntry.COLUMN_PARCELTYPE_ID,parcels.getLong(parcels.getColumnIndex(ParcelEntry.COLUMN_PARCELTYPE_ID)));
                         parcelJson.put(ParcelEntry.COLUMN_OBSERVATIONS,(parcels.isNull(parcels.getColumnIndex(ParcelEntry.COLUMN_OBSERVATIONS))) ? JSONObject.NULL : parcels.getString(parcels.getColumnIndex(ParcelEntry.COLUMN_OBSERVATIONS)));
                         parcelJson.put(ParcelEntry.COLUMN_FULL_NAME,parcels.getString(parcels.getColumnIndex(ParcelEntry.COLUMN_FULL_NAME)));
                         parcelJson.put(ParcelEntry.COLUMN_ENTRY_PARCEL,parcels.getString(parcels.getColumnIndex(ParcelEntry.COLUMN_ENTRY_PARCEL)));

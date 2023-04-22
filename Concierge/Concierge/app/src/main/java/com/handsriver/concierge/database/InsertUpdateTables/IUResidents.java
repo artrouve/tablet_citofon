@@ -1,5 +1,6 @@
 package com.handsriver.concierge.database.InsertUpdateTables;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.SQLException;
@@ -28,9 +29,11 @@ public class IUResidents{
     private static final int IS_SYNC = 1;
     private static final int NOT_REQUEST_CODE = 0;
     private static final int NOT_UPDATE = 0;
+    private static final int NOT_DELETE = 0;
     private static ArrayList<String> mResidentNew;
     private static LongSparseArray<Resident> mResidentMap;
 
+    @SuppressLint("Range")
     public static void run(Vector<ContentValues> cVVector) {
         SQLiteDatabase db;
         mResidentNew = new ArrayList<String>();
@@ -86,6 +89,7 @@ public class IUResidents{
                             obj.put(ResidentEntry.COLUMN_IS_SYNC,IS_SYNC);
                             obj.put(ResidentEntry.COLUMN_IS_UPDATE,NOT_UPDATE);
                             obj.put(ResidentEntry.COLUMN_REQUEST_CODE,NOT_REQUEST_CODE);
+                            obj.put(ResidentEntry.COLUMN_IS_DELETED,NOT_DELETE);
                             db.insert(tableName,null,obj);
                         }
                     }
@@ -94,6 +98,7 @@ public class IUResidents{
                     obj.put(ResidentEntry.COLUMN_IS_SYNC,IS_SYNC);
                     obj.put(ResidentEntry.COLUMN_IS_UPDATE,NOT_UPDATE);
                     obj.put(ResidentEntry.COLUMN_REQUEST_CODE,NOT_REQUEST_CODE);
+                    obj.put(ResidentEntry.COLUMN_IS_DELETED,NOT_DELETE);
                     db.insert(tableName,null,obj);
                 }
             }

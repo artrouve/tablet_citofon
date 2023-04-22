@@ -20,6 +20,7 @@ import android.widget.TextView;
 
 import com.handsriver.concierge.R;
 import com.handsriver.concierge.database.ConciergeContract.ParcelEntry;
+import com.handsriver.concierge.database.ConciergeContract.ParcelTypeEntry;
 import com.handsriver.concierge.database.ConciergeContract.ApartmentEntry;
 import com.handsriver.concierge.database.ConciergeDbHelper;
 import com.handsriver.concierge.database.DatabaseManager;
@@ -66,9 +67,11 @@ public class SearchParcelsListFragment extends Fragment {
                 ParcelEntry.COLUMN_OBSERVATIONS + "," +
                 ParcelEntry.COLUMN_ENTRY_PARCEL + "," +
                 ParcelEntry.COLUMN_EXIT_PARCEL + "," +
+                ParcelTypeEntry.TABLE_NAME + "." + ParcelTypeEntry.COLUMN_PARCELTYPE_TYPE + "," +
                 ApartmentEntry.TABLE_NAME + "." + ApartmentEntry.COLUMN_APARTMENT_NUMBER +
-                " FROM " + ParcelEntry.TABLE_NAME + "," + ApartmentEntry.TABLE_NAME +
+                " FROM " + ParcelEntry.TABLE_NAME + "," + ApartmentEntry.TABLE_NAME + "," + ParcelTypeEntry.TABLE_NAME +
                 " WHERE " + ApartmentEntry.TABLE_NAME + "." + ApartmentEntry.COLUMN_APARTMENT_ID_SERVER + " = " + ParcelEntry.TABLE_NAME + "." + ParcelEntry.COLUMN_APARTMENT_ID +
+                " AND " + ParcelEntry.TABLE_NAME + "." + ParcelEntry.COLUMN_PARCELTYPE_ID + " = " + ParcelTypeEntry.TABLE_NAME + "." + ParcelTypeEntry.COLUMN_PARCELTYPE_ID_SERVER +
                 " ORDER BY " + ParcelEntry.COLUMN_ENTRY_PARCEL + " DESC";
 
         Cursor c;
@@ -88,6 +91,7 @@ public class SearchParcelsListFragment extends Fragment {
                 parcel.setFullName(c.getString(c.getColumnIndex(ParcelEntry.COLUMN_FULL_NAME)));
                 parcel.setObservations(c.getString(c.getColumnIndex(ParcelEntry.COLUMN_OBSERVATIONS)));
                 parcel.setEntryParcel(c.getString(c.getColumnIndex(ParcelEntry.COLUMN_ENTRY_PARCEL)));
+                parcel.setTypeParcel(c.getString(c.getColumnIndex(ParcelTypeEntry.COLUMN_PARCELTYPE_TYPE)));
                 parcel.setExitParcel(c.getString(c.getColumnIndex(ParcelEntry.COLUMN_EXIT_PARCEL)));
                 parcel.setApartmentNumber(c.getString(c.getColumnIndex(ApartmentEntry.COLUMN_APARTMENT_NUMBER)));
                 mParcels.add(parcel);

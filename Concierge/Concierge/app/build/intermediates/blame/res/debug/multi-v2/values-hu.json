@@ -4,7 +4,24 @@
             "outputFile": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hu/values-hu.xml",
             "map": [
                 {
-                    "source": "/home/alain/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.0.1.aar/204b62cdf66e03dfeb9b99904016c671/res/values-hu/values-hu.xml",
+                    "source": "/home/alain/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/78139fe9ff15daaa11e67a458d66ae9c/res/values-hu/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "235",
+                        "endOffsets": "482"
+                    },
+                    "to": {
+                        "startLines": "29",
+                        "startColumns": "4",
+                        "startOffsets": "3359",
+                        "endColumns": "235",
+                        "endOffsets": "3590"
+                    }
+                },
+                {
+                    "source": "/home/alain/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.0.1.aar/4a634afc57ad9e1cdbe9893490e955d6/res/values-hu/values-hu.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "/home/alain/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/0d5c6c7220e97560d9b19dd89422a723/res/values-hu/values.xml",
+                    "source": "/home/alain/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/61ee39feb0c59d5bfa15a08ab71be1f4/res/values-hu/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -35,23 +52,6 @@
                         "startOffsets": "2121,2234,2450,2590,2701,2928,3068,3220,3595,3824,3934,4150,4289,4520,4722,4823,4921",
                         "endColumns": "112,215,139,110,226,139,151,138,228,109,215,138,230,201,100,97,116",
                         "endOffsets": "2229,2445,2585,2696,2923,3063,3215,3354,3819,3929,4145,4284,4515,4717,4818,4916,5033"
-                    }
-                },
-                {
-                    "source": "/home/alain/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/e7f473ebb4b8e5ef8c800e8f8d2e928c/res/values-hu/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "235",
-                        "endOffsets": "482"
-                    },
-                    "to": {
-                        "startLines": "29",
-                        "startColumns": "4",
-                        "startOffsets": "3359",
-                        "endColumns": "235",
-                        "endOffsets": "3590"
                     }
                 }
             ]

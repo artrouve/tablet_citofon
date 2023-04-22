@@ -90,6 +90,7 @@ public class VisitsRegisterFragment extends Fragment{
     ProgressBar indeterminatePlatesBar;
     TextView textViewParkingLots;
     Button addVisitList;
+    Button callPhone;
     ListView visitList;
     String parkingLots;
     ArrayList<Visit> arrayOfVisit;
@@ -111,6 +112,7 @@ public class VisitsRegisterFragment extends Fragment{
     ListView platesLists;
     VehiclePlateDetectedOper DetectedPlate;
     VehiclePlateDetectedOper DetectedPlateAux;
+    Boolean allowPhoneCall;
 
 
     public static final String MANUAL_ONLY_RUT = "MANUAL_ONLY_RUT";
@@ -142,6 +144,9 @@ public class VisitsRegisterFragment extends Fragment{
 
         SharedPreferences settingsPrefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
         parkingLots = settingsPrefs.getString(getString(R.string.pref_id_parking_key),"");
+        allowPhoneCall = settingsPrefs.getBoolean(getString(R.string.pref_allow_phonecall_key),false);
+
+
 
         optionalField = settingsPrefs.getString(getString(R.string.pref_OPTIONAL_FILED_VISITS_key),"");
 
@@ -150,6 +155,7 @@ public class VisitsRegisterFragment extends Fragment{
             items = new ArrayList<String>(items);
             parkingAdapter = new ArrayAdapter<String>(getActivity(),R.layout.spinner_item,items);
         }
+
 
     }
 
@@ -248,11 +254,6 @@ public class VisitsRegisterFragment extends Fragment{
 
 
         });
-
-
-
-
-
 
 
         textOptionalValue.setOnKeyListener(new View.OnKeyListener() {
@@ -406,7 +407,7 @@ public class VisitsRegisterFragment extends Fragment{
                 if (vehiclePlateDetected != null)
                 {
 
-                    if(vehiclePlateDetected.getLicensePlate()!="noPlate"){
+                    if(vehiclePlateDetected.getLicensePlate()!="noPlate" && vehiclePlateDetected.getLicensePlate()!="unknown"){
 
                         textLicensePlate.setText(vehiclePlateDetected.getLicensePlate());
                         //OJALA BUSCAR EN LAS VISITAS HISTORICAS
@@ -476,7 +477,7 @@ public class VisitsRegisterFragment extends Fragment{
                     }
                     else
                     {
-                        newVisit.setOptional(textOptionalValue.getText().toString());
+                        //newVisit.setOptional(textOptionalValue.getText().toString());
                         Utility.hideKeyboard(rootView,getContext());
                         textFullName.setText("");
 
@@ -566,7 +567,7 @@ public class VisitsRegisterFragment extends Fragment{
                 visitsAdapter.add(newVisit);
                 textRut.getText().clear();
                 textFullName.getText().clear();
-                textOptionalValue.getText().clear();
+                //textOptionalValue.getText().clear();
             }
             else if (textFullName.length() == 0 && textRut.length()>2) {
                 if (RutFormat.checkRutDv(textRut.getText().toString())) {
@@ -583,7 +584,7 @@ public class VisitsRegisterFragment extends Fragment{
                             visitsAdapter.add(newVisit);
                             textRut.getText().clear();
                             textFullName.getText().clear();
-                            textOptionalValue.getText().clear();
+                            //textOptionalValue.getText().clear();
                         }
                     }
                 }
@@ -609,7 +610,7 @@ public class VisitsRegisterFragment extends Fragment{
                             visitsAdapter.add(newVisit);
                             textRut.getText().clear();
                             textFullName.getText().clear();
-                            textOptionalValue.getText().clear();
+                            //textOptionalValue.getText().clear();
                         }
                     }
                 }
@@ -627,6 +628,12 @@ public class VisitsRegisterFragment extends Fragment{
 
         if (apartment.length()>0 && arrayOfVisit.size()>0)
         {
+
+            int i=0;
+            for(i=0;i<arrayOfVisit.size();i++){
+                arrayOfVisit.get(i).setOptional(textOptionalValue.getText().toString());
+            }
+
             Bundle args = new Bundle();
             args.putParcelableArrayList("visitList",arrayOfVisit);
 
@@ -728,7 +735,7 @@ public class VisitsRegisterFragment extends Fragment{
                             visitsAdapter.add(newVisit);
                             textRut.getText().clear();
                             textFullName.getText().clear();
-                            textOptionalValue.getText().clear();
+                            //textOptionalValue.getText().clear();
                         }
                     }
                     if (resultCode == Activity.RESULT_CANCELED){
@@ -739,7 +746,7 @@ public class VisitsRegisterFragment extends Fragment{
                         else if (type.equals(MANUAL_ONLY_RUT) || type.equals(MANUAL_ALL)){
                             textRut.getText().clear();
                             textFullName.getText().clear();
-                            textOptionalValue.getText().clear();
+                            //textOptionalValue.getText().clear();
                         }
                     }
                 }
@@ -754,7 +761,7 @@ public class VisitsRegisterFragment extends Fragment{
                             visitsAdapter.add(newVisit);
                             textRut.getText().clear();
                             textFullName.getText().clear();
-                            textOptionalValue.getText().clear();
+                            //textOptionalValue.getText().clear();
                         }
                     }
                 }

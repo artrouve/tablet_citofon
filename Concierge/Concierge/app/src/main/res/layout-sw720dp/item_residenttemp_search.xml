@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:orientation="horizontal">
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp">
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fullNameList"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textViewfullNameList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/emailList"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textViewEmailList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/apartmentList"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textViewApartmentList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rut/Pasaporte"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textViewRutList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        </TableRow>
+
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fono"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textViewPhoneList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:autoLink="phone"
+                android:linksClickable="true"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fecha Inicio"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textViewStartDateList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fecha Término"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textViewEndDateList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        </TableRow>
+
+
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/visitButtonListLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingTop="0dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:gravity="end"
+        android:layout_gravity="center_vertical">
+
+        <Button
+            android:id="@+id/buttonGenerateCodeResident"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/code"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+
+        <Button
+            android:id="@+id/buttonEditResident"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+
+        <Button
+            android:id="@+id/buttonRegisterVisitResident"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/visits_register"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

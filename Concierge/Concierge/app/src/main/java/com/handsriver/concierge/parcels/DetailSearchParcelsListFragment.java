@@ -13,7 +13,9 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.handsriver.concierge.R;
+import com.handsriver.concierge.database.ConciergeContract;
 import com.handsriver.concierge.database.ConciergeContract.ParcelEntry;
+import com.handsriver.concierge.database.ConciergeContract.PorterEntry;
 import com.handsriver.concierge.database.ConciergeDbHelper;
 import com.handsriver.concierge.database.DatabaseManager;
 import com.handsriver.concierge.database.SelectToDBRaw;
@@ -31,9 +33,12 @@ import java.util.concurrent.ExecutionException;
 public class DetailSearchParcelsListFragment extends Fragment {
     View rootView;
     TextView textViewObservations;
+    TextView textViewTypeParcel;
     TextView textViewFullName;
     TextView textViewExitParcel;
+    TextView textViewExitParcelPorter;
     TextView textViewEntryParcel;
+    TextView textViewEntryParcelPorter;
     TextView textViewApartmentNumber;
     TextView textViewUniqueIdParcel;
     TextView textViewFullNameExitParcel;
@@ -42,8 +47,12 @@ public class DetailSearchParcelsListFragment extends Fragment {
     String uniqueId;
     String observations;
     String fullName;
+    String typeParcel;
+
     String exitParcel;
     String entryParcel;
+    String entryParcelNamePorter;
+    String exitParcelNamePorter;
     String apartmentNumber;
     String fullNameExitParcel;
     String documentNumberExitParcel;
@@ -68,11 +77,15 @@ public class DetailSearchParcelsListFragment extends Fragment {
         id = args.getString("id");
         observations = args.getString("observations",NO_AVAILABLE);
         fullName = args.getString("fullName",NO_AVAILABLE);
+        typeParcel = args.getString("typeParcel",NO_AVAILABLE);
         entryParcel = Utility.changeDateFormat(args.getString("entryParcel"),"ENTRY");
         apartmentNumber = args.getString("apartmentNumber",NO_AVAILABLE);
         uniqueId = args.getString("uniqueId");
 
         getExitDate();
+        getEntryPorter();
+        getExitPorter();
+
 
         rootView = inflater.inflate(R.layout.detail_parcels, container, false);
 
@@ -99,12 +112,25 @@ public class DetailSearchParcelsListFragment extends Fragment {
 
         textViewObservations = (TextView) rootView.findViewById(R.id.textViewDetailObservationsParcel);
         textViewObservations.setText(observations);
+
+        textViewTypeParcel = (TextView) rootView.findViewById(R.id.textViewDetailTypeParcel);
+        textViewTypeParcel.setText(typeParcel);
+
         textViewFullName = (TextView) rootView.findViewById(R.id.textViewDetailFullNameParcel);
         textViewFullName.setText(fullName);
         textViewEntryParcel = (TextView) rootView.findViewById(R.id.textViewDetailEntryParcel);
         textViewEntryParcel.setText(entryParcel);
+        textViewEntryParcelPorter = (TextView) rootView.findViewById(R.id.textViewDetailEntryParcelPorter);
+        textViewEntryParcelPorter.setText(entryParcelNamePorter);
+
+
         textViewExitParcel = (TextView) rootView.findViewById(R.id.textViewDetailExitDateParcel);
         textViewExitParcel.setText(exitParcel);
+        textViewExitParcelPorter = (TextView) rootView.findViewById(R.id.textViewDetailExitParcelPorter);
+        textViewExitParcelPorter.setText(exitParcelNamePorter);
+
+
+
         textViewApartmentNumber = (TextView) rootView.findViewById(R.id.textViewDetailApartmentNumber);
         textViewApartmentNumber.setText(apartmentNumber);
         textViewUniqueIdParcel = (TextView) rootView.findViewById(R.id.textViewIdUniqueParcel);
@@ -123,7 +149,9 @@ public class DetailSearchParcelsListFragment extends Fragment {
             case DIALOG_FRAGMENT:
                 if (resultCode == Activity.RESULT_OK){
                     getExitDate();
+                    getExitPorter();
                     textViewExitParcel.setText(exitParcel);
+                    textViewExitParcelPorter.setText(exitParcelNamePorter);
                     textViewFullNameExitParcel.setText(fullNameExitParcel);
                     textViewDocumentNumberExitParcel.setText(documentNumberExitParcel);
 
@@ -135,6 +163,42 @@ public class DetailSearchParcelsListFragment extends Fragment {
                 break;
         }
     }
+
+    public void getEntryPorter(){
+
+        final String query1 = "SELECT " + PorterEntry.TABLE_NAME+"."+PorterEntry.COLUMN_FIRST_NAME +" || '' || " + PorterEntry.TABLE_NAME+"."+PorterEntry.COLUMN_LAST_NAME +
+                " FROM " + ParcelEntry.TABLE_NAME + "," + PorterEntry.TABLE_NAME +
+                " WHERE " + ParcelEntry.TABLE_NAME+"."+ParcelEntry._ID + " = ? AND " +
+                PorterEntry.TABLE_NAME+"."+PorterEntry.COLUMN_PORTER_ID_SERVER +"="+ParcelEntry.TABLE_NAME+"."+ParcelEntry.COLUMN_ENTRY_PARCEL_PORTER_ID;
+
+        String [] args2 = new String[]{id};
+
+        Cursor c1;
+
+        try {
+            SelectToDBRaw selectPorterEntryParcel = new SelectToDBRaw(query1,args2);
+            c1 = selectPorterEntryParcel.execute().get();
+        }catch (Exception e){
+            c1 = null;
+        }
+
+        if (c1 != null){
+            if(c1.moveToFirst()){
+                if (c1.getString(0) == null || c1.getString(0).isEmpty())
+                {
+                    entryParcelNamePorter = NO_AVAILABLE;
+                }
+                else
+                {
+                    entryParcelNamePorter = c1.getString(0);
+                }
+
+
+            }
+        }
+
+    }
+
 
     public void getExitDate (){
 
@@ -184,4 +248,49 @@ public class DetailSearchParcelsListFragment extends Fragment {
             }
         }
     }
+
+
+    public void getExitPorter(){
+
+        if(!exitParcel.equals(NO_AVAILABLE)){
+
+            final String query1 = "SELECT " + PorterEntry.TABLE_NAME+"."+PorterEntry.COLUMN_FIRST_NAME +" || '' || " + PorterEntry.TABLE_NAME+"."+PorterEntry.COLUMN_LAST_NAME +
+                    " FROM " + ParcelEntry.TABLE_NAME + "," + PorterEntry.TABLE_NAME +
+                    " WHERE " + ParcelEntry.TABLE_NAME+"."+ParcelEntry._ID + " = ? AND " +
+                    PorterEntry.TABLE_NAME+"."+PorterEntry.COLUMN_PORTER_ID_SERVER +"="+ParcelEntry.TABLE_NAME+"."+ParcelEntry.COLUMN_EXIT_PARCEL_PORTER_ID;
+
+            String [] args2 = new String[]{id};
+
+            Cursor c1;
+
+            try {
+                SelectToDBRaw selectPorterEntryParcel = new SelectToDBRaw(query1,args2);
+                c1 = selectPorterEntryParcel.execute().get();
+            }catch (Exception e){
+                c1 = null;
+            }
+
+            if (c1 != null){
+                if(c1.moveToFirst()){
+                    if (c1.getString(0) == null || c1.getString(0).isEmpty())
+                    {
+                        exitParcelNamePorter = NO_AVAILABLE;
+                    }
+                    else
+                    {
+                        exitParcelNamePorter = c1.getString(0);
+                    }
+
+
+                }
+            }
+        }
+        else{
+            exitParcelNamePorter = NO_AVAILABLE;
+        }
+
+
+    }
+
+
 }

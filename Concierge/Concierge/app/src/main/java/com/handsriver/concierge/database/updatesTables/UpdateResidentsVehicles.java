@@ -1,0 +1,66 @@
+package com.handsriver.concierge.database.updatesTables;
+
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
+import android.os.AsyncTask;
+import android.util.Log;
+
+import com.handsriver.concierge.database.ConciergeContract.ResidentVehicleEntry;
+import com.handsriver.concierge.database.DatabaseManager;
+import com.handsriver.concierge.sync.ConfigureSyncAccount;
+
+/**
+ * Created by Created by alain_r._trouve_silva after 03-03-17.
+ */
+
+public class UpdateResidentsVehicles extends AsyncTask<Void,Void,Void> {
+    private SQLiteDatabase db;
+    private String plate;
+    private String active;
+    private long id;
+    private Context mContext;
+
+    private static final String TAG = "UpdateResidentVehicle";
+    private static final int IS_UPDATE = 1;
+
+
+    public UpdateResidentsVehicles(String plate, String active, long id, Context mContext){
+        this.plate = plate;
+        this.active = active;
+        this.id = id;
+        this.mContext = mContext;
+    }
+
+    @Override
+    protected Void doInBackground(Void... params) {
+        String tableName = ResidentVehicleEntry.TABLE_NAME;
+        db = DatabaseManager.getInstance().openDatabase();
+        try {
+            ContentValues values = new ContentValues();
+            values.put(ResidentVehicleEntry.COLUMN_PLATE,plate);
+            values.put(ResidentVehicleEntry.COLUMN_ACTIVE,active);
+
+            values.put(ResidentVehicleEntry.COLUMN_IS_UPDATE,IS_UPDATE);
+
+            String whereClause = ResidentVehicleEntry._ID + " = ? ";
+            String [] whereArgs = {String.valueOf(id)};
+
+            db.update(tableName,values,whereClause,whereArgs);
+
+            ConfigureSyncAccount.syncImmediatelyResidentsVehiclesTablet(mContext);
+
+        } catch (SQLException e){
+            Log.e(TAG, "SQLiteException:" + e.getMessage());
+            DatabaseManager.getInstance().closeDatabase();
+        }
+        return null;
+    }
+
+    @Override
+    protected void onPostExecute(Void aVoid) {
+        DatabaseManager.getInstance().closeDatabase();
+        super.onPostExecute(aVoid);
+    }
+}

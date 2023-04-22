@@ -16,7 +16,7 @@ import com.handsriver.concierge.suppliers.SupplierVisit;
 
 public class ConciergeDbHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 4;
+    private static final int DATABASE_VERSION = 7;
 
     static final String DATABASE_NAME = "concierge.db";
 
@@ -105,6 +105,67 @@ public class ConciergeDbHelper extends SQLiteOpenHelper {
             ");";
 
 
+    private final String SQL_CREATE_RESIDENTSVEHICLES_TABLE = "CREATE TABLE " + ResidentVehicleEntry.TABLE_NAME + " (" +
+            ResidentVehicleEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+            ResidentVehicleEntry.COLUMN_PLATE + " TEXT NOT NULL, " +
+            ResidentVehicleEntry.COLUMN_ACTIVE + " INTEGER NOT NULL, " +
+            ResidentVehicleEntry.COLUMN_RESIDENTVEHICLE_ID_SERVER + " INTEGER UNIQUE, " +
+            ResidentVehicleEntry.COLUMN_APARTMENT_ID + " INTEGER NOT NULL, " +
+            ResidentVehicleEntry.COLUMN_IS_SYNC + " INTEGER NOT NULL, " +
+            ResidentVehicleEntry.COLUMN_IS_UPDATE + " INTEGER NOT NULL, " +
+            "FOREIGN KEY (" + ResidentVehicleEntry.COLUMN_APARTMENT_ID + ") REFERENCES " +
+            ApartmentEntry.TABLE_NAME + " (" + ApartmentEntry.COLUMN_APARTMENT_ID_SERVER + ") " +
+            ");";
+
+    private final String SQL_CREATE_PLATE_RESIDENTSVEHICLES_INDEX = "CREATE INDEX plate_residentsvehicles_idx ON " + ResidentVehicleEntry.TABLE_NAME + " (" +
+            ResidentVehicleEntry.COLUMN_PLATE +
+            ");";
+
+    private final String SQL_CREATE_APARTMENT_ID_RESIDENTSVEHICLES_INDEX = "CREATE INDEX apartment_id_residentsvehicles_idx ON " + ResidentVehicleEntry.TABLE_NAME + " (" +
+            ResidentVehicleEntry.COLUMN_APARTMENT_ID +
+            ");";
+
+    private final String SQL_CREATE_RESIDENTVEHICLE_ID_SERVER_RESIDENTSVEHICLES_INDEX = "CREATE UNIQUE INDEX residentvehicle_id_server_residentsvehicles_idx ON " + ResidentVehicleEntry.TABLE_NAME + " (" +
+            ResidentVehicleEntry.COLUMN_RESIDENTVEHICLE_ID_SERVER +
+            ");";
+
+    private final String SQL_CREATE_RESIDENTSTEMPS_TABLE = "CREATE TABLE " + ResidentTempEntry.TABLE_NAME + " (" +
+            ResidentTempEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+            ResidentTempEntry.COLUMN_RUT + " TEXT, " +
+            ResidentTempEntry.COLUMN_FULL_NAME + " TEXT, " +
+            ResidentTempEntry.COLUMN_EMAIL + " TEXT, " +
+            ResidentTempEntry.COLUMN_PHONE + " TEXT, " +
+            ResidentTempEntry.COLUMN_START_DATE + " DATETIME, " +
+            ResidentTempEntry.COLUMN_END_DATE + " DATETIME, " +
+            ResidentTempEntry.COLUMN_RESIDENTTEMP_ID_SERVER + " INTEGER UNIQUE, " +
+            ResidentTempEntry.COLUMN_APARTMENT_ID + " INTEGER NOT NULL, " +
+            ResidentTempEntry.COLUMN_IS_SYNC + " INTEGER NOT NULL, " +
+            ResidentTempEntry.COLUMN_IS_UPDATE + " INTEGER NOT NULL, " +
+            "FOREIGN KEY (" + ResidentTempEntry.COLUMN_APARTMENT_ID + ") REFERENCES " +
+            ApartmentEntry.TABLE_NAME + " (" + ApartmentEntry.COLUMN_APARTMENT_ID_SERVER + ") " +
+            ");";
+
+
+    private final String SQL_CREATE_APARTMENT_ID_RESIDENTSTEMPS_INDEX = "CREATE INDEX apartment_id_residentstemps_idx ON " + ResidentTempEntry.TABLE_NAME + " (" +
+            ResidentTempEntry.COLUMN_APARTMENT_ID +
+            ");";
+
+    private final String SQL_CREATE_RESIDENTTEMP_ID_SERVER_RESIDENTSTEMPS_INDEX = "CREATE UNIQUE INDEX residenttemp_id_server_residentstemps_idx ON " + ResidentTempEntry.TABLE_NAME + " (" +
+            ResidentTempEntry.COLUMN_RESIDENTTEMP_ID_SERVER +
+            ");";
+
+
+
+    private final String SQL_CREATE_PARCELTYPE_TABLE = "CREATE TABLE " + ParcelTypeEntry.TABLE_NAME + " (" +
+            ParcelTypeEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+            ParcelTypeEntry.COLUMN_PARCELTYPE_TYPE + " TEXT NOT NULL, " +
+            ParcelTypeEntry.COLUMN_PARCELTYPE_ID_SERVER + " INTEGER UNIQUE, " +
+            ParcelTypeEntry.COLUMN_ACTIVE + " INTEGER NOT NULL " +
+            ");";
+
+    private final String SQL_ADD_FIRST_PARCELTYPE = "INSERT INTO "+ParcelTypeEntry.TABLE_NAME+" values (null, 'Encomienda',1,1)";
+
+
 
 
 
@@ -128,8 +189,6 @@ public class ConciergeDbHelper extends SQLiteOpenHelper {
                 ");";
 
 
-
-
         final String SQL_CREATE_APARTMENTS_TABLE = "CREATE TABLE " + ApartmentEntry.TABLE_NAME + " (" +
                 ApartmentEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 ApartmentEntry.COLUMN_APARTMENT_NUMBER + " TEXT NOT NULL, " +
@@ -144,6 +203,7 @@ public class ConciergeDbHelper extends SQLiteOpenHelper {
         final String SQL_CREATE_APARTMENT_ID_SERVER_APARTMENTS_INDEX = "CREATE UNIQUE INDEX apartment_id_server_apartments_idx ON " + ApartmentEntry.TABLE_NAME + " (" +
                 ApartmentEntry.COLUMN_APARTMENT_ID_SERVER +
                 ");";
+
 
         final String SQL_CREATE_TIMEKEEPING_TABLE = "CREATE TABLE " + TimekeepingEntry.TABLE_NAME + " (" +
                 TimekeepingEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -317,11 +377,14 @@ public class ConciergeDbHelper extends SQLiteOpenHelper {
                 ParcelEntry.COLUMN_APARTMENT_ID + " INTEGER NOT NULL, " +
                 ParcelEntry.COLUMN_ENTRY_PARCEL_PORTER_ID + " INTEGER NOT NULL, " +
                 ParcelEntry.COLUMN_EXIT_PARCEL_PORTER_ID + " INTEGER, " +
+                ParcelEntry.COLUMN_PARCELTYPE_ID + " INTEGER NOT NULL DEFAULT 1, " +
                 ParcelEntry.COLUMN_PARCEL_ID_SERVER + " INTEGER UNIQUE, " +
                 ParcelEntry.COLUMN_IS_SYNC + " INTEGER NOT NULL, " +
                 ParcelEntry.COLUMN_IS_UPDATE + " INTEGER NOT NULL, " +
                 "FOREIGN KEY (" + ParcelEntry.COLUMN_APARTMENT_ID + ") REFERENCES " +
                 ApartmentEntry.TABLE_NAME + " (" + ApartmentEntry.COLUMN_APARTMENT_ID_SERVER + "), " +
+                "FOREIGN KEY (" + ParcelEntry.COLUMN_PARCELTYPE_ID + ") REFERENCES " +
+                ParcelTypeEntry.TABLE_NAME + " (" + ParcelTypeEntry.COLUMN_PARCELTYPE_ID_SERVER + "), " +
                 "FOREIGN KEY (" + ParcelEntry.COLUMN_ENTRY_PARCEL_PORTER_ID + ") REFERENCES " +
                 PorterEntry.TABLE_NAME + " (" + PorterEntry.COLUMN_PORTER_ID_SERVER + "), " +
                 "FOREIGN KEY (" + ParcelEntry.COLUMN_EXIT_PARCEL_PORTER_ID + ") REFERENCES " +
@@ -360,6 +423,7 @@ public class ConciergeDbHelper extends SQLiteOpenHelper {
                 ResidentEntry.COLUMN_TOKEN + " TEXT, " +
                 ResidentEntry.COLUMN_PUSH_NOTIFICATIONS + " INTEGER, " +
                 ResidentEntry.COLUMN_REQUEST_CODE + " INTEGER NOT NULL, " +
+                ResidentEntry.COLUMN_IS_DELETED + " INTEGER NOT NULL, " +
                 ResidentEntry.COLUMN_IS_SYNC + " INTEGER NOT NULL, " +
                 ResidentEntry.COLUMN_IS_UPDATE + " INTEGER NOT NULL, " +
                 "FOREIGN KEY (" + ResidentEntry.COLUMN_APARTMENT_ID + ") REFERENCES " +
@@ -377,6 +441,9 @@ public class ConciergeDbHelper extends SQLiteOpenHelper {
         final String SQL_CREATE_RESIDENT_ID_SERVER_RESIDENTS_INDEX = "CREATE UNIQUE INDEX resident_id_server_residents_idx ON " + ResidentEntry.TABLE_NAME + " (" +
                 ResidentEntry.COLUMN_RESIDENT_ID_SERVER +
                 ");";
+
+
+
 
         final String SQL_CREATE_BLACKLIST_TABLE = "CREATE TABLE " + BlacklistEntry.TABLE_NAME + " (" +
                 BlacklistEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -405,6 +472,7 @@ public class ConciergeDbHelper extends SQLiteOpenHelper {
                 WhitelistEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 WhitelistEntry.COLUMN_DOCUMENT_NUMBER + " TEXT NOT NULL, " +
                 WhitelistEntry.COLUMN_FULL_NAME + " TEXT, " +
+                WhitelistEntry.COLUMN_PLATE + " TEXT, " +
                 WhitelistEntry.COLUMN_APARTMENT_ID + " INTEGER NOT NULL, " +
                 WhitelistEntry.COLUMN_WHITELIST_ID_SERVER + " INTEGER UNIQUE, " +
                 "FOREIGN KEY (" + WhitelistEntry.COLUMN_APARTMENT_ID + ") REFERENCES " +
@@ -500,6 +568,8 @@ public class ConciergeDbHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_CREATE_COMMONSPACES_TABLE);
 
         db.execSQL(SQL_CREATE_APARTMENTS_TABLE);
+        db.execSQL(SQL_CREATE_PARCELTYPE_TABLE);
+        db.execSQL(SQL_ADD_FIRST_PARCELTYPE);
         db.execSQL(SQL_CREATE_TIMEKEEPING_TABLE);
         db.execSQL(SQL_CREATE_VEHICLES_TABLE);
         db.execSQL(SQL_CREATE_VISITS_TABLE);
@@ -507,6 +577,8 @@ public class ConciergeDbHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_CREATE_COMMONSPACES_VISITS_TABLE);
         db.execSQL(SQL_CREATE_PARCELS_TABLE);
         db.execSQL(SQL_CREATE_RESIDENTS_TABLE);
+        db.execSQL(SQL_CREATE_RESIDENTSVEHICLES_TABLE);
+        db.execSQL(SQL_CREATE_RESIDENTSTEMPS_TABLE);
         db.execSQL(SQL_CREATE_BLACKLIST_TABLE);
         db.execSQL(SQL_CREATE_WHITELIST_TABLE);
         db.execSQL(SQL_CREATE_PAYMENT_TABLE);
@@ -537,9 +609,19 @@ public class ConciergeDbHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_CREATE_FULL_NAME_PARCELS_INDEX);
         db.execSQL(SQL_CREATE_PARCEL_ID_SERVER_PARCELS_INDEX);
         db.execSQL(SQL_CREATE_UNIQUE_ID_PARCEL_PARCELS_INDEX);
+
         db.execSQL(SQL_CREATE_APARTMENT_ID_RESIDENTS_INDEX);
         db.execSQL(SQL_CREATE_FULL_NAME_RESIDENTS_INDEX);
         db.execSQL(SQL_CREATE_RESIDENT_ID_SERVER_RESIDENTS_INDEX);
+
+        db.execSQL(SQL_CREATE_APARTMENT_ID_RESIDENTSVEHICLES_INDEX);
+        db.execSQL(SQL_CREATE_PLATE_RESIDENTSVEHICLES_INDEX);
+        db.execSQL(SQL_CREATE_RESIDENTVEHICLE_ID_SERVER_RESIDENTSVEHICLES_INDEX);
+
+        db.execSQL(SQL_CREATE_APARTMENT_ID_RESIDENTSTEMPS_INDEX);
+        db.execSQL(SQL_CREATE_RESIDENTTEMP_ID_SERVER_RESIDENTSTEMPS_INDEX);
+
+
         db.execSQL(SQL_CREATE_APARTMENT_ID_BLACKLIST_INDEX);
         db.execSQL(SQL_CREATE_DOCUMENT_NUMBER_BLACKLIST_INDEX);
         db.execSQL(SQL_CREATE_BLACKLIST_ID_SERVER_BLACKLIST_INDEX);
@@ -684,6 +766,43 @@ public class ConciergeDbHelper extends SQLiteOpenHelper {
             db.execSQL(SQL_CREATE_APARTMENT_ID_COMMONSPACEVISITS_INDEX);
 
         }
+
+        if(oldVersion == 4){
+
+            db.execSQL(SQL_CREATE_RESIDENTSVEHICLES_TABLE);
+            db.execSQL(SQL_CREATE_PLATE_RESIDENTSVEHICLES_INDEX);
+            db.execSQL(SQL_CREATE_RESIDENTVEHICLE_ID_SERVER_RESIDENTSVEHICLES_INDEX);
+            db.execSQL(SQL_CREATE_APARTMENT_ID_RESIDENTSVEHICLES_INDEX);
+
+        }
+
+
+        if(oldVersion == 5){
+
+            db.execSQL(SQL_CREATE_PARCELTYPE_TABLE);
+            db.execSQL(SQL_ADD_FIRST_PARCELTYPE);
+            String SQL_ALTER_TABLE_PARCELS_ADD_PARCELTYPE = "ALTER TABLE " + ParcelEntry.TABLE_NAME + " ADD " + ParcelEntry.COLUMN_PARCELTYPE_ID +  "  INTEGER NOT NULL DEFAULT 1 REFERENCES "+ ParcelTypeEntry.TABLE_NAME + " ("+ParcelTypeEntry.COLUMN_PARCELTYPE_ID_SERVER + ")";
+            db.execSQL(SQL_ALTER_TABLE_PARCELS_ADD_PARCELTYPE);
+
+        }
+
+        if(oldVersion == 6){
+
+            db.execSQL(SQL_CREATE_RESIDENTSTEMPS_TABLE);
+            db.execSQL(SQL_CREATE_RESIDENTTEMP_ID_SERVER_RESIDENTSTEMPS_INDEX);
+            db.execSQL(SQL_CREATE_APARTMENT_ID_RESIDENTSTEMPS_INDEX);
+
+        }
+
+        if(oldVersion == 7){
+
+            String SQL_ALTER_TABLE_RESIDENT_ADD_IS_DELETED = "ALTER TABLE " + ResidentEntry.TABLE_NAME + " ADD " + ResidentEntry.COLUMN_IS_DELETED +  "  INTEGER NOT NULL DEFAULT 0";
+            String SQL_ALTER_TABLE_WHITELIST_ADD_PLATE = "ALTER TABLE " + WhitelistEntry.TABLE_NAME + " ADD " + WhitelistEntry.COLUMN_PLATE +  "  TEXT";
+            db.execSQL(SQL_ALTER_TABLE_RESIDENT_ADD_IS_DELETED);
+            db.execSQL(SQL_ALTER_TABLE_WHITELIST_ADD_PLATE);
+
+        }
+
 
 
     }

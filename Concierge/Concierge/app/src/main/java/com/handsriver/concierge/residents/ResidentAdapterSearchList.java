@@ -3,6 +3,7 @@ package com.handsriver.concierge.residents;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -16,6 +17,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.handsriver.concierge.R;
+import com.handsriver.concierge.visits.DetailSearchVisitsListFragment;
+import com.handsriver.concierge.visits.DialogExitVisitRegister;
 import com.handsriver.concierge.visits.VisitsRegisterFragment;
 
 import java.text.Normalizer;
@@ -89,6 +92,7 @@ public class ResidentAdapterSearchList extends BaseAdapter implements Filterable
 
 
         Button button = (Button) view.findViewById(R.id.buttonRegisterVisitResident);
+        Button buttonDelete = (Button) view.findViewById(R.id.buttonDeleteResident);
         Button buttonEdit = (Button) view.findViewById(R.id.buttonEditResident);
         Button buttonCode = (Button) view.findViewById(R.id.buttonGenerateCodeResident);
 
@@ -124,8 +128,8 @@ public class ResidentAdapterSearchList extends BaseAdapter implements Filterable
 
         textViewApartment.setText(resident.getApartmentNumber());
 
-        button.setTag(position);
 
+        button.setTag(position);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -143,8 +147,22 @@ public class ResidentAdapterSearchList extends BaseAdapter implements Filterable
             }
         });
 
-        buttonEdit.setTag(position);
+        buttonDelete.setTag(position);
+        buttonDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle args = new Bundle();
+                args.putLong("id",resident.getId());
+                FragmentManager fm = ((AppCompatActivity) mContext).getSupportFragmentManager();
+                DialogDeleteResidentRegister dialog = new DialogDeleteResidentRegister();
+                dialog.setArguments(args);
+                dialog.show(fm, "DialogDeleteResidentsEdit");
 
+            }
+        });
+
+
+        buttonEdit.setTag(position);
         buttonEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

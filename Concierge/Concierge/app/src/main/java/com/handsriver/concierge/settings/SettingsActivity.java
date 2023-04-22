@@ -161,7 +161,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_id_gateway_key)));
             bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_id_building_key)));
             bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_id_URL_key)));
-            bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_id_URL_ANPR_key)));
+
 
         }
 
@@ -210,6 +210,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             findPreference(getString(R.string.pref_automatic_fine_key)).setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                 @Override
                 public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    /*
                     if((Boolean) newValue){
                         SwitchPreference mark = (SwitchPreference) findPreference(getString(R.string.pref_id_automatic_fine_key));
                         mark.setChecked(false);
@@ -220,7 +221,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                     else{
                         SwitchPreference mark = (SwitchPreference) findPreference(getString(R.string.pref_send_email_alert_key));
                         mark.setChecked(false);
-                    }
+                    }*/
                     return true;
                 }
             });
@@ -228,13 +229,14 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             findPreference(getString(R.string.pref_id_automatic_fine_key)).setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                 @Override
                 public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    /*
                     if((Boolean) newValue){
                         SwitchPreference mark = (SwitchPreference) findPreference(getString(R.string.pref_automatic_fine_key));
                         mark.setChecked(false);
                         EditTextPreference hours = (EditTextPreference) findPreference(getString(R.string.pref_id_max_time_parking_key));
                         hours.setText(String.valueOf(1));
                         bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_id_max_time_parking_key)));
-                    }
+                    }*/
                     return true;
                 }
             });
@@ -242,14 +244,41 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             findPreference(getString(R.string.pref_send_email_fine_key)).setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                 @Override
                 public boolean onPreferenceChange(Preference preference, Object newValue) {
-                    if((Boolean) newValue){
+                    /*if((Boolean) newValue){
                         EditTextPreference hours = (EditTextPreference) findPreference(getString(R.string.pref_id_time_delay_parking_key));
                         hours.setText(String.valueOf(30));
                         bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_id_time_delay_parking_key)));
+                    }*/
+                    return true;
+                }
+            });
+
+            findPreference(getString(R.string.pref_send_email_fine_key)).setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                @Override
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    /*if((Boolean) newValue){
+                        EditTextPreference hours = (EditTextPreference) findPreference(getString(R.string.pref_id_time_delay_parking_key));
+                        hours.setText(String.valueOf(30));
+                        bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_id_time_delay_parking_key)));
+                    }*/
+                    return true;
+                }
+            });
+
+
+            findPreference(getString(R.string.pref_automatic_plate_detection_key)).setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                @Override
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    if((Boolean) newValue){
+                        SwitchPreference mark = (SwitchPreference) findPreference(getString(R.string.pref_automatic_plate_detection_key));
+                        mark.setChecked(false);
                     }
                     return true;
                 }
             });
+
+
+
 
             // Bind the summaries of EditText/List/Dialog/Ringtone preferences
             // to their values. When their values change, their summaries are
@@ -258,7 +287,12 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_id_parking_key)));
             bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_id_max_time_parking_key)));
             bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_send_email_field_key)));
+            bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_id_URL_ANPR_key)));
             bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_id_time_delay_parking_key)));
+            bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_max_plates_images_key)));
+            bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_ips_cameras_key)));
+
+
 
         }
 

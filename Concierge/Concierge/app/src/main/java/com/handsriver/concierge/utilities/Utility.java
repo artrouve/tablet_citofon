@@ -126,7 +126,7 @@ public class Utility {
         long different =  dateExit.getTime() - dateEntry.getTime();
         long secondsInMilli = 1000;
         long minutesInMilli = secondsInMilli * 60;
-        long minuteslimit = hours * 60 + minutes;
+        long minuteslimit = hours * 60 - minutes;
 
         long elapsedMinutes = different / minutesInMilli;
 

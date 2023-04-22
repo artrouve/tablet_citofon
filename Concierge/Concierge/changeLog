@@ -1,0 +1,6 @@
+-- 2.5.2
+Se añade combinatoria para patentes en sus variantes X-K K-X B-8 8-B
+-- 2.5.3
+Se repara funcion recursiva de generacion de combinatorias para cualquier tamaño de patente
+
+

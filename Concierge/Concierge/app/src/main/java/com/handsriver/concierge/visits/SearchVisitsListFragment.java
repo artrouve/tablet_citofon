@@ -1,8 +1,11 @@
 package com.handsriver.concierge.visits;
 
+import android.accounts.Account;
+import android.accounts.AccountManager;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -24,6 +27,8 @@ import com.handsriver.concierge.database.ConciergeContract.ApartmentEntry;
 import com.handsriver.concierge.database.ConciergeDbHelper;
 import com.handsriver.concierge.database.DatabaseManager;
 import com.handsriver.concierge.database.SelectToDBRaw;
+import com.handsriver.concierge.sync.ConfigureSyncAccount;
+import com.handsriver.concierge.sync.VisitsOthersGatewaysSyncAdapter;
 import com.handsriver.concierge.utilities.Utility;
 
 import java.util.ArrayList;
@@ -57,6 +62,46 @@ public class SearchVisitsListFragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
+        rootView = inflater.inflate(R.layout.fragment_list_search_visits, container, false);
+        viewVisits = (ListView) rootView.findViewById(R.id.listViewVisits);
+        searchVisits = (SearchView) rootView.findViewById(R.id.searchVisits);
+        searchVisits.setIconified(true);
+
+        searchVisits.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                visitsAdapter.getFilter().filter(newText);
+                return true;
+            }
+        });
+
+        viewVisits.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Visit visit = (Visit) parent.getItemAtPosition(position);
+
+                if (visit != null)
+                {
+                    mCallback.onItemSelected(visit);
+                }
+
+            }
+        });
+
+        viewVisits.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                Utility.hideKeyboard(v,getContext());
+                return false;
+            }
+        });
+
 
         final String query = "SELECT " + VisitEntry.TABLE_NAME + "." + VisitEntry._ID + "," +
                 VisitEntry.COLUMN_FULL_NAME + "," +
@@ -101,53 +146,29 @@ public class SearchVisitsListFragment extends Fragment{
             visitsAdapter = new VisitAdapterSearchList(getContext(),mVisits);
         }
 
-        rootView = inflater.inflate(R.layout.fragment_list_search_visits, container, false);
-
-        viewVisits = (ListView) rootView.findViewById(R.id.listViewVisits);
         viewVisits.setAdapter(visitsAdapter);
 
-        searchVisits = (SearchView) rootView.findViewById(R.id.searchVisits);
-        searchVisits.setIconified(true);
-
-        searchVisits.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                visitsAdapter.getFilter().filter(newText);
-                return true;
-            }
-        });
-
-
-
-        viewVisits.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Visit visit = (Visit) parent.getItemAtPosition(position);
-
-                if (visit != null)
-                {
-                    mCallback.onItemSelected(visit);
-                }
-
-            }
-        });
-
-        viewVisits.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                Utility.hideKeyboard(v,getContext());
-                return false;
-            }
-        });
+        if(ConfigureSyncAccount.getEnableSyncPeriodic(getContext(),getContext().getString(R.string.content_authority_visits_others_gateways))){
+            getVisitsOthersGateways();
+        }
 
         return rootView;
     }
 
+
+    public void getVisitsOthersGateways(){
+
+        new Thread(
+                new Runnable() {
+                    @Override
+                    public void run() {
+                        VisitsOthersGatewaysSyncAdapter sVisitsOthersGatewaysSyncAdapter = new VisitsOthersGatewaysSyncAdapter(getContext(),true);
+                        sVisitsOthersGatewaysSyncAdapter.onPerformSync(null,null,null,null,null);
+                    }
+                }
+        ).start();
+
+    }
 
     @Override
     public void onAttach(Context context) {

@@ -1,6 +1,7 @@
 package com.handsriver.concierge.sync;
 
 import android.accounts.Account;
+import android.annotation.SuppressLint;
 import android.content.AbstractThreadedSyncAdapter;
 import android.content.ContentProviderClient;
 import android.content.ContentValues;
@@ -20,6 +21,7 @@ import com.handsriver.concierge.database.ConciergeDbHelper;
 import com.handsriver.concierge.database.DatabaseManager;
 import com.handsriver.concierge.database.updatesTables.UpdateSyncParcels;
 import com.handsriver.concierge.database.updatesTables.UpdateSyncResidents;
+
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -54,7 +56,7 @@ public class ResidentsTabletSyncAdapter extends AbstractThreadedSyncAdapter {
     public static final String IS_SYNC = "1";
     public static final String NOT_UPDATE = "0";
     public static final String IS_UPDATE = "1";
-
+    public static final String IS_DELETE = "1";
 
 
     public ResidentsTabletSyncAdapter(Context context, boolean autoInitialize) {
@@ -62,6 +64,7 @@ public class ResidentsTabletSyncAdapter extends AbstractThreadedSyncAdapter {
         this.mContext= context;
     }
 
+    @SuppressLint("Range")
     @Override
     public void onPerformSync(Account account, Bundle extras, String authority, ContentProviderClient provider, SyncResult syncResult) {
         Log.d(LOG_TAG, "Starting sync");
@@ -76,7 +79,7 @@ public class ResidentsTabletSyncAdapter extends AbstractThreadedSyncAdapter {
 
         final String ID_RESIDENT = "id_resident";
         final String IS_UPDATE_COL = "is_update";
-
+        final String IS_DELETE_COL = "is_deleted";
 
         try {
             SharedPreferences settingsPrefs = PreferenceManager.getDefaultSharedPreferences(mContext);
@@ -146,6 +149,7 @@ public class ResidentsTabletSyncAdapter extends AbstractThreadedSyncAdapter {
                         JSONObject residentUpdateJson = new JSONObject();
                         residentUpdateJson.put(ID_RESIDENT,residents_update.getLong(residents_update.getColumnIndex(ResidentEntry._ID)));
                         residentUpdateJson.put(IS_UPDATE_COL,true);
+                        residentUpdateJson.put(IS_DELETE_COL,false);
                         residentUpdateJson.put(ResidentEntry.COLUMN_EMAIL,(residents_update.isNull(residents_update.getColumnIndex(ResidentEntry.COLUMN_EMAIL))) ? JSONObject.NULL : residents_update.getString(residents_update.getColumnIndex(ResidentEntry.COLUMN_EMAIL)));
 
                         residentUpdateJson.put(ResidentEntry.COLUMN_MOBILE,(residents_update.isNull(residents_update.getColumnIndex(ResidentEntry.COLUMN_EMAIL))) ? JSONObject.NULL : residents_update.getString(residents_update.getColumnIndex(ResidentEntry.COLUMN_MOBILE)));
@@ -159,7 +163,33 @@ public class ResidentsTabletSyncAdapter extends AbstractThreadedSyncAdapter {
                     residents_update.close();
                 }
 
-                if ((residents != null && residents.getCount()>0) || (residents_update != null && residents_update.getCount()>0)){
+                String[] projection_d = {
+                        ResidentEntry._ID,
+                        ResidentEntry.COLUMN_RESIDENT_ID_SERVER,
+                };
+
+
+                String selection_d = ResidentEntry.COLUMN_IS_SYNC + " = ? AND " + ResidentEntry.COLUMN_IS_UPDATE + " = ?" + " = ? AND " + ResidentEntry.COLUMN_IS_DELETED + " = ?";
+                String [] selectionArgs_d = {IS_SYNC,IS_UPDATE,IS_DELETE};
+
+                Cursor residents_delete = db.query(ResidentEntry.TABLE_NAME,projection_d,selection_d,selectionArgs_d,null,null,null,null);
+
+                if (residents_delete != null && residents_delete.getCount()>0){
+                    while (residents_delete.moveToNext()){
+                        JSONObject residentDeleteJson = new JSONObject();
+                        residentDeleteJson.put(ID_RESIDENT,residents_delete.getLong(residents_delete.getColumnIndex(ResidentEntry._ID)));
+                        residentDeleteJson.put(IS_UPDATE_COL,true);
+                        residentDeleteJson.put(IS_DELETE_COL,true);
+                        residentDeleteJson.put(ResidentEntry.COLUMN_RESIDENT_ID_SERVER,residents_delete.getLong(residents_delete.getColumnIndex(ResidentEntry.COLUMN_RESIDENT_ID_SERVER)));
+                        residentsArrayJson.put(residentDeleteJson);
+                    }
+                    residents_delete.close();
+                }
+
+
+
+
+                if ((residents != null && residents.getCount()>0) || (residents_update != null && residents_update.getCount()>0)  || (residents_delete != null && residents_delete.getCount()>0)){
                     JSONObject jsonObject = new JSONObject();
                     jsonObject.accumulate("building_id",buildingId);
                     if (residentsArrayJson.length() != 0){
@@ -271,15 +301,18 @@ public class ResidentsTabletSyncAdapter extends AbstractThreadedSyncAdapter {
 
         final String RESIDENT_RETURN = "resident_return";
         final String RESIDENT_UPDATE_RETURN = "resident_update_return";
+        final String RESIDENT_DELETE_RETURN = "resident_delete_return";
         final String ID_RESIDENT = "id_resident";
         final String INSERT_DATA = "insert_data";
         final String ID_SERVER = "id_server";
         final String UPDATE_DATA = "update_data";
+        final String DELETE_DATA = "delete_data";
 
         try {
             JSONObject returnJson = new JSONObject(residentsJsonStr);
             JSONArray residentsReturn = (returnJson.isNull(RESIDENT_RETURN)) ? null : returnJson.getJSONArray(RESIDENT_RETURN);
             JSONArray residentsUpdateReturn = (returnJson.isNull(RESIDENT_UPDATE_RETURN)) ? null : returnJson.getJSONArray(RESIDENT_UPDATE_RETURN);
+            JSONArray residentsDeleteReturn = (returnJson.isNull(RESIDENT_DELETE_RETURN)) ? null : returnJson.getJSONArray(RESIDENT_DELETE_RETURN);
 
             Vector<ContentValues> vectorResidentsReturn;
             if (residentsReturn != null){
@@ -343,7 +376,39 @@ public class ResidentsTabletSyncAdapter extends AbstractThreadedSyncAdapter {
                 vectorResidentsUpdateReturn = null;
             }
 
-            UpdateSyncResidents.run(vectorResidentsReturn,vectorResidentsUpdateReturn);
+            Vector<ContentValues> vectorResidentsDeleteReturn;
+            if (residentsDeleteReturn != null){
+                vectorResidentsDeleteReturn = new Vector<ContentValues>(residentsDeleteReturn.length());
+
+                for(int i = 0; i < residentsDeleteReturn.length(); i++) {
+
+                    long id_resident;
+                    boolean delete_data;
+
+                    JSONObject returnResidentDeleteJson = residentsDeleteReturn.getJSONObject(i);
+
+                    id_resident = returnResidentDeleteJson.getLong(ID_RESIDENT);
+                    delete_data = returnResidentDeleteJson.getBoolean(DELETE_DATA);
+
+                    ContentValues residentsDeleteValues = new ContentValues();
+                    if (delete_data){
+                        residentsDeleteValues.put(ResidentEntry.COLUMN_IS_UPDATE, NOT_UPDATE);
+                    }
+                    else{
+                        residentsDeleteValues.put(ResidentEntry.COLUMN_IS_UPDATE, IS_UPDATE);
+                    }
+                    residentsDeleteValues.put(ResidentEntry._ID, id_resident);
+
+                    vectorResidentsDeleteReturn.add(residentsDeleteValues);
+                }
+            }
+            else{
+                vectorResidentsDeleteReturn = null;
+            }
+
+
+
+            UpdateSyncResidents.run(vectorResidentsReturn,vectorResidentsUpdateReturn,vectorResidentsDeleteReturn);
 
         } catch (JSONException e) {
             Log.e(LOG_TAG, e.getMessage(), e);

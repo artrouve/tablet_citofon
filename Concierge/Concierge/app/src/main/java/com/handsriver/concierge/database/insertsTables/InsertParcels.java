@@ -23,6 +23,7 @@ public class InsertParcels extends AsyncTask<Void,Void,Long> {
     private int apartmentId;
     private int gatewayId;
     private int entryPorterId;
+    private int parcelTypeId;
 
 
     private static final String TAG = "InsertParcels";
@@ -30,7 +31,7 @@ public class InsertParcels extends AsyncTask<Void,Void,Long> {
     private static final int IS_UPDATE = 0;
 
 
-    public InsertParcels(String nullColumnHack, String observations, String entry, int apartmentId, int gatewayId, int entryPorterId, String fullName){
+    public InsertParcels(String nullColumnHack, String observations, String entry, int apartmentId, int gatewayId, int entryPorterId, String fullName, int parcelTypeId){
         this.nullColumnHack = nullColumnHack;
         this.observations = observations;
         this.entry = entry;
@@ -38,6 +39,7 @@ public class InsertParcels extends AsyncTask<Void,Void,Long> {
         this.gatewayId = gatewayId;
         this.entryPorterId = entryPorterId;
         this.fullName = fullName;
+        this.parcelTypeId = parcelTypeId;
     }
 
     @Override
@@ -53,6 +55,7 @@ public class InsertParcels extends AsyncTask<Void,Void,Long> {
                 values.put(ParcelEntry.COLUMN_FULL_NAME,fullName);
                 values.put(ParcelEntry.COLUMN_OBSERVATIONS,observations);
                 values.put(ParcelEntry.COLUMN_GATEWAY_ID,gatewayId);
+                values.put(ParcelEntry.COLUMN_PARCELTYPE_ID,parcelTypeId);
                 values.put(ParcelEntry.COLUMN_IS_SYNC,IS_SYNC);
                 values.put(ParcelEntry.COLUMN_IS_UPDATE,IS_UPDATE);
 

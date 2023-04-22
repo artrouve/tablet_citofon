@@ -1,13 +1,14 @@
 package com.handsriver.concierge.visits;
 
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-
 import com.handsriver.concierge.R;
 
 import java.util.ArrayList;
@@ -37,9 +38,17 @@ public class VisitsAdapterDialog extends ArrayAdapter<Visit> {
 
         TextView textViewFullName = (TextView) convertView.findViewById(R.id.textViewfullName);
         TextView textViewRUT = (TextView) convertView.findViewById(R.id.textViewRUT);
+        TextView textViewOptionalValue = (TextView) convertView.findViewById(R.id.textViewOptionalValue);
+
+        SharedPreferences settingsPrefs = PreferenceManager.getDefaultSharedPreferences(getContext());
+        String optionalField = settingsPrefs.getString(getContext().getString(R.string.pref_OPTIONAL_FILED_VISITS_key),"");
+
+        TextView textViewOptionalField = (TextView) convertView.findViewById(R.id.textViewOptionalField);
+        textViewOptionalField.setText(optionalField+":");
 
         textViewFullName.setText(visit.getFullName());
         textViewRUT.setText(visit.getDocumentNumber());
+        textViewOptionalValue.setText(visit.getOptional());
 
         return convertView;
     }

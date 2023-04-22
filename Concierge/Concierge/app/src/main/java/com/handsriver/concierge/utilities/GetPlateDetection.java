@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
@@ -25,6 +26,7 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
 
 /**
  * Created by Created by alain_r._trouve_silva after 26-07-17.
@@ -62,18 +64,18 @@ public class GetPlateDetection extends AsyncTask<String,Void,Boolean>
         HttpURLConnection urlConnection = null;
         BufferedReader reader = null;
 
+        SharedPreferences settingsPrefs = PreferenceManager.getDefaultSharedPreferences(context);
+        boolean isAutomaticPlateDetection = settingsPrefs.getBoolean(context.getResources().getString(R.string.pref_automatic_plate_detection_key), false);
+
         //DETECCION DE PATENTES:
-        if(true){
+        if(isAutomaticPlateDetection){
 
             try{
                 String idGateway = params[0];
                 String urlParameters = "idGateway="+idGateway;
                 byte[] postData = urlParameters.getBytes( StandardCharsets.UTF_8 );
                 int postDataLength = postData.length;
-                //String BASE_URL = "https://salpr.citofon.cl/ftp/getPlates.php";
                 String BASE_URL = "https://salpr.citofon.cl/ftp/getPlate.php";
-
-
 
                 Uri buildUri = Uri.parse(BASE_URL).buildUpon().build();
                 URL url = new URL(buildUri.toString());
@@ -106,7 +108,6 @@ public class GetPlateDetection extends AsyncTask<String,Void,Boolean>
 
                     json = json + line;
 
-
                 }
 
                 JSONObject Json = new JSONObject(json);
@@ -129,6 +130,29 @@ public class GetPlateDetection extends AsyncTask<String,Void,Boolean>
                     editor.apply();
 
                 }
+
+                SharedPreferences plateDetectionPref = this.context.getSharedPreferences(this.DetectedPlate.PREFS_PLATE_DETECTION_NAME, Context.MODE_PRIVATE);
+                String platesDetection = plateDetectionPref.getString(this.context.getString(R.string.platesDetectionReceived), "");
+
+                //max number for plate image
+                int max_images = Integer.parseInt(settingsPrefs.getString(this.context.getResources().getString(R.string.pref_max_plates_images_key),"0"));
+                if(max_images!=0){
+                    //must to maintain first 100
+                    String images_detection[] = platesDetection.split(";");
+                    if(images_detection.length > max_images){
+                        String final_images="";
+                        int k = 0;
+                        for(k = 0;k < max_images; k++){
+                            final_images = final_images + images_detection[k]+";";
+                        }
+                        platesDetection = final_images;
+
+                        SharedPreferences.Editor editor = plateDetectionPref.edit();
+                        editor.putString(this.context.getString(R.string.platesDetectionReceived),platesDetection);
+                        editor.apply();
+                    }
+                }
+
                 return true;
 
             }catch (Exception e) {

@@ -116,6 +116,7 @@ public class SearchTimekeepingListFragment extends Fragment {
         viewTimekeeping = (ListView) rootView.findViewById(R.id.listViewTimekeeping);
         viewTimekeeping.setAdapter(timekeepingAdapter);
 
+
         searchTimekeeping = (SearchView) rootView.findViewById(R.id.searchTimekeeping);
 
         searchTimekeeping.setIconified(true);

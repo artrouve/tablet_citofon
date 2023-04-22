@@ -81,7 +81,7 @@ public class AlertAutomaticSyncAdapter extends AbstractThreadedSyncAdapter {
                 final String API_KEY = settingsPrefs.getString(mContext.getResources().getString(R.string.pref_apikey_key),"");
                 String dateForServer = Utility.getHourForServer();
                 final int hours = Integer.parseInt(settingsPrefs.getString(mContext.getResources().getString(R.string.pref_id_max_time_parking_key),"0"));
-
+                final int minutes = Integer.parseInt(settingsPrefs.getString(mContext.getResources().getString(R.string.pref_id_time_delay_parking_key),"0"));
                 if (BASE_URL.length()>0 && (BASE_URL.startsWith(HTTP) || BASE_URL.startsWith(HTTPS))){
                     Uri buildUri = Uri.parse(BASE_URL).buildUpon().appendPath(EMAIL_SERVICE).build();
                     URL url = new URL(buildUri.toString());
@@ -103,7 +103,7 @@ public class AlertAutomaticSyncAdapter extends AbstractThreadedSyncAdapter {
 
                     if (vehicles != null && vehicles.getCount()>0){
                         while (vehicles.moveToNext()){
-                            boolean timeExpire = Utility.differenceDateHours(dateForServer,vehicles.getString(vehicles.getColumnIndex(VehicleEntry.COLUMN_ENTRY)),hours);
+                            boolean timeExpire = Utility.differenceDateHoursMinutesExtra(dateForServer,vehicles.getString(vehicles.getColumnIndex(VehicleEntry.COLUMN_ENTRY)),hours,minutes);
                             if(timeExpire){
                                 JSONObject vehicleJson = new JSONObject();
                                 vehicleJson.put(VehicleEntry._ID,vehicles.getLong(vehicles.getColumnIndex(VehicleEntry._ID)));

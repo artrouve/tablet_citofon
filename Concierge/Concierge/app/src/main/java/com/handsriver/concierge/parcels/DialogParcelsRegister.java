@@ -40,9 +40,12 @@ public class DialogParcelsRegister extends DialogFragment{
 
     TextView textViewApartment;
     TextView textViewResident;
+    TextView textViewParcelType;
     TextView textViewObservations;
     String apartment;
     String resident;
+    public static String parceltypeId;
+    String parceltype;
     String observations;
 
     public static final String PREFS_NAME = "PorterPrefs";
@@ -72,14 +75,21 @@ public class DialogParcelsRegister extends DialogFragment{
 
         textViewApartment = (TextView) content.findViewById(R.id.textViewApartmentDialog);
         textViewResident = (TextView) content.findViewById(R.id.textViewResidentDialog);
+        textViewParcelType = (TextView) content.findViewById(R.id.textViewParcelTypeDialog);
         textViewObservations = (TextView) content.findViewById(R.id.textViewObservationsDialog);
 
         apartment = getArguments().getString("apartment");
         resident = getArguments().getString("resident");
+
+        parceltypeId = getArguments().getString("typeParcelId");
+        parceltype = getArguments().getString("typeParcel");
+
         observations = getArguments().getString("observations");
+
 
         textViewApartment.setText(apartment);
         textViewResident.setText(resident);
+        textViewParcelType.setText(parceltype);
         textViewObservations.setText(observations);
 
         builder.setPositiveButton(R.string.confirm, new DialogInterface.OnClickListener() {
@@ -102,15 +112,17 @@ public class DialogParcelsRegister extends DialogFragment{
                 String resident = textViewResident.getText().toString();
                 String apartment = textViewApartment.getText().toString();
                 String observations = textViewObservations.getText().toString();
+                String parcelType = textViewParcelType.getText().toString();
+                int apartmentId = 0;
+                int parcelTypeId = 0;
+                String unique_id = "";
+
 
                 String[] projection = {
                         ApartmentEntry.COLUMN_APARTMENT_ID_SERVER
                 };
                 String selection = ApartmentEntry.COLUMN_APARTMENT_NUMBER + " = ?";
                 String [] selectionArgs = {apartment};
-
-                String unique_id = "";
-
                 Cursor c;
                 try {
                     SelectToDB selectApartment = new SelectToDB(ApartmentEntry.TABLE_NAME,projection,selection,selectionArgs,null,null,null,null);
@@ -118,30 +130,46 @@ public class DialogParcelsRegister extends DialogFragment{
                 }catch (Exception e){
                     c = null;
                 }
-
                 if (c != null){
                     if(c.moveToFirst())
                     {
-                        int apartmentId = c.getInt(0);
-
-                        try {
-                            InsertParcels parcel = new InsertParcels(null,observations,entry,apartmentId,gatewayId,porterIdServer,resident);
-                            long id = parcel.execute().get();
-                            unique_id = String.valueOf(gatewayId)+"-"+id;
-
-                            UpdateUniqueIdParcel updateParcel = new UpdateUniqueIdParcel(String.valueOf(id),unique_id);
-                            updateParcel.execute();
-
-                            ConfigureSyncAccount.syncImmediatelyParcels(getContext());
-                        }catch (Exception e){
-
-                        }
-
-
+                        apartmentId = c.getInt(0);
                     }
                     c.close();
                 }
 
+                String[] projectionParceltype = {
+                        ParcelTypeEntry.COLUMN_PARCELTYPE_ID_SERVER
+                };
+                String selectionParceltype = ParcelTypeEntry.COLUMN_PARCELTYPE_TYPE + " = ?";
+                String [] selectionArgsParceltype = {parcelType};
+                Cursor d;
+                try {
+                    SelectToDB selectParcelType = new SelectToDB(ParcelTypeEntry.TABLE_NAME,projectionParceltype,selectionParceltype,selectionArgsParceltype,null,null,null,null);
+                    d = selectParcelType.execute().get();
+                }catch (Exception e){
+                    d = null;
+                }
+                if (d != null){
+                    if(d.moveToFirst())
+                    {
+                        parcelTypeId = d.getInt(0);
+                    }
+                    d.close();
+                }
+
+                try {
+                    InsertParcels parcel = new InsertParcels(null,observations,entry,apartmentId,gatewayId,porterIdServer,resident,parcelTypeId);
+                    long id = parcel.execute().get();
+                    unique_id = String.valueOf(gatewayId)+"-"+id;
+
+                    UpdateUniqueIdParcel updateParcel = new UpdateUniqueIdParcel(String.valueOf(id),unique_id);
+                    updateParcel.execute();
+
+                    ConfigureSyncAccount.syncImmediatelyParcels(getContext());
+                }catch (Exception e){
+
+                }
 
                 Bundle args = new Bundle();
                 args.putString("uniqueId",unique_id);

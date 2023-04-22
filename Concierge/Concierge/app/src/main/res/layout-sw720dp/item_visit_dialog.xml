@@ -46,6 +46,24 @@
                     android:textSize="16sp"
                     android:textStyle="bold"/>
             </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/textViewOptionalField"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/textViewOptionalValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+            </TableRow>
+
         </TableLayout>
 
     </LinearLayout>

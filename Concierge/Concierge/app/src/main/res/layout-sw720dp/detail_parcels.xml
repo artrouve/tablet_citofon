@@ -55,6 +55,22 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/entryListPorter"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/textViewDetailEntryParcelPorter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        </TableRow>
+
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/exitDateList"
                 android:textSize="16sp"/>
             <TextView
@@ -69,6 +85,21 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/exitListPorter"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/textViewDetailExitParcelPorter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/fullNameList"
                 android:textSize="16sp"/>
             <TextView
@@ -79,6 +110,21 @@
                 android:textSize="16sp"
                 android:textStyle="bold"/>
         </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/parcelTypeList"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/textViewDetailTypeParcel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        </TableRow>
+
         <TableRow>
             <TextView
                 android:layout_width="wrap_content"

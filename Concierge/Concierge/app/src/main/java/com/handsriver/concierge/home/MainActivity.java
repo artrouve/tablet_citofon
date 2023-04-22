@@ -39,6 +39,14 @@ import com.handsriver.concierge.residents.ResidentRegisterFragment;
 import com.handsriver.concierge.residents.SearchParkingFragment;
 import com.handsriver.concierge.residents.SearchResidentsFragment;
 import com.handsriver.concierge.residents.SearchWarehouseFragment;
+
+import com.handsriver.concierge.residents.ResidentVehicleRegisterFragment;
+import com.handsriver.concierge.residents.SearchResidentsVehiclesFragment;
+
+//import com.handsriver.concierge.residents.ResidentTempRegisterFragment;
+import com.handsriver.concierge.residents.SearchResidentsTempsFragment;
+
+
 import com.handsriver.concierge.suppliers.DetailSearchSuppliersListFragment;
 import com.handsriver.concierge.suppliers.SearchSuppliersFragment;
 import com.handsriver.concierge.suppliers.SearchSuppliersListFragment;
@@ -110,7 +118,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         View header = navigationView.getHeaderView(0);
 
         SharedPreferences porterPrefs = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
-        fullname = porterPrefs.getString(getString(R.string.fullNameVar),"Sistema Concierge");
+        fullname = porterPrefs.getString(getString(R.string.fullNameVar),"Sistema Citofon");
 
         textViewFullNamePorter = (TextView) header.findViewById(R.id.textViewfullNamePorter);
         textViewFullNamePorter.setText(fullname);
@@ -227,7 +235,32 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             toolbar.setTitle(getString(R.string.searchResident));
             //return true;
 
-        } else if (id == R.id.searchParking) {
+        } else if (id == R.id.registerResidentsVehicles) {
+            ResidentVehicleRegisterFragment fragmentRegisterResidentsVehicle = new ResidentVehicleRegisterFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.frame_main,fragmentRegisterResidentsVehicle).commit();
+            toolbar.setTitle(getString(R.string.registerResidentVehicle));
+            //return true;
+
+        } else if (id == R.id.searchResidentsVehicles) {
+            SearchResidentsVehiclesFragment fragmentSearchResidentsVehicles = new SearchResidentsVehiclesFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.frame_main,fragmentSearchResidentsVehicles).commit();
+            toolbar.setTitle(getString(R.string.searchResidentVehicle));
+
+        } /*else if (id == R.id.registerResidentsTemps) {*/
+            /*
+            ResidentTempRegisterFragment fragmentRegisterResidentsVehicle = new ResidentVehicleRegisterFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.frame_main,fragmentRegisterResidentsVehicle).commit();
+            toolbar.setTitle(getString(R.string.registerResidentVehicle));
+            */
+            //return true;
+
+        /*}*/
+            else if (id == R.id.searchResidentsTemps) {
+            SearchResidentsTempsFragment fragmentSearchResidentsTemps = new SearchResidentsTempsFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.frame_main,fragmentSearchResidentsTemps).commit();
+            toolbar.setTitle(getString(R.string.searchResidenttemp));    //return true;
+
+        }else if (id == R.id.searchParking) {
             SearchParkingFragment fragmentSearchParking = new SearchParkingFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.frame_main,fragmentSearchParking).commit();
             toolbar.setTitle(getString(R.string.searchParking));
@@ -313,6 +346,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         args.putString("observations",parcel.getObservations());
         args.putString("entryParcel",parcel.getEntryParcel());
         args.putString("apartmentNumber",parcel.getApartmentNumber());
+        args.putString("typeParcel",parcel.getTypeParcel());
 
         DetailSearchParcelsListFragment detailFragment = new DetailSearchParcelsListFragment();
         detailFragment.setArguments(args);

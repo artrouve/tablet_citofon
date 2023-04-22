@@ -62,4 +62,30 @@
             android:singleLine="true"
             android:maxLength="4"/>
 
+        <SwitchPreference
+            android:defaultValue="false"
+            android:title="@string/pref_automatic_plate_detection_label"
+            android:key="@string/pref_automatic_plate_detection_key"/>
+
+        <EditTextPreference
+            android:title="@string/pref_id_URL_ANPR_label"
+            android:key="@string/pref_id_URL_ANPR_key"
+            android:inputType="text"
+            android:singleLine="true" />
+
+        <EditTextPreference
+            android:title="@string/pref_max_plates_images_label"
+            android:key="@string/pref_max_plates_images_key"
+            android:defaultValue="0"
+            android:inputType="number"
+            android:numeric="integer"
+            android:singleLine="true"
+            android:maxLength="4" />
+
+        <EditTextPreference
+            android:title="@string/pref_ips_cameras_label"
+            android:key="@string/pref_ips_cameras_key"
+            android:inputType="text"
+            android:singleLine="true" />
+
 </PreferenceScreen>

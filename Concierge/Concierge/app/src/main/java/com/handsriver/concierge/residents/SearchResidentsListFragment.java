@@ -39,6 +39,7 @@ public class SearchResidentsListFragment extends Fragment{
     ListView viewResidents;
     SearchView searchResidents;
     private static final int IS_SYNC = 1;
+    private static final int IS_NOT_DELETED = 0;
     ArrayList<Resident> mResident;
 
     @Override
@@ -66,6 +67,7 @@ public class SearchResidentsListFragment extends Fragment{
                 " FROM " + ResidentEntry.TABLE_NAME + "," + ApartmentEntry.TABLE_NAME +
                 " WHERE " + ApartmentEntry.TABLE_NAME + "." + ApartmentEntry.COLUMN_APARTMENT_ID_SERVER + " = " + ResidentEntry.TABLE_NAME + "." + ResidentEntry.COLUMN_APARTMENT_ID +
                 " AND " + ResidentEntry.COLUMN_IS_SYNC + " = " + IS_SYNC +
+                " AND " + ResidentEntry.COLUMN_IS_DELETED + " = " + IS_NOT_DELETED +
                 " ORDER BY " + ApartmentEntry.TABLE_NAME + "." + ApartmentEntry.COLUMN_APARTMENT_NUMBER + " ASC";
 
         Cursor c;

@@ -21,7 +21,7 @@ public class UpdateSyncResidents {
     private static final String IS_SYNC = "1";
     private static final String NOT_UPDATE = "0";
 
-    public static void run(Vector<ContentValues> vectorResidentsReturn, Vector<ContentValues> vectorResidentsUpdateReturn) {
+    public static void run(Vector<ContentValues> vectorResidentsReturn, Vector<ContentValues> vectorResidentsUpdateReturn, Vector<ContentValues> vectorResidentsDeleteReturn) {
         SQLiteDatabase db;
         db = DatabaseManager.getInstance().openDatabase();
         try {
@@ -46,6 +46,17 @@ public class UpdateSyncResidents {
                     }
                 }
             }
+
+            if (vectorResidentsDeleteReturn != null) {
+                for (ContentValues residents_delete:vectorResidentsDeleteReturn){
+                    if (residents_delete.getAsString(ResidentEntry.COLUMN_IS_UPDATE).equals(NOT_UPDATE)){
+                        String whereClause = ResidentEntry._ID + " = ?";
+                        String [] whereArgs = {residents_delete.getAsString(ResidentEntry._ID)};
+                        db.delete(ResidentEntry.TABLE_NAME,whereClause,whereArgs);
+                    }
+                }
+            }
+
 
         } catch (SQLException e){
             Log.e(TAG, "SQLiteException:" + e.getMessage());

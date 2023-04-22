@@ -141,6 +141,7 @@ public class DialogExitParcelsRegister extends DialogFragment {
         textViewFullName = (TextView) content.findViewById(R.id.textViewDocumentNumber);
         buttonRegisterInfoExit = (Button) content.findViewById(R.id.buttonRegisterInfoExitParcel);
 
+        textInputEditTextFullName.addTextChangedListener(inputAutomaticDocument);
         textInputEditTextRut.setOnKeyListener(new View.OnKeyListener() {
 
             @Override
@@ -148,12 +149,15 @@ public class DialogExitParcelsRegister extends DialogFragment {
                 return isScannerOCR(v,keycode,event);
             }
         });
+
+
         textInputEditTextFullName.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keycode, KeyEvent event) {
                 return isScannerOCR(v,keycode,event);
             }
         });
+
 
         textInputEditTextRut.addTextChangedListener(new TextWatcher() {
 
@@ -194,6 +198,42 @@ public class DialogExitParcelsRegister extends DialogFragment {
         return alert;
     }
 
+    private TextWatcher inputAutomaticDocument = new TextWatcher() {
+        public void afterTextChanged(Editable s) { }
+        public void beforeTextChanged(CharSequence s, int start, int count, int after)
+        { }
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            String string_scan = s.toString();
+            if(!string_scan.equals("")){
+
+                char ini = string_scan.charAt(0);
+                if(ini == '_'){
+
+                    string_scan = string_scan.substring(1,string_scan.length());
+                    Visit newVisit = FormatICAO9303.formatDocument(string_scan);
+
+                    if (newVisit == null)
+                    {
+                        Toast.makeText(getActivity().getApplicationContext(), "Lectura Errónea, Favor Escanear Nuevamente", Toast.LENGTH_LONG).show();
+                    }
+                    else
+                    {
+                        textViewDocumentNumber.setText(newVisit.getDocumentNumber());
+                        textViewFullName.setText(newVisit.getFullName());
+                        if (isMarkInfoExitParcel){
+                            buttonPositive.setEnabled(true);
+                        }
+                        textInputEditTextFullName.setText("");
+
+
+                    }
+                }
+
+            }
+
+        }
+    };
     private boolean isScannerOCR(View v, int keycode, KeyEvent event){
 
         if (event.getDeviceId() == KeyCharacterMap.VIRTUAL_KEYBOARD) {

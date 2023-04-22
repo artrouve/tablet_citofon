@@ -56,7 +56,11 @@ import java.io.OutputStreamWriter;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
-
+/*
+import com.hcnetsdk.jna.HCNetSDKByJNA.*;
+import com.hcnetsdk.jna.HCNetSDKByJNA;
+import com.hcnetsdk.jna.HCNetSDKJNAInstance;
+*/
 
 /**
  * Created by Created by alain_r._trouve_silva after 25-01-17.
@@ -65,6 +69,7 @@ import java.net.Socket;
 
 
 public class LoginFragment extends Fragment {
+
 
     Button btnSignIn;
     View rootView;
@@ -77,126 +82,6 @@ public class LoginFragment extends Fragment {
         super.onCreate(savedInstanceState);
         ConciergeDbHelper helper= new ConciergeDbHelper(getContext());
         DatabaseManager.initializeInstance(helper);
-
-        /*
-
-        SharedPreferences plateDetectionPrefs = getContext().getSharedPreferences(PREFS_PLATE_DETECTION_NAME, Context.MODE_PRIVATE);
-        String platesDetection = plateDetectionPrefs.getString(getString(R.string.platesDetectionReceived), "");
-
-        SharedPreferences.Editor editor = plateDetectionPrefs.edit();
-        editor.putString(getString(R.string.platesDetectionReceived),"");
-        editor.apply();
-        */
-
-        // SE REALIZA PRUEBA DE CONEXION
-
-        /*
-        new Thread() {
-            @Override
-            public void run() {
-
-                ConciergeDbHelper helper= new ConciergeDbHelper(getContext());
-                DatabaseManager.initializeInstance(helper);
-
-
-                SharedPreferences settingsPrefs = PreferenceManager.getDefaultSharedPreferences(getContext());
-                int gatewayId = Integer.parseInt(settingsPrefs.getString(getContext().getResources().getString(R.string.pref_id_gateway_key),"0"));
-                int port = 20000 + gatewayId;
-                Socket socket = null;
-                BufferedReader br;
-                BufferedWriter mensaje_bienvenida;
-                String msj;
-                String[] data_received;
-                String url;
-                String plate;
-                String datetime;
-                String line;
-
-                while(true){
-
-                    try{
-                        Thread.sleep(100);
-                    }
-                    catch (Exception e){
-
-                    }
-
-                    try {
-                        // Create Socket instance
-                        //Log.e("Iniciando Socket Puerto", String.valueOf(port) );
-
-                        socket = new Socket();
-                        socket.connect(new InetSocketAddress("3.130.76.213", port), 20000);
-
-                        // Get input buffer
-                        Thread.sleep(100);
-
-
-                        br = new BufferedReader( new InputStreamReader(socket.getInputStream()));
-
-
-                        mensaje_bienvenida = new BufferedWriter( new OutputStreamWriter( socket.getOutputStream() ) );
-                        mensaje_bienvenida.write( "Hi server: i am 06" );
-                        mensaje_bienvenida.newLine();
-                        mensaje_bienvenida.flush();
-
-                        msj = br.readLine();
-
-
-                        while (true) {
-
-                            Thread.sleep(100);
-                            Log.e("Intentado Leer", "Intento de Lectura");
-                            line = br.readLine();
-                            Log.e("Leido", line);
-
-                            if(line!=null){
-                                Log.e("Recepcion Patente", line);
-                                data_received = line.split(";", 3);
-                                url = data_received[2];
-                                plate = data_received[0];
-                                datetime = data_received[1];
-
-
-                                SharedPreferences plateDetectionPref = getContext().getSharedPreferences(PREFS_PLATE_DETECTION_NAME, Context.MODE_PRIVATE);
-
-                                String platesDetection = plateDetectionPref.getString(getString(R.string.platesDetectionReceived), "");
-                                platesDetection = plate + "@" + datetime + "@" + url + ";" + platesDetection ;
-
-                                SharedPreferences.Editor editor = plateDetectionPref.edit();
-                                editor.putString(getString(R.string.platesDetectionReceived),platesDetection);
-                                editor.apply();
-
-                                BufferedWriter mensaje_ok = new BufferedWriter( new OutputStreamWriter( socket.getOutputStream() ) );
-                                mensaje_ok.write( "Patente Recivida:"+url);
-                                mensaje_ok.newLine(); //HERE!!!!!!
-                                mensaje_ok.flush();
-
-
-
-                            }
-
-                        }
-
-
-                    } catch (Exception e) {
-                        try {
-                            socket.close();
-                            //Log.e("Socket Cerrado", e.getMessage());
-                        } catch (Exception ex) {
-
-                            //Log.e("Socket Cerrado Error", ex.getMessage());
-                        }
-                        // TODO Auto-generated catch block
-                        //Log.e("Socket Cerrado", e.toString());
-                    }
-                }
-
-            }
-        }.start();
-        */
-
-
 
     }
 

@@ -179,7 +179,6 @@ public class WhitelistSyncAdapter extends AbstractThreadedSyncAdapter {
 
         final String ID_WHITELIST = "id_whitelist";
 
-
         try {
             JSONArray whitelistArray = new JSONArray(whitelistJsonStr);
 
@@ -190,6 +189,7 @@ public class WhitelistSyncAdapter extends AbstractThreadedSyncAdapter {
                 long apartment_id;
                 long id_whitelist;
                 String full_name;
+                String plate;
                 String document_number;
 
                 JSONObject whitelistJson = whitelistArray.getJSONObject(i);
@@ -197,12 +197,14 @@ public class WhitelistSyncAdapter extends AbstractThreadedSyncAdapter {
                 apartment_id = whitelistJson.getLong(WhitelistEntry.COLUMN_APARTMENT_ID);
                 id_whitelist = whitelistJson.getLong(ID_WHITELIST);
                 full_name = (whitelistJson.isNull(WhitelistEntry.COLUMN_FULL_NAME)) ? null : whitelistJson.getString(WhitelistEntry.COLUMN_FULL_NAME);
+                plate = (whitelistJson.isNull(WhitelistEntry.COLUMN_PLATE)) ? null : whitelistJson.getString(WhitelistEntry.COLUMN_PLATE);
                 document_number = whitelistJson.getString(WhitelistEntry.COLUMN_DOCUMENT_NUMBER);
 
                 ContentValues whitelistValues = new ContentValues();
 
                 whitelistValues.put(WhitelistEntry.COLUMN_FULL_NAME, full_name);
                 whitelistValues.put(WhitelistEntry.COLUMN_DOCUMENT_NUMBER, document_number);
+                whitelistValues.put(WhitelistEntry.COLUMN_PLATE, plate);
                 whitelistValues.put(WhitelistEntry.COLUMN_APARTMENT_ID, apartment_id);
                 whitelistValues.put(WhitelistEntry.COLUMN_WHITELIST_ID_SERVER, id_whitelist);
 

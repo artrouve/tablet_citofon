@@ -9,13 +9,21 @@
     <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
     <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
     <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_SYNC_STATS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    
 
     <application
+        android:requestLegacyExternalStorage="true"
         android:largeHeap="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:theme="@style/AppTheme">
         <activity android:name=".login.LoginActivity">
             <intent-filter>
@@ -46,6 +54,12 @@
             android:label="@string/apartments"/>
 
         <provider
+            android:authorities="com.handsriver.concierge.parceltype"
+            android:name="com.handsriver.concierge.database.StubProviderParcelType"
+            android:label="@string/parcelTypeList"/>
+
+
+        <provider
             android:authorities="com.handsriver.concierge.porters"
             android:name="com.handsriver.concierge.database.StubProviderPorters"
             android:label="@string/porters"/>
@@ -64,6 +78,28 @@
             android:authorities="com.handsriver.concierge.residents.tablet"
             android:name="com.handsriver.concierge.database.StubProviderResidentsTablet"
             android:label="@string/residentsTablet"/>
+
+        <provider
+            android:authorities="com.handsriver.concierge.residentstemps"
+            android:name="com.handsriver.concierge.database.StubProviderResidentsTemps"
+            android:label="@string/residentstemps"/>
+
+        <provider
+            android:authorities="com.handsriver.concierge.residentstemps.tablet"
+            android:name="com.handsriver.concierge.database.StubProviderResidentsTempsTablet"
+            android:label="@string/residentstempsTablet"/>
+
+
+        <provider
+            android:authorities="com.handsriver.concierge.residentsvehicles"
+            android:name="com.handsriver.concierge.database.StubProviderResidentsVehicles"
+            android:label="@string/residentsvehicles"/>
+
+        <provider
+            android:authorities="com.handsriver.concierge.residentsvehicles.tablet"
+            android:name="com.handsriver.concierge.database.StubProviderResidentsVehiclesTablet"
+            android:label="@string/residentsvehiclesTablet"/>
+
 
         <provider
             android:authorities="com.handsriver.concierge.blacklist"
@@ -89,6 +125,17 @@
             android:authorities="com.handsriver.concierge.parcels"
             android:name="com.handsriver.concierge.database.StubProviderParcels"
             android:label="@string/parcels"/>
+
+
+        <provider
+            android:authorities="com.handsriver.concierge.parcels.exitothersgateways"
+            android:name="com.handsriver.concierge.database.StubProviderParcelsExitOthersGateways"
+            android:label="@string/parcels_exit_other_gateways"/>
+
+        <provider
+            android:authorities="com.handsriver.concierge.parcels.othersgateways"
+            android:name="com.handsriver.concierge.database.StubProviderParcelsOthersGateways"
+            android:label="@string/parcels_others_gateways"/>
 
         <provider
             android:authorities="com.handsriver.concierge.payments"
@@ -221,6 +268,17 @@
                 android:resource="@xml/sync_adapter_apartments" />
         </service>
 
+        <service android:name=".sync.ParcelTypeSyncService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/sync_adapter_parceltype" />
+        </service>
+
+
         <service android:name=".sync.PortersSyncService"
             android:exported="true">
             <intent-filter>
@@ -260,6 +318,49 @@
                 android:name="android.content.SyncAdapter"
                 android:resource="@xml/sync_adapter_residents_tablet" />
         </service>
+
+
+        <service android:name=".sync.ResidentsTempsSyncService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/sync_adapter_residentstemps" />
+        </service>
+
+        <service android:name=".sync.ResidentsTempsTabletSyncService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/sync_adapter_residentstemps_tablet" />
+        </service>
+
+
+        <service android:name=".sync.ResidentsVehiclesSyncService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/sync_adapter_residentsvehicles" />
+        </service>
+
+        <service android:name=".sync.ResidentsVehiclesTabletSyncService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/sync_adapter_residentsvehicles_tablet" />
+        </service>
+
 
         <service android:name=".sync.BlacklistSyncService"
             android:exported="true">
@@ -382,6 +483,28 @@
                 android:name="android.content.SyncAdapter"
                 android:resource="@xml/sync_adapter_visits_others_gateways" />
         </service>
+
+
+        <service android:name=".sync.ParcelsOthersGatewaysSyncService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/sync_adapter_parcels_others_gateways" />
+        </service>
+
+        <service android:name=".sync.ParcelsExitOthersGatewaysSyncService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/sync_adapter_parcels_exit_others_gateways" />
+        </service>
+
 
         <service android:name=".sync.TimekeepingOthersGatewaysSyncService"
             android:exported="true">

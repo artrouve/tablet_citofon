@@ -39,6 +39,10 @@ public class VehiclePlateAdapter extends ArrayAdapter<VehiclePlateDetected> {
     ImageButton buttonDeletePlateDetected;
     ImageButton buttonViewPlateDetected;
     VehiclePlateDetected vehicleSelected;
+
+    //private String urlBase = "https://salpr.citofon.cl/";
+    //private String urlBase = "https://citofonalpr.s3.us-east-2.amazonaws.com/";
+    //LA URL BASE VENDRA EN EL JSON DE VUELTA
     private String urlBase = "https://salpr.citofon.cl/";
 
     public void setFocusedPosition(int focusedPosition) {
@@ -104,7 +108,13 @@ public class VehiclePlateAdapter extends ArrayAdapter<VehiclePlateDetected> {
                 Bundle args = new Bundle();
                 VehiclePlateDetected vehicleDetected = getItem(position);
 
-                args.putString("urlBase",urlBase + vehicleDetected.getUrlImage());
+                if(vehicleDetected.getUrlImage().contains("https")){
+                    args.putString("urlBase",vehicleDetected.getUrlImage());
+                }
+                else{
+                    args.putString("urlBase",urlBase + vehicleDetected.getUrlImage());
+                }
+
 
                 FragmentManager manager = ((AppCompatActivity)getContext()).getSupportFragmentManager();
 
@@ -120,7 +130,14 @@ public class VehiclePlateAdapter extends ArrayAdapter<VehiclePlateDetected> {
 
         try{
             ImageView imagePlate = (ImageView) convertView.findViewById(R.id.plateImageView);
-            Picasso.get().load(urlBase+vehicleDetected.getUrlImage()).networkPolicy(NetworkPolicy.NO_CACHE).memoryPolicy(MemoryPolicy.NO_CACHE).into(imagePlate);
+
+            if(vehicleDetected.getUrlImage().contains("https")){
+                Picasso.get().load(vehicleDetected.getUrlImage()).networkPolicy(NetworkPolicy.NO_CACHE).memoryPolicy(MemoryPolicy.NO_CACHE).into(imagePlate);
+            }
+            else{
+                Picasso.get().load(urlBase+vehicleDetected.getUrlImage()).networkPolicy(NetworkPolicy.NO_CACHE).memoryPolicy(MemoryPolicy.NO_CACHE).into(imagePlate);
+            }
+
         }
         catch (Exception e){
 
@@ -145,23 +162,7 @@ public class VehiclePlateAdapter extends ArrayAdapter<VehiclePlateDetected> {
 
         this.notifyDataSetChanged();
 
-/*
 
-
-        int size = this.vehiclesDetected.size();
-        //this.vehiclesDetected.removeAll(this.vehiclesDetected);
-
-        this.clear();
-        this.vehiclesDetected = vehiclesDetecteds;
-        this.notifyDataSetChanged();
-
-
-
-        //this.vehiclesDetected.addAll(vehiclesDetected);
-
-        //this.notifyDataSetChanged();
-
- */
     }
 
 }

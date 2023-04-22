@@ -9,7 +9,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-
 import com.handsriver.concierge.R;
 import com.handsriver.concierge.utilities.Utility;
 

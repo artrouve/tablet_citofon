@@ -60,8 +60,6 @@ public class FineAlertAutomaticSyncAdapter extends AbstractThreadedSyncAdapter {
     public static final String PREFS_NAME = "PorterPrefs";
     public static final int DEF_VALUE = 0;
 
-
-
     public FineAlertAutomaticSyncAdapter(Context context, boolean autoInitialize) {
         super(context, autoInitialize);
         this.mContext= context;

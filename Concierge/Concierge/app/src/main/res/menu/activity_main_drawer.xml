@@ -138,6 +138,17 @@
                     android:icon="@drawable/ic_search"
                     android:checkable="true"/>
                 <item
+                    android:id="@+id/registerResidentsVehicles"
+                    android:title="@string/registerResidentVehicle"
+                    android:icon="@drawable/ic_vehicles"
+                    android:checkable="true"/>
+                <item
+                    android:id="@+id/searchResidentsVehicles"
+                    android:title="@string/searchResidentVehicle"
+                    android:icon="@drawable/ic_search"
+                    android:checkable="true"/>
+
+                <item
                     android:id="@+id/searchParking"
                     android:title="@string/searchParking"
                     android:icon="@drawable/ic_search"
@@ -147,6 +158,13 @@
                     android:title="@string/searchWarehouse"
                     android:icon="@drawable/ic_search"
                     android:checkable="true"/>
+
+                <item
+                    android:id="@+id/searchResidentsTemps"
+                    android:title="@string/searchResidenttemp"
+                    android:icon="@drawable/ic_search"
+                    android:checkable="true"/>
+
             </menu>
         </item>
     </group>

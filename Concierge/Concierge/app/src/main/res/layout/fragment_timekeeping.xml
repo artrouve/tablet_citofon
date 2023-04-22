@@ -122,7 +122,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_gravity="center"
                 android:maxLines="1"
-                android:maxLength="15"
+                android:maxLength="300"
                 android:singleLine="true"/>
 
         </android.support.design.widget.TextInputLayout>

@@ -35,7 +35,9 @@ public class SendPushNotifications {
     public static String TITLE = "Encomienda recibida";
     public static String BODY = "Tiene una encomienda para retiro";
     public static String DEFAULT = "default";
-    public static String AUTHORIZATION = "key=AAAAxi1rbFQ:APA91bFhYpJ33K5P95EkWiLfyyMrUbn1NS1nu89_UVaxXv4iwdelHUXo3qPKJZIAm1xu0RybZBJiLSQ5AvURcJuQhVpQX5jO1MdMDItTozrceTMjt9NHxwCZ_0MRTPdaCGUj9JwqECSR";
+    //public static String AUTHORIZATION = "key=AAAAxi1rbFQ:APA91bFhYpJ33K5P95EkWiLfyyMrUbn1NS1nu89_UVaxXv4iwdelHUXo3qPKJZIAm1xu0RybZBJiLSQ5AvURcJuQhVpQX5jO1MdMDItTozrceTMjt9NHxwCZ_0MRTPdaCGUj9JwqECSR";
+    public static String AUTHORIZATION = "key=AAAAGnxBHCk:APA91bGg1yFAt95j8oGx1BObyh13y2RNoal0doHZxUku3ZdE1JS5QFWC-sbMus8PpVIblWTxyi4L6vpHFKHx0vMTm6pAHvw6I2sKFFSG-dZMwdePe_njMsfSDXCvTUfGkSZ6lHEFwHyJ";
+
     public static String ENABLE_PUSH_NOTIFICATION = "1";
 
 

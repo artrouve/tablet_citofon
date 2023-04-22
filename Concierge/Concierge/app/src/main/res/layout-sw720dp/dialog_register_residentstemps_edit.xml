@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="15dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:stretchColumns="1">
+        <TableRow android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/apartmentList"/>
+
+            <TextView
+                android:id="@+id/textViewApartmentDialog"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="20dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/fullNameList"/>
+
+            <TextView
+                android:id="@+id/textViewFullNameDialog"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="20dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/emailList"/>
+
+            <EditText
+                android:id="@+id/textViewEmailDialog"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="20dp"
+                android:inputType="textEmailAddress"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="Rut/Pasaporte"/>
+
+            <EditText
+                android:id="@+id/textViewRutDialog"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="20dp"
+                android:inputType="text"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="Fono"/>
+
+            <EditText
+                android:id="@+id/textViewPhoneDialog"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="20dp"
+                android:inputType="text"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="Fecha Inicio"/>
+
+            <EditText
+                android:id="@+id/textViewStartDateDialog"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="20dp"
+                android:inputType="text"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="Fecha Término"/>
+
+            <EditText
+                android:id="@+id/textViewEndDateDialog"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="20dp"
+                android:inputType="text"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+
+
+    </TableLayout>
+</LinearLayout>

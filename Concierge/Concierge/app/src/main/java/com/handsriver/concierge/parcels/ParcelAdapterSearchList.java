@@ -112,14 +112,23 @@ public class ParcelAdapterSearchList extends BaseAdapter implements Filterable {
             }
             else{
                 ArrayList<Parcel> filteredParcels = new ArrayList<Parcel>();
+                if(!(constraint.toString().toUpperCase()).equals("PEN")){
+                    for (Parcel parcel : mParcels){
+                        Pattern pattern = Pattern.compile("(^|\\s)" + Pattern.quote(Normalizer.normalize(constraint.toString().toUpperCase(), Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", "")));
+                        Matcher matcher = pattern.matcher(Normalizer.normalize(parcel.getUniqueId().toUpperCase(), Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", ""));
+                        Matcher matcher1 = pattern.matcher(Normalizer.normalize(parcel.getApartmentNumber().toUpperCase(), Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", ""));
 
-                for (Parcel parcel : mParcels){
-                    Pattern pattern = Pattern.compile("(^|\\s)" + Pattern.quote(Normalizer.normalize(constraint.toString().toUpperCase(), Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", "")));
-                    Matcher matcher = pattern.matcher(Normalizer.normalize(parcel.getUniqueId().toUpperCase(), Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", ""));
-                    Matcher matcher1 = pattern.matcher(Normalizer.normalize(parcel.getApartmentNumber().toUpperCase(), Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", ""));
-
-                    if (matcher.find() || matcher1.find()){
-                        filteredParcels.add(parcel);
+                        if (matcher.find() || matcher1.find()){
+                            filteredParcels.add(parcel);
+                        }
+                    }
+                }
+                else{
+                    //SEARCH PENDING TO RESIDENT RECEPT
+                    for (Parcel parcel : mParcels){
+                        if (parcel.getExitParcel() == null){
+                            filteredParcels.add(parcel);
+                        }
                     }
                 }
 

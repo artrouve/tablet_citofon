@@ -8,6 +8,7 @@ public class Parcel {
     private String id;
     private String uniqueId;
     private String fullName;
+    private String typeParcel;
     private String observations;
     private String entryParcel;
     private String exitParcel;
@@ -35,6 +36,14 @@ public class Parcel {
 
     public void setFullName(String fullName) {
         this.fullName = fullName;
+    }
+
+    public String getTypeParcel() {
+        return typeParcel;
+    }
+
+    public void setTypeParcel(String typeParcel) {
+        this.typeParcel = typeParcel;
     }
 
     public String getObservations() {

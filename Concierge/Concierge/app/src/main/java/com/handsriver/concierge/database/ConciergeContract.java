@@ -229,6 +229,7 @@ public class ConciergeContract {
         public static final String COLUMN_APARTMENT_ID = "apartment_id";
         public static final String COLUMN_ENTRY_PARCEL_PORTER_ID = "entry_parcel_porter_id";
         public static final String COLUMN_EXIT_PARCEL_PORTER_ID = "exit_parcel_porter_id";
+        public static final String COLUMN_PARCELTYPE_ID = "parceltype_id";
         public static final String COLUMN_PARCEL_ID_SERVER = "parcel_id_server";
         public static final String COLUMN_IS_SYNC = "is_sync";
         public static final String COLUMN_IS_UPDATE = "is_update";
@@ -249,6 +250,23 @@ public class ConciergeContract {
         public static final String COLUMN_ACTIVE = "active";
 
     }
+
+    public static final class ParcelTypeEntry implements BaseColumns{
+
+        /*
+         * TABLE NAME
+         * */
+        public static final String TABLE_NAME = "parceltype";
+
+        /*
+         * COLUMNS TABLE APARTMENTS
+         * */
+        public static final String COLUMN_PARCELTYPE_TYPE = "type";
+        public static final String COLUMN_PARCELTYPE_ID_SERVER = "parceltype_id_server";
+        public static final String COLUMN_ACTIVE = "active";
+
+    }
+
 
     public static final class ResidentEntry implements BaseColumns{
 
@@ -272,9 +290,36 @@ public class ConciergeContract {
         public static final String COLUMN_PUSH_NOTIFICATIONS = "push_notifications";
         public static final String COLUMN_RESIDENT_ID_SERVER = "resident_id_server";
         public static final String COLUMN_REQUEST_CODE = "request_code";
+        public static final String COLUMN_IS_DELETED = "is_deleted";
         public static final String COLUMN_IS_SYNC = "is_sync";
         public static final String COLUMN_IS_UPDATE = "is_update";
     }
+
+
+    public static final class ResidentTempEntry implements BaseColumns{
+
+        /*
+         * TABLE NAME
+         * */
+        public static final String TABLE_NAME = "residentstemps";
+
+        /*
+         * COLUMNS TABLE RESIDENTS
+         * */
+        public static final String COLUMN_FULL_NAME = "full_name";
+        public static final String COLUMN_EMAIL = "email";
+        public static final String COLUMN_PHONE = "phone";
+        public static final String COLUMN_RUT = "rut";
+        public static final String COLUMN_START_DATE = "start_date";
+        public static final String COLUMN_END_DATE = "end_date";
+
+        public static final String COLUMN_APARTMENT_ID = "apartment_id";
+
+        public static final String COLUMN_RESIDENTTEMP_ID_SERVER = "residenttemp_id_server";
+        public static final String COLUMN_IS_SYNC = "is_sync";
+        public static final String COLUMN_IS_UPDATE = "is_update";
+    }
+
 
     public static final class BlacklistEntry implements BaseColumns{
 
@@ -306,6 +351,7 @@ public class ConciergeContract {
         * */
         public static final String COLUMN_DOCUMENT_NUMBER = "document_number";
         public static final String COLUMN_FULL_NAME = "full_name";
+        public static final String COLUMN_PLATE = "plate";
         public static final String COLUMN_APARTMENT_ID = "apartment_id";
         public static final String COLUMN_WHITELIST_ID_SERVER = "whitelist_id_server";
 
@@ -365,6 +411,26 @@ public class ConciergeContract {
 
 
     }
+
+    public static final class ResidentVehicleEntry implements BaseColumns{
+
+        /*
+         * TABLE NAME
+         * */
+        public static final String TABLE_NAME = "residentsvehicles";
+
+        /*
+         * COLUMNS TABLE RESIDENTS
+         * */
+        public static final String COLUMN_PLATE = "plate";
+        public static final String COLUMN_APARTMENT_ID = "apartment_id";
+        public static final String COLUMN_ACTIVE = "active";
+        public static final String COLUMN_RESIDENTVEHICLE_ID_SERVER = "residentvehicle_id_server";
+        public static final String COLUMN_IS_SYNC = "is_sync";
+        public static final String COLUMN_IS_UPDATE = "is_update";
+
+    }
+
 
 
 }

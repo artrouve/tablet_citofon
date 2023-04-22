@@ -176,6 +176,8 @@ public class CommonspacesvisitRegisterFragment extends Fragment {
 
         commonspaces.setAdapter(commonspacesAdapter);
 
+        textFullName.addTextChangedListener(inputAutomaticDocument);
+
         textRut.setOnKeyListener(new View.OnKeyListener() {
 
             @Override
@@ -371,6 +373,40 @@ public class CommonspacesvisitRegisterFragment extends Fragment {
         return super.onOptionsItemSelected(item);
     }
 
+    private TextWatcher inputAutomaticDocument = new TextWatcher() {
+        public void afterTextChanged(Editable s) { }
+        public void beforeTextChanged(CharSequence s, int start, int count, int after)
+        { }
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            String string_scan = s.toString();
+            if(!string_scan.equals("")){
+
+                char ini = string_scan.charAt(0);
+                if(ini == '_'){
+
+                    string_scan = string_scan.substring(1,string_scan.length());
+                    Visit newVisit = FormatICAO9303.formatDocument(string_scan.toString());
+
+                    if (newVisit == null)
+                    {
+                        textFullName.setText("");
+                        Toast.makeText(getActivity().getApplicationContext(), "Lectura Errónea, Favor Escanear Nuevamente", Toast.LENGTH_LONG).show();
+                    }
+                    else
+                    {
+                        newVisit.setFullName(newVisit.getFullName());
+                        newVisit.setDocumentNumber(newVisit.getDocumentNumber());
+                        visitsAdapter.add(newVisit);
+                        textFullName.setText("");
+                    }
+
+                }
+
+            }
+
+        }
+    };
 
     private boolean isScannerOCR(View v, int keycode, KeyEvent event){
 

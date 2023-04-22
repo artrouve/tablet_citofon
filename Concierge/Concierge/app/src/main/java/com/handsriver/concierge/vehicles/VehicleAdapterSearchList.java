@@ -86,6 +86,10 @@ public class VehicleAdapterSearchList extends BaseAdapter implements Filterable 
 
         isFined = Utility.differenceDateHours(Utility.getHourForServer(),vehicle.getEntry(),mHours);
 
+
+        //ROBERTO RECULIAO TU Y TUS LOGICAS ABSUDAS QUE NADIE ENTIENDE
+        //SACO WEA!!!
+        /*
         if (isFined && fineDate == null && exitDate == null) {
             view.setBackgroundColor(Color.argb(75,255,255,0));
         }else if (exitDate != null){
@@ -93,6 +97,16 @@ public class VehicleAdapterSearchList extends BaseAdapter implements Filterable 
         }else{
             view.setBackgroundColor(Color.TRANSPARENT);
         }
+        */
+
+        view.setBackgroundColor(Color.TRANSPARENT);
+        if (isFined && exitDate == null) {
+            view.setBackgroundColor(Color.argb(75,255,255,0));
+        }
+        if (exitDate != null) {
+            view.setBackgroundColor(Color.argb(75,0,255,0));
+        }
+
 
         if (vehicle.getParkingNumber() == null){
             textViewParkingNumber.setText(NO_AVAILABLE);

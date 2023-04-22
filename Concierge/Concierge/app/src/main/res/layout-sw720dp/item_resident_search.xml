@@ -86,7 +86,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:textSize="16sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:autoLink="phone"
+                android:linksClickable="true"
+                />
         </TableRow>
 
         <TableRow>
@@ -102,7 +105,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:textSize="16sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:autoLink="phone"
+                android:linksClickable="true"/>
         </TableRow>
 
 
@@ -133,6 +138,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/edit"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+
+        <Button
+            android:id="@+id/buttonDeleteResident"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/deleteResident"
             style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
 
         <Button

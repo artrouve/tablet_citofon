@@ -4,11 +4,15 @@ import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.PeriodicSync;
+import android.content.SyncInfo;
 import android.content.SyncRequest;
 import android.os.Build;
 import android.os.Bundle;
 
 import com.handsriver.concierge.R;
+
+import java.util.List;
 
 /**
  * Created by Created by alain_r._trouve_silva after 03-05-17.
@@ -22,6 +26,9 @@ public class ConfigureSyncAccount {
     private static final int SYNC_INTERVAL_APARTMENTS = 24 * HOUR_IN_SECS;
     private static final int SYNC_FLEXTIME_APARTMENTS = 30 * MIN_IN_SECS;
 
+    private static final int SYNC_INTERVAL_PARCELTYPE = 24 * HOUR_IN_SECS;
+    private static final int SYNC_FLEXTIME_PARCELTYPE = 30 * MIN_IN_SECS;
+
     private static final int SYNC_INTERVAL_PORTERS = 5 * HOUR_IN_SECS;
     private static final int SYNC_FLEXTIME_PORTERS = 20 * MIN_IN_SECS;
 
@@ -30,6 +37,12 @@ public class ConfigureSyncAccount {
 
     private static final int SYNC_INTERVAL_RESIDENTS = 5 * MIN_IN_SECS;
     private static final int SYNC_FLEXTIME_RESIDENTS = MIN_IN_SECS;
+
+    private static final int SYNC_INTERVAL_RESIDENTSTEMPS = 5 * MIN_IN_SECS;
+    private static final int SYNC_FLEXTIME_RESIDENTSTEMPS = MIN_IN_SECS;
+
+    private static final int SYNC_INTERVAL_RESIDENTSVEHICLES = 5 * MIN_IN_SECS;
+    private static final int SYNC_FLEXTIME_RESIDENTSVEHICLES = MIN_IN_SECS;
 
     private static final int SYNC_INTERVAL_FINE_ALERT_AUTOMATIC = 2 * MIN_IN_SECS;
     private static final int SYNC_FLEXTIME_FINE_ALERT_AUTOMATIC = MIN_IN_SECS;
@@ -40,6 +53,12 @@ public class ConfigureSyncAccount {
     private static final int SYNC_INTERVAL_RESIDENTS_TABLET = HOUR_IN_SECS;
     private static final int SYNC_FLEXTIME_RESIDENTS_TABLET = 10 * MIN_IN_SECS;
 
+    private static final int SYNC_INTERVAL_RESIDENTSTEMPS_TABLET = HOUR_IN_SECS;
+    private static final int SYNC_FLEXTIME_RESIDENTSTEMPS_TABLET = 10 * MIN_IN_SECS;
+
+    private static final int SYNC_INTERVAL_RESIDENTSVEHICLES_TABLET = HOUR_IN_SECS;
+    private static final int SYNC_FLEXTIME_RESIDENTSVEHICLES_TABLET = 10 * MIN_IN_SECS;
+
     private static final int SYNC_INTERVAL_BLACKLIST = HOUR_IN_SECS;
     private static final int SYNC_FLEXTIME_BLACKLIST = 15 * MIN_IN_SECS;
 
@@ -48,7 +67,6 @@ public class ConfigureSyncAccount {
 
     private static final int SYNC_INTERVAL_COMMONSPACES = 24 * HOUR_IN_SECS;
     private static final int SYNC_FLEXTIME_COMMONSPACES = 20 * MIN_IN_SECS;
-
 
     private static final int SYNC_INTERVAL_VISITS_VEHICLES = HOUR_IN_SECS;
     private static final int SYNC_FLEXTIME_VISITS_VEHICLES = 25 * MIN_IN_SECS;
@@ -86,15 +104,14 @@ public class ConfigureSyncAccount {
     private static final int SYNC_INTERVAL_VISITS_COMMONSPACES = HOUR_IN_SECS;
     private static final int SYNC_FLEXTIME_VISITS_COMMONSPACES = 15 * MIN_IN_SECS;
 
+    private static final int SYNC_INTERVAL_VISITS_OTHER_GATEWAYS = 1 * 40;
+    private static final int SYNC_FLEXTIME_VISITS_OTHER_GATEWAYS = 1 * 15;
 
-    private static final int SYNC_INTERVAL_VISITS_OTHER_GATEWAYS = 2 * HOUR_IN_SECS;
-    private static final int SYNC_FLEXTIME_VISITS_OTHER_GATEWAYS = 27 * MIN_IN_SECS;
+    private static final int SYNC_INTERVAL_TIMEKEEPING_OTHER_GATEWAYS = 15 * MIN_IN_SECS;
+    private static final int SYNC_FLEXTIME_TIMEKEEPING_OTHER_GATEWAYS = 5 * MIN_IN_SECS;
 
-    private static final int SYNC_INTERVAL_TIMEKEEPING_OTHER_GATEWAYS = 5 * HOUR_IN_SECS;
-    private static final int SYNC_FLEXTIME_TIMEKEEPING_OTHER_GATEWAYS = 33 * MIN_IN_SECS;
-
-    private static final int SYNC_INTERVAL_TIMEKEEPING_EXIT_OTHER_GATEWAYS = HOUR_IN_SECS;
-    private static final int SYNC_FLEXTIME_TIMEKEEPING_EXIT_OTHER_GATEWAYS = 7 * MIN_IN_SECS;
+    private static final int SYNC_INTERVAL_TIMEKEEPING_EXIT_OTHER_GATEWAYS = 15 * MIN_IN_SECS;
+    private static final int SYNC_FLEXTIME_TIMEKEEPING_EXIT_OTHER_GATEWAYS = 5 * MIN_IN_SECS;
 
     private static final int SYNC_INTERVAL_VISITS_SUPPLIERS_OTHER_GATEWAYS = HOUR_IN_SECS;
     private static final int SYNC_FLEXTIME_VISITS_SUPPLIERS_OTHER_GATEWAYS = 21 * MIN_IN_SECS;
@@ -108,6 +125,11 @@ public class ConfigureSyncAccount {
     private static final int SYNC_INTERVAL_VISITS_COMMONSPACES_EXIT_OTHER_GATEWAYS = HOUR_IN_SECS;
     private static final int SYNC_FLEXTIME_VISITS_COMMONSPACES_EXIT_OTHER_GATEWAYS = 27 * MIN_IN_SECS;
 
+    private static final int SYNC_INTERVAL_PARCELS_OTHER_GATEWAYS = 5 * MIN_IN_SECS;
+    private static final int SYNC_FLEXTIME_PARCELS_OTHER_GATEWAYS = 15 * MIN_IN_SECS;
+
+    private static final int SYNC_INTERVAL_PARCELS_EXIT_OTHER_GATEWAYS = 5 * MIN_IN_SECS;
+    private static final int SYNC_FLEXTIME_PARCELS_EXIT_OTHER_GATEWAYS = 16 * MIN_IN_SECS;
 
     private static final int SYNC_INTERVAL_CODE_AUTH = HOUR_IN_SECS;
     private static final int SYNC_FLEXTIME_CODE_AUTH = 16 * MIN_IN_SECS;
@@ -121,10 +143,15 @@ public class ConfigureSyncAccount {
     private static void configurePeriodicSync(Context context) {
         Account account = getSyncAccount(context);
         String authority_apartments = context.getString(R.string.content_authority_apartments);
+        String authority_parceltype = context.getString(R.string.content_authority_parceltype);
         String authority_porters = context.getString(R.string.content_authority_porters);
         String authority_porters_tablet = context.getString(R.string.content_authority_porters_tablet);
         String authority_residents = context.getString(R.string.content_authority_residents);
         String authority_residents_tablet = context.getString(R.string.content_authority_residents_tablet);
+        String authority_residentstemps = context.getString(R.string.content_authority_residentstemps);
+        String authority_residentstemps_tablet = context.getString(R.string.content_authority_residentstemps_tablet);
+        String authority_residentsvehicles = context.getString(R.string.content_authority_residentsvehicles);
+        String authority_residentsvehicles_tablet = context.getString(R.string.content_authority_residentsvehicles_tablet);
         String authority_blacklist = context.getString(R.string.content_authority_blacklist);
         String authority_suppliers = context.getString(R.string.content_authority_suppliers);
         String authority_commonspaces = context.getString(R.string.content_authority_commonspaces);
@@ -148,6 +175,9 @@ public class ConfigureSyncAccount {
         String authority_visits_suppliers_exit_others_gateways = context.getString(R.string.content_authority_visits_suppliers_exit_others_gateways);
         String authority_visits_commonspaces_others_gateways = context.getString(R.string.content_authority_visits_commonspaces_others_gateways);
         String authority_visits_commonspaces_exit_others_gateways = context.getString(R.string.content_authority_visits_commonspaces_exit_others_gateways);
+        String authority_parcels_others_gateways = context.getString(R.string.content_authority_parcels_others_gateways);
+        String authority_parcels_exit_others_gateways = context.getString(R.string.content_authority_parcels_exit_others_gateways);
+
 
 
         String authority_code_auth = context.getString(R.string.content_authority_residents_codeauth);
@@ -157,12 +187,17 @@ public class ConfigureSyncAccount {
         String authority_google_play_service = context.getString(R.string.content_authority_update_google_play_service);
 
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
             SyncRequest request_apartments = new SyncRequest.Builder().syncPeriodic(SYNC_INTERVAL_APARTMENTS, SYNC_FLEXTIME_APARTMENTS).setSyncAdapter(account, authority_apartments).setExtras(new Bundle()).build();
+            SyncRequest request_parceltype = new SyncRequest.Builder().syncPeriodic(SYNC_INTERVAL_PARCELTYPE, SYNC_FLEXTIME_PARCELTYPE).setSyncAdapter(account, authority_parceltype).setExtras(new Bundle()).build();
             SyncRequest request_porters = new SyncRequest.Builder().syncPeriodic(SYNC_INTERVAL_PORTERS, SYNC_FLEXTIME_PORTERS).setSyncAdapter(account, authority_porters).setExtras(new Bundle()).build();
             SyncRequest request_porters_tablet = new SyncRequest.Builder().syncPeriodic(SYNC_INTERVAL_PORTERS_TABLET, SYNC_FLEXTIME_PORTERS_TABLET).setSyncAdapter(account, authority_porters_tablet).setExtras(new Bundle()).build();
             SyncRequest request_residents_tablet = new SyncRequest.Builder().syncPeriodic(SYNC_INTERVAL_RESIDENTS_TABLET, SYNC_FLEXTIME_RESIDENTS_TABLET).setSyncAdapter(account, authority_residents_tablet).setExtras(new Bundle()).build();
             SyncRequest request_residents = new SyncRequest.Builder().syncPeriodic(SYNC_INTERVAL_RESIDENTS, SYNC_FLEXTIME_RESIDENTS).setSyncAdapter(account, authority_residents).setExtras(new Bundle()).build();
+            SyncRequest request_residentstemps_tablet = new SyncRequest.Builder().syncPeriodic(SYNC_INTERVAL_RESIDENTS_TABLET, SYNC_FLEXTIME_RESIDENTS_TABLET).setSyncAdapter(account, authority_residentstemps_tablet).setExtras(new Bundle()).build();
+            SyncRequest request_residentstemps = new SyncRequest.Builder().syncPeriodic(SYNC_INTERVAL_RESIDENTS, SYNC_FLEXTIME_RESIDENTS).setSyncAdapter(account, authority_residentstemps).setExtras(new Bundle()).build();
+            SyncRequest request_residentsvehicles_tablet = new SyncRequest.Builder().syncPeriodic(SYNC_INTERVAL_RESIDENTSVEHICLES_TABLET, SYNC_FLEXTIME_RESIDENTSVEHICLES_TABLET).setSyncAdapter(account, authority_residentsvehicles_tablet).setExtras(new Bundle()).build();
+            SyncRequest request_residentsvehicles = new SyncRequest.Builder().syncPeriodic(SYNC_INTERVAL_RESIDENTSVEHICLES, SYNC_FLEXTIME_RESIDENTSVEHICLES).setSyncAdapter(account, authority_residentsvehicles).setExtras(new Bundle()).build();
             SyncRequest request_blacklist = new SyncRequest.Builder().syncPeriodic(SYNC_INTERVAL_BLACKLIST, SYNC_FLEXTIME_BLACKLIST).setSyncAdapter(account, authority_blacklist).setExtras(new Bundle()).build();
             SyncRequest request_suppliers = new SyncRequest.Builder().syncPeriodic(SYNC_INTERVAL_SUPPLIERS, SYNC_FLEXTIME_SUPPLIERS).setSyncAdapter(account, authority_suppliers).setExtras(new Bundle()).build();
             SyncRequest request_commonspaces = new SyncRequest.Builder().syncPeriodic(SYNC_INTERVAL_COMMONSPACES, SYNC_FLEXTIME_COMMONSPACES).setSyncAdapter(account, authority_commonspaces).setExtras(new Bundle()).build();
@@ -179,7 +214,6 @@ public class ConfigureSyncAccount {
             SyncRequest request_timekeeping_delete = new SyncRequest.Builder().syncPeriodic(SYNC_INTERVAL_TIMEKEEPING_DELETE, SYNC_FLEXTIME_TIMEKEEPING_DELETE).setSyncAdapter(account, authority_timekeeping_delete).setExtras(new Bundle()).build();
             SyncRequest request_visits_suppliers = new SyncRequest.Builder().syncPeriodic(SYNC_INTERVAL_VISITS_SUPPLIERS, SYNC_FLEXTIME_VISITS_SUPPLIERS).setSyncAdapter(account, authority_visits_suppliers).setExtras(new Bundle()).build();
             SyncRequest request_visits_commonspaces = new SyncRequest.Builder().syncPeriodic(SYNC_INTERVAL_VISITS_COMMONSPACES, SYNC_FLEXTIME_VISITS_COMMONSPACES).setSyncAdapter(account, authority_visits_commonspaces).setExtras(new Bundle()).build();
-
             SyncRequest request_visits_others_gateways = new SyncRequest.Builder().syncPeriodic(SYNC_INTERVAL_VISITS_OTHER_GATEWAYS, SYNC_FLEXTIME_VISITS_OTHER_GATEWAYS).setSyncAdapter(account, authority_visits_others_gateways).setExtras(new Bundle()).build();
             SyncRequest request_timekeeping_others_gateways = new SyncRequest.Builder().syncPeriodic(SYNC_INTERVAL_TIMEKEEPING_OTHER_GATEWAYS, SYNC_FLEXTIME_TIMEKEEPING_OTHER_GATEWAYS).setSyncAdapter(account, authority_timekeeping_others_gateways).setExtras(new Bundle()).build();
             SyncRequest request_timekeeping_exit_others_gateways = new SyncRequest.Builder().syncPeriodic(SYNC_INTERVAL_TIMEKEEPING_EXIT_OTHER_GATEWAYS, SYNC_FLEXTIME_TIMEKEEPING_EXIT_OTHER_GATEWAYS).setSyncAdapter(account, authority_timekeeping_exit_others_gateways).setExtras(new Bundle()).build();
@@ -187,6 +221,8 @@ public class ConfigureSyncAccount {
             SyncRequest request_visits_suppliers_exit_others_gateways = new SyncRequest.Builder().syncPeriodic(SYNC_INTERVAL_VISITS_SUPPLIERS_EXIT_OTHER_GATEWAYS, SYNC_FLEXTIME_VISITS_SUPPLIERS_EXIT_OTHER_GATEWAYS).setSyncAdapter(account, authority_visits_suppliers_exit_others_gateways).setExtras(new Bundle()).build();
             SyncRequest request_visits_commonspaces_others_gateways = new SyncRequest.Builder().syncPeriodic(SYNC_INTERVAL_VISITS_COMMONSPACES_OTHER_GATEWAYS, SYNC_FLEXTIME_VISITS_COMMONSPACES_OTHER_GATEWAYS).setSyncAdapter(account, authority_visits_commonspaces_others_gateways).setExtras(new Bundle()).build();
             SyncRequest request_visits_commonspaces_exit_others_gateways = new SyncRequest.Builder().syncPeriodic(SYNC_INTERVAL_VISITS_COMMONSPACES_EXIT_OTHER_GATEWAYS, SYNC_FLEXTIME_VISITS_COMMONSPACES_EXIT_OTHER_GATEWAYS).setSyncAdapter(account, authority_visits_commonspaces_exit_others_gateways).setExtras(new Bundle()).build();
+            SyncRequest request_parcels_others_gateways = new SyncRequest.Builder().syncPeriodic(SYNC_INTERVAL_PARCELS_OTHER_GATEWAYS, SYNC_FLEXTIME_PARCELS_OTHER_GATEWAYS).setSyncAdapter(account, authority_parcels_others_gateways).setExtras(new Bundle()).build();
+            SyncRequest request_parcels_exit_others_gateways = new SyncRequest.Builder().syncPeriodic(SYNC_INTERVAL_PARCELS_EXIT_OTHER_GATEWAYS, SYNC_FLEXTIME_PARCELS_EXIT_OTHER_GATEWAYS).setSyncAdapter(account, authority_parcels_exit_others_gateways).setExtras(new Bundle()).build();
             SyncRequest request_code_auth = new SyncRequest.Builder().syncPeriodic(SYNC_INTERVAL_CODE_AUTH, SYNC_FLEXTIME_CODE_AUTH).setSyncAdapter(account, authority_code_auth).setExtras(new Bundle()).build();
             SyncRequest request_whitelist = new SyncRequest.Builder().syncPeriodic(SYNC_INTERVAL_WHITELIST, SYNC_FLEXTIME_WHITELIST).setSyncAdapter(account, authority_whitelist).setExtras(new Bundle()).build();
             SyncRequest request_fine_automatic = new SyncRequest.Builder().syncPeriodic(SYNC_INTERVAL_FINE_ALERT_AUTOMATIC, SYNC_FLEXTIME_FINE_ALERT_AUTOMATIC).setSyncAdapter(account, authority_fine_automatic).setExtras(new Bundle()).build();
@@ -194,10 +230,15 @@ public class ConfigureSyncAccount {
             SyncRequest request_google_play_services = new SyncRequest.Builder().syncPeriodic(SYNC_INTERVAL_GOOGLE_PLAY_SERVICE, SYNC_FLEXTIME_GOOGLE_PLAY_SERVICE).setSyncAdapter(account, authority_google_play_service).setExtras(new Bundle()).build();
 
             ContentResolver.requestSync(request_apartments);
+            ContentResolver.requestSync(request_parceltype);
             ContentResolver.requestSync(request_porters);
             ContentResolver.requestSync(request_porters_tablet);
             ContentResolver.requestSync(request_residents_tablet);
             ContentResolver.requestSync(request_residents);
+            ContentResolver.requestSync(request_residentstemps_tablet);
+            ContentResolver.requestSync(request_residentstemps);
+            ContentResolver.requestSync(request_residentsvehicles_tablet);
+            ContentResolver.requestSync(request_residentsvehicles);
             ContentResolver.requestSync(request_blacklist);
             ContentResolver.requestSync(request_suppliers);
             ContentResolver.requestSync(request_commonspaces);
@@ -220,6 +261,8 @@ public class ConfigureSyncAccount {
             ContentResolver.requestSync(request_visits_suppliers_exit_others_gateways);
             ContentResolver.requestSync(request_visits_commonspaces_others_gateways);
             ContentResolver.requestSync(request_visits_commonspaces_exit_others_gateways);
+            ContentResolver.requestSync(request_parcels_others_gateways);
+            ContentResolver.requestSync(request_parcels_exit_others_gateways);
             ContentResolver.requestSync(request_code_auth);
             ContentResolver.requestSync(request_whitelist);
             ContentResolver.requestSync(request_fine_automatic);
@@ -229,10 +272,15 @@ public class ConfigureSyncAccount {
 
         } else {
             ContentResolver.addPeriodicSync(account, authority_apartments, new Bundle(), SYNC_INTERVAL_APARTMENTS);
+            ContentResolver.addPeriodicSync(account, authority_parceltype, new Bundle(), SYNC_INTERVAL_PARCELTYPE);
             ContentResolver.addPeriodicSync(account, authority_porters, new Bundle(), SYNC_INTERVAL_PORTERS);
             ContentResolver.addPeriodicSync(account, authority_porters_tablet, new Bundle(), SYNC_INTERVAL_PORTERS_TABLET);
             ContentResolver.addPeriodicSync(account, authority_residents_tablet, new Bundle(), SYNC_INTERVAL_RESIDENTS_TABLET);
             ContentResolver.addPeriodicSync(account, authority_residents, new Bundle(), SYNC_INTERVAL_RESIDENTS);
+            ContentResolver.addPeriodicSync(account, authority_residentstemps_tablet, new Bundle(), SYNC_INTERVAL_RESIDENTS_TABLET);
+            ContentResolver.addPeriodicSync(account, authority_residentstemps, new Bundle(), SYNC_INTERVAL_RESIDENTS);
+            ContentResolver.addPeriodicSync(account, authority_residentsvehicles_tablet, new Bundle(), SYNC_INTERVAL_RESIDENTSVEHICLES_TABLET);
+            ContentResolver.addPeriodicSync(account, authority_residentsvehicles, new Bundle(), SYNC_INTERVAL_RESIDENTSVEHICLES);
             ContentResolver.addPeriodicSync(account, authority_blacklist, new Bundle(), SYNC_INTERVAL_BLACKLIST);
             ContentResolver.addPeriodicSync(account, authority_suppliers, new Bundle(), SYNC_INTERVAL_SUPPLIERS);
             ContentResolver.addPeriodicSync(account, authority_commonspaces, new Bundle(), SYNC_INTERVAL_COMMONSPACES);
@@ -255,6 +303,8 @@ public class ConfigureSyncAccount {
             ContentResolver.addPeriodicSync(account, authority_visits_suppliers_exit_others_gateways, new Bundle(), SYNC_INTERVAL_VISITS_SUPPLIERS_EXIT_OTHER_GATEWAYS);
             ContentResolver.addPeriodicSync(account, authority_visits_commonspaces_others_gateways, new Bundle(), SYNC_INTERVAL_VISITS_COMMONSPACES_OTHER_GATEWAYS);
             ContentResolver.addPeriodicSync(account, authority_visits_commonspaces_exit_others_gateways, new Bundle(), SYNC_INTERVAL_VISITS_COMMONSPACES_EXIT_OTHER_GATEWAYS);
+            ContentResolver.addPeriodicSync(account, authority_parcels_others_gateways, new Bundle(), SYNC_INTERVAL_PARCELS_OTHER_GATEWAYS);
+            ContentResolver.addPeriodicSync(account, authority_parcels_exit_others_gateways, new Bundle(), SYNC_INTERVAL_PARCELS_EXIT_OTHER_GATEWAYS);
             ContentResolver.addPeriodicSync(account, authority_code_auth, new Bundle(), SYNC_INTERVAL_CODE_AUTH);
             ContentResolver.addPeriodicSync(account, authority_whitelist, new Bundle(), SYNC_INTERVAL_WHITELIST);
             ContentResolver.addPeriodicSync(account, authority_fine_automatic, new Bundle(), SYNC_INTERVAL_FINE_ALERT_AUTOMATIC);
@@ -277,6 +327,21 @@ public class ConfigureSyncAccount {
         bundle.putBoolean(ContentResolver.SYNC_EXTRAS_MANUAL, true);
         ContentResolver.requestSync(getSyncAccount(context), context.getString(R.string.content_authority_residents_tablet), bundle);
     }
+    public static void syncImmediatelyResidentsTempsTablet(Context context) {
+        Bundle bundle = new Bundle();
+        bundle.putBoolean(ContentResolver.SYNC_EXTRAS_EXPEDITED, true);
+        bundle.putBoolean(ContentResolver.SYNC_EXTRAS_MANUAL, true);
+        ContentResolver.requestSync(getSyncAccount(context), context.getString(R.string.content_authority_residentstemps_tablet), bundle);
+    }
+
+
+    public static void syncImmediatelyResidentsVehiclesTablet(Context context) {
+        Bundle bundle = new Bundle();
+        bundle.putBoolean(ContentResolver.SYNC_EXTRAS_EXPEDITED, true);
+        bundle.putBoolean(ContentResolver.SYNC_EXTRAS_MANUAL, true);
+        ContentResolver.requestSync(getSyncAccount(context), context.getString(R.string.content_authority_residentsvehicles_tablet), bundle);
+    }
+
 
     public static void syncImmediatelyVisitsAndVehicles(Context context) {
         Bundle bundle = new Bundle();
@@ -328,6 +393,20 @@ public class ConfigureSyncAccount {
         ContentResolver.requestSync(getSyncAccount(context), context.getString(R.string.content_authority_residents_codeauth), bundle);
     }
 
+    public static void syncImmediatelyVisitsOtherGateways(Context context) {
+        Bundle bundle = new Bundle();
+        bundle.putBoolean(ContentResolver.SYNC_EXTRAS_EXPEDITED, true);
+        bundle.putBoolean(ContentResolver.SYNC_EXTRAS_MANUAL, true);
+        ContentResolver.requestSync(getSyncAccount(context), context.getString(R.string.content_authority_visits_others_gateways), bundle);
+    }
+
+    public static boolean getEnableSyncPeriodic(Context context, String authority){
+        ConfigureSyncAccount.configurePeriodicSync(context);
+        boolean es = ContentResolver.isSyncActive(getSyncAccount(context),authority);
+        return es;
+
+    }
+
     public static void syncImmediately(Context context) {
         Bundle bundle = new Bundle();
         bundle.putBoolean(ContentResolver.SYNC_EXTRAS_EXPEDITED, true);
@@ -335,10 +414,13 @@ public class ConfigureSyncAccount {
         ContentResolver.requestSync(getSyncAccount(context), context.getString(R.string.content_authority_parkings), bundle);
         ContentResolver.requestSync(getSyncAccount(context), context.getString(R.string.content_authority_warehouses), bundle);
         ContentResolver.requestSync(getSyncAccount(context), context.getString(R.string.content_authority_residents), bundle);
+        ContentResolver.requestSync(getSyncAccount(context), context.getString(R.string.content_authority_residentstemps), bundle);
+        ContentResolver.requestSync(getSyncAccount(context), context.getString(R.string.content_authority_residentsvehicles), bundle);
         ContentResolver.requestSync(getSyncAccount(context), context.getString(R.string.content_authority_blacklist), bundle);
         ContentResolver.requestSync(getSyncAccount(context), context.getString(R.string.content_authority_suppliers), bundle);
         ContentResolver.requestSync(getSyncAccount(context), context.getString(R.string.content_authority_commonspaces), bundle);
         ContentResolver.requestSync(getSyncAccount(context), context.getString(R.string.content_authority_apartments), bundle);
+        ContentResolver.requestSync(getSyncAccount(context), context.getString(R.string.content_authority_parceltype), bundle);
         ContentResolver.requestSync(getSyncAccount(context), context.getString(R.string.content_authority_porters), bundle);
         ContentResolver.requestSync(getSyncAccount(context), context.getString(R.string.content_authority_whitelist), bundle);
     }
@@ -365,10 +447,16 @@ public class ConfigureSyncAccount {
         ConfigureSyncAccount.configurePeriodicSync(context);
 
         ContentResolver.setSyncAutomatically(newAccount, context.getString(R.string.content_authority_apartments), true);
+        ContentResolver.setSyncAutomatically(newAccount, context.getString(R.string.content_authority_parceltype), true);
         ContentResolver.setSyncAutomatically(newAccount, context.getString(R.string.content_authority_porters), true);
         ContentResolver.setSyncAutomatically(newAccount, context.getString(R.string.content_authority_porters_tablet), true);
         ContentResolver.setSyncAutomatically(newAccount, context.getString(R.string.content_authority_residents_tablet), true);
         ContentResolver.setSyncAutomatically(newAccount, context.getString(R.string.content_authority_residents), true);
+        ContentResolver.setSyncAutomatically(newAccount, context.getString(R.string.content_authority_residentstemps_tablet), true);
+        ContentResolver.setSyncAutomatically(newAccount, context.getString(R.string.content_authority_residentstemps), true);
+
+        ContentResolver.setSyncAutomatically(newAccount, context.getString(R.string.content_authority_residentsvehicles_tablet), true);
+        ContentResolver.setSyncAutomatically(newAccount, context.getString(R.string.content_authority_residentsvehicles), true);
         ContentResolver.setSyncAutomatically(newAccount, context.getString(R.string.content_authority_blacklist), true);
         ContentResolver.setSyncAutomatically(newAccount, context.getString(R.string.content_authority_suppliers), true);
         ContentResolver.setSyncAutomatically(newAccount, context.getString(R.string.content_authority_commonspaces), true);
@@ -397,6 +485,9 @@ public class ConfigureSyncAccount {
         ContentResolver.setSyncAutomatically(newAccount, context.getString(R.string.content_authority_visits_suppliers_exit_others_gateways), false);
         ContentResolver.setSyncAutomatically(newAccount, context.getString(R.string.content_authority_visits_commonspaces_others_gateways), false);
         ContentResolver.setSyncAutomatically(newAccount, context.getString(R.string.content_authority_visits_commonspaces_exit_others_gateways), false);
+        ContentResolver.setSyncAutomatically(newAccount, context.getString(R.string.content_authority_parcels_others_gateways), false);
+        ContentResolver.setSyncAutomatically(newAccount, context.getString(R.string.content_authority_parcels_exit_others_gateways), false);
+
 
     }
 

@@ -59,8 +59,13 @@
     <string name="pref_send_email_visits_label">Notificar Visitas por email</string>
     <string name="pref_send_email_visits_key">send_email_visits</string>
 
+    <string name="pref_allow_phonecall_label">Permitir Llamados</string>
+    <string name="pref_allow_phonecall_key">allow_phonecall</string>
+
+
     <string name="pref_OPTIONAL_FILED_VISITS_label">Visitas Campo Opcional</string>
     <string name="pref_OPTIONAL_FILED_VISITS_key">optional_field_visits</string>
+
 
 
 
@@ -79,12 +84,27 @@
     <string name="pref_id_time_delay_parking_label">Tiempo antes de cursar multas en minutos</string>
     <string name="pref_id_time_delay_parking_key">delay_hours_parking</string>
 
+    <string name="pref_automatic_plate_detection_label">Detección automáticas de patentes</string>
+    <string name="pref_automatic_plate_detection_key">automatic_plate_detection</string>
+
+    <string name="pref_max_plates_images_label">N° max Imágenes</string>
+    <string name="pref_max_plates_images_key">n_max_plates_images</string>
+
+    <string name="pref_ips_cameras_label">IP cámaras (separadas por ;)</string>
+    <string name="pref_ips_cameras_key">ips_cameras</string>
+
+
     <string name="sync_account_type">handsriver.com</string>
     <string name="content_authority_apartments">com.handsriver.concierge.apartments</string>
+    <string name="content_authority_parceltype">com.handsriver.concierge.parceltype</string>
     <string name="content_authority_porters">com.handsriver.concierge.porters</string>
     <string name="content_authority_porters_tablet">com.handsriver.concierge.porters.tablet</string>
     <string name="content_authority_residents">com.handsriver.concierge.residents</string>
     <string name="content_authority_residents_tablet">com.handsriver.concierge.residents.tablet</string>
+    <string name="content_authority_residentstemps">com.handsriver.concierge.residentstemps</string>
+    <string name="content_authority_residentstemps_tablet">com.handsriver.concierge.residentstemps.tablet</string>
+    <string name="content_authority_residentsvehicles">com.handsriver.concierge.residentsvehicles</string>
+    <string name="content_authority_residentsvehicles_tablet">com.handsriver.concierge.residentsvehicles.tablet</string>
     <string name="content_authority_blacklist">com.handsriver.concierge.blacklist</string>
     <string name="content_authority_whitelist">com.handsriver.concierge.whitelist</string>
     <string name="content_authority_suppliers">com.handsriver.concierge.suppliers</string>
@@ -108,6 +128,9 @@
     <string name="content_authority_visits_suppliers_exit_others_gateways">com.handsriver.concierge.visitssuppliers.exitothersgateways</string>
     <string name="content_authority_visits_commonspaces_others_gateways">com.handsriver.concierge.visitscommonspaces.othersgateways</string>
     <string name="content_authority_visits_commonspaces_exit_others_gateways">com.handsriver.concierge.visitscommonspaces.exitothersgateways</string>
+    <string name="content_authority_parcels_others_gateways">com.handsriver.concierge.parcels.othersgateways</string>
+    <string name="content_authority_parcels_exit_others_gateways">com.handsriver.concierge.parcels.exitothersgateways</string>
+
 
     <string name="content_authority_residents_codeauth">com.handsriver.concierge.residents.codeauth</string>
     <string name="content_authority_vehicle_fine_alert_automatic">com.handsriver.concierge.vehicle.automaticFineAlert</string>
@@ -123,6 +146,7 @@
     <string name="visits">Visitas</string>
     <string name="numberParking">Estacionamiento</string>
     <string name="addVisit">Agregar Visita</string>
+    <string name="callApartment">Llamar</string>
     <string name="visitsList">Lista de Visitas</string>
     <string name="visitsvehicles">Visitas y Vehículos</string>
     <string name="visits_other_gateways">Visitas de otros dispositivos</string>
@@ -133,7 +157,10 @@
     <string name="documentNumber">Número Documento</string>
     <string name="documentNumberList">Número Documento:\u0020</string>
     <string name="entryList">Entrada:\u0020</string>
+    <string name="entryListPorter">Recepcionó:\u0020</string>
     <string name="exitList">Salida:\u0020</string>
+    <string name="exitListPorter">Entregó:\u0020</string>
+
     <string name="exitListBtn">Salida\u0020</string>
     <string name="genderList">Sexo:\u0020</string>
     <string name="nationalityList">Nacionalidad:\u0020</string>
@@ -158,6 +185,10 @@
     <string name="vehicles">Vehículos</string>
     <string name="vehicle">Vehículo</string>
     <string name="vehicleList">Patente:\u0020</string>
+    <string name="vehicleactiveList">Estado:\u0020</string>
+    <string name="plate">Patente</string>
+    <string name="plateActive">Activo</string>
+
     <string name="titleDetailVehicle">Detalle de Vehículo</string>
     <string name="parkingNumberList">Estacionamiento:\u0020</string>
     <string name="parkingNumber">Estacionamiento</string>
@@ -172,14 +203,15 @@
     <string name="license_plate">Patente</string>
     <string name="platesDetectionReceived">PatentesDeteccionRecividas</string>
 
-
-
     <string name="parcels">Encomiendas</string>
     <string name="parcel">Encomienda</string>
+    <string name="parcels_others_gateways">Encomiendas de otros dispositivos</string>
+    <string name="parcels_exit_other_gateways">Salida Encomiendas de otros dispositivos</string>
     <string name="parcels_register">Registrar Encomienda</string>
     <string name="parcels_register_bar">\u0020\u0020Registrar Encomienda</string>
     <string name="parcels_search">Buscar Encomienda</string>
     <string name="titleDetailParcel">Detalle de Encomienda</string>
+    <string name="parcelTypeList">Tipo Encomienda</string>
     <string name="markExitParcel">Retirar</string>
     <string name="markExitParcelQuestion">¿Desea marcar el retiro de la encomienda? Ingrese los datos requeridos a continuación de forma manual o escaneé el documento de identidad:</string>
     <string name="textUniqueParcels">A continuación se muestra el número de encomienda. Anótelo en la encomienda como referencia:</string>
@@ -280,16 +312,37 @@
     <string name="residentList">Residente:\u0020</string>
     <string name="observations">Observaciones</string>
     <string name="observationsList">Observaciones:\u0020</string>
+    <string name="markDeleteResidentQuestion">¿Desea eliminar al residente?</string>
+
 
     <string name="residents">Residentes</string>
+    <string name="residentstemps">Residentes Temporales</string>
     <string name="codeAuth">Generación Dispositivos Móviles</string>
     <string name="edit">Editar</string>
+    <string name="deleteResident">Eliminar</string>
     <string name="editResident">Edición de Residente</string>
-    <string name="code">Enviar Código</string>
+    <string name="editResidentTemp">Edición de Residente Temporal</string>
+    <string name="code">Activar App</string>
     <string name="residentsTablet">Residentes de la Tablet</string>
+    <string name="residentstempsTablet">Residentes Temporales de la Tablet</string>
     <string name="registerResident">Registrar Residentes</string>
+    <string name="registerResidenttemp">Reg Residentes Temp</string>
     <string name="registerResident_bar">\u0020\u0020Registrar Residente</string>
+    <string name="registerResidenttemp_bar">\u0020\u0020Registrar Residente Temporal</string>
     <string name="searchResident">Buscar Residentes</string>
+    <string name="searchResidenttemp">Bus Residentes Temp</string>
+
+
+
+    <string name="residentsvehicles">Vehículos</string>
+    <string name="editResidentVehicle">Edición de Vehículo</string>
+    <string name="residentsvehiclesTablet">Vehículos de la Tablet</string>
+    <string name="registerResidentVehicle">Registrar Vehículo</string>
+    <string name="registerResidentVehicle_bar">\u0020\u0020Registrar Vehículo</string>
+    <string name="searchResidentVehicle">Buscar Vehículo</string>
+
+
+
     <string name="searchParking">Buscar Estacionamiento</string>
     <string name="searchWarehouse">Buscar Bodega</string>
     <string name="warehouseList">Bodega:\u0020</string>
@@ -297,9 +350,10 @@
     <string name="warehouses">Bodegas</string>
     <string name="email">Correo Electrónico</string>
     <string name="emailList">Correo Electrónico:\u0020</string>
-    <string name="messageResident">Verifique la información que se muestra a continuación sobre el registro del residente:</string>
+    <string name="messageResident">Verifique la información que se muestra a continuación sobre el registro de vehículo:</string>
     <string name="messageResidentCodeAuth">Verifique la información que se muestra a continuación antes de mandar el código:</string>
     <string name="messageEditResident">Verifique la información que se muestra a continuación sobre el residente:</string>
+    <string name="messageEditResidentVehicle">Verifique la información que se muestra a continuación sobre el vehículo:</string>
 
 
     <string name="payments">Pagos</string>
@@ -312,7 +366,7 @@
 
     <string name="paymentType">Tipo de Pago</string>
     <string name="documentNumberPayment">Documento Medio de Pago (Nº Cheque, Nº Transacción Débito o Crédito, Nº Transferencia, Otros)</string>
-    <string name="documentNumberPaymentHint">Número Cheque/Transacción</string>
+    <string name="documentNumberPaymentHint">Número Cheque/Tarjeta</string>
     <string name="documentNumberPaymentBuilding">Documento Comunidad</string>
     <string name="documentNumberPaymentBuildingList">Documento Comunidad:\u0020</string>
     <string name="documentNumberPaymentBuildingHint">Número Recibo</string>

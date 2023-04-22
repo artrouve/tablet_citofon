@@ -74,7 +74,7 @@ public class ExitTimekeepingFragment extends Fragment {
 
         rutEditText = (TextInputEditText) rootView.findViewById(R.id.rutInput);
         passwordEditText = (TextInputEditText) rootView.findViewById(R.id.passwordInput);
-
+        passwordEditText.addTextChangedListener(inputAutomaticDocument);
         rutEditText.setOnKeyListener(new View.OnKeyListener() {
 
             @Override
@@ -171,6 +171,52 @@ public class ExitTimekeepingFragment extends Fragment {
         return super.onOptionsItemSelected(item);
     }
 
+    private TextWatcher inputAutomaticDocument = new TextWatcher() {
+        public void afterTextChanged(Editable s) { }
+        public void beforeTextChanged(CharSequence s, int start, int count, int after)
+        { }
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            String string_scan = s.toString();
+            if(!string_scan.equals("")){
+
+                char ini = string_scan.charAt(0);
+                if(ini == '_'){
+
+                    string_scan = string_scan.substring(1,string_scan.length());
+                    String rut = FormatICAO9303.returnRut(string_scan);
+
+                    if (rut == null) {
+                        Toast.makeText(getActivity().getApplicationContext(), "Lectura Errónea, Favor Escanear Nuevamente", Toast.LENGTH_LONG).show();
+                    } else if (rut.equals(INVALID)){
+                        Toast.makeText(getActivity().getApplicationContext(), "Documento Inválido", Toast.LENGTH_LONG).show();
+                    } else {
+                        String porter_id = porterVerified(rut);
+                        if (porter_id != null){
+                            if (porterVerifiedEntry(porter_id)){
+                                Bundle args = new Bundle();
+                                args.putString("rut",rut);
+
+                                DialogExitTimekeeping dialog = new DialogExitTimekeeping();
+                                dialog.setArguments(args);
+                                dialog.show(getFragmentManager(), "dialog");
+                            }
+                            else{
+                                Toast.makeText(getActivity().getApplicationContext(), "No se encuentra una entrada para asociarla a esta salida", Toast.LENGTH_LONG).show();
+                            }
+
+                        } else{
+                            Toast.makeText(getActivity().getApplicationContext(), "No se encuentra registrado como empleado", Toast.LENGTH_LONG).show();
+                        }
+                    }
+                    passwordEditText.setText("");
+
+                }
+
+            }
+
+        }
+    };
     private boolean isScannerOCR(View v, int keycode, KeyEvent event){
 
         if (event.getDeviceId() == KeyCharacterMap.VIRTUAL_KEYBOARD) {

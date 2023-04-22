@@ -30,6 +30,7 @@ import com.handsriver.concierge.database.DatabaseManager;
 import com.handsriver.concierge.utilities.Utility;
 import com.handsriver.concierge.database.ConciergeContract.ApartmentEntry;
 import com.handsriver.concierge.database.ConciergeContract.ResidentEntry;
+import com.handsriver.concierge.database.ConciergeContract.ParcelTypeEntry;
 import com.handsriver.concierge.database.ConciergeDbHelper;
 import com.handsriver.concierge.database.SelectToDB;
 import com.handsriver.concierge.database.SelectToDBRaw;
@@ -49,7 +50,9 @@ public class ParcelsRegisterFragment extends Fragment {
     ArrayList<String> autoCompleteApartmentContent;
     ArrayAdapter<String> autoCompleteApartmentAdapter;
     SimpleCursorAdapter residentsAdapter;
+    SimpleCursorAdapter parceltypeAdapter;
     Spinner residentsSpinner;
+    Spinner parceltypeSpinner;
     StringBuilder ocr;
     View rootView;
     LinearLayout linearParcel;
@@ -59,6 +62,11 @@ public class ParcelsRegisterFragment extends Fragment {
     String[] fromColumns = {
             ResidentEntry.COLUMN_FULL_NAME
     };
+
+    String[] fromColumnsParcelType = {
+            ParcelTypeEntry.COLUMN_PARCELTYPE_TYPE
+    };
+
 
     int[] toViews = {
             R.id.itemSpinner
@@ -109,6 +117,9 @@ public class ParcelsRegisterFragment extends Fragment {
         textObservations = (TextInputEditText) rootView.findViewById(R.id.observationsInput);
 
         residentsSpinner = (Spinner) rootView.findViewById(R.id.residentsSpinner);
+
+        parceltypeSpinner = (Spinner) rootView.findViewById(R.id.parceltypeSpinner);
+        spinnerParcelTypeLoad();
 
         residentsSpinner.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -223,6 +234,11 @@ public class ParcelsRegisterFragment extends Fragment {
         String apartment = autoCompleteApartment.getText().toString();
         Cursor c = (Cursor)residentsSpinner.getSelectedItem();
         String resident = c.getString(c.getColumnIndex("full_name"));
+
+        Cursor d = (Cursor)parceltypeSpinner.getSelectedItem();
+        String typeParcel = d.getString(d.getColumnIndex("type"));
+        String typeParcelId = d.getString(d.getColumnIndex("_id"));
+
         String observations = textObservations.getText().toString();
 
         if (apartment.length()>0)
@@ -230,6 +246,8 @@ public class ParcelsRegisterFragment extends Fragment {
             Bundle args = new Bundle();
             args.putString("apartment",apartment);
             args.putString("resident",resident);
+            args.putString("typeParcel",typeParcel);
+            args.putString("typeParcelId",typeParcelId);
             args.putString("observations",observations);
 
             DialogParcelsRegister dialog = new DialogParcelsRegister();
@@ -274,5 +292,35 @@ public class ParcelsRegisterFragment extends Fragment {
 
         residentsSpinner.setAdapter(residentsAdapter);
     }
+
+    private void spinnerParcelTypeLoad(){
+
+        MatrixCursor others = new MatrixCursor(new String[] {ParcelTypeEntry.COLUMN_PARCELTYPE_ID_SERVER,ParcelTypeEntry.COLUMN_PARCELTYPE_TYPE});
+
+        final String query = "SELECT " + ParcelTypeEntry.TABLE_NAME + "." + ParcelTypeEntry.COLUMN_PARCELTYPE_ID_SERVER + " AS _id," + ParcelTypeEntry.COLUMN_PARCELTYPE_TYPE +
+                " FROM " + ParcelTypeEntry.TABLE_NAME +
+                " WHERE active = ? "+
+                " ORDER BY " + ParcelTypeEntry.COLUMN_PARCELTYPE_ID_SERVER + " ASC";
+
+        String [] args = new String[]{"1"};
+
+
+        Cursor c;
+        try {
+            SelectToDBRaw selectParcelType = new SelectToDBRaw(query,args);
+            c = selectParcelType.execute().get();
+        }catch (Exception e){
+            c = null;
+        }
+
+        MergeCursor mergeCursor = new MergeCursor(new Cursor[]{c,others});
+
+        parceltypeAdapter = new SimpleCursorAdapter(getActivity(),R.layout.spinner_item,mergeCursor,fromColumnsParcelType,toViews,0);
+
+        parceltypeAdapter.setDropDownViewResource(R.layout.spinner_item);
+
+        parceltypeSpinner.setAdapter(parceltypeAdapter);
+    }
+
 
 }
