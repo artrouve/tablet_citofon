@@ -1,6 +1,7 @@
 package com.handsriver.concierge.isapi.alpr;
 
 import android.accounts.Account;
+import android.annotation.SuppressLint;
 import android.content.AbstractThreadedSyncAdapter;
 import android.content.ContentProviderClient;
 import android.content.ContentValues;
@@ -20,6 +21,7 @@ import android.util.Log;
 import com.handsriver.concierge.R;
 import com.handsriver.concierge.database.ConciergeContract;
 import com.handsriver.concierge.database.ConciergeContract.ResidentVehicleEntry;
+import com.handsriver.concierge.database.ConciergeContract.WhitelistEntry;
 import com.handsriver.concierge.database.ConciergeDbHelper;
 import com.handsriver.concierge.database.DatabaseManager;
 import com.handsriver.concierge.database.InsertUpdateTables.IUResidentsVehicles;
@@ -123,6 +125,7 @@ public class ResidentsVehiclesSyncIsapi {
 
     }
 
+    @SuppressLint("Range")
     public void generate_file_v2(){
         dbHelper = new ConciergeDbHelper(mContext);
         db = DatabaseManager.getInstance().openDatabase();
@@ -135,7 +138,15 @@ public class ResidentsVehiclesSyncIsapi {
                 " FROM " + ResidentVehicleEntry.TABLE_NAME + "," + ConciergeContract.ApartmentEntry.TABLE_NAME +
                 " WHERE " + ConciergeContract.ApartmentEntry.TABLE_NAME + "." + ConciergeContract.ApartmentEntry.COLUMN_APARTMENT_ID_SERVER + " = " + ResidentVehicleEntry.TABLE_NAME + "." + ResidentVehicleEntry.COLUMN_APARTMENT_ID +
                 " AND " + ResidentVehicleEntry.TABLE_NAME + "." + ResidentVehicleEntry.COLUMN_ACTIVE + " = " + IS_ACTIVE +
-                " ORDER BY " + ConciergeContract.ApartmentEntry.TABLE_NAME + "." + ConciergeContract.ApartmentEntry.COLUMN_APARTMENT_NUMBER + " ASC";
+
+                " UNION SELECT " + WhitelistEntry.TABLE_NAME + "." + WhitelistEntry._ID + "," +
+                WhitelistEntry.TABLE_NAME + "." +WhitelistEntry.COLUMN_PLATE + "," +
+                ConciergeContract.ApartmentEntry.TABLE_NAME + "." + ConciergeContract.ApartmentEntry.COLUMN_APARTMENT_NUMBER +
+                " FROM " + WhitelistEntry.TABLE_NAME + "," + ConciergeContract.ApartmentEntry.TABLE_NAME +
+                " WHERE " + ConciergeContract.ApartmentEntry.TABLE_NAME + "." + ConciergeContract.ApartmentEntry.COLUMN_APARTMENT_ID_SERVER + " = " + WhitelistEntry.TABLE_NAME + "." + WhitelistEntry.COLUMN_APARTMENT_ID +
+                " AND " + WhitelistEntry.TABLE_NAME + "." + WhitelistEntry.COLUMN_PLATE + " <> ''" +
+                " AND " + WhitelistEntry.TABLE_NAME + "." + WhitelistEntry.COLUMN_PLATE + " IS NOT NULL";
+
 
         Cursor c;
         try {
@@ -179,11 +190,12 @@ public class ResidentsVehiclesSyncIsapi {
 
 
 
+
             while (c.moveToNext()){
                 //FOR EACH PLATE WE NEED TO GENERATE ALTERNATIVES BY LETER THAT CAN BE READER
                 //LIKE NUMBER, FOR EXAMPLE: CBGB45 THE B CHARACTER CAN BE READER LIKE 8, WE
                 //NEED TO GENERATE ALL ALTERNATIVES: C8GB45 C8G845 CBG845
-                plate = c.getString(c.getColumnIndex(ResidentVehicleEntry.COLUMN_PLATE));
+                plate = c.getString(1);
                 plates.clear();
 
                 //PATENTE NORMAL SE AGREGAN ALTERNATIVAS DE LETRAS
@@ -245,6 +257,9 @@ public class ResidentsVehiclesSyncIsapi {
                     HSSFRichTextString endDate = new HSSFRichTextString("2030-12-31");
                     cellEndDate.setCellValue(endDate);
 
+
+
+
                 }
             }
             c.close();
@@ -280,7 +295,14 @@ public class ResidentsVehiclesSyncIsapi {
                 " FROM " + ResidentVehicleEntry.TABLE_NAME + "," + ConciergeContract.ApartmentEntry.TABLE_NAME +
                 " WHERE " + ConciergeContract.ApartmentEntry.TABLE_NAME + "." + ConciergeContract.ApartmentEntry.COLUMN_APARTMENT_ID_SERVER + " = " + ResidentVehicleEntry.TABLE_NAME + "." + ResidentVehicleEntry.COLUMN_APARTMENT_ID +
                 " AND " + ResidentVehicleEntry.TABLE_NAME + "." + ResidentVehicleEntry.COLUMN_ACTIVE + " = " + IS_ACTIVE +
-                " ORDER BY " + ConciergeContract.ApartmentEntry.TABLE_NAME + "." + ConciergeContract.ApartmentEntry.COLUMN_APARTMENT_NUMBER + " ASC";
+
+                " UNION SELECT " + WhitelistEntry.TABLE_NAME + "." + WhitelistEntry._ID + "," +
+                WhitelistEntry.TABLE_NAME + "." +WhitelistEntry.COLUMN_PLATE + "," +
+                ConciergeContract.ApartmentEntry.TABLE_NAME + "." + ConciergeContract.ApartmentEntry.COLUMN_APARTMENT_NUMBER +
+                " FROM " + WhitelistEntry.TABLE_NAME + "," + ConciergeContract.ApartmentEntry.TABLE_NAME +
+                " WHERE " + ConciergeContract.ApartmentEntry.TABLE_NAME + "." + ConciergeContract.ApartmentEntry.COLUMN_APARTMENT_ID_SERVER + " = " + WhitelistEntry.TABLE_NAME + "." + WhitelistEntry.COLUMN_APARTMENT_ID +
+                " AND " + WhitelistEntry.TABLE_NAME + "." + WhitelistEntry.COLUMN_PLATE + " <> ''" +
+                " AND " + WhitelistEntry.TABLE_NAME + "." + WhitelistEntry.COLUMN_PLATE + " IS NOT NULL";
 
         Cursor c;
         try {
@@ -324,7 +346,7 @@ public class ResidentsVehiclesSyncIsapi {
                 //FOR EACH PLATE WE NEED TO GENERATE ALTERNATIVES BY LETER THAT CAN BE READER
                 //LIKE NUMBER, FOR EXAMPLE: CBGB45 THE B CHARACTER CAN BE READER LIKE 8, WE
                 //NEED TO GENERATE ALL ALTERNATIVES: C8GB45 C8G845 CBG845
-                plate = c.getString(c.getColumnIndex(ResidentVehicleEntry.COLUMN_PLATE));
+                plate = c.getString(1);
                 plates.clear();
 
                 //PATENTE NORMAL SE AGREGAN ALTERNATIVAS DE LETRAS
@@ -403,13 +425,177 @@ public class ResidentsVehiclesSyncIsapi {
 
     }
 
+    public void generate_file_v3(){
+        dbHelper = new ConciergeDbHelper(mContext);
+        db = DatabaseManager.getInstance().openDatabase();
+
+        Log.d(LOG_TAG, "Starting sync ISAPI alpr");
+
+        final String query = "SELECT " + ResidentVehicleEntry.TABLE_NAME + "." + ResidentVehicleEntry._ID + "," +
+                ResidentVehicleEntry.TABLE_NAME + "." +ResidentVehicleEntry.COLUMN_PLATE + "," +
+                ConciergeContract.ApartmentEntry.TABLE_NAME + "." + ConciergeContract.ApartmentEntry.COLUMN_APARTMENT_NUMBER +
+                " FROM " + ResidentVehicleEntry.TABLE_NAME + "," + ConciergeContract.ApartmentEntry.TABLE_NAME +
+                " WHERE " + ConciergeContract.ApartmentEntry.TABLE_NAME + "." + ConciergeContract.ApartmentEntry.COLUMN_APARTMENT_ID_SERVER + " = " + ResidentVehicleEntry.TABLE_NAME + "." + ResidentVehicleEntry.COLUMN_APARTMENT_ID +
+                " AND " + ResidentVehicleEntry.TABLE_NAME + "." + ResidentVehicleEntry.COLUMN_ACTIVE + " = " + IS_ACTIVE +
+
+                " UNION SELECT " + WhitelistEntry.TABLE_NAME + "." + WhitelistEntry._ID + "," +
+                WhitelistEntry.TABLE_NAME + "." +WhitelistEntry.COLUMN_PLATE + "," +
+                ConciergeContract.ApartmentEntry.TABLE_NAME + "." + ConciergeContract.ApartmentEntry.COLUMN_APARTMENT_NUMBER +
+                " FROM " + WhitelistEntry.TABLE_NAME + "," + ConciergeContract.ApartmentEntry.TABLE_NAME +
+                " WHERE " + ConciergeContract.ApartmentEntry.TABLE_NAME + "." + ConciergeContract.ApartmentEntry.COLUMN_APARTMENT_ID_SERVER + " = " + WhitelistEntry.TABLE_NAME + "." + WhitelistEntry.COLUMN_APARTMENT_ID +
+                " AND " + WhitelistEntry.TABLE_NAME + "." + WhitelistEntry.COLUMN_PLATE + " <> ''" +
+                " AND " + WhitelistEntry.TABLE_NAME + "." + WhitelistEntry.COLUMN_PLATE + " IS NOT NULL";
+
+
+        Cursor c;
+        try {
+            c = db.rawQuery(query,null);
+
+        }catch (Exception e){
+            c = null;
+        }
+
+
+        //SE GENERA EL EXCEL PARA REALIZAR LA SUBIDA MEDIANTE ISAPI
+        HSSFWorkbook XlsBookPlates = new HSSFWorkbook();
+        HSSFSheet XlsSheetPlates = XlsBookPlates.createSheet();
+
+
+        int i = 0;
+        if (c != null) {
+            HSSFRow firtsRow = XlsSheetPlates.createRow(0);
+
+
+            HSSFCell firstRowCell0 = firtsRow.createCell(0);
+            HSSFRichTextString title0 = new HSSFRichTextString("No.");
+            firstRowCell0.setCellValue(title0);
+
+            HSSFCell firstRowCell1 = firtsRow.createCell(1);
+            HSSFRichTextString title1 = new HSSFRichTextString("Plate No.");
+            firstRowCell1.setCellValue(title1);
+
+            HSSFCell firstRowCell2 = firtsRow.createCell(2);
+            HSSFRichTextString title2 = new HSSFRichTextString("Group(0 block list, 1 allow list)");
+            firstRowCell2.setCellValue(title2);
+
+            HSSFCell firstRowCell3 = firtsRow.createCell(3);
+            HSSFRichTextString title3 = new HSSFRichTextString("Effective Start Date (Format: YYYY-MM-DD, e.g., 2017-12-07)");
+            firstRowCell3.setCellValue(title3);
+
+
+            HSSFCell firstRowCell4 = firtsRow.createCell(4);
+            HSSFRichTextString title4 = new HSSFRichTextString("Effective End Date (Format: YYYY-MM-DD, e.g., 2017-12-07)");
+            firstRowCell4.setCellValue(title4);
+
+
+            //CARD
+            HSSFCell firstRowCell5 = firtsRow.createCell(5);
+            HSSFRichTextString title5 = new HSSFRichTextString("Card");
+            firstRowCell5.setCellValue(title5);
+
+
+            while (c.moveToNext()){
+                //FOR EACH PLATE WE NEED TO GENERATE ALTERNATIVES BY LETER THAT CAN BE READER
+                //LIKE NUMBER, FOR EXAMPLE: CBGB45 THE B CHARACTER CAN BE READER LIKE 8, WE
+                //NEED TO GENERATE ALL ALTERNATIVES: C8GB45 C8G845 CBG845
+                plate = c.getString(1);
+                plates.clear();
+
+                //PATENTE NORMAL SE AGREGAN ALTERNATIVAS DE LETRAS
+                plates.add(plate);
+                generates_plates_alternatives(plate,0,plate.length());
+
+                //SE AGREGA ALTERNATIVA CON '-' DEL MEDIO
+                String plate_aux1 = ((plate.toString().substring(0,2)).concat("-")).concat(plate.toString().substring(2,plate.toString().length()));
+                plates.add(plate_aux1);
+                generates_plates_alternatives(plate_aux1,0,plate_aux1.length());
+
+                //SE ELIMINA EL PRIMER CARACTER SI CONTIENE UNA L AL PRINCIPIO
+                if(plate.substring(0,1).contentEquals("L")){
+                    String plate_aux2 = plate.toString().substring(1,plate.toString().length());
+                    plates.add(plate_aux2);
+                    generates_plates_alternatives(plate_aux2,0,plate_aux2.length());
+
+                    String plate_aux3 = ((plate_aux2.toString().substring(0,1)).concat("-")).concat(plate_aux2.toString().substring(1,plate_aux2.toString().length()));
+                    plates.add(plate_aux3);
+                    generates_plates_alternatives(plate_aux3,0,plate_aux3.length());
+                }
+
+
+                for (String plt:plates) {
+
+                    /*
+                    No.
+                    Plate No.
+                    Group(0 block list, 1 allow list)
+                    Start Date (Format: YYYY-MM-DD, e.g., 2017-12-07)
+                    Expiry Date (Format: YYYY-MM-DD, e.g., 2017-12-07)
+                    Card No.*/
+
+                    i = i + 1;
+                    HSSFRow row = XlsSheetPlates.createRow(i);
+
+                    //NRO
+                    HSSFCell cellNro = row.createCell(0);
+                    HSSFRichTextString Snro = new HSSFRichTextString(Integer.toString(i));
+                    cellNro.setCellValue(Snro);
+
+                    //PLATE
+                    HSSFCell cellPlate = row.createCell(1);
+                    HSSFRichTextString plate = new HSSFRichTextString(plt);
+                    cellPlate.setCellValue(plate);
+
+                    //ALLOW OR BLACK
+                    HSSFCell cellBlackAllow = row.createCell(2);
+                    HSSFRichTextString SblackAllow = new HSSFRichTextString(Integer.toString(1));
+                    cellBlackAllow.setCellValue(SblackAllow);
+
+                    //START DATE
+                    HSSFCell cellStartDate = row.createCell(3);
+                    HSSFRichTextString startDate = new HSSFRichTextString("2020-01-01");
+                    cellStartDate.setCellValue(startDate);
+
+                    //END DATE
+                    HSSFCell cellEndDate = row.createCell(4);
+                    HSSFRichTextString endDate = new HSSFRichTextString("2030-12-31");
+                    cellEndDate.setCellValue(endDate);
+
+                    //CARD
+                    HSSFCell cellCards = row.createCell(5);
+                    HSSFRichTextString Card = new HSSFRichTextString("0000");
+                    cellCards.setCellValue(Card);
+
+
+
+                }
+            }
+            c.close();
+
+            //SE GENERA EL ARCHIVO XLS CON PATENTES
+            try {
+
+                //File sdCard = Environment.getExternalStorageDirectory();
+                //File dir = new File (sdCard.getAbsolutePath());
+                File dir = new File (Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).getAbsolutePath());
+                File file = new File(dir, "plates_v3.xls");
+                FileOutputStream filePlates = new FileOutputStream(file);
+                XlsBookPlates.write(filePlates);
+                filePlates.close();
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }
+
+    }
 
 
     public void sync() {
 
         generate_file_v1();
         generate_file_v2();
-
+        generate_file_v3();
         HttpURLConnection urlConnection = null;
         BufferedReader reader = null;
 
@@ -449,6 +635,11 @@ public class ResidentsVehiclesSyncIsapi {
                     if(VERSION_FILE.equals("V2")){
                         file_name = "plates_v2.xls";
                     }
+                    if(VERSION_FILE.equals("V3")){
+                        file_name = "plates_v3.xls";
+                    }
+
+
                     File dir = new File (Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).getAbsolutePath());
                     File file = new File(dir, file_name);
 

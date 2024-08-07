@@ -125,11 +125,11 @@ public class ConfigureSyncAccount {
     private static final int SYNC_INTERVAL_VISITS_COMMONSPACES_EXIT_OTHER_GATEWAYS = HOUR_IN_SECS;
     private static final int SYNC_FLEXTIME_VISITS_COMMONSPACES_EXIT_OTHER_GATEWAYS = 27 * MIN_IN_SECS;
 
-    private static final int SYNC_INTERVAL_PARCELS_OTHER_GATEWAYS = 5 * MIN_IN_SECS;
-    private static final int SYNC_FLEXTIME_PARCELS_OTHER_GATEWAYS = 15 * MIN_IN_SECS;
+    private static final int SYNC_INTERVAL_PARCELS_OTHER_GATEWAYS = 15 * MIN_IN_SECS;
+    private static final int SYNC_FLEXTIME_PARCELS_OTHER_GATEWAYS = 1 * MIN_IN_SECS;
 
-    private static final int SYNC_INTERVAL_PARCELS_EXIT_OTHER_GATEWAYS = 5 * MIN_IN_SECS;
-    private static final int SYNC_FLEXTIME_PARCELS_EXIT_OTHER_GATEWAYS = 16 * MIN_IN_SECS;
+    private static final int SYNC_INTERVAL_PARCELS_EXIT_OTHER_GATEWAYS = 15 * MIN_IN_SECS;
+    private static final int SYNC_FLEXTIME_PARCELS_EXIT_OTHER_GATEWAYS = 1 * MIN_IN_SECS;
 
     private static final int SYNC_INTERVAL_CODE_AUTH = HOUR_IN_SECS;
     private static final int SYNC_FLEXTIME_CODE_AUTH = 16 * MIN_IN_SECS;

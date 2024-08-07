@@ -23,6 +23,10 @@
         android:icon="@drawable/ic_parcels"
         android:title="@string/pref_general_parcels" />
 
+    <header
+        android:fragment="com.handsriver.concierge.settings.SettingsActivity$ResidentPreferenceFragment"
+        android:icon="@drawable/ic_person"
+        android:title="@string/pref_general_residents" />
 
 
 </preference-headers>

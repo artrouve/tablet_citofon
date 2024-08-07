@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Gradle: ./app/libs/poi-3.7.jar">
+  <library name="Gradle: ./app/libs/poi-3.7.jar" external-system-id="GRADLE">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/app/libs/poi-3.7.jar!/" />
     </CLASSES>

@@ -39,6 +39,7 @@ public class DeleteResident extends AsyncTask<Void,Void,Integer> {
         try {
             ContentValues values = new ContentValues();
             values.put(ResidentEntry.COLUMN_IS_DELETED,1);
+            //values.put(ResidentEntry.COLUMN_IS_UPDATE,1);
             String whereClause = ResidentEntry._ID + " = ?";
             String [] whereArgs = {id};
             count = db.update(tableName,values,whereClause,whereArgs);

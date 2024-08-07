@@ -138,7 +138,8 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                 || GeneralPreferenceFragment.class.getName().equals(fragmentName)
                 || ParkingPreferenceFragment.class.getName().equals(fragmentName)
                 || ParcelPreferenceFragment.class.getName().equals(fragmentName)
-                || VisitsPreferenceFragment.class.getName().equals(fragmentName);
+                || VisitsPreferenceFragment.class.getName().equals(fragmentName)
+                || ResidentPreferenceFragment.class.getName().equals(fragmentName);
     }
 
     /**
@@ -277,7 +278,16 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                 }
             });
 
-
+            findPreference(getString(R.string.pref_id_reserved_parking_vehicle_key)).setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                @Override
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    if((Boolean) newValue){
+                        SwitchPreference mark = (SwitchPreference) findPreference(getString(R.string.pref_id_reserved_parking_vehicle_key));
+                        mark.setChecked(false);
+                    }
+                    return true;
+                }
+            });
 
 
             // Bind the summaries of EditText/List/Dialog/Ringtone preferences
@@ -346,6 +356,31 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
 
 
 
+        }
+
+        @Override
+        public boolean onOptionsItemSelected(MenuItem item) {
+            int id = item.getItemId();
+            if (id == android.R.id.home) {
+                NavUtils.navigateUpFromSameTask(getActivity());
+                return true;
+            }
+            return super.onOptionsItemSelected(item);
+        }
+    }
+
+
+    /**
+     * This fragment shows general preferences only. It is used when the
+     * activity is showing a two-pane settings UI.
+     */
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    public static class ResidentPreferenceFragment extends PreferenceFragment {
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            addPreferencesFromResource(R.xml.pref_general_residents);
+            setHasOptionsMenu(true);
         }
 
         @Override

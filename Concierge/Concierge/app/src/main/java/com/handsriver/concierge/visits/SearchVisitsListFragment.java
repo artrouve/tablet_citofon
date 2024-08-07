@@ -148,9 +148,11 @@ public class SearchVisitsListFragment extends Fragment{
 
         viewVisits.setAdapter(visitsAdapter);
 
+        //REVISAR POR QUE ESTA LLAMANDOLO EN VERSIONES MAS ANTIGUAS CUANDO ESTA DESACTIVADO.
         if(ConfigureSyncAccount.getEnableSyncPeriodic(getContext(),getContext().getString(R.string.content_authority_visits_others_gateways))){
             getVisitsOthersGateways();
         }
+
 
         return rootView;
     }

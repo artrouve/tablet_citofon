@@ -181,9 +181,11 @@ public class ExitTimekeepingFragment extends Fragment {
             if(!string_scan.equals("")){
 
                 char ini = string_scan.charAt(0);
-                if(ini == '_'){
+                if(ini == '_' || string_scan.contains("<")){
 
-                    string_scan = string_scan.substring(1,string_scan.length());
+                    if(ini == '_'){
+                        string_scan = string_scan.substring(1,string_scan.length());
+                    }
                     String rut = FormatICAO9303.returnRut(string_scan);
 
                     if (rut == null) {

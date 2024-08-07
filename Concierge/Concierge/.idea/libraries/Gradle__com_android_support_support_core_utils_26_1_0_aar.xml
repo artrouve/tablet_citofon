@@ -1,11 +1,8 @@
 <component name="libraryTable">
-  <library name="Gradle: com.android.support:support-core-utils:26.1.0@aar">
+  <library name="Gradle: com.android.support:support-core-utils:26.1.0@aar" external-system-id="GRADLE">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/0c05e324700eb1a4ed9772d81db4d62f/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/a56a0a2bd90fcc4c96ba01df94564868/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/896a2efec5f34d59b8bae3184f25a6ae/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/896a2efec5f34d59b8bae3184f25a6ae/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/896a2efec5f34d59b8bae3184f25a6ae/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/cb3cadef94965b747cbe9c018cdc9d5b/transformed/support-core-utils-26.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/cb3cadef94965b747cbe9c018cdc9d5b/transformed/support-core-utils-26.1.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

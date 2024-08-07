@@ -1,12 +1,15 @@
 package com.handsriver.concierge.residents;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -89,8 +92,6 @@ public class ResidentAdapterSearchList extends BaseAdapter implements Filterable
         TextView textViewPhone = (TextView) view.findViewById(R.id.textViewPhoneList);
         TextView textViewRut = (TextView) view.findViewById(R.id.textViewRutList);
 
-
-
         Button button = (Button) view.findViewById(R.id.buttonRegisterVisitResident);
         Button buttonDelete = (Button) view.findViewById(R.id.buttonDeleteResident);
         Button buttonEdit = (Button) view.findViewById(R.id.buttonEditResident);
@@ -147,7 +148,19 @@ public class ResidentAdapterSearchList extends BaseAdapter implements Filterable
             }
         });
 
-        buttonDelete.setTag(position);
+
+        SharedPreferences settingsPrefs = PreferenceManager.getDefaultSharedPreferences(mContext);
+        Boolean isAllowManageResidents = settingsPrefs.getBoolean(mContext.getString(R.string.pref_manage_resident_key),true);
+
+        if(isAllowManageResidents){
+            buttonDelete.setTag(position);
+            buttonEdit.setTag(position);
+        }
+        else{
+            buttonDelete.setVisibility(View.GONE);
+            buttonEdit.setVisibility(View.GONE);
+        }
+
         buttonDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -161,8 +174,6 @@ public class ResidentAdapterSearchList extends BaseAdapter implements Filterable
             }
         });
 
-
-        buttonEdit.setTag(position);
         buttonEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

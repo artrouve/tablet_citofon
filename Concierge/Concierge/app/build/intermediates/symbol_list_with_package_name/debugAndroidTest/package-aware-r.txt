@@ -1,0 +1,2 @@
+com.handsriver.concierge.test
+string app_name

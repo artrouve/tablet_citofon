@@ -17,6 +17,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.InputDevice;
 import android.view.KeyCharacterMap;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -41,6 +42,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.handsriver.concierge.database.ConciergeContract;
 import com.handsriver.concierge.database.ConciergeContract.BlacklistEntry;
 import com.handsriver.concierge.database.ConciergeContract.WhitelistEntry;
 import com.handsriver.concierge.database.DatabaseManager;
@@ -114,6 +116,7 @@ public class VisitsRegisterFragment extends Fragment{
     VehiclePlateDetectedOper DetectedPlateAux;
     Boolean allowPhoneCall;
 
+    Boolean placeVehicleReserved;
 
     public static final String MANUAL_ONLY_RUT = "MANUAL_ONLY_RUT";
     public static final String MANUAL_ALL = "MANUAL_ALL";
@@ -146,13 +149,54 @@ public class VisitsRegisterFragment extends Fragment{
         parkingLots = settingsPrefs.getString(getString(R.string.pref_id_parking_key),"");
         allowPhoneCall = settingsPrefs.getBoolean(getString(R.string.pref_allow_phonecall_key),false);
 
-
+        placeVehicleReserved = settingsPrefs.getBoolean(getString(R.string.pref_id_reserved_parking_vehicle_key),false);
 
         optionalField = settingsPrefs.getString(getString(R.string.pref_OPTIONAL_FILED_VISITS_key),"");
 
         if (parkingLots.length() > 0){
             items = Arrays.asList(parkingLots.split("\\s*,\\s*"));
             items = new ArrayList<String>(items);
+
+            if(placeVehicleReserved){
+
+                final String query = "SELECT " + ConciergeContract.VehicleEntry.TABLE_NAME + "." + ConciergeContract.VehicleEntry.COLUMN_PARKING_NUMBER +
+                        " FROM " + ConciergeContract.VehicleEntry.TABLE_NAME +
+                        " WHERE " + ConciergeContract.VehicleEntry.TABLE_NAME + "." + ConciergeContract.VehicleEntry.COLUMN_EXIT_DATE + " is null" +
+                        " GROUP BY " + ConciergeContract.VehicleEntry.TABLE_NAME + "." + ConciergeContract.VehicleEntry.COLUMN_PARKING_NUMBER;
+
+                Cursor c;
+                try {
+                    SelectToDBRaw selectParkingsInUse = new SelectToDBRaw(query,null);
+                    c = selectParkingsInUse.execute().get();
+                }catch (Exception e){
+                    c = null;
+                }
+
+                if (c != null){
+
+                    while (c.moveToNext()){
+                        String parking_in_use = (c.getString(0));
+                        //SE DEBE ELIMINAR DEL ITEMS
+                        int index = -1;
+                        int i = 0;
+
+                        for(i=0; i < items.size();i++){
+                            if(items.get(i).equals(parking_in_use)){
+                                index = i;
+                            }
+
+                        }
+                        if(index >= 0){
+                            items.remove(index);
+                        }
+
+                    }
+                    c.close();
+
+                }
+            }
+
+
             parkingAdapter = new ArrayAdapter<String>(getActivity(),R.layout.spinner_item,items);
         }
 
@@ -179,6 +223,9 @@ public class VisitsRegisterFragment extends Fragment{
                 
 
                 return isScannerOCR(v,keyCode,event);
+
+
+
             }
 
         });
@@ -226,7 +273,6 @@ public class VisitsRegisterFragment extends Fragment{
         textOptionalValue.setText("");
         textLicensePlate.setText("");
 
-
        if (parkingLots.length() > 0){
             spinnerParkingLots.setVisibility(View.VISIBLE);
             textViewParkingLots.setVisibility(View.VISIBLE);
@@ -255,7 +301,6 @@ public class VisitsRegisterFragment extends Fragment{
 
         });
 
-
         textOptionalValue.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keycode, KeyEvent event) {
@@ -280,7 +325,6 @@ public class VisitsRegisterFragment extends Fragment{
         addVisitList = (Button) rootView.findViewById(R.id.addVisitList);
         visitList = (ListView) rootView.findViewById(R.id.visitList);
         visitList.setAdapter(visitsAdapter);
-
 
         autoCompleteApartment.setThreshold(1);
         autoCompleteApartment.setAdapter(spinneradapter);
@@ -465,9 +509,10 @@ public class VisitsRegisterFragment extends Fragment{
             if(!string_scan.equals("")){
 
                 char ini = string_scan.charAt(0);
-                if(ini == '_'){
-
-                    string_scan = string_scan.substring(1,string_scan.length());
+                if(ini == '_' || string_scan.contains("<")){
+                    if(ini == '_'){
+                        string_scan = string_scan.substring(1,string_scan.length());
+                    }
                     Visit newVisit = FormatICAO9303.formatDocument(string_scan);
 
                     if (newVisit == null)
@@ -504,6 +549,13 @@ public class VisitsRegisterFragment extends Fragment{
 
     private boolean isScannerOCR(View v, int keycode, KeyEvent event){
 
+        //event.getSource()
+        //event.getDevice().getKeyboardType()
+        //event.getDevice().getKeyboardType()
+        /*
+        if (event.getSource() != InputDevice.SOURCE_KEYBOARD) {
+            return false;
+        }*/
 
         if (event.getDeviceId() == KeyCharacterMap.VIRTUAL_KEYBOARD) {
             return false;
@@ -626,6 +678,14 @@ public class VisitsRegisterFragment extends Fragment{
         String apartment = autoCompleteApartment.getText().toString();
         String licensePlate = textLicensePlate.getText().toString();
 
+
+        if(placeVehicleReserved && !licensePlate.equals("") && items.size()==0){
+            Toast.makeText(getActivity().getApplicationContext(), "No hay lugar disponible para el vehículo", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+
+
         if (apartment.length()>0 && arrayOfVisit.size()>0)
         {
 
@@ -648,7 +708,12 @@ public class VisitsRegisterFragment extends Fragment{
                 args.putString("spinnerParkingSelected",null);
             }
             else{
-                args.putString("spinnerParkingSelected",spinnerParkingLots.getSelectedItem().toString());
+                if(items.size()>0){
+                    args.putString("spinnerParkingSelected",spinnerParkingLots.getSelectedItem().toString());
+                }
+                else{
+                    args.putString("spinnerParkingSelected","");
+                }
             }
 
             DialogVisitsRegister dialog = new DialogVisitsRegister();
@@ -668,6 +733,10 @@ public class VisitsRegisterFragment extends Fragment{
             {
                 Toast.makeText(getActivity().getApplicationContext(), "Falta ingresar por lo menos una visita y el número de departamento", Toast.LENGTH_LONG).show();
             }
+
+
+
+
         }
     }
 

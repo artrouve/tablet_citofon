@@ -9,9 +9,16 @@
 
         <SwitchPreference
             android:defaultValue="false"
+            android:title="@string/pref_id_reserved_parking_vehicle_label"
+            android:key="@string/pref_id_reserved_parking_vehicle_key"
+            android:disableDependentsState="false"/>
+
+        <SwitchPreference
+            android:defaultValue="false"
             android:title="@string/pref_id_mark_exit_label"
             android:key="@string/pref_id_mark_exit_key"
             android:disableDependentsState="false"/>
+
 
         <SwitchPreference
             android:dependency="@string/pref_id_mark_exit_key"

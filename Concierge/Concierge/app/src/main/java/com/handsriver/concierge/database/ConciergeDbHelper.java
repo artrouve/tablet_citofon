@@ -16,7 +16,7 @@ import com.handsriver.concierge.suppliers.SupplierVisit;
 
 public class ConciergeDbHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 7;
+    private static final int DATABASE_VERSION = 8;
 
     static final String DATABASE_NAME = "concierge.db";
 
@@ -423,7 +423,7 @@ public class ConciergeDbHelper extends SQLiteOpenHelper {
                 ResidentEntry.COLUMN_TOKEN + " TEXT, " +
                 ResidentEntry.COLUMN_PUSH_NOTIFICATIONS + " INTEGER, " +
                 ResidentEntry.COLUMN_REQUEST_CODE + " INTEGER NOT NULL, " +
-                ResidentEntry.COLUMN_IS_DELETED + " INTEGER NOT NULL, " +
+                ResidentEntry.COLUMN_IS_DELETED + " INTEGER NOT NULL DEFAULT 0, " +
                 ResidentEntry.COLUMN_IS_SYNC + " INTEGER NOT NULL, " +
                 ResidentEntry.COLUMN_IS_UPDATE + " INTEGER NOT NULL, " +
                 "FOREIGN KEY (" + ResidentEntry.COLUMN_APARTMENT_ID + ") REFERENCES " +

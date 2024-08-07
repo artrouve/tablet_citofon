@@ -169,8 +169,8 @@ public class ResidentsTabletSyncAdapter extends AbstractThreadedSyncAdapter {
                 };
 
 
-                String selection_d = ResidentEntry.COLUMN_IS_SYNC + " = ? AND " + ResidentEntry.COLUMN_IS_UPDATE + " = ?" + " = ? AND " + ResidentEntry.COLUMN_IS_DELETED + " = ?";
-                String [] selectionArgs_d = {IS_SYNC,IS_UPDATE,IS_DELETE};
+                String selection_d = ResidentEntry.COLUMN_IS_DELETED + " = ? ";
+                String [] selectionArgs_d = {IS_DELETE};
 
                 Cursor residents_delete = db.query(ResidentEntry.TABLE_NAME,projection_d,selection_d,selectionArgs_d,null,null,null,null);
 
@@ -185,8 +185,6 @@ public class ResidentsTabletSyncAdapter extends AbstractThreadedSyncAdapter {
                     }
                     residents_delete.close();
                 }
-
-
 
 
                 if ((residents != null && residents.getCount()>0) || (residents_update != null && residents_update.getCount()>0)  || (residents_delete != null && residents_delete.getCount()>0)){

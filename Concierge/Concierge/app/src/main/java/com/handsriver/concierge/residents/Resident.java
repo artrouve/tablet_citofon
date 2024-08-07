@@ -14,6 +14,7 @@ public class Resident {
 
     private String isSync;
     private String isUpdate;
+    private String isDelete;
     private String apartmentNumber;
     private long residentIdServer;
 
@@ -71,6 +72,14 @@ public class Resident {
 
     public void setIsUpdate(String isUpdate) {
         this.isUpdate = isUpdate;
+    }
+
+
+    public String getIsDelete() {
+        return isDelete;
+    }
+    public void setIsDelete(String isDelete) {
+        this.isDelete = isDelete;
     }
 
     public String getApartmentNumber() {

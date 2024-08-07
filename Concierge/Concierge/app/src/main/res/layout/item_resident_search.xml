@@ -109,8 +109,6 @@
                 android:textStyle="bold"/>
         </TableRow>
 
-
-
     </TableLayout>
 
     <LinearLayout

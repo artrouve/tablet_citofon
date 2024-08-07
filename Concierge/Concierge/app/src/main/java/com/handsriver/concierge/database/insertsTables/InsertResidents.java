@@ -34,9 +34,8 @@ public class InsertResidents extends AsyncTask<Void,Void,Void> {
     private static final String TAG = "InsertResident";
     private static final int IS_SYNC = 0;
     private static final int IS_UPDATE = 0;
+    private static final int IS_DELETED = 0;
     private static final int REQUEST_CODE = 0;
-
-
 
     public InsertResidents(String nullColumnHack, String email, String fullName, String mobile, String phone,String rut, int apartmentId, Context mContext){
         this.nullColumnHack = nullColumnHack;
@@ -64,8 +63,8 @@ public class InsertResidents extends AsyncTask<Void,Void,Void> {
             values.put(ResidentEntry.COLUMN_PHONE,phone);
             values.put(ResidentEntry.COLUMN_RUT,rut);
 
-
             values.put(ResidentEntry.COLUMN_IS_SYNC,IS_SYNC);
+            values.put(ResidentEntry.COLUMN_IS_DELETED,IS_DELETED);
             values.put(ResidentEntry.COLUMN_IS_UPDATE,IS_UPDATE);
             values.put(ResidentEntry.COLUMN_REQUEST_CODE,REQUEST_CODE);
             db.insert(tableName,nullColumnHack,values);

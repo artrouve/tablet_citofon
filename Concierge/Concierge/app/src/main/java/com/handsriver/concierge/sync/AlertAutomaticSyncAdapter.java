@@ -80,6 +80,7 @@ public class AlertAutomaticSyncAdapter extends AbstractThreadedSyncAdapter {
                 final int buildingId = Integer.parseInt(settingsPrefs.getString(mContext.getResources().getString(R.string.pref_id_building_key),"0"));
                 final String API_KEY = settingsPrefs.getString(mContext.getResources().getString(R.string.pref_apikey_key),"");
                 String dateForServer = Utility.getHourForServer();
+                final String emails_cc = settingsPrefs.getString(mContext.getResources().getString(R.string.pref_send_email_field_key),"");
                 final int hours = Integer.parseInt(settingsPrefs.getString(mContext.getResources().getString(R.string.pref_id_max_time_parking_key),"0"));
                 final int minutes = Integer.parseInt(settingsPrefs.getString(mContext.getResources().getString(R.string.pref_id_time_delay_parking_key),"0"));
                 if (BASE_URL.length()>0 && (BASE_URL.startsWith(HTTP) || BASE_URL.startsWith(HTTPS))){
@@ -122,6 +123,8 @@ public class AlertAutomaticSyncAdapter extends AbstractThreadedSyncAdapter {
                         jsonObject.accumulate("building_id",buildingId);
                         jsonObject.accumulate("gateway_id",gatewayId);
                         jsonObject.accumulate("type",SEND_AUTOMATIC);
+                        jsonObject.accumulate("emails_cc",emails_cc);
+
 
                         if (vehiclesAlertArrayJson.length() != 0){
                             jsonObject.accumulate("vehicles_alert",vehiclesAlertArrayJson);

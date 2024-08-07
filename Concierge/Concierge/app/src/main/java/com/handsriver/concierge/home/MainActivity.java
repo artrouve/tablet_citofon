@@ -1,9 +1,12 @@
 package com.handsriver.concierge.home;
 
+
+import android.content.ClipData.Item;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.graphics.Color;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.DialogFragment;
@@ -18,6 +21,7 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
+
 
 import com.handsriver.concierge.R;
 import com.handsriver.concierge.commonspaces.CommonspaceVisit;
@@ -108,6 +112,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout.setScrimColor(Color.TRANSPARENT);
 
         navigationView = (NavigationView)findViewById(R.id.nav_view);
+
+        SharedPreferences settingsPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        Boolean isAllowManageResidents = settingsPrefs.getBoolean(getString(R.string.pref_manage_resident_key),true);
+
+        MenuItem itemRegisterResidents = ((MenuItem)navigationView.getMenu().findItem(R.id.registerResidents));
+        itemRegisterResidents.setVisible(isAllowManageResidents);
 
         navigationView.setNavigationItemSelectedListener(this);
 
@@ -236,6 +246,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             //return true;
 
         } else if (id == R.id.registerResidentsVehicles) {
+
             ResidentVehicleRegisterFragment fragmentRegisterResidentsVehicle = new ResidentVehicleRegisterFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.frame_main,fragmentRegisterResidentsVehicle).commit();
             toolbar.setTitle(getString(R.string.registerResidentVehicle));

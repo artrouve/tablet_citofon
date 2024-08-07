@@ -1,0 +1,1198 @@
+[
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_item_commonspacevisit_search.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/item_commonspacevisit_search.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_item_residentvehicle_search.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/item_residentvehicle_search.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_dialog_register_residents.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/dialog_register_residents.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_list_search_suppliers.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_list_search_suppliers.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_list_search_residents.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_list_search_residents.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_timekeeping_others_gateways.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_timekeeping_others_gateways.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_dialog_password_settings.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/dialog_password_settings.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_search_commonspacesvisits.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_search_commonspacesvisits.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable-xxhdpi_ic_error.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable-xxhdpi/ic_error.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_item_visit_search.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/item_visit_search.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_detail_commonspacevisits.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/detail_commonspacevisits.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_search_parcels.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_search_parcels.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/menu_app_bar_menu_residentsvehicles.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/menu/app_bar_menu_residentsvehicles.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_parkings.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_parkings.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_list_search_vehicles.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_list_search_vehicles.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_dialog_password_settings.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/dialog_password_settings.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_detail_commonspacevisits.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/detail_commonspacevisits.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_network_security_config.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/network_security_config.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_visits_suppliers.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_visits_suppliers.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_dialog_register_suppliers.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/dialog_register_suppliers.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/mipmap-hdpi_concierge_vertical.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/mipmap-hdpi/concierge_vertical.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_item_parcel_search.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/item_parcel_search.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/menu_app_bar_menu_residentstemps.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/menu/app_bar_menu_residentstemps.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_dialog_register_residents_edit.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/dialog_register_residents_edit.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_dialog_select_plate_detected.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/dialog_select_plate_detected.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable-xhdpi_ic_divider.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable-xhdpi/ic_divider.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_item_warehouse_search.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/item_warehouse_search.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_register_residents.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_register_residents.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable_ic_exit.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable/ic_exit.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_dialog_register_whitelist.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/dialog_register_whitelist.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_list_search_parcels.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_list_search_parcels.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_item_supplier_search.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/item_supplier_search.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_detail_parcels.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/detail_parcels.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_activity_login.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/activity_login.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable-xhdpi_ic_check.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable-xhdpi/ic_check.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_vehicles_fine_alert_automatic.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_vehicles_fine_alert_automatic.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_item_user.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/item_user.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable_border.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable/border.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/menu_activity_main_drawer.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/menu/activity_main_drawer.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable_ic_password.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable/ic_password.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_list_search_commonspacesvisitis.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_list_search_commonspacesvisitis.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_register_payments.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_register_payments.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_payments.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_payments.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_dialog_register_residentstemps_edit.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/dialog_register_residentstemps_edit.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_detail_timekeeping.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/detail_timekeeping.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_timekeeping_delete.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_timekeeping_delete.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/mipmap-xhdpi_concierge_vertical_.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/mipmap-xhdpi/concierge_vertical_.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/mipmap-mdpi_concierge_vertical_.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/mipmap-mdpi/concierge_vertical_.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/mipmap-xhdpi_antiguo_reverso.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/mipmap-xhdpi/antiguo_reverso.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable_ic_home.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable/ic_home.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_dialog_register_payments.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/dialog_register_payments.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_dialog_register_residentsvehicles_edit.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/dialog_register_residentsvehicles_edit.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable_ic_vehicles.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable/ic_vehicles.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_list_search_residentstemps.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_list_search_residentstemps.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable_ic_edit.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable/ic_edit.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable_ic_person_add.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable/ic_person_add.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable-mdpi_ic_delete_plate.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable-mdpi/ic_delete_plate.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_antiguo_reverso.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/mipmap-xxxhdpi/antiguo_reverso.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_dialog_login.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/dialog_login.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_search_parcels.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_search_parcels.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable-hdpi_ic_save.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable-hdpi/ic_save.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable-hdpi_side_nav_bar.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable-hdpi/side_nav_bar.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_dialog_timekeeping.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/dialog_timekeeping.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_list_search_visits.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_list_search_visits.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_app_bar.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/app_bar.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_detail_timekeeping.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/detail_timekeeping.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_list_search_payments.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_list_search_payments.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_update_google_play_services.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_update_google_play_services.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_nueva_reverso.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/mipmap-xxhdpi/nueva_reverso.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_dialog_login.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/dialog_login.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_list_search_residents.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_list_search_residents.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/menu_app_bar_menu_residents.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/menu/app_bar_menu_residents.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_register_residents.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_register_residents.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_list_search_residentsvehicles.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_list_search_residentsvehicles.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_nav_header_main.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/nav_header_main.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_detail_suppliers.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/detail_suppliers.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_home.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_home.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_list_search_visits.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_list_search_visits.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_residentstemps_tablet.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_residentstemps_tablet.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable_ic_money.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable/ic_money.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable_ic_payment.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable/ic_payment.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_register_residentsvehicles.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_register_residentsvehicles.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_dialog_register_parcels_unique.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/dialog_register_parcels_unique.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/menu_app_bar_menu_parcels.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/menu/app_bar_menu_parcels.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_register_residentsvehicles.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_register_residentsvehicles.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable-hdpi_ic_warning.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable-hdpi/ic_warning.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/mipmap-hdpi_nueva_reverso.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/mipmap-hdpi/nueva_reverso.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_residentsvehicles_tablet.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_residentsvehicles_tablet.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/menu_app_bar_menu_exit_timekeeping.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/menu/app_bar_menu_exit_timekeeping.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/menu_app_bar_menu_commonspacesvisits.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/menu/app_bar_menu_commonspacesvisits.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable-hdpi_ic_check.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable-hdpi/ic_check.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable-xhdpi_ic_error.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable-xhdpi/ic_error.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_dialog_register_parcels_exit.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/dialog_register_parcels_exit.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_dialog_register_residentstemps.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/dialog_register_residentstemps.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_nav_header_main.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/nav_header_main.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_login.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_login.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_search_timekeeping.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_search_timekeeping.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable_ic_settings.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable/ic_settings.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_search_payments.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_search_payments.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_pref_general_parcel.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/pref_general_parcel.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_search_residentstemps.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_search_residentstemps.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_payments_delete.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_payments_delete.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_item_plate_detected.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/item_plate_detected.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_dialog_register_code_auth.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/dialog_register_code_auth.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_codeauth.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_codeauth.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_list_search_timekeeping.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_list_search_timekeeping.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_detail_vehicles.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/detail_vehicles.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_register_suppliers.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_register_suppliers.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_list_search_suppliers.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_list_search_suppliers.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_item_residentvehicle_search.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/item_residentvehicle_search.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_antiguo_reverso.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/mipmap-xxhdpi/antiguo_reverso.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_item_parcel_search.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/item_parcel_search.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable_ic_timekeeping.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable/ic_timekeeping.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_pref_general_building.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/pref_general_building.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable-xxhdpi_ic_divider.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable-xxhdpi/ic_divider.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_warehouses.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_warehouses.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_item_timekeeping_search.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/item_timekeeping_search.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_list_search_residentstemps.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_list_search_residentstemps.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_dialog_register_parcels.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/dialog_register_parcels.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_visits_commonspaces_exit_others_gateways.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_visits_commonspaces_exit_others_gateways.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_search_visits.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_search_visits.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_item_parking_search.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/item_parking_search.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_list_search_residentsvehicles.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_list_search_residentsvehicles.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_item_payment_search.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/item_payment_search.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_register_visits.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_register_visits.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_search_timekeeping.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_search_timekeeping.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_dialog_register_code_auth.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/dialog_register_code_auth.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_dialog_register_residents.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/dialog_register_residents.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable-xhdpi_ic_save.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable-xhdpi/ic_save.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_dialog_register_residentstemps_edit.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/dialog_register_residentstemps_edit.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_visits_commonspaces_others_gateways.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_visits_commonspaces_others_gateways.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_pref_headers.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/pref_headers.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_search_residentsvehicles.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_search_residentsvehicles.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable-mdpi_ic_warning.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable-mdpi/ic_warning.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_apartments.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_apartments.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_item_supplier_search.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/item_supplier_search.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_detail_vehicles.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/detail_vehicles.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_dialog_register_whitelist.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/dialog_register_whitelist.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_search_vehicles.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_search_vehicles.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_register_suppliers.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_register_suppliers.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_search_residentstemps.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_search_residentstemps.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/mipmap-xhdpi_nueva_reverso.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/mipmap-xhdpi/nueva_reverso.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_item_vehicle_search.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/item_vehicle_search.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/menu_app_bar_menu_suppliers.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/menu/app_bar_menu_suppliers.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_timekeeping.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_timekeeping.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_visits_vehicles.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_visits_vehicles.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_dialog_register_visits.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/dialog_register_visits.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_concierge_vertical_.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/mipmap-xxhdpi/concierge_vertical_.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_search_residentsvehicles.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_search_residentsvehicles.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_dialog_register_residentstemps.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/dialog_register_residentstemps.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_dialog_change_password.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/dialog_change_password.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable-mdpi_ic_error.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable-mdpi/ic_error.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_item_commonspacevisit_search.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/item_commonspacevisit_search.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_dialog_register_suppliers.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/dialog_register_suppliers.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_dialog_select_plate_detected.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/dialog_select_plate_detected.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_authenticator.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/authenticator.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_dialog_register_blacklist.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/dialog_register_blacklist.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_detail_visits.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/detail_visits.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_timekeeping_exit_others_gateways.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_timekeeping_exit_others_gateways.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/menu_app_bar_menu_payments.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/menu/app_bar_menu_payments.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_search_vehicles.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_search_vehicles.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_visits_others_gateways.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_visits_others_gateways.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_activity_login.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/activity_login.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_dialog_register_commonspacesvisits.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/dialog_register_commonspacesvisits.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_detail_visits.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/detail_visits.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_list_search_timekeeping.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_list_search_timekeeping.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/menu_app_bar_menu_visits.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/menu/app_bar_menu_visits.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable-xhdpi_ic_warning.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable-xhdpi/ic_warning.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_residents.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_residents.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_list_search_vehicles.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_list_search_vehicles.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable_ic_parcels.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable/ic_parcels.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_item_visit.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/item_visit.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable-hdpi_ic_error.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable-hdpi/ic_error.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_item_visit_search.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/item_visit_search.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_activity_main.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_timekeeping.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_timekeeping.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_search_parking.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_search_parking.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable_border_plate_selected.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable/border_plate_selected.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_visits_suppliers_others_gateways.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_visits_suppliers_others_gateways.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_app_bar.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/app_bar.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_pref_general_parking.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/pref_general_parking.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_whitelist.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_whitelist.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_dialog_register_residentsvehicles.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/dialog_register_residentsvehicles.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_visits_suppliers_exit_others_gateways.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_visits_suppliers_exit_others_gateways.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_register_payments.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_register_payments.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_dialog_register_blacklist.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/dialog_register_blacklist.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_item_residenttemp_search.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/item_residenttemp_search.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_residentsvehicles.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_residentsvehicles.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_list_search_warehouses.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_list_search_warehouses.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_list_search_payments.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_list_search_payments.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_register_residentstemps.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_register_residentstemps.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_commonspaces.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_commonspaces.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_list_search_parking.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_list_search_parking.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_porters.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_porters.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/mipmap-hdpi_concierge_vertical_.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/mipmap-hdpi/concierge_vertical_.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_detail_parcels.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/detail_parcels.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_item_warehouse_search.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/item_warehouse_search.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_nueva_reverso.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/mipmap-xxxhdpi/nueva_reverso.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable-mdpi_ic_check.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable-mdpi/ic_check.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_register_visits.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_register_visits.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/mipmap-mdpi_nueva_reverso.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/mipmap-mdpi/nueva_reverso.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_dialog_register_residents_edit.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/dialog_register_residents_edit.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_pref_general_residents.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/pref_general_residents.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable-xxhdpi_ic_check.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable-xxhdpi/ic_check.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_dialog_register_commonspacesvisits.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/dialog_register_commonspacesvisits.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_spinner_item.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/spinner_item.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_detail_suppliers.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/detail_suppliers.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_dialog_timekeeping.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/dialog_timekeeping.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_item_resident_search.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/item_resident_search.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable-mdpi_ic_divider.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable-mdpi/ic_divider.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/mipmap-mdpi_concierge_vertical.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/mipmap-mdpi/concierge_vertical.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/mipmap-mdpi_antiguo_reverso.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/mipmap-mdpi/antiguo_reverso.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_dialog_register_parcels_unique.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/dialog_register_parcels_unique.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/menu_app_bar_menu_entry_timekeeping.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/menu/app_bar_menu_entry_timekeeping.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_parcels.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_parcels.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable-hdpi_ic_divider.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable-hdpi/ic_divider.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_item_parking_search.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/item_parking_search.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_item_visit_dialog.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/item_visit_dialog.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_dialog_register_residentsvehicles_edit.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/dialog_register_residentsvehicles_edit.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_dialog_register_residentsvehicles.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/dialog_register_residentsvehicles.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable_ic_search.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable/ic_search.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_pref_general_visits.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/pref_general_visits.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_home.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_home.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable_ic_sync.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable/ic_sync.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_list_search_parcels.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_list_search_parcels.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_search_warehouse.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_search_warehouse.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/mipmap-hdpi_antiguo_reverso.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/mipmap-hdpi/antiguo_reverso.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable_ic_group.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable/ic_group.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_register_residentstemps.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_register_residentstemps.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_concierge_vertical.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/mipmap-xxxhdpi/concierge_vertical.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_item_visits_supplier_search.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/item_visits_supplier_search.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable_ic_view_plate.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable/ic_view_plate.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_item_payment_search.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/item_payment_search.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_search_residents.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_search_residents.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_register_parcels.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_register_parcels.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_item_visit.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/item_visit.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_vehicles_alert_automatic.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_vehicles_alert_automatic.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_item_resident_search.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/item_resident_search.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_item_vehicle_search.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/item_vehicle_search.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable_ic_visits.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable/ic_visits.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable_ic_suppliers.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable/ic_suppliers.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable_ic_apartments.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable/ic_apartments.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_detail_payments.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/detail_payments.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_item_visit_dialog.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/item_visit_dialog.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_search_payments.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_search_payments.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_dialog_register_parcels_exit.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/dialog_register_parcels_exit.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_spinner_item.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/spinner_item.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_item_plate_detected.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/item_plate_detected.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable_ic_delete.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable/ic_delete.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_search_commonspacesvisits.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_search_commonspacesvisits.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_porters_tablet.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_porters_tablet.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_login.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_login.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_concierge_vertical_.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/mipmap-xxxhdpi/concierge_vertical_.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_search_parking.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_search_parking.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_list_search_parking.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_list_search_parking.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_search_suppliers.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_search_suppliers.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_parcels_delete.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_parcels_delete.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_residentstemps.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_residentstemps.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_dialog_register_payments.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/dialog_register_payments.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_detail_payments.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/detail_payments.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_dialog_register_visits.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/dialog_register_visits.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_register_parcels.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_register_parcels.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_search_warehouse.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_search_warehouse.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable-xxhdpi_ic_save.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable-xxhdpi/ic_save.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_parcels_exit_others_gateways.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_parcels_exit_others_gateways.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable_ic_person.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable/ic_person.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable-xxhdpi_ic_warning.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable-xxhdpi/ic_warning.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_list_search_commonspacesvisitis.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_list_search_commonspacesvisitis.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_visits_vehicles_delete.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_visits_vehicles_delete.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_item_residenttemp_search.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/item_residenttemp_search.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_search_residents.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_search_residents.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_timekeeping.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_timekeeping.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable-mdpi_ic_save.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable-mdpi/ic_save.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_search_visits.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_search_visits.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_activity_main.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/activity_main.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_register_commonspacesvisits.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_register_commonspacesvisits.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_visits_commonspaces.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_visits_commonspaces.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/menu_login.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/menu/login.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/drawable_ic_commonspaces.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/drawable/ic_commonspaces.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_residents_tablet.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_residents_tablet.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_dialog_change_password.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/dialog_change_password.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_item_visits_supplier_search.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/item_visits_supplier_search.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_parcels_others_gateways.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_parcels_others_gateways.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_parceltype.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_parceltype.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_item_user.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/item_user.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_list_search_warehouses.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_list_search_warehouses.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_blacklist.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_blacklist.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_item_timekeeping_search.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/item_timekeeping_search.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_fragment_register_commonspacesvisits.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/fragment_register_commonspacesvisits.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout-sw720dp_dialog_register_parcels.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout-sw720dp/dialog_register_parcels.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/layout_fragment_search_suppliers.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/layout/fragment_search_suppliers.xml"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/mipmap-xhdpi_concierge_vertical.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/mipmap-xhdpi/concierge_vertical.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_concierge_vertical.png.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/mipmap-xxhdpi/concierge_vertical.png"
+    },
+    {
+        "merged": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/merged_res/debug/xml_sync_adapter_suppliers.xml.flat",
+        "source": "/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/res/xml/sync_adapter_suppliers.xml"
+    }
+]

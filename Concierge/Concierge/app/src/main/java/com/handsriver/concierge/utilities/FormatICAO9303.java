@@ -43,10 +43,12 @@ public class FormatICAO9303 {
     private static final int fillCharacter = 0;
 
 
-    public static Visit formatDocument(String ocrEntry) {
+    public static Visit formatDocument(String ocrEntry_) {
 
         try {
 
+            String ocrEntry = ocrEntry_.replace("+","<");
+            //ocrEntry = ocrEntry.replace("/","<");
 
             String ocr = ocrEntry.replace("\n", "");
             Integer lenghtOcr = ocr.length();

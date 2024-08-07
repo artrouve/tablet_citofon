@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.handsriver.concierge",
+  "variantName": "debug",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 32,
+      "versionName": "2.7.9",
+      "outputFile": "Concierge-debug-2.7.9.apk"
+    }
+  ],
+  "elementType": "File"
+}

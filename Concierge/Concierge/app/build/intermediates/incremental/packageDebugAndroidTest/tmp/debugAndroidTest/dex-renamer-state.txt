@@ -1,0 +1,4 @@
+#Mon Oct 16 12:44:41 CLST 2023
+base.0=/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/dex/debugAndroidTest/mergeDexDebugAndroidTest/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

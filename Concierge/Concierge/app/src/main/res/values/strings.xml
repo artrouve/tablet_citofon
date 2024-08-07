@@ -26,6 +26,7 @@
     <string name="pref_general_parking">Configuración Estacionamiento</string>
     <string name="pref_general_parcels">Configuración Encomiendas</string>
     <string name="pref_general_visits">Configuración Visitas</string>
+    <string name="pref_general_residents">Configuración Residentes</string>
     <string name="pref_apikey_label">API-KEY</string>
     <string name="pref_apikey_key" translatable="false">api-key</string>
 
@@ -43,6 +44,9 @@
 
     <string name="pref_id_max_time_parking_label">Máximo Horas Estacionamiento (0 Desactivado)</string>
     <string name="pref_id_max_time_parking_key">max_hours_parking</string>
+
+    <string name="pref_id_reserved_parking_vehicle_label">Lugar reservado</string>
+    <string name="pref_id_reserved_parking_vehicle_key">reserved_place</string>
 
     <string name="pref_id_mark_exit_label">Se marca la salida de vehículos</string>
     <string name="pref_id_mark_exit_key">mark_exit</string>
@@ -66,8 +70,8 @@
     <string name="pref_OPTIONAL_FILED_VISITS_label">Visitas Campo Opcional</string>
     <string name="pref_OPTIONAL_FILED_VISITS_key">optional_field_visits</string>
 
-
-
+    <string name="pref_manage_resident_label">Permitir Administrar Residentes</string>
+    <string name="pref_manage_resident_key">allow_manage_residentes</string>
 
     <string name="pref_send_email_fine_label">Notificar Multas por email</string>
     <string name="pref_send_email_fine_key">send_email_fine</string>

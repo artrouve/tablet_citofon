@@ -208,9 +208,12 @@ public class DialogExitParcelsRegister extends DialogFragment {
             if(!string_scan.equals("")){
 
                 char ini = string_scan.charAt(0);
-                if(ini == '_'){
+                if(ini == '_' || string_scan.contains("<")){
 
-                    string_scan = string_scan.substring(1,string_scan.length());
+                    if(ini == '_'){
+                        string_scan = string_scan.substring(1,string_scan.length());
+                    }
+
                     Visit newVisit = FormatICAO9303.formatDocument(string_scan);
 
                     if (newVisit == null)

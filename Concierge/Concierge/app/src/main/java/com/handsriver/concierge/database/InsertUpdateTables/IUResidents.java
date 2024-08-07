@@ -46,7 +46,8 @@ public class IUResidents{
             String[] projection = {
                     ResidentEntry._ID,
                     ResidentEntry.COLUMN_RESIDENT_ID_SERVER,
-                    ResidentEntry.COLUMN_IS_UPDATE
+                    ResidentEntry.COLUMN_IS_UPDATE,
+                    ResidentEntry.COLUMN_IS_DELETED
             };
 
             Cursor residents = db.query(tableName,projection,null,null,null,null,null);
@@ -57,6 +58,7 @@ public class IUResidents{
                     resident.setId(residents.getLong(residents.getColumnIndex(ResidentEntry._ID)));
                     resident.setResidentIdServer(residents.getLong(residents.getColumnIndex(ResidentEntry.COLUMN_RESIDENT_ID_SERVER)));
                     resident.setIsUpdate(residents.getString(residents.getColumnIndex(ResidentEntry.COLUMN_IS_UPDATE)));
+                    resident.setIsDelete(residents.getString(residents.getColumnIndex(ResidentEntry.COLUMN_IS_DELETED)));
                     mResidentMap.append(resident.getResidentIdServer(),resident);
 
                 }
@@ -68,7 +70,7 @@ public class IUResidents{
 
                 String args = TextUtils.join(",",mResidentNew);
 
-                String whereClause = ResidentEntry.COLUMN_RESIDENT_ID_SERVER + " NOT IN (?) AND " + ResidentEntry.COLUMN_IS_SYNC + " = ?";
+                String whereClause = ResidentEntry.COLUMN_RESIDENT_ID_SERVER + " NOT IN (?) AND " + ResidentEntry.COLUMN_IS_SYNC + " = ? ";
                 String [] whereArgs = {args,String.valueOf(IS_SYNC)};
                 db.delete(tableName,whereClause,whereArgs);
 
@@ -81,7 +83,7 @@ public class IUResidents{
                 Resident resident = mResidentMap.get(obj.getAsLong(ResidentEntry.COLUMN_RESIDENT_ID_SERVER));
 
                 if (resident != null){
-                    if (resident.getIsUpdate().equals(String.valueOf(NOT_UPDATE))){
+                    if (resident.getIsUpdate().equals(String.valueOf(NOT_UPDATE)) && resident.getIsDelete().equals(String.valueOf(NOT_DELETE))){
                         String whereClause = ResidentEntry.COLUMN_RESIDENT_ID_SERVER + " = ?";
                         String [] whereArgs = {obj.getAsString(ResidentEntry.COLUMN_RESIDENT_ID_SERVER)};
                         int numUpdated = db.update(tableName,obj,whereClause,whereArgs);
