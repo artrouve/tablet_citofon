@@ -289,6 +289,23 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                 }
             });
 
+            findPreference(getString(R.string.pref_automatic_plate_detection_key)).setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                @Override
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    if((Boolean) newValue){
+                        SwitchPreference mark = (SwitchPreference) findPreference(getString(R.string.pref_automatic_plate_detection_key));
+                        mark.setChecked(false);
+                    }
+                    return true;
+                }
+            });
+
+
+
+
+
+
+
 
             // Bind the summaries of EditText/List/Dialog/Ringtone preferences
             // to their values. When their values change, their summaries are
@@ -301,7 +318,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_id_time_delay_parking_key)));
             bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_max_plates_images_key)));
             bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_ips_cameras_key)));
-
 
 
         }
@@ -381,6 +397,18 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             super.onCreate(savedInstanceState);
             addPreferencesFromResource(R.xml.pref_general_residents);
             setHasOptionsMenu(true);
+
+            findPreference(getString(R.string.pref_facialaccess_resident_key)).setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                @Override
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    if((Boolean) newValue){
+                        SwitchPreference mark = (SwitchPreference) findPreference(getString(R.string.pref_facialaccess_resident_key));
+                        mark.setChecked(false);
+                    }
+                    return true;
+                }
+            });
+            bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_ips_facialterminal_key)));
         }
 
         @Override
@@ -392,6 +420,9 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             }
             return super.onOptionsItemSelected(item);
         }
+
+
+
     }
 
 

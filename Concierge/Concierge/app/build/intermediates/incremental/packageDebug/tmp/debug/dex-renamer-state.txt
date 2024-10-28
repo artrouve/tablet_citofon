@@ -1,4 +1,4 @@
-#Tue Aug 06 11:11:21 CLT 2024
+#Mon Sep 09 14:41:58 CLST 2024
 base.0=/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

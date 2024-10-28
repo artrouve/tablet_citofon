@@ -1622,6 +1622,8 @@ int string pref_automatic_fine_key 0x7f0d00f0
 int string pref_automatic_fine_label 0x7f0d00f1
 int string pref_automatic_plate_detection_key 0x7f0d00f2
 int string pref_automatic_plate_detection_label 0x7f0d00f3
+int string pref_facialaccess_resident_key 0x7f0d0172
+int string pref_facialaccess_resident_label 0x7f0d0173
 int string pref_general_conf 0x7f0d00f4
 int string pref_general_parcels 0x7f0d00f5
 int string pref_general_parking 0x7f0d00f6
@@ -1651,6 +1653,8 @@ int string pref_id_time_delay_parking_key 0x7f0d010d
 int string pref_id_time_delay_parking_label 0x7f0d010e
 int string pref_ips_cameras_key 0x7f0d010f
 int string pref_ips_cameras_label 0x7f0d0110
+int string pref_ips_facialterminal_key 0x7f0d0174
+int string pref_ips_facialterminal_label 0x7f0d0175
 int string pref_manage_resident_key 0x7f0d0111
 int string pref_manage_resident_label 0x7f0d0112
 int string pref_max_plates_images_key 0x7f0d0113

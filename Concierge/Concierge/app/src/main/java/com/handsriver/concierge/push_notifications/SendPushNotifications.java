@@ -39,6 +39,8 @@ public class SendPushNotifications {
     //public static String AUTHORIZATION = "key=AAAAGnxBHCk:APA91bGg1yFAt95j8oGx1BObyh13y2RNoal0doHZxUku3ZdE1JS5QFWC-sbMus8PpVIblWTxyi4L6vpHFKHx0vMTm6pAHvw6I2sKFFSG-dZMwdePe_njMsfSDXCvTUfGkSZ6lHEFwHyJ";
     public static String AUTHORIZATION = "key=AAAALG2Ahls:APA91bFwLg0DhOfKVhx047YV79zb9-BKgByfHH3L5AV45LPU0URbC4-xa97UtbSUii_C-U1yWYUlKfSJqWTEoU7chjTEmMXox27tdvr0F0nEKPlnzV0CM1fHwhAatzxS3aE5oxfzX8sd";
 
+
+
     public static String ENABLE_PUSH_NOTIFICATION = "1";
 
 

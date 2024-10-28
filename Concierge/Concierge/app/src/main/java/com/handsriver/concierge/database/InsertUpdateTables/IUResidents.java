@@ -1,7 +1,9 @@
 package com.handsriver.concierge.database.InsertUpdateTables;
 
 import android.annotation.SuppressLint;
+import android.app.Service;
 import android.content.ContentValues;
+import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
@@ -13,6 +15,7 @@ import android.util.LongSparseArray;
 import com.handsriver.concierge.database.ConciergeContract.ResidentEntry;
 import com.handsriver.concierge.database.ConciergeDbHelper;
 import com.handsriver.concierge.database.DatabaseManager;
+import com.handsriver.concierge.isapi.terminalfacial.ResidentsFaceSyncIsapi;
 import com.handsriver.concierge.residents.Resident;
 
 import java.util.ArrayList;
@@ -34,8 +37,11 @@ public class IUResidents{
     private static LongSparseArray<Resident> mResidentMap;
 
     @SuppressLint("Range")
-    public static void run(Vector<ContentValues> cVVector) {
+    public static void run(Vector<ContentValues> cVVector, Context context) {
         SQLiteDatabase db;
+
+
+        ResidentsFaceSyncIsapi faceIsapi = new ResidentsFaceSyncIsapi(context);
         mResidentNew = new ArrayList<String>();
         mResidentMap = new LongSparseArray<Resident>();
         String tableName = ResidentEntry.TABLE_NAME;
@@ -70,8 +76,25 @@ public class IUResidents{
 
                 String args = TextUtils.join(",",mResidentNew);
 
-                String whereClause = ResidentEntry.COLUMN_RESIDENT_ID_SERVER + " NOT IN (?) AND " + ResidentEntry.COLUMN_IS_SYNC + " = ? ";
-                String [] whereArgs = {args,String.valueOf(IS_SYNC)};
+                String whereClause = ResidentEntry.COLUMN_RESIDENT_ID_SERVER + " NOT IN ("+ args +") AND " + ResidentEntry.COLUMN_IS_SYNC + " = ? ";
+                String [] whereArgs = {String.valueOf(IS_SYNC)};
+
+                //LOS QUE SE ELIMINAN DEBER SER ELIMINADOS DE LA DETECCION FACIAL
+                //SE DEBE SELECCIONAR UNO POR UNO PARA QUE ESTOS SEAN ELIMINADOS
+                //DEL SISTEMA DE DETECCION FACIAL
+
+                Cursor residents_to_delete_isapi = db.query(tableName,null,whereClause,whereArgs,null,null,null);
+                if (residents_to_delete_isapi != null) {
+                    while (residents_to_delete_isapi.moveToNext()) {
+                        Resident resident = new Resident();
+                        resident.setId(residents_to_delete_isapi.getLong(residents_to_delete_isapi.getColumnIndex(ResidentEntry._ID)));
+                        resident.setResidentIdServer(residents_to_delete_isapi.getLong(residents_to_delete_isapi.getColumnIndex(ResidentEntry.COLUMN_RESIDENT_ID_SERVER)));
+                        faceIsapi.deleteResident(resident);
+                    }
+                    residents_to_delete_isapi.close();
+                }
+
+                //SE ELIMINA DE MANERA GENERAL SIN IMPORTAR SI TIENE O NO TERMINAL FACIAL
                 db.delete(tableName,whereClause,whereArgs);
 
             }
@@ -86,13 +109,54 @@ public class IUResidents{
                     if (resident.getIsUpdate().equals(String.valueOf(NOT_UPDATE)) && resident.getIsDelete().equals(String.valueOf(NOT_DELETE))){
                         String whereClause = ResidentEntry.COLUMN_RESIDENT_ID_SERVER + " = ?";
                         String [] whereArgs = {obj.getAsString(ResidentEntry.COLUMN_RESIDENT_ID_SERVER)};
+
+                        //SE DEBE VERIFICAR QUE LA FECHA DE ACTUALIZACION SEA DIFERENTE
+                        Cursor residents_to_update_isapi = db.query(tableName,null,whereClause,whereArgs,null,null,null);
+                        if (residents_to_update_isapi != null) {
+                            while (residents_to_update_isapi.moveToNext()) {
+
+
+                                
+
+                                if(residents_to_update_isapi.getLong(residents_to_update_isapi.getColumnIndex(ResidentEntry.COLUMN_UPDATED_AT)) != )
+
+                                    resident_to_update.setResidentUpdatedAt();
+
+                                Resident resident_to_update = new Resident();
+                                resident_to_update.setId(residents_to_update_isapi.getLong(residents_to_update_isapi.getColumnIndex(ResidentEntry._ID)));
+                                resident_to_update.setResidentIdServer(residents_to_update_isapi.getLong(residents_to_update_isapi.getColumnIndex(ResidentEntry.COLUMN_RESIDENT_ID_SERVER)));
+
+
+                                faceIsapi.updateResident(resident_to_update);
+                            }
+                            residents_to_update_isapi.close();
+                        }
+
+
                         int numUpdated = db.update(tableName,obj,whereClause,whereArgs);
                         if(numUpdated == 0){
                             obj.put(ResidentEntry.COLUMN_IS_SYNC,IS_SYNC);
                             obj.put(ResidentEntry.COLUMN_IS_UPDATE,NOT_UPDATE);
                             obj.put(ResidentEntry.COLUMN_REQUEST_CODE,NOT_REQUEST_CODE);
                             obj.put(ResidentEntry.COLUMN_IS_DELETED,NOT_DELETE);
+
+                            //SE REALIZA UNA INSERCION EN LA BASE DE DATOS
+                            //SE DEBE REALIZAR LA INSERCION EN LA DETECCION FACIAL EN CASO DE
+                            //EXISTIR
+                            Resident new_resident = new Resident();
+                            new_resident.setId(obj.getAsLong(ResidentEntry.COLUMN_RESIDENT_ID_SERVER));
+                            faceIsapi.addResident(new_resident);
+
                             db.insert(tableName,null,obj);
+                        }
+                        else{
+
+                            //SE DEBE VALIDAR SI LA FECHA DE ULTIMA ACTUALIZACION CORRESPONDE
+                            //PARA PODER REALIZAR LA ACTUALIZACION
+                            Resident new_resident = new Resident();
+                            new_resident.setId(obj.getAsLong(ResidentEntry.COLUMN_RESIDENT_ID_SERVER));
+                            faceIsapi.addResident(new_resident);
+
                         }
                     }
                 }
@@ -101,6 +165,10 @@ public class IUResidents{
                     obj.put(ResidentEntry.COLUMN_IS_UPDATE,NOT_UPDATE);
                     obj.put(ResidentEntry.COLUMN_REQUEST_CODE,NOT_REQUEST_CODE);
                     obj.put(ResidentEntry.COLUMN_IS_DELETED,NOT_DELETE);
+                    
+                    Resident new_resident = new Resident();
+                    new_resident.setId(obj.getAsLong(ResidentEntry.COLUMN_RESIDENT_ID_SERVER));
+                    faceIsapi.addResident(new_resident);
                     db.insert(tableName,null,obj);
                 }
             }

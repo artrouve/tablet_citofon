@@ -66,12 +66,17 @@
     <string name="pref_allow_phonecall_label">Permitir Llamados</string>
     <string name="pref_allow_phonecall_key">allow_phonecall</string>
 
-
     <string name="pref_OPTIONAL_FILED_VISITS_label">Visitas Campo Opcional</string>
     <string name="pref_OPTIONAL_FILED_VISITS_key">optional_field_visits</string>
 
     <string name="pref_manage_resident_label">Permitir Administrar Residentes</string>
     <string name="pref_manage_resident_key">allow_manage_residentes</string>
+
+    <string name="pref_facialaccess_resident_label">Permitir Acceso Terminal Facial</string>
+    <string name="pref_facialaccess_resident_key">allow_facialaccess_residentes</string>
+
+    <string name="pref_ips_facialterminal_label">IP terminales faciales (separadas por ;)</string>
+    <string name="pref_ips_facialterminal_key">ips_facialterminals</string>
 
     <string name="pref_send_email_fine_label">Notificar Multas por email</string>
     <string name="pref_send_email_fine_key">send_email_fine</string>

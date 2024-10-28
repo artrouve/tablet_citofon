@@ -1623,6 +1623,8 @@ string pref_automatic_fine_key
 string pref_automatic_fine_label
 string pref_automatic_plate_detection_key
 string pref_automatic_plate_detection_label
+string pref_facialaccess_resident_key
+string pref_facialaccess_resident_label
 string pref_general_conf
 string pref_general_parcels
 string pref_general_parking
@@ -1652,6 +1654,8 @@ string pref_id_time_delay_parking_key
 string pref_id_time_delay_parking_label
 string pref_ips_cameras_key
 string pref_ips_cameras_label
+string pref_ips_facialterminal_key
+string pref_ips_facialterminal_label
 string pref_manage_resident_key
 string pref_manage_resident_label
 string pref_max_plates_images_key

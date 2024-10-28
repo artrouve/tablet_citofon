@@ -7,4 +7,17 @@
             android:key="@string/pref_manage_resident_key"
             android:disableDependentsState="true"/>
 
+        <SwitchPreference
+            android:defaultValue="false"
+            android:title="@string/pref_facialaccess_resident_label"
+            android:key="@string/pref_facialaccess_resident_key"
+            android:disableDependentsState="true"/>
+
+        <EditTextPreference
+            android:title="@string/pref_ips_facialterminal_label"
+            android:key="@string/pref_ips_facialterminal_key"
+            android:inputType="text"
+            android:singleLine="true" />
+
+
 </PreferenceScreen>

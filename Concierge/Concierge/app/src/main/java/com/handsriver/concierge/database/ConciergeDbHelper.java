@@ -16,7 +16,7 @@ import com.handsriver.concierge.suppliers.SupplierVisit;
 
 public class ConciergeDbHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 8;
+    private static final int DATABASE_VERSION = 9;
 
     static final String DATABASE_NAME = "concierge.db";
 
@@ -423,6 +423,11 @@ public class ConciergeDbHelper extends SQLiteOpenHelper {
                 ResidentEntry.COLUMN_TOKEN + " TEXT, " +
                 ResidentEntry.COLUMN_PUSH_NOTIFICATIONS + " INTEGER, " +
                 ResidentEntry.COLUMN_REQUEST_CODE + " INTEGER NOT NULL, " +
+
+                ResidentEntry.COLUMN_CREATED_AT + " DATETIME, " +
+                ResidentEntry.COLUMN_UPDATED_AT + " DATETIME, " +
+                ResidentEntry.COLUMN_DELETED_AT + " DATETIME, " +
+
                 ResidentEntry.COLUMN_IS_DELETED + " INTEGER NOT NULL DEFAULT 0, " +
                 ResidentEntry.COLUMN_IS_SYNC + " INTEGER NOT NULL, " +
                 ResidentEntry.COLUMN_IS_UPDATE + " INTEGER NOT NULL, " +
@@ -802,6 +807,21 @@ public class ConciergeDbHelper extends SQLiteOpenHelper {
             db.execSQL(SQL_ALTER_TABLE_WHITELIST_ADD_PLATE);
 
         }
+
+        if(oldVersion == 8){
+
+            String SQL_ALTER_TABLE_RESIDENT_ADD_CREATED_AT = "ALTER TABLE " + ResidentEntry.TABLE_NAME + " ADD " + ResidentEntry.COLUMN_CREATED_AT +  "  DATETIME DEFAULT NULL";
+            String SQL_ALTER_TABLE_RESIDENT_ADD_UPDATED_AT = "ALTER TABLE " + ResidentEntry.TABLE_NAME + " ADD " + ResidentEntry.COLUMN_UPDATED_AT +  "  DATETIME DEFAULT NULL";
+            String SQL_ALTER_TABLE_RESIDENT_ADD_DELETED_AT = "ALTER TABLE " + ResidentEntry.TABLE_NAME + " ADD " + ResidentEntry.COLUMN_DELETED_AT +  "  DATETIME DEFAULT NULL";
+
+            db.execSQL(SQL_ALTER_TABLE_RESIDENT_ADD_CREATED_AT);
+            db.execSQL(SQL_ALTER_TABLE_RESIDENT_ADD_UPDATED_AT);
+            db.execSQL(SQL_ALTER_TABLE_RESIDENT_ADD_DELETED_AT);
+
+
+        }
+
+
 
 
 

@@ -293,6 +293,10 @@ public class ConciergeContract {
         public static final String COLUMN_IS_DELETED = "is_deleted";
         public static final String COLUMN_IS_SYNC = "is_sync";
         public static final String COLUMN_IS_UPDATE = "is_update";
+
+        public static final String COLUMN_CREATED_AT = "created_at";
+        public static final String COLUMN_UPDATED_AT = "updated_at";
+        public static final String COLUMN_DELETED_AT = "deleted_at";
     }
 
 

@@ -186,7 +186,6 @@ public class ResidentsSyncAdapter extends AbstractThreadedSyncAdapter {
         final String PHONE = "phone";
         final String RUT = "rut";
 
-
         try {
             JSONArray residentsArray = new JSONArray(residentJsonStr);
 
@@ -237,7 +236,7 @@ public class ResidentsSyncAdapter extends AbstractThreadedSyncAdapter {
                 cVVector.add(residentValues);
             }
 
-            IUResidents.run(cVVector);
+            IUResidents.run(cVVector, getContext());
 
         } catch (JSONException e) {
             Log.e(LOG_TAG, e.getMessage(), e);

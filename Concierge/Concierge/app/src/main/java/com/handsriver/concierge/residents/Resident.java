@@ -42,6 +42,7 @@ public class Resident {
         return rut;
     }
 
+
     public void setEmail(String email) {
         this.email = email;
     }

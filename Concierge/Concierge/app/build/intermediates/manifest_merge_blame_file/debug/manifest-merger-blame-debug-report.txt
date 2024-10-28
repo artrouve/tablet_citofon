@@ -58,1186 +58,1187 @@
 31-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:20:9-52
 32        android:supportsRtl="true"
 32-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:25:9-35
-33        android:theme="@style/AppTheme" >
-33-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:27:9-40
-34        <activity
-34-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:28:9-36:20
-35            android:name="com.handsriver.concierge.login.LoginActivity"
-35-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:28:19-54
-36            android:exported="true" >
-36-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:29:13-36
-37            <intent-filter>
-37-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:31:13-35:29
-38                <action android:name="android.intent.action.MAIN" />
-38-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:32:17-69
-38-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:32:25-66
-39
-40                <category android:name="android.intent.category.LAUNCHER" />
-40-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:34:17-77
-40-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:34:27-74
-41            </intent-filter>
-42        </activity>
-43        <activity
-43-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:37:9-45:20
-44            android:name="com.handsriver.concierge.settings.SettingsActivity"
-44-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:38:13-54
-45            android:label="@string/settings"
-45-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:39:13-45
-46            android:parentActivityName="com.handsriver.concierge.login.LoginActivity" >
-46-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:41:13-86
-47            <meta-data
-47-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:42:13-44:80
-48                android:name="android.support.PARENT_ACTIVITY"
-48-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:43:17-63
-49                android:value="com.handsriver.concierge.login.LoginActivity" />
-49-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:44:17-77
-50        </activity>
-51        <activity
-51-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:46:9-52:20
-52            android:name="com.handsriver.concierge.home.MainActivity"
-52-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:46:19-52
-53            android:parentActivityName="com.handsriver.concierge.login.LoginActivity"
-53-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:48:13-86
-54            android:windowSoftInputMode="adjustPan" >
-54-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:47:13-52
-55            <meta-data
-55-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:42:13-44:80
-56                android:name="android.support.PARENT_ACTIVITY"
-56-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:43:17-63
-57                android:value="com.handsriver.concierge.login.LoginActivity" />
-57-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:44:17-77
-58        </activity>
-59
-60        <provider
-60-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:54:9-57:49
-61            android:name="com.handsriver.concierge.database.StubProviderApartments"
-61-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:56:13-84
-62            android:authorities="com.handsriver.concierge.apartments"
-62-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:55:13-70
-63            android:label="@string/apartments" />
-63-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:57:13-47
-64        <provider
-64-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:59:9-62:53
-65            android:name="com.handsriver.concierge.database.StubProviderParcelType"
-65-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:61:13-84
-66            android:authorities="com.handsriver.concierge.parceltype"
-66-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:60:13-70
-67            android:label="@string/parcelTypeList" />
-67-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:62:13-51
-68        <provider
-68-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:65:9-68:46
-69            android:name="com.handsriver.concierge.database.StubProviderPorters"
-69-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:67:13-81
-70            android:authorities="com.handsriver.concierge.porters"
-70-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:66:13-67
-71            android:label="@string/porters" />
-71-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:68:13-44
-72        <provider
-72-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:70:9-73:53
-73            android:name="com.handsriver.concierge.database.StubProviderPortersTablet"
-73-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:72:13-87
-74            android:authorities="com.handsriver.concierge.porters.tablet"
-74-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:71:13-74
-75            android:label="@string/porterPassword" />
-75-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:73:13-51
-76        <provider
-76-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:75:9-78:48
-77            android:name="com.handsriver.concierge.database.StubProviderResidents"
-77-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:77:13-83
-78            android:authorities="com.handsriver.concierge.residents"
-78-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:76:13-69
-79            android:label="@string/residents" />
-79-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:78:13-46
-80        <provider
-80-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:80:9-83:54
-81            android:name="com.handsriver.concierge.database.StubProviderResidentsTablet"
-81-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:82:13-89
-82            android:authorities="com.handsriver.concierge.residents.tablet"
-82-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:81:13-76
-83            android:label="@string/residentsTablet" />
-83-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:83:13-52
-84        <provider
-84-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:85:9-88:53
-85            android:name="com.handsriver.concierge.database.StubProviderResidentsTemps"
-85-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:87:13-88
-86            android:authorities="com.handsriver.concierge.residentstemps"
-86-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:86:13-74
-87            android:label="@string/residentstemps" />
-87-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:88:13-51
-88        <provider
-88-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:90:9-93:59
-89            android:name="com.handsriver.concierge.database.StubProviderResidentsTempsTablet"
-89-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:92:13-94
-90            android:authorities="com.handsriver.concierge.residentstemps.tablet"
-90-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:91:13-81
-91            android:label="@string/residentstempsTablet" />
-91-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:93:13-57
-92        <provider
-92-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:96:9-99:56
-93            android:name="com.handsriver.concierge.database.StubProviderResidentsVehicles"
-93-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:98:13-91
-94            android:authorities="com.handsriver.concierge.residentsvehicles"
-94-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:97:13-77
-95            android:label="@string/residentsvehicles" />
-95-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:99:13-54
-96        <provider
-96-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:101:9-104:62
-97            android:name="com.handsriver.concierge.database.StubProviderResidentsVehiclesTablet"
-97-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:103:13-97
-98            android:authorities="com.handsriver.concierge.residentsvehicles.tablet"
-98-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:102:13-84
-99            android:label="@string/residentsvehiclesTablet" />
-99-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:104:13-60
-100        <provider
-100-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:107:9-110:48
-101            android:name="com.handsriver.concierge.database.StubProviderBlacklist"
-101-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:109:13-83
-102            android:authorities="com.handsriver.concierge.blacklist"
-102-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:108:13-69
-103            android:label="@string/blacklist" />
-103-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:110:13-46
-104        <provider
-104-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:112:9-115:48
-105            android:name="com.handsriver.concierge.database.StubProviderSuppliers"
-105-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:114:13-83
-106            android:authorities="com.handsriver.concierge.suppliers"
-106-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:113:13-69
-107            android:label="@string/suppliers" />
-107-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:115:13-46
-108        <provider
-108-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:117:9-120:51
-109            android:name="com.handsriver.concierge.database.StubProviderCommonspaces"
-109-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:119:13-86
-110            android:authorities="com.handsriver.concierge.commonspaces"
-110-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:118:13-72
-111            android:label="@string/commonspaces" />
-111-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:120:13-49
-112        <provider
-112-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:122:9-125:53
-113            android:name="com.handsriver.concierge.database.StubProviderVisitsVehicles"
-113-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:124:13-88
-114            android:authorities="com.handsriver.concierge.visitsvehicles"
-114-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:123:13-74
-115            android:label="@string/visitsvehicles" />
-115-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:125:13-51
-116        <provider
-116-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:127:9-130:46
-117            android:name="com.handsriver.concierge.database.StubProviderParcels"
-117-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:129:13-81
-118            android:authorities="com.handsriver.concierge.parcels"
-118-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:128:13-67
-119            android:label="@string/parcels" />
-119-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:130:13-44
-120        <provider
-120-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:133:9-136:66
-121            android:name="com.handsriver.concierge.database.StubProviderParcelsExitOthersGateways"
-121-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:135:13-99
-122            android:authorities="com.handsriver.concierge.parcels.exitothersgateways"
-122-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:134:13-86
-123            android:label="@string/parcels_exit_other_gateways" />
-123-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:136:13-64
-124        <provider
-124-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:138:9-141:62
-125            android:name="com.handsriver.concierge.database.StubProviderParcelsOthersGateways"
-125-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:140:13-95
-126            android:authorities="com.handsriver.concierge.parcels.othersgateways"
-126-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:139:13-82
-127            android:label="@string/parcels_others_gateways" />
-127-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:141:13-60
-128        <provider
-128-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:143:9-146:47
-129            android:name="com.handsriver.concierge.database.StubProviderPayments"
-129-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:145:13-82
-130            android:authorities="com.handsriver.concierge.payments"
-130-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:144:13-68
-131            android:label="@string/payments" />
-131-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:146:13-45
-132        <provider
-132-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:148:9-151:47
-133            android:name="com.handsriver.concierge.database.StubProviderParkings"
-133-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:150:13-82
-134            android:authorities="com.handsriver.concierge.parkings"
-134-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:149:13-68
-135            android:label="@string/parkings" />
-135-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:151:13-45
-136        <provider
-136-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:153:9-156:49
-137            android:name="com.handsriver.concierge.database.StubProviderWarehouses"
-137-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:155:13-84
-138            android:authorities="com.handsriver.concierge.warehouses"
-138-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:154:13-70
-139            android:label="@string/warehouses" />
-139-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:156:13-47
-140        <provider
-140-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:158:9-161:50
-141            android:name="com.handsriver.concierge.database.StubProviderTimekeeping"
-141-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:160:13-85
-142            android:authorities="com.handsriver.concierge.timekeeping"
-142-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:159:13-71
-143            android:label="@string/timekeeping" />
-143-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:161:13-48
-144        <provider
-144-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:163:9-166:55
-145            android:name="com.handsriver.concierge.database.StubProviderVisitsSuppliers"
-145-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:165:13-89
-146            android:authorities="com.handsriver.concierge.visitssuppliers"
-146-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:164:13-75
-147            android:label="@string/visits_suppliers" />
-147-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:166:13-53
-148        <provider
-148-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:168:9-171:58
-149            android:name="com.handsriver.concierge.database.StubProviderVisitsCommonspaces"
-149-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:170:13-92
-150            android:authorities="com.handsriver.concierge.visitscommonspaces"
-150-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:169:13-78
-151            android:label="@string/visits_commonspaces" />
-151-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:171:13-56
-152        <provider
-152-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:174:9-177:60
-153            android:name="com.handsriver.concierge.database.StubProviderVisitsOthersGateways"
-153-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:176:13-94
-154            android:authorities="com.handsriver.concierge.visits.othersgateways"
-154-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:175:13-81
-155            android:label="@string/visits_other_gateways" />
-155-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:177:13-58
-156        <provider
-156-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:179:9-182:65
-157            android:name="com.handsriver.concierge.database.StubProviderTimekeepingOthersGateways"
-157-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:181:13-99
-158            android:authorities="com.handsriver.concierge.timekeeping.othersgateways"
-158-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:180:13-86
-159            android:label="@string/timekeeping_other_gateways" />
-159-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:182:13-63
-160        <provider
-160-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:184:9-187:70
-161            android:name="com.handsriver.concierge.database.StubProviderTimekeepingExitOthersGateways"
-161-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:186:13-103
-162            android:authorities="com.handsriver.concierge.timekeeping.exitothersgateways"
-162-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:185:13-90
-163            android:label="@string/timekeeping_exit_other_gateways" />
-163-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:187:13-68
-164        <provider
-164-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:189:9-192:71
-165            android:name="com.handsriver.concierge.database.StubProviderVisitsSuppliersOthersGateways"
-165-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:191:13-103
-166            android:authorities="com.handsriver.concierge.visitssuppliers.othersgateways"
-166-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:190:13-90
-167            android:label="@string/visits_suppliers_others_gateways" />
-167-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:192:13-69
-168        <provider
-168-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:194:9-197:75
-169            android:name="com.handsriver.concierge.database.StubProviderVisitsSuppliersExitOthersGateways"
-169-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:196:13-107
-170            android:authorities="com.handsriver.concierge.visitssuppliers.exitothersgateways"
-170-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:195:13-94
-171            android:label="@string/visits_suppliers_exit_other_gateways" />
-171-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:197:13-73
-172        <provider
-172-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:199:9-202:74
-173            android:name="com.handsriver.concierge.database.StubProviderVisitsCommonspacesOthersGateways"
-173-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:201:13-106
-174            android:authorities="com.handsriver.concierge.visitscommonspaces.othersgateways"
-174-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:200:13-93
-175            android:label="@string/visits_commonspaces_others_gateways" />
-175-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:202:13-72
-176        <provider
-176-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:204:9-207:78
-177            android:name="com.handsriver.concierge.database.StubProviderVisitsCommonspacesExitOthersGateways"
-177-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:206:13-110
-178            android:authorities="com.handsriver.concierge.visitscommonspaces.exitothersgateways"
-178-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:205:13-97
-179            android:label="@string/visits_commonspaces_exit_other_gateways" />
-179-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:207:13-76
-180        <provider
-180-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:210:9-213:47
-181            android:name="com.handsriver.concierge.database.StubProviderCodeAuth"
-181-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:212:13-82
-182            android:authorities="com.handsriver.concierge.residents.codeauth"
-182-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:211:13-78
-183            android:label="@string/codeAuth" />
-183-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:213:13-45
-184        <provider
-184-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:215:9-218:53
-185            android:name="com.handsriver.concierge.database.StubProviderWhitelist"
-185-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:217:13-83
-186            android:authorities="com.handsriver.concierge.whitelist"
-186-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:216:13-69
-187            android:label="@string/whitelistTitle" />
-187-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:218:13-51
-188        <provider
-188-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:220:9-223:59
-189            android:name="com.handsriver.concierge.database.StubProviderVisitsVehiclesDelete"
-189-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:222:13-94
-190            android:authorities="com.handsriver.concierge.visitsvehicles.delete"
-190-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:221:13-81
-191            android:label="@string/deleteVisitsVehicles" />
-191-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:223:13-57
-192        <provider
-192-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:225:9-228:52
-193            android:name="com.handsriver.concierge.database.StubProviderParcelsDelete"
-193-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:227:13-87
-194            android:authorities="com.handsriver.concierge.parcels.delete"
-194-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:226:13-74
-195            android:label="@string/deleteParcels" />
-195-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:228:13-50
-196        <provider
-196-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:230:9-233:53
-197            android:name="com.handsriver.concierge.database.StubProviderPaymentsDelete"
-197-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:232:13-88
-198            android:authorities="com.handsriver.concierge.payments.delete"
-198-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:231:13-75
-199            android:label="@string/deletePayments" />
-199-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:233:13-51
-200        <provider
-200-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:235:9-238:56
-201            android:name="com.handsriver.concierge.database.StubProviderTimekeepingDelete"
-201-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:237:13-91
-202            android:authorities="com.handsriver.concierge.timekeeping.delete"
-202-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:236:13-78
-203            android:label="@string/deleteTimekeeping" />
-203-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:238:13-54
-204        <provider
-204-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:240:9-243:57
-205            android:name="com.handsriver.concierge.database.StubProviderFineAlertAutomatic"
-205-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:242:13-92
-206            android:authorities="com.handsriver.concierge.vehicle.automaticFineAlert"
-206-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:241:13-86
-207            android:label="@string/fineAlertAutomatic" />
-207-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:243:13-55
-208        <provider
-208-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:245:9-248:53
-209            android:name="com.handsriver.concierge.database.StubProviderAlertAutomatic"
-209-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:247:13-88
-210            android:authorities="com.handsriver.concierge.vehicle.automaticAlert"
-210-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:246:13-82
-211            android:label="@string/alertAutomatic" />
-211-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:248:13-51
-212        <provider
-212-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:250:9-253:63
-213            android:name="com.handsriver.concierge.database.StubProviderUpdateGooglePlayServices"
-213-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:252:13-98
-214            android:authorities="com.handsriver.concierge.updateGooglePlayService"
-214-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:251:13-83
-215            android:label="@string/updateGooglePlayServices" />
-215-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:253:13-61
-216
-217        <service android:name="com.handsriver.concierge.sync.ConciergeAuthenticatorService" >
-217-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:255:9-262:19
-217-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:255:18-68
-218            <intent-filter>
-218-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:256:13-258:29
-219                <action android:name="android.accounts.AccountAuthenticator" />
-219-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:257:17-80
-219-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:257:25-77
-220            </intent-filter>
-221
-222            <meta-data
-222-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:259:13-261:57
-223                android:name="android.accounts.AccountAuthenticator"
-223-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:260:17-69
-224                android:resource="@xml/authenticator" />
-224-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:261:17-54
-225        </service>
-226        <service
-226-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:264:9-272:19
-227            android:name="com.handsriver.concierge.sync.ApartmentsSyncService"
-227-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:264:18-60
-228            android:exported="true" >
-228-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:265:13-36
-229            <intent-filter>
-229-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-230                <action android:name="android.content.SyncAdapter" />
-230-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-230-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-231            </intent-filter>
-232
-233            <meta-data
-233-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-234                android:name="android.content.SyncAdapter"
-234-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-235                android:resource="@xml/sync_adapter_apartments" />
-235-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-236        </service>
-237        <service
-237-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:274:9-282:19
-238            android:name="com.handsriver.concierge.sync.ParcelTypeSyncService"
-238-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:274:18-60
-239            android:exported="true" >
-239-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:275:13-36
-240            <intent-filter>
-240-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-241                <action android:name="android.content.SyncAdapter" />
-241-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-241-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-242            </intent-filter>
-243
-244            <meta-data
-244-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-245                android:name="android.content.SyncAdapter"
-245-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-246                android:resource="@xml/sync_adapter_parceltype" />
-246-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-247        </service>
-248        <service
-248-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:285:9-293:19
-249            android:name="com.handsriver.concierge.sync.PortersSyncService"
-249-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:285:18-57
-250            android:exported="true" >
-250-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:286:13-36
-251            <intent-filter>
-251-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-252                <action android:name="android.content.SyncAdapter" />
-252-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-252-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-253            </intent-filter>
-254
-255            <meta-data
-255-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-256                android:name="android.content.SyncAdapter"
-256-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-257                android:resource="@xml/sync_adapter_porters" />
-257-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-258        </service>
-259        <service
-259-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:295:9-303:19
-260            android:name="com.handsriver.concierge.sync.PortersTabletSyncService"
-260-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:295:18-63
-261            android:exported="true" >
-261-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:296:13-36
-262            <intent-filter>
-262-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-263                <action android:name="android.content.SyncAdapter" />
-263-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-263-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-264            </intent-filter>
-265
-266            <meta-data
-266-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-267                android:name="android.content.SyncAdapter"
-267-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-268                android:resource="@xml/sync_adapter_porters_tablet" />
-268-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-269        </service>
-270        <service
-270-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:305:9-313:19
-271            android:name="com.handsriver.concierge.sync.ResidentsSyncService"
-271-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:305:18-59
-272            android:exported="true" >
-272-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:306:13-36
-273            <intent-filter>
-273-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-274                <action android:name="android.content.SyncAdapter" />
-274-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-274-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-275            </intent-filter>
-276
-277            <meta-data
-277-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-278                android:name="android.content.SyncAdapter"
-278-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-279                android:resource="@xml/sync_adapter_residents" />
-279-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-280        </service>
-281        <service
-281-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:315:9-323:19
-282            android:name="com.handsriver.concierge.sync.ResidentsTabletSyncService"
-282-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:315:18-65
-283            android:exported="true" >
-283-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:316:13-36
-284            <intent-filter>
-284-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-285                <action android:name="android.content.SyncAdapter" />
-285-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-285-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-286            </intent-filter>
-287
-288            <meta-data
-288-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-289                android:name="android.content.SyncAdapter"
-289-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-290                android:resource="@xml/sync_adapter_residents_tablet" />
-290-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-291        </service>
-292        <service
-292-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:326:9-334:19
-293            android:name="com.handsriver.concierge.sync.ResidentsTempsSyncService"
-293-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:326:18-64
-294            android:exported="true" >
-294-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:327:13-36
-295            <intent-filter>
-295-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-296                <action android:name="android.content.SyncAdapter" />
-296-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-296-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-297            </intent-filter>
-298
-299            <meta-data
-299-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-300                android:name="android.content.SyncAdapter"
-300-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-301                android:resource="@xml/sync_adapter_residentstemps" />
-301-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-302        </service>
-303        <service
-303-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:336:9-344:19
-304            android:name="com.handsriver.concierge.sync.ResidentsTempsTabletSyncService"
-304-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:336:18-70
-305            android:exported="true" >
-305-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:337:13-36
-306            <intent-filter>
-306-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-307                <action android:name="android.content.SyncAdapter" />
-307-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-307-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-308            </intent-filter>
-309
-310            <meta-data
-310-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-311                android:name="android.content.SyncAdapter"
-311-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-312                android:resource="@xml/sync_adapter_residentstemps_tablet" />
-312-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-313        </service>
-314        <service
-314-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:347:9-355:19
-315            android:name="com.handsriver.concierge.sync.ResidentsVehiclesSyncService"
-315-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:347:18-67
-316            android:exported="true" >
-316-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:348:13-36
-317            <intent-filter>
-317-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-318                <action android:name="android.content.SyncAdapter" />
-318-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-318-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-319            </intent-filter>
-320
-321            <meta-data
-321-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-322                android:name="android.content.SyncAdapter"
-322-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-323                android:resource="@xml/sync_adapter_residentsvehicles" />
-323-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-324        </service>
-325        <service
-325-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:357:9-365:19
-326            android:name="com.handsriver.concierge.sync.ResidentsVehiclesTabletSyncService"
-326-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:357:18-73
-327            android:exported="true" >
-327-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:358:13-36
-328            <intent-filter>
-328-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-329                <action android:name="android.content.SyncAdapter" />
-329-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-329-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-330            </intent-filter>
-331
-332            <meta-data
-332-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-333                android:name="android.content.SyncAdapter"
-333-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-334                android:resource="@xml/sync_adapter_residentsvehicles_tablet" />
-334-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-335        </service>
-336        <service
-336-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:368:9-376:19
-337            android:name="com.handsriver.concierge.sync.BlacklistSyncService"
-337-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:368:18-59
-338            android:exported="true" >
-338-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:369:13-36
-339            <intent-filter>
-339-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-340                <action android:name="android.content.SyncAdapter" />
-340-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-340-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-341            </intent-filter>
-342
-343            <meta-data
-343-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-344                android:name="android.content.SyncAdapter"
-344-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-345                android:resource="@xml/sync_adapter_blacklist" />
-345-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-346        </service>
-347        <service
-347-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:378:9-386:19
-348            android:name="com.handsriver.concierge.sync.SuppliersSyncService"
-348-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:378:18-59
-349            android:exported="true" >
-349-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:379:13-36
-350            <intent-filter>
-350-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-351                <action android:name="android.content.SyncAdapter" />
-351-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-351-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-352            </intent-filter>
-353
-354            <meta-data
-354-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-355                android:name="android.content.SyncAdapter"
-355-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-356                android:resource="@xml/sync_adapter_suppliers" />
-356-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-357        </service>
-358        <service
-358-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:388:9-396:19
-359            android:name="com.handsriver.concierge.sync.CommonspacesSyncService"
-359-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:388:18-62
-360            android:exported="true" >
-360-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:389:13-36
-361            <intent-filter>
-361-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-362                <action android:name="android.content.SyncAdapter" />
-362-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-362-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-363            </intent-filter>
-364
-365            <meta-data
-365-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-366                android:name="android.content.SyncAdapter"
-366-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-367                android:resource="@xml/sync_adapter_commonspaces" />
-367-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-368        </service>
-369        <service
-369-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:399:9-407:19
-370            android:name="com.handsriver.concierge.sync.VisitsVehiclesSyncService"
-370-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:399:18-64
-371            android:exported="true" >
-371-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:400:13-36
-372            <intent-filter>
-372-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-373                <action android:name="android.content.SyncAdapter" />
-373-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-373-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-374            </intent-filter>
-375
-376            <meta-data
-376-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-377                android:name="android.content.SyncAdapter"
-377-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-378                android:resource="@xml/sync_adapter_visits_vehicles" />
-378-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-379        </service>
-380        <service
-380-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:409:9-417:19
-381            android:name="com.handsriver.concierge.sync.ParcelsSyncService"
-381-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:409:18-57
-382            android:exported="true" >
-382-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:410:13-36
-383            <intent-filter>
-383-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-384                <action android:name="android.content.SyncAdapter" />
-384-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-384-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-385            </intent-filter>
-386
-387            <meta-data
-387-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-388                android:name="android.content.SyncAdapter"
-388-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-389                android:resource="@xml/sync_adapter_parcels" />
-389-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-390        </service>
-391        <service
-391-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:419:9-427:19
-392            android:name="com.handsriver.concierge.sync.PaymentsSyncService"
-392-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:419:18-58
-393            android:exported="true" >
-393-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:420:13-36
-394            <intent-filter>
-394-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-395                <action android:name="android.content.SyncAdapter" />
-395-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-395-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-396            </intent-filter>
-397
-398            <meta-data
-398-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-399                android:name="android.content.SyncAdapter"
-399-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-400                android:resource="@xml/sync_adapter_payments" />
-400-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-401        </service>
-402        <service
-402-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:429:9-437:19
-403            android:name="com.handsriver.concierge.sync.ParkingsSyncService"
-403-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:429:18-58
-404            android:exported="true" >
-404-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:430:13-36
-405            <intent-filter>
-405-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-406                <action android:name="android.content.SyncAdapter" />
-406-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-406-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-407            </intent-filter>
-408
-409            <meta-data
-409-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-410                android:name="android.content.SyncAdapter"
-410-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-411                android:resource="@xml/sync_adapter_parkings" />
-411-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-412        </service>
-413        <service
-413-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:439:9-447:19
-414            android:name="com.handsriver.concierge.sync.WarehousesSyncService"
-414-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:439:18-60
-415            android:exported="true" >
-415-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:440:13-36
-416            <intent-filter>
-416-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-417                <action android:name="android.content.SyncAdapter" />
-417-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-417-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-418            </intent-filter>
-419
-420            <meta-data
-420-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-421                android:name="android.content.SyncAdapter"
-421-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-422                android:resource="@xml/sync_adapter_warehouses" />
-422-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-423        </service>
-424        <service
-424-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:449:9-457:19
-425            android:name="com.handsriver.concierge.sync.TimekeepingSyncService"
-425-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:449:18-61
-426            android:exported="true" >
-426-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:450:13-36
-427            <intent-filter>
-427-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-428                <action android:name="android.content.SyncAdapter" />
-428-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-428-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-429            </intent-filter>
-430
-431            <meta-data
-431-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-432                android:name="android.content.SyncAdapter"
-432-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-433                android:resource="@xml/sync_adapter_timekeeping" />
-433-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-434        </service>
-435        <service
-435-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:459:9-467:19
-436            android:name="com.handsriver.concierge.sync.VisitsSuppliersSyncService"
-436-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:459:18-65
-437            android:exported="true" >
-437-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:460:13-36
-438            <intent-filter>
-438-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-439                <action android:name="android.content.SyncAdapter" />
-439-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-439-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-440            </intent-filter>
-441
-442            <meta-data
-442-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-443                android:name="android.content.SyncAdapter"
-443-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-444                android:resource="@xml/sync_adapter_visits_suppliers" />
-444-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-445        </service>
-446        <service
-446-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:469:9-477:19
-447            android:name="com.handsriver.concierge.sync.VisitsCommonspacesSyncService"
-447-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:469:18-68
-448            android:exported="true" >
-448-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:470:13-36
-449            <intent-filter>
-449-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-450                <action android:name="android.content.SyncAdapter" />
-450-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-450-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-451            </intent-filter>
-452
-453            <meta-data
-453-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-454                android:name="android.content.SyncAdapter"
-454-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-455                android:resource="@xml/sync_adapter_visits_commonspaces" />
-455-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-456        </service>
-457        <service
-457-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:480:9-488:19
-458            android:name="com.handsriver.concierge.sync.VisitsOthersGatewaysSyncService"
-458-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:480:18-70
-459            android:exported="true" >
-459-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:481:13-36
-460            <intent-filter>
-460-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-461                <action android:name="android.content.SyncAdapter" />
-461-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-461-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-462            </intent-filter>
-463
-464            <meta-data
-464-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-465                android:name="android.content.SyncAdapter"
-465-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-466                android:resource="@xml/sync_adapter_visits_others_gateways" />
-466-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-467        </service>
-468        <service
-468-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:491:9-499:19
-469            android:name="com.handsriver.concierge.sync.ParcelsOthersGatewaysSyncService"
-469-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:491:18-71
-470            android:exported="true" >
-470-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:492:13-36
-471            <intent-filter>
-471-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-472                <action android:name="android.content.SyncAdapter" />
-472-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-472-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-473            </intent-filter>
-474
-475            <meta-data
-475-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-476                android:name="android.content.SyncAdapter"
-476-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-477                android:resource="@xml/sync_adapter_parcels_others_gateways" />
-477-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-478        </service>
-479        <service
-479-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:501:9-509:19
-480            android:name="com.handsriver.concierge.sync.ParcelsExitOthersGatewaysSyncService"
-480-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:501:18-75
-481            android:exported="true" >
-481-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:502:13-36
-482            <intent-filter>
-482-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-483                <action android:name="android.content.SyncAdapter" />
-483-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-483-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-484            </intent-filter>
-485
-486            <meta-data
-486-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-487                android:name="android.content.SyncAdapter"
-487-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-488                android:resource="@xml/sync_adapter_parcels_exit_others_gateways" />
-488-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-489        </service>
-490        <service
-490-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:512:9-520:19
-491            android:name="com.handsriver.concierge.sync.TimekeepingOthersGatewaysSyncService"
-491-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:512:18-75
-492            android:exported="true" >
-492-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:513:13-36
-493            <intent-filter>
-493-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-494                <action android:name="android.content.SyncAdapter" />
-494-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-494-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-495            </intent-filter>
-496
-497            <meta-data
-497-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-498                android:name="android.content.SyncAdapter"
-498-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-499                android:resource="@xml/sync_adapter_timekeeping_others_gateways" />
-499-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-500        </service>
-501        <service
-501-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:522:9-530:19
-502            android:name="com.handsriver.concierge.sync.TimekeepingExitOthersGatewaysSyncService"
-502-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:522:18-79
-503            android:exported="true" >
-503-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:523:13-36
-504            <intent-filter>
-504-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-505                <action android:name="android.content.SyncAdapter" />
-505-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-505-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-506            </intent-filter>
-507
-508            <meta-data
-508-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-509                android:name="android.content.SyncAdapter"
-509-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-510                android:resource="@xml/sync_adapter_timekeeping_exit_others_gateways" />
-510-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-511        </service>
-512        <service
-512-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:533:9-541:19
-513            android:name="com.handsriver.concierge.sync.VisitsSuppliersOthersGatewaysSyncService"
-513-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:533:18-79
-514            android:exported="true" >
-514-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:534:13-36
-515            <intent-filter>
-515-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-516                <action android:name="android.content.SyncAdapter" />
-516-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-516-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-517            </intent-filter>
-518
-519            <meta-data
-519-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-520                android:name="android.content.SyncAdapter"
-520-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-521                android:resource="@xml/sync_adapter_visits_suppliers_others_gateways" />
-521-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-522        </service>
-523        <service
-523-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:543:9-551:19
-524            android:name="com.handsriver.concierge.sync.VisitsCommonspacesOthersGatewaysSyncService"
-524-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:543:18-82
-525            android:exported="true" >
-525-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:544:13-36
-526            <intent-filter>
-526-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-527                <action android:name="android.content.SyncAdapter" />
-527-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-527-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-528            </intent-filter>
-529
-530            <meta-data
-530-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-531                android:name="android.content.SyncAdapter"
-531-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-532                android:resource="@xml/sync_adapter_visits_commonspaces_others_gateways" />
-532-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-533        </service>
-534        <service
-534-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:553:9-561:19
-535            android:name="com.handsriver.concierge.sync.CodeAuthSyncService"
-535-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:553:18-58
-536            android:exported="true" >
-536-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:554:13-36
-537            <intent-filter>
-537-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-538                <action android:name="android.content.SyncAdapter" />
-538-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-538-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-539            </intent-filter>
-540
-541            <meta-data
-541-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-542                android:name="android.content.SyncAdapter"
-542-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-543                android:resource="@xml/sync_adapter_codeauth" />
-543-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-544        </service>
-545        <service
-545-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:563:9-571:19
-546            android:name="com.handsriver.concierge.sync.WhitelistSyncService"
-546-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:563:18-59
-547            android:exported="true" >
-547-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:564:13-36
-548            <intent-filter>
-548-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-549                <action android:name="android.content.SyncAdapter" />
-549-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-549-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-550            </intent-filter>
-551
-552            <meta-data
-552-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-553                android:name="android.content.SyncAdapter"
-553-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-554                android:resource="@xml/sync_adapter_whitelist" />
-554-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-555        </service>
-556        <service
-556-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:573:9-581:19
-557            android:name="com.handsriver.concierge.sync.VisitsVehiclesDeleteSyncService"
-557-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:573:18-70
-558            android:exported="true" >
-558-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:574:13-36
-559            <intent-filter>
-559-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-560                <action android:name="android.content.SyncAdapter" />
-560-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-560-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-561            </intent-filter>
-562
-563            <meta-data
-563-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-564                android:name="android.content.SyncAdapter"
-564-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-565                android:resource="@xml/sync_adapter_visits_vehicles_delete" />
-565-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-566        </service>
-567        <service
-567-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:583:9-591:19
-568            android:name="com.handsriver.concierge.sync.ParcelsDeleteSyncService"
-568-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:583:18-63
-569            android:exported="true" >
-569-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:584:13-36
-570            <intent-filter>
-570-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-571                <action android:name="android.content.SyncAdapter" />
-571-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-571-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-572            </intent-filter>
-573
-574            <meta-data
-574-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-575                android:name="android.content.SyncAdapter"
-575-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-576                android:resource="@xml/sync_adapter_parcels_delete" />
-576-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-577        </service>
-578        <service
-578-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:593:9-601:19
-579            android:name="com.handsriver.concierge.sync.PaymentsDeleteSyncService"
-579-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:593:18-64
-580            android:exported="true" >
-580-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:594:13-36
-581            <intent-filter>
-581-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-582                <action android:name="android.content.SyncAdapter" />
-582-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-582-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-583            </intent-filter>
-584
-585            <meta-data
-585-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-586                android:name="android.content.SyncAdapter"
-586-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-587                android:resource="@xml/sync_adapter_payments_delete" />
-587-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-588        </service>
-589        <service
-589-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:603:9-611:19
-590            android:name="com.handsriver.concierge.sync.TimekeepingDeleteSyncService"
-590-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:603:18-67
-591            android:exported="true" >
-591-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:604:13-36
-592            <intent-filter>
-592-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-593                <action android:name="android.content.SyncAdapter" />
-593-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-593-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-594            </intent-filter>
-595
-596            <meta-data
-596-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-597                android:name="android.content.SyncAdapter"
-597-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-598                android:resource="@xml/sync_adapter_timekeeping_delete" />
-598-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-599        </service>
-600        <service
-600-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:613:9-621:19
-601            android:name="com.handsriver.concierge.sync.FineAlertAutomaticSyncService"
-601-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:613:18-68
-602            android:exported="true" >
-602-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:614:13-36
-603            <intent-filter>
-603-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-604                <action android:name="android.content.SyncAdapter" />
-604-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-604-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-605            </intent-filter>
-606
-607            <meta-data
-607-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-608                android:name="android.content.SyncAdapter"
-608-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-609                android:resource="@xml/sync_adapter_vehicles_fine_alert_automatic" />
-609-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-610        </service>
-611        <service
-611-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:623:9-631:19
-612            android:name="com.handsriver.concierge.sync.AlertAutomaticSyncService"
-612-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:623:18-64
-613            android:exported="true" >
-613-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:624:13-36
-614            <intent-filter>
-614-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-615                <action android:name="android.content.SyncAdapter" />
-615-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-615-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-616            </intent-filter>
-617
-618            <meta-data
-618-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-619                android:name="android.content.SyncAdapter"
-619-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-620                android:resource="@xml/sync_adapter_vehicles_alert_automatic" />
-620-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-621        </service>
-622        <service
-622-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:633:9-641:19
-623            android:name="com.handsriver.concierge.sync.UpdateGooglePlayServicesSyncService"
-623-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:633:18-74
-624            android:exported="true" >
-624-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:634:13-36
-625            <intent-filter>
-625-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
-626                <action android:name="android.content.SyncAdapter" />
-626-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
-626-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
-627            </intent-filter>
-628
-629            <meta-data
-629-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
-630                android:name="android.content.SyncAdapter"
-630-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
-631                android:resource="@xml/sync_adapter_update_google_play_services" />
-631-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
-632        </service>
-633
-634        <activity
-634-->[com.google.android.gms:play-services-auth:15.0.1] /home/alain/.gradle/caches/transforms-3/af903ad9b3feb60595376d1b89b4c5bd/transformed/play-services-auth-15.0.1/AndroidManifest.xml:23:9-27:75
-635            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-635-->[com.google.android.gms:play-services-auth:15.0.1] /home/alain/.gradle/caches/transforms-3/af903ad9b3feb60595376d1b89b4c5bd/transformed/play-services-auth-15.0.1/AndroidManifest.xml:24:13-93
-636            android:excludeFromRecents="true"
-636-->[com.google.android.gms:play-services-auth:15.0.1] /home/alain/.gradle/caches/transforms-3/af903ad9b3feb60595376d1b89b4c5bd/transformed/play-services-auth-15.0.1/AndroidManifest.xml:25:13-46
-637            android:exported="false"
-637-->[com.google.android.gms:play-services-auth:15.0.1] /home/alain/.gradle/caches/transforms-3/af903ad9b3feb60595376d1b89b4c5bd/transformed/play-services-auth-15.0.1/AndroidManifest.xml:26:13-37
-638            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-638-->[com.google.android.gms:play-services-auth:15.0.1] /home/alain/.gradle/caches/transforms-3/af903ad9b3feb60595376d1b89b4c5bd/transformed/play-services-auth-15.0.1/AndroidManifest.xml:27:13-72
-639        <!--
-640            Service handling Google Sign-In user revocation. For apps that do not integrate with
-641            Google Sign-In, this service will never be started.
-642        -->
-643        <service
-643-->[com.google.android.gms:play-services-auth:15.0.1] /home/alain/.gradle/caches/transforms-3/af903ad9b3feb60595376d1b89b4c5bd/transformed/play-services-auth-15.0.1/AndroidManifest.xml:33:9-36:110
-644            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-644-->[com.google.android.gms:play-services-auth:15.0.1] /home/alain/.gradle/caches/transforms-3/af903ad9b3feb60595376d1b89b4c5bd/transformed/play-services-auth-15.0.1/AndroidManifest.xml:34:13-89
-645            android:exported="true"
-645-->[com.google.android.gms:play-services-auth:15.0.1] /home/alain/.gradle/caches/transforms-3/af903ad9b3feb60595376d1b89b4c5bd/transformed/play-services-auth-15.0.1/AndroidManifest.xml:35:13-36
-646            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
-646-->[com.google.android.gms:play-services-auth:15.0.1] /home/alain/.gradle/caches/transforms-3/af903ad9b3feb60595376d1b89b4c5bd/transformed/play-services-auth-15.0.1/AndroidManifest.xml:36:13-107
-647
-648        <provider
-648-->[com.squareup.picasso:picasso:2.71828] /home/alain/.gradle/caches/transforms-3/4f0be187715cfb0e34aba82e62e9dbb5/transformed/picasso-2.71828/AndroidManifest.xml:8:9-11:40
-649            android:name="com.squareup.picasso.PicassoProvider"
-649-->[com.squareup.picasso:picasso:2.71828] /home/alain/.gradle/caches/transforms-3/4f0be187715cfb0e34aba82e62e9dbb5/transformed/picasso-2.71828/AndroidManifest.xml:9:13-64
-650            android:authorities="com.handsriver.concierge.com.squareup.picasso"
-650-->[com.squareup.picasso:picasso:2.71828] /home/alain/.gradle/caches/transforms-3/4f0be187715cfb0e34aba82e62e9dbb5/transformed/picasso-2.71828/AndroidManifest.xml:10:13-72
-651            android:exported="false" />
-651-->[com.squareup.picasso:picasso:2.71828] /home/alain/.gradle/caches/transforms-3/4f0be187715cfb0e34aba82e62e9dbb5/transformed/picasso-2.71828/AndroidManifest.xml:11:13-37
-652
-653        <activity
-653-->[com.google.android.gms:play-services-base:15.0.1] /home/alain/.gradle/caches/transforms-3/94b990198e3b9faf53fd0ac4ed2afd58/transformed/play-services-base-15.0.1/AndroidManifest.xml:23:9-26:75
-654            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-654-->[com.google.android.gms:play-services-base:15.0.1] /home/alain/.gradle/caches/transforms-3/94b990198e3b9faf53fd0ac4ed2afd58/transformed/play-services-base-15.0.1/AndroidManifest.xml:24:13-79
-655            android:exported="false"
-655-->[com.google.android.gms:play-services-base:15.0.1] /home/alain/.gradle/caches/transforms-3/94b990198e3b9faf53fd0ac4ed2afd58/transformed/play-services-base-15.0.1/AndroidManifest.xml:25:13-37
-656            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-656-->[com.google.android.gms:play-services-base:15.0.1] /home/alain/.gradle/caches/transforms-3/94b990198e3b9faf53fd0ac4ed2afd58/transformed/play-services-base-15.0.1/AndroidManifest.xml:26:13-72
-657
-658        <meta-data
-658-->[com.google.android.gms:play-services-basement:15.0.1] /home/alain/.gradle/caches/transforms-3/59463a35881d10291b297f2fd43c4629/transformed/play-services-basement-15.0.1/AndroidManifest.xml:23:9-25:69
-659            android:name="com.google.android.gms.version"
-659-->[com.google.android.gms:play-services-basement:15.0.1] /home/alain/.gradle/caches/transforms-3/59463a35881d10291b297f2fd43c4629/transformed/play-services-basement-15.0.1/AndroidManifest.xml:24:13-58
-660            android:value="@integer/google_play_services_version" />
-660-->[com.google.android.gms:play-services-basement:15.0.1] /home/alain/.gradle/caches/transforms-3/59463a35881d10291b297f2fd43c4629/transformed/play-services-basement-15.0.1/AndroidManifest.xml:25:13-66
-661        <meta-data
-661-->[com.android.support:support-v4:26.1.0] /home/alain/.gradle/caches/transforms-3/b37bb97236599011b3b87676b39e32c2/transformed/support-v4-26.1.0/AndroidManifest.xml:26:9-28:38
-662            android:name="android.support.VERSION"
-662-->[com.android.support:support-v4:26.1.0] /home/alain/.gradle/caches/transforms-3/b37bb97236599011b3b87676b39e32c2/transformed/support-v4-26.1.0/AndroidManifest.xml:27:13-51
-663            android:value="26.1.0" />
-663-->[com.android.support:support-v4:26.1.0] /home/alain/.gradle/caches/transforms-3/b37bb97236599011b3b87676b39e32c2/transformed/support-v4-26.1.0/AndroidManifest.xml:28:13-35
-664        <meta-data
-664-->[android.arch.lifecycle:runtime:1.0.0] /home/alain/.gradle/caches/transforms-3/eed57d62c708cba7b35676adbe8d7cdb/transformed/runtime-1.0.0/AndroidManifest.xml:25:9-27:47
-665            android:name="android.arch.lifecycle.VERSION"
-665-->[android.arch.lifecycle:runtime:1.0.0] /home/alain/.gradle/caches/transforms-3/eed57d62c708cba7b35676adbe8d7cdb/transformed/runtime-1.0.0/AndroidManifest.xml:26:13-58
-666            android:value="27.0.0-SNAPSHOT" />
-666-->[android.arch.lifecycle:runtime:1.0.0] /home/alain/.gradle/caches/transforms-3/eed57d62c708cba7b35676adbe8d7cdb/transformed/runtime-1.0.0/AndroidManifest.xml:27:13-44
-667    </application>
-668
-669</manifest>
+33        android:testOnly="true"
+34        android:theme="@style/AppTheme" >
+34-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:27:9-40
+35        <activity
+35-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:28:9-36:20
+36            android:name="com.handsriver.concierge.login.LoginActivity"
+36-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:28:19-54
+37            android:exported="true" >
+37-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:29:13-36
+38            <intent-filter>
+38-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:31:13-35:29
+39                <action android:name="android.intent.action.MAIN" />
+39-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:32:17-69
+39-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:32:25-66
+40
+41                <category android:name="android.intent.category.LAUNCHER" />
+41-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:34:17-77
+41-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:34:27-74
+42            </intent-filter>
+43        </activity>
+44        <activity
+44-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:37:9-45:20
+45            android:name="com.handsriver.concierge.settings.SettingsActivity"
+45-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:38:13-54
+46            android:label="@string/settings"
+46-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:39:13-45
+47            android:parentActivityName="com.handsriver.concierge.login.LoginActivity" >
+47-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:41:13-86
+48            <meta-data
+48-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:42:13-44:80
+49                android:name="android.support.PARENT_ACTIVITY"
+49-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:43:17-63
+50                android:value="com.handsriver.concierge.login.LoginActivity" />
+50-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:44:17-77
+51        </activity>
+52        <activity
+52-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:46:9-52:20
+53            android:name="com.handsriver.concierge.home.MainActivity"
+53-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:46:19-52
+54            android:parentActivityName="com.handsriver.concierge.login.LoginActivity"
+54-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:48:13-86
+55            android:windowSoftInputMode="adjustPan" >
+55-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:47:13-52
+56            <meta-data
+56-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:42:13-44:80
+57                android:name="android.support.PARENT_ACTIVITY"
+57-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:43:17-63
+58                android:value="com.handsriver.concierge.login.LoginActivity" />
+58-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:44:17-77
+59        </activity>
+60
+61        <provider
+61-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:54:9-57:49
+62            android:name="com.handsriver.concierge.database.StubProviderApartments"
+62-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:56:13-84
+63            android:authorities="com.handsriver.concierge.apartments"
+63-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:55:13-70
+64            android:label="@string/apartments" />
+64-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:57:13-47
+65        <provider
+65-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:59:9-62:53
+66            android:name="com.handsriver.concierge.database.StubProviderParcelType"
+66-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:61:13-84
+67            android:authorities="com.handsriver.concierge.parceltype"
+67-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:60:13-70
+68            android:label="@string/parcelTypeList" />
+68-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:62:13-51
+69        <provider
+69-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:65:9-68:46
+70            android:name="com.handsriver.concierge.database.StubProviderPorters"
+70-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:67:13-81
+71            android:authorities="com.handsriver.concierge.porters"
+71-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:66:13-67
+72            android:label="@string/porters" />
+72-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:68:13-44
+73        <provider
+73-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:70:9-73:53
+74            android:name="com.handsriver.concierge.database.StubProviderPortersTablet"
+74-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:72:13-87
+75            android:authorities="com.handsriver.concierge.porters.tablet"
+75-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:71:13-74
+76            android:label="@string/porterPassword" />
+76-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:73:13-51
+77        <provider
+77-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:75:9-78:48
+78            android:name="com.handsriver.concierge.database.StubProviderResidents"
+78-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:77:13-83
+79            android:authorities="com.handsriver.concierge.residents"
+79-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:76:13-69
+80            android:label="@string/residents" />
+80-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:78:13-46
+81        <provider
+81-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:80:9-83:54
+82            android:name="com.handsriver.concierge.database.StubProviderResidentsTablet"
+82-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:82:13-89
+83            android:authorities="com.handsriver.concierge.residents.tablet"
+83-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:81:13-76
+84            android:label="@string/residentsTablet" />
+84-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:83:13-52
+85        <provider
+85-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:85:9-88:53
+86            android:name="com.handsriver.concierge.database.StubProviderResidentsTemps"
+86-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:87:13-88
+87            android:authorities="com.handsriver.concierge.residentstemps"
+87-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:86:13-74
+88            android:label="@string/residentstemps" />
+88-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:88:13-51
+89        <provider
+89-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:90:9-93:59
+90            android:name="com.handsriver.concierge.database.StubProviderResidentsTempsTablet"
+90-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:92:13-94
+91            android:authorities="com.handsriver.concierge.residentstemps.tablet"
+91-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:91:13-81
+92            android:label="@string/residentstempsTablet" />
+92-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:93:13-57
+93        <provider
+93-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:96:9-99:56
+94            android:name="com.handsriver.concierge.database.StubProviderResidentsVehicles"
+94-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:98:13-91
+95            android:authorities="com.handsriver.concierge.residentsvehicles"
+95-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:97:13-77
+96            android:label="@string/residentsvehicles" />
+96-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:99:13-54
+97        <provider
+97-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:101:9-104:62
+98            android:name="com.handsriver.concierge.database.StubProviderResidentsVehiclesTablet"
+98-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:103:13-97
+99            android:authorities="com.handsriver.concierge.residentsvehicles.tablet"
+99-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:102:13-84
+100            android:label="@string/residentsvehiclesTablet" />
+100-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:104:13-60
+101        <provider
+101-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:107:9-110:48
+102            android:name="com.handsriver.concierge.database.StubProviderBlacklist"
+102-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:109:13-83
+103            android:authorities="com.handsriver.concierge.blacklist"
+103-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:108:13-69
+104            android:label="@string/blacklist" />
+104-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:110:13-46
+105        <provider
+105-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:112:9-115:48
+106            android:name="com.handsriver.concierge.database.StubProviderSuppliers"
+106-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:114:13-83
+107            android:authorities="com.handsriver.concierge.suppliers"
+107-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:113:13-69
+108            android:label="@string/suppliers" />
+108-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:115:13-46
+109        <provider
+109-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:117:9-120:51
+110            android:name="com.handsriver.concierge.database.StubProviderCommonspaces"
+110-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:119:13-86
+111            android:authorities="com.handsriver.concierge.commonspaces"
+111-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:118:13-72
+112            android:label="@string/commonspaces" />
+112-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:120:13-49
+113        <provider
+113-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:122:9-125:53
+114            android:name="com.handsriver.concierge.database.StubProviderVisitsVehicles"
+114-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:124:13-88
+115            android:authorities="com.handsriver.concierge.visitsvehicles"
+115-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:123:13-74
+116            android:label="@string/visitsvehicles" />
+116-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:125:13-51
+117        <provider
+117-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:127:9-130:46
+118            android:name="com.handsriver.concierge.database.StubProviderParcels"
+118-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:129:13-81
+119            android:authorities="com.handsriver.concierge.parcels"
+119-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:128:13-67
+120            android:label="@string/parcels" />
+120-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:130:13-44
+121        <provider
+121-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:133:9-136:66
+122            android:name="com.handsriver.concierge.database.StubProviderParcelsExitOthersGateways"
+122-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:135:13-99
+123            android:authorities="com.handsriver.concierge.parcels.exitothersgateways"
+123-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:134:13-86
+124            android:label="@string/parcels_exit_other_gateways" />
+124-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:136:13-64
+125        <provider
+125-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:138:9-141:62
+126            android:name="com.handsriver.concierge.database.StubProviderParcelsOthersGateways"
+126-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:140:13-95
+127            android:authorities="com.handsriver.concierge.parcels.othersgateways"
+127-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:139:13-82
+128            android:label="@string/parcels_others_gateways" />
+128-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:141:13-60
+129        <provider
+129-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:143:9-146:47
+130            android:name="com.handsriver.concierge.database.StubProviderPayments"
+130-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:145:13-82
+131            android:authorities="com.handsriver.concierge.payments"
+131-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:144:13-68
+132            android:label="@string/payments" />
+132-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:146:13-45
+133        <provider
+133-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:148:9-151:47
+134            android:name="com.handsriver.concierge.database.StubProviderParkings"
+134-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:150:13-82
+135            android:authorities="com.handsriver.concierge.parkings"
+135-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:149:13-68
+136            android:label="@string/parkings" />
+136-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:151:13-45
+137        <provider
+137-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:153:9-156:49
+138            android:name="com.handsriver.concierge.database.StubProviderWarehouses"
+138-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:155:13-84
+139            android:authorities="com.handsriver.concierge.warehouses"
+139-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:154:13-70
+140            android:label="@string/warehouses" />
+140-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:156:13-47
+141        <provider
+141-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:158:9-161:50
+142            android:name="com.handsriver.concierge.database.StubProviderTimekeeping"
+142-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:160:13-85
+143            android:authorities="com.handsriver.concierge.timekeeping"
+143-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:159:13-71
+144            android:label="@string/timekeeping" />
+144-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:161:13-48
+145        <provider
+145-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:163:9-166:55
+146            android:name="com.handsriver.concierge.database.StubProviderVisitsSuppliers"
+146-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:165:13-89
+147            android:authorities="com.handsriver.concierge.visitssuppliers"
+147-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:164:13-75
+148            android:label="@string/visits_suppliers" />
+148-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:166:13-53
+149        <provider
+149-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:168:9-171:58
+150            android:name="com.handsriver.concierge.database.StubProviderVisitsCommonspaces"
+150-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:170:13-92
+151            android:authorities="com.handsriver.concierge.visitscommonspaces"
+151-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:169:13-78
+152            android:label="@string/visits_commonspaces" />
+152-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:171:13-56
+153        <provider
+153-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:174:9-177:60
+154            android:name="com.handsriver.concierge.database.StubProviderVisitsOthersGateways"
+154-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:176:13-94
+155            android:authorities="com.handsriver.concierge.visits.othersgateways"
+155-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:175:13-81
+156            android:label="@string/visits_other_gateways" />
+156-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:177:13-58
+157        <provider
+157-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:179:9-182:65
+158            android:name="com.handsriver.concierge.database.StubProviderTimekeepingOthersGateways"
+158-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:181:13-99
+159            android:authorities="com.handsriver.concierge.timekeeping.othersgateways"
+159-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:180:13-86
+160            android:label="@string/timekeeping_other_gateways" />
+160-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:182:13-63
+161        <provider
+161-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:184:9-187:70
+162            android:name="com.handsriver.concierge.database.StubProviderTimekeepingExitOthersGateways"
+162-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:186:13-103
+163            android:authorities="com.handsriver.concierge.timekeeping.exitothersgateways"
+163-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:185:13-90
+164            android:label="@string/timekeeping_exit_other_gateways" />
+164-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:187:13-68
+165        <provider
+165-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:189:9-192:71
+166            android:name="com.handsriver.concierge.database.StubProviderVisitsSuppliersOthersGateways"
+166-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:191:13-103
+167            android:authorities="com.handsriver.concierge.visitssuppliers.othersgateways"
+167-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:190:13-90
+168            android:label="@string/visits_suppliers_others_gateways" />
+168-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:192:13-69
+169        <provider
+169-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:194:9-197:75
+170            android:name="com.handsriver.concierge.database.StubProviderVisitsSuppliersExitOthersGateways"
+170-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:196:13-107
+171            android:authorities="com.handsriver.concierge.visitssuppliers.exitothersgateways"
+171-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:195:13-94
+172            android:label="@string/visits_suppliers_exit_other_gateways" />
+172-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:197:13-73
+173        <provider
+173-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:199:9-202:74
+174            android:name="com.handsriver.concierge.database.StubProviderVisitsCommonspacesOthersGateways"
+174-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:201:13-106
+175            android:authorities="com.handsriver.concierge.visitscommonspaces.othersgateways"
+175-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:200:13-93
+176            android:label="@string/visits_commonspaces_others_gateways" />
+176-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:202:13-72
+177        <provider
+177-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:204:9-207:78
+178            android:name="com.handsriver.concierge.database.StubProviderVisitsCommonspacesExitOthersGateways"
+178-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:206:13-110
+179            android:authorities="com.handsriver.concierge.visitscommonspaces.exitothersgateways"
+179-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:205:13-97
+180            android:label="@string/visits_commonspaces_exit_other_gateways" />
+180-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:207:13-76
+181        <provider
+181-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:210:9-213:47
+182            android:name="com.handsriver.concierge.database.StubProviderCodeAuth"
+182-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:212:13-82
+183            android:authorities="com.handsriver.concierge.residents.codeauth"
+183-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:211:13-78
+184            android:label="@string/codeAuth" />
+184-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:213:13-45
+185        <provider
+185-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:215:9-218:53
+186            android:name="com.handsriver.concierge.database.StubProviderWhitelist"
+186-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:217:13-83
+187            android:authorities="com.handsriver.concierge.whitelist"
+187-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:216:13-69
+188            android:label="@string/whitelistTitle" />
+188-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:218:13-51
+189        <provider
+189-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:220:9-223:59
+190            android:name="com.handsriver.concierge.database.StubProviderVisitsVehiclesDelete"
+190-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:222:13-94
+191            android:authorities="com.handsriver.concierge.visitsvehicles.delete"
+191-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:221:13-81
+192            android:label="@string/deleteVisitsVehicles" />
+192-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:223:13-57
+193        <provider
+193-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:225:9-228:52
+194            android:name="com.handsriver.concierge.database.StubProviderParcelsDelete"
+194-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:227:13-87
+195            android:authorities="com.handsriver.concierge.parcels.delete"
+195-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:226:13-74
+196            android:label="@string/deleteParcels" />
+196-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:228:13-50
+197        <provider
+197-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:230:9-233:53
+198            android:name="com.handsriver.concierge.database.StubProviderPaymentsDelete"
+198-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:232:13-88
+199            android:authorities="com.handsriver.concierge.payments.delete"
+199-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:231:13-75
+200            android:label="@string/deletePayments" />
+200-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:233:13-51
+201        <provider
+201-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:235:9-238:56
+202            android:name="com.handsriver.concierge.database.StubProviderTimekeepingDelete"
+202-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:237:13-91
+203            android:authorities="com.handsriver.concierge.timekeeping.delete"
+203-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:236:13-78
+204            android:label="@string/deleteTimekeeping" />
+204-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:238:13-54
+205        <provider
+205-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:240:9-243:57
+206            android:name="com.handsriver.concierge.database.StubProviderFineAlertAutomatic"
+206-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:242:13-92
+207            android:authorities="com.handsriver.concierge.vehicle.automaticFineAlert"
+207-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:241:13-86
+208            android:label="@string/fineAlertAutomatic" />
+208-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:243:13-55
+209        <provider
+209-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:245:9-248:53
+210            android:name="com.handsriver.concierge.database.StubProviderAlertAutomatic"
+210-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:247:13-88
+211            android:authorities="com.handsriver.concierge.vehicle.automaticAlert"
+211-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:246:13-82
+212            android:label="@string/alertAutomatic" />
+212-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:248:13-51
+213        <provider
+213-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:250:9-253:63
+214            android:name="com.handsriver.concierge.database.StubProviderUpdateGooglePlayServices"
+214-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:252:13-98
+215            android:authorities="com.handsriver.concierge.updateGooglePlayService"
+215-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:251:13-83
+216            android:label="@string/updateGooglePlayServices" />
+216-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:253:13-61
+217
+218        <service android:name="com.handsriver.concierge.sync.ConciergeAuthenticatorService" >
+218-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:255:9-262:19
+218-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:255:18-68
+219            <intent-filter>
+219-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:256:13-258:29
+220                <action android:name="android.accounts.AccountAuthenticator" />
+220-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:257:17-80
+220-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:257:25-77
+221            </intent-filter>
+222
+223            <meta-data
+223-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:259:13-261:57
+224                android:name="android.accounts.AccountAuthenticator"
+224-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:260:17-69
+225                android:resource="@xml/authenticator" />
+225-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:261:17-54
+226        </service>
+227        <service
+227-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:264:9-272:19
+228            android:name="com.handsriver.concierge.sync.ApartmentsSyncService"
+228-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:264:18-60
+229            android:exported="true" >
+229-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:265:13-36
+230            <intent-filter>
+230-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+231                <action android:name="android.content.SyncAdapter" />
+231-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+231-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+232            </intent-filter>
+233
+234            <meta-data
+234-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+235                android:name="android.content.SyncAdapter"
+235-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+236                android:resource="@xml/sync_adapter_apartments" />
+236-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+237        </service>
+238        <service
+238-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:274:9-282:19
+239            android:name="com.handsriver.concierge.sync.ParcelTypeSyncService"
+239-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:274:18-60
+240            android:exported="true" >
+240-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:275:13-36
+241            <intent-filter>
+241-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+242                <action android:name="android.content.SyncAdapter" />
+242-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+242-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+243            </intent-filter>
+244
+245            <meta-data
+245-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+246                android:name="android.content.SyncAdapter"
+246-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+247                android:resource="@xml/sync_adapter_parceltype" />
+247-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+248        </service>
+249        <service
+249-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:285:9-293:19
+250            android:name="com.handsriver.concierge.sync.PortersSyncService"
+250-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:285:18-57
+251            android:exported="true" >
+251-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:286:13-36
+252            <intent-filter>
+252-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+253                <action android:name="android.content.SyncAdapter" />
+253-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+253-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+254            </intent-filter>
+255
+256            <meta-data
+256-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+257                android:name="android.content.SyncAdapter"
+257-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+258                android:resource="@xml/sync_adapter_porters" />
+258-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+259        </service>
+260        <service
+260-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:295:9-303:19
+261            android:name="com.handsriver.concierge.sync.PortersTabletSyncService"
+261-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:295:18-63
+262            android:exported="true" >
+262-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:296:13-36
+263            <intent-filter>
+263-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+264                <action android:name="android.content.SyncAdapter" />
+264-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+264-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+265            </intent-filter>
+266
+267            <meta-data
+267-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+268                android:name="android.content.SyncAdapter"
+268-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+269                android:resource="@xml/sync_adapter_porters_tablet" />
+269-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+270        </service>
+271        <service
+271-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:305:9-313:19
+272            android:name="com.handsriver.concierge.sync.ResidentsSyncService"
+272-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:305:18-59
+273            android:exported="true" >
+273-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:306:13-36
+274            <intent-filter>
+274-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+275                <action android:name="android.content.SyncAdapter" />
+275-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+275-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+276            </intent-filter>
+277
+278            <meta-data
+278-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+279                android:name="android.content.SyncAdapter"
+279-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+280                android:resource="@xml/sync_adapter_residents" />
+280-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+281        </service>
+282        <service
+282-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:315:9-323:19
+283            android:name="com.handsriver.concierge.sync.ResidentsTabletSyncService"
+283-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:315:18-65
+284            android:exported="true" >
+284-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:316:13-36
+285            <intent-filter>
+285-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+286                <action android:name="android.content.SyncAdapter" />
+286-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+286-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+287            </intent-filter>
+288
+289            <meta-data
+289-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+290                android:name="android.content.SyncAdapter"
+290-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+291                android:resource="@xml/sync_adapter_residents_tablet" />
+291-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+292        </service>
+293        <service
+293-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:326:9-334:19
+294            android:name="com.handsriver.concierge.sync.ResidentsTempsSyncService"
+294-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:326:18-64
+295            android:exported="true" >
+295-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:327:13-36
+296            <intent-filter>
+296-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+297                <action android:name="android.content.SyncAdapter" />
+297-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+297-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+298            </intent-filter>
+299
+300            <meta-data
+300-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+301                android:name="android.content.SyncAdapter"
+301-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+302                android:resource="@xml/sync_adapter_residentstemps" />
+302-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+303        </service>
+304        <service
+304-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:336:9-344:19
+305            android:name="com.handsriver.concierge.sync.ResidentsTempsTabletSyncService"
+305-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:336:18-70
+306            android:exported="true" >
+306-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:337:13-36
+307            <intent-filter>
+307-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+308                <action android:name="android.content.SyncAdapter" />
+308-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+308-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+309            </intent-filter>
+310
+311            <meta-data
+311-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+312                android:name="android.content.SyncAdapter"
+312-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+313                android:resource="@xml/sync_adapter_residentstemps_tablet" />
+313-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+314        </service>
+315        <service
+315-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:347:9-355:19
+316            android:name="com.handsriver.concierge.sync.ResidentsVehiclesSyncService"
+316-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:347:18-67
+317            android:exported="true" >
+317-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:348:13-36
+318            <intent-filter>
+318-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+319                <action android:name="android.content.SyncAdapter" />
+319-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+319-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+320            </intent-filter>
+321
+322            <meta-data
+322-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+323                android:name="android.content.SyncAdapter"
+323-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+324                android:resource="@xml/sync_adapter_residentsvehicles" />
+324-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+325        </service>
+326        <service
+326-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:357:9-365:19
+327            android:name="com.handsriver.concierge.sync.ResidentsVehiclesTabletSyncService"
+327-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:357:18-73
+328            android:exported="true" >
+328-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:358:13-36
+329            <intent-filter>
+329-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+330                <action android:name="android.content.SyncAdapter" />
+330-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+330-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+331            </intent-filter>
+332
+333            <meta-data
+333-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+334                android:name="android.content.SyncAdapter"
+334-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+335                android:resource="@xml/sync_adapter_residentsvehicles_tablet" />
+335-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+336        </service>
+337        <service
+337-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:368:9-376:19
+338            android:name="com.handsriver.concierge.sync.BlacklistSyncService"
+338-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:368:18-59
+339            android:exported="true" >
+339-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:369:13-36
+340            <intent-filter>
+340-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+341                <action android:name="android.content.SyncAdapter" />
+341-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+341-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+342            </intent-filter>
+343
+344            <meta-data
+344-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+345                android:name="android.content.SyncAdapter"
+345-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+346                android:resource="@xml/sync_adapter_blacklist" />
+346-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+347        </service>
+348        <service
+348-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:378:9-386:19
+349            android:name="com.handsriver.concierge.sync.SuppliersSyncService"
+349-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:378:18-59
+350            android:exported="true" >
+350-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:379:13-36
+351            <intent-filter>
+351-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+352                <action android:name="android.content.SyncAdapter" />
+352-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+352-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+353            </intent-filter>
+354
+355            <meta-data
+355-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+356                android:name="android.content.SyncAdapter"
+356-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+357                android:resource="@xml/sync_adapter_suppliers" />
+357-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+358        </service>
+359        <service
+359-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:388:9-396:19
+360            android:name="com.handsriver.concierge.sync.CommonspacesSyncService"
+360-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:388:18-62
+361            android:exported="true" >
+361-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:389:13-36
+362            <intent-filter>
+362-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+363                <action android:name="android.content.SyncAdapter" />
+363-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+363-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+364            </intent-filter>
+365
+366            <meta-data
+366-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+367                android:name="android.content.SyncAdapter"
+367-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+368                android:resource="@xml/sync_adapter_commonspaces" />
+368-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+369        </service>
+370        <service
+370-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:399:9-407:19
+371            android:name="com.handsriver.concierge.sync.VisitsVehiclesSyncService"
+371-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:399:18-64
+372            android:exported="true" >
+372-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:400:13-36
+373            <intent-filter>
+373-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+374                <action android:name="android.content.SyncAdapter" />
+374-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+374-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+375            </intent-filter>
+376
+377            <meta-data
+377-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+378                android:name="android.content.SyncAdapter"
+378-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+379                android:resource="@xml/sync_adapter_visits_vehicles" />
+379-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+380        </service>
+381        <service
+381-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:409:9-417:19
+382            android:name="com.handsriver.concierge.sync.ParcelsSyncService"
+382-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:409:18-57
+383            android:exported="true" >
+383-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:410:13-36
+384            <intent-filter>
+384-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+385                <action android:name="android.content.SyncAdapter" />
+385-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+385-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+386            </intent-filter>
+387
+388            <meta-data
+388-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+389                android:name="android.content.SyncAdapter"
+389-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+390                android:resource="@xml/sync_adapter_parcels" />
+390-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+391        </service>
+392        <service
+392-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:419:9-427:19
+393            android:name="com.handsriver.concierge.sync.PaymentsSyncService"
+393-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:419:18-58
+394            android:exported="true" >
+394-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:420:13-36
+395            <intent-filter>
+395-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+396                <action android:name="android.content.SyncAdapter" />
+396-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+396-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+397            </intent-filter>
+398
+399            <meta-data
+399-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+400                android:name="android.content.SyncAdapter"
+400-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+401                android:resource="@xml/sync_adapter_payments" />
+401-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+402        </service>
+403        <service
+403-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:429:9-437:19
+404            android:name="com.handsriver.concierge.sync.ParkingsSyncService"
+404-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:429:18-58
+405            android:exported="true" >
+405-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:430:13-36
+406            <intent-filter>
+406-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+407                <action android:name="android.content.SyncAdapter" />
+407-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+407-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+408            </intent-filter>
+409
+410            <meta-data
+410-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+411                android:name="android.content.SyncAdapter"
+411-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+412                android:resource="@xml/sync_adapter_parkings" />
+412-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+413        </service>
+414        <service
+414-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:439:9-447:19
+415            android:name="com.handsriver.concierge.sync.WarehousesSyncService"
+415-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:439:18-60
+416            android:exported="true" >
+416-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:440:13-36
+417            <intent-filter>
+417-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+418                <action android:name="android.content.SyncAdapter" />
+418-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+418-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+419            </intent-filter>
+420
+421            <meta-data
+421-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+422                android:name="android.content.SyncAdapter"
+422-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+423                android:resource="@xml/sync_adapter_warehouses" />
+423-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+424        </service>
+425        <service
+425-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:449:9-457:19
+426            android:name="com.handsriver.concierge.sync.TimekeepingSyncService"
+426-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:449:18-61
+427            android:exported="true" >
+427-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:450:13-36
+428            <intent-filter>
+428-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+429                <action android:name="android.content.SyncAdapter" />
+429-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+429-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+430            </intent-filter>
+431
+432            <meta-data
+432-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+433                android:name="android.content.SyncAdapter"
+433-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+434                android:resource="@xml/sync_adapter_timekeeping" />
+434-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+435        </service>
+436        <service
+436-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:459:9-467:19
+437            android:name="com.handsriver.concierge.sync.VisitsSuppliersSyncService"
+437-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:459:18-65
+438            android:exported="true" >
+438-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:460:13-36
+439            <intent-filter>
+439-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+440                <action android:name="android.content.SyncAdapter" />
+440-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+440-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+441            </intent-filter>
+442
+443            <meta-data
+443-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+444                android:name="android.content.SyncAdapter"
+444-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+445                android:resource="@xml/sync_adapter_visits_suppliers" />
+445-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+446        </service>
+447        <service
+447-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:469:9-477:19
+448            android:name="com.handsriver.concierge.sync.VisitsCommonspacesSyncService"
+448-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:469:18-68
+449            android:exported="true" >
+449-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:470:13-36
+450            <intent-filter>
+450-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+451                <action android:name="android.content.SyncAdapter" />
+451-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+451-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+452            </intent-filter>
+453
+454            <meta-data
+454-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+455                android:name="android.content.SyncAdapter"
+455-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+456                android:resource="@xml/sync_adapter_visits_commonspaces" />
+456-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+457        </service>
+458        <service
+458-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:480:9-488:19
+459            android:name="com.handsriver.concierge.sync.VisitsOthersGatewaysSyncService"
+459-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:480:18-70
+460            android:exported="true" >
+460-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:481:13-36
+461            <intent-filter>
+461-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+462                <action android:name="android.content.SyncAdapter" />
+462-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+462-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+463            </intent-filter>
+464
+465            <meta-data
+465-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+466                android:name="android.content.SyncAdapter"
+466-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+467                android:resource="@xml/sync_adapter_visits_others_gateways" />
+467-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+468        </service>
+469        <service
+469-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:491:9-499:19
+470            android:name="com.handsriver.concierge.sync.ParcelsOthersGatewaysSyncService"
+470-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:491:18-71
+471            android:exported="true" >
+471-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:492:13-36
+472            <intent-filter>
+472-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+473                <action android:name="android.content.SyncAdapter" />
+473-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+473-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+474            </intent-filter>
+475
+476            <meta-data
+476-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+477                android:name="android.content.SyncAdapter"
+477-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+478                android:resource="@xml/sync_adapter_parcels_others_gateways" />
+478-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+479        </service>
+480        <service
+480-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:501:9-509:19
+481            android:name="com.handsriver.concierge.sync.ParcelsExitOthersGatewaysSyncService"
+481-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:501:18-75
+482            android:exported="true" >
+482-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:502:13-36
+483            <intent-filter>
+483-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+484                <action android:name="android.content.SyncAdapter" />
+484-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+484-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+485            </intent-filter>
+486
+487            <meta-data
+487-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+488                android:name="android.content.SyncAdapter"
+488-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+489                android:resource="@xml/sync_adapter_parcels_exit_others_gateways" />
+489-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+490        </service>
+491        <service
+491-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:512:9-520:19
+492            android:name="com.handsriver.concierge.sync.TimekeepingOthersGatewaysSyncService"
+492-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:512:18-75
+493            android:exported="true" >
+493-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:513:13-36
+494            <intent-filter>
+494-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+495                <action android:name="android.content.SyncAdapter" />
+495-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+495-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+496            </intent-filter>
+497
+498            <meta-data
+498-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+499                android:name="android.content.SyncAdapter"
+499-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+500                android:resource="@xml/sync_adapter_timekeeping_others_gateways" />
+500-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+501        </service>
+502        <service
+502-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:522:9-530:19
+503            android:name="com.handsriver.concierge.sync.TimekeepingExitOthersGatewaysSyncService"
+503-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:522:18-79
+504            android:exported="true" >
+504-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:523:13-36
+505            <intent-filter>
+505-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+506                <action android:name="android.content.SyncAdapter" />
+506-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+506-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+507            </intent-filter>
+508
+509            <meta-data
+509-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+510                android:name="android.content.SyncAdapter"
+510-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+511                android:resource="@xml/sync_adapter_timekeeping_exit_others_gateways" />
+511-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+512        </service>
+513        <service
+513-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:533:9-541:19
+514            android:name="com.handsriver.concierge.sync.VisitsSuppliersOthersGatewaysSyncService"
+514-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:533:18-79
+515            android:exported="true" >
+515-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:534:13-36
+516            <intent-filter>
+516-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+517                <action android:name="android.content.SyncAdapter" />
+517-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+517-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+518            </intent-filter>
+519
+520            <meta-data
+520-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+521                android:name="android.content.SyncAdapter"
+521-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+522                android:resource="@xml/sync_adapter_visits_suppliers_others_gateways" />
+522-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+523        </service>
+524        <service
+524-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:543:9-551:19
+525            android:name="com.handsriver.concierge.sync.VisitsCommonspacesOthersGatewaysSyncService"
+525-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:543:18-82
+526            android:exported="true" >
+526-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:544:13-36
+527            <intent-filter>
+527-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+528                <action android:name="android.content.SyncAdapter" />
+528-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+528-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+529            </intent-filter>
+530
+531            <meta-data
+531-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+532                android:name="android.content.SyncAdapter"
+532-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+533                android:resource="@xml/sync_adapter_visits_commonspaces_others_gateways" />
+533-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+534        </service>
+535        <service
+535-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:553:9-561:19
+536            android:name="com.handsriver.concierge.sync.CodeAuthSyncService"
+536-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:553:18-58
+537            android:exported="true" >
+537-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:554:13-36
+538            <intent-filter>
+538-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+539                <action android:name="android.content.SyncAdapter" />
+539-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+539-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+540            </intent-filter>
+541
+542            <meta-data
+542-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+543                android:name="android.content.SyncAdapter"
+543-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+544                android:resource="@xml/sync_adapter_codeauth" />
+544-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+545        </service>
+546        <service
+546-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:563:9-571:19
+547            android:name="com.handsriver.concierge.sync.WhitelistSyncService"
+547-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:563:18-59
+548            android:exported="true" >
+548-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:564:13-36
+549            <intent-filter>
+549-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+550                <action android:name="android.content.SyncAdapter" />
+550-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+550-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+551            </intent-filter>
+552
+553            <meta-data
+553-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+554                android:name="android.content.SyncAdapter"
+554-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+555                android:resource="@xml/sync_adapter_whitelist" />
+555-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+556        </service>
+557        <service
+557-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:573:9-581:19
+558            android:name="com.handsriver.concierge.sync.VisitsVehiclesDeleteSyncService"
+558-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:573:18-70
+559            android:exported="true" >
+559-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:574:13-36
+560            <intent-filter>
+560-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+561                <action android:name="android.content.SyncAdapter" />
+561-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+561-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+562            </intent-filter>
+563
+564            <meta-data
+564-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+565                android:name="android.content.SyncAdapter"
+565-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+566                android:resource="@xml/sync_adapter_visits_vehicles_delete" />
+566-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+567        </service>
+568        <service
+568-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:583:9-591:19
+569            android:name="com.handsriver.concierge.sync.ParcelsDeleteSyncService"
+569-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:583:18-63
+570            android:exported="true" >
+570-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:584:13-36
+571            <intent-filter>
+571-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+572                <action android:name="android.content.SyncAdapter" />
+572-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+572-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+573            </intent-filter>
+574
+575            <meta-data
+575-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+576                android:name="android.content.SyncAdapter"
+576-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+577                android:resource="@xml/sync_adapter_parcels_delete" />
+577-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+578        </service>
+579        <service
+579-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:593:9-601:19
+580            android:name="com.handsriver.concierge.sync.PaymentsDeleteSyncService"
+580-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:593:18-64
+581            android:exported="true" >
+581-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:594:13-36
+582            <intent-filter>
+582-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+583                <action android:name="android.content.SyncAdapter" />
+583-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+583-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+584            </intent-filter>
+585
+586            <meta-data
+586-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+587                android:name="android.content.SyncAdapter"
+587-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+588                android:resource="@xml/sync_adapter_payments_delete" />
+588-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+589        </service>
+590        <service
+590-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:603:9-611:19
+591            android:name="com.handsriver.concierge.sync.TimekeepingDeleteSyncService"
+591-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:603:18-67
+592            android:exported="true" >
+592-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:604:13-36
+593            <intent-filter>
+593-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+594                <action android:name="android.content.SyncAdapter" />
+594-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+594-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+595            </intent-filter>
+596
+597            <meta-data
+597-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+598                android:name="android.content.SyncAdapter"
+598-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+599                android:resource="@xml/sync_adapter_timekeeping_delete" />
+599-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+600        </service>
+601        <service
+601-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:613:9-621:19
+602            android:name="com.handsriver.concierge.sync.FineAlertAutomaticSyncService"
+602-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:613:18-68
+603            android:exported="true" >
+603-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:614:13-36
+604            <intent-filter>
+604-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+605                <action android:name="android.content.SyncAdapter" />
+605-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+605-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+606            </intent-filter>
+607
+608            <meta-data
+608-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+609                android:name="android.content.SyncAdapter"
+609-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+610                android:resource="@xml/sync_adapter_vehicles_fine_alert_automatic" />
+610-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+611        </service>
+612        <service
+612-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:623:9-631:19
+613            android:name="com.handsriver.concierge.sync.AlertAutomaticSyncService"
+613-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:623:18-64
+614            android:exported="true" >
+614-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:624:13-36
+615            <intent-filter>
+615-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+616                <action android:name="android.content.SyncAdapter" />
+616-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+616-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+617            </intent-filter>
+618
+619            <meta-data
+619-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+620                android:name="android.content.SyncAdapter"
+620-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+621                android:resource="@xml/sync_adapter_vehicles_alert_automatic" />
+621-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+622        </service>
+623        <service
+623-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:633:9-641:19
+624            android:name="com.handsriver.concierge.sync.UpdateGooglePlayServicesSyncService"
+624-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:633:18-74
+625            android:exported="true" >
+625-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:634:13-36
+626            <intent-filter>
+626-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:266:13-268:29
+627                <action android:name="android.content.SyncAdapter" />
+627-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:17-70
+627-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:267:25-67
+628            </intent-filter>
+629
+630            <meta-data
+630-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:269:13-271:67
+631                android:name="android.content.SyncAdapter"
+631-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:270:17-59
+632                android:resource="@xml/sync_adapter_update_google_play_services" />
+632-->/home/alain/Escritorio/CONCIERGETABLET (copia)/Concierge/Concierge/app/src/main/AndroidManifest.xml:271:17-64
+633        </service>
+634
+635        <activity
+635-->[com.google.android.gms:play-services-auth:15.0.1] /home/alain/.gradle/caches/transforms-3/af903ad9b3feb60595376d1b89b4c5bd/transformed/play-services-auth-15.0.1/AndroidManifest.xml:23:9-27:75
+636            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+636-->[com.google.android.gms:play-services-auth:15.0.1] /home/alain/.gradle/caches/transforms-3/af903ad9b3feb60595376d1b89b4c5bd/transformed/play-services-auth-15.0.1/AndroidManifest.xml:24:13-93
+637            android:excludeFromRecents="true"
+637-->[com.google.android.gms:play-services-auth:15.0.1] /home/alain/.gradle/caches/transforms-3/af903ad9b3feb60595376d1b89b4c5bd/transformed/play-services-auth-15.0.1/AndroidManifest.xml:25:13-46
+638            android:exported="false"
+638-->[com.google.android.gms:play-services-auth:15.0.1] /home/alain/.gradle/caches/transforms-3/af903ad9b3feb60595376d1b89b4c5bd/transformed/play-services-auth-15.0.1/AndroidManifest.xml:26:13-37
+639            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+639-->[com.google.android.gms:play-services-auth:15.0.1] /home/alain/.gradle/caches/transforms-3/af903ad9b3feb60595376d1b89b4c5bd/transformed/play-services-auth-15.0.1/AndroidManifest.xml:27:13-72
+640        <!--
+641            Service handling Google Sign-In user revocation. For apps that do not integrate with
+642            Google Sign-In, this service will never be started.
+643        -->
+644        <service
+644-->[com.google.android.gms:play-services-auth:15.0.1] /home/alain/.gradle/caches/transforms-3/af903ad9b3feb60595376d1b89b4c5bd/transformed/play-services-auth-15.0.1/AndroidManifest.xml:33:9-36:110
+645            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+645-->[com.google.android.gms:play-services-auth:15.0.1] /home/alain/.gradle/caches/transforms-3/af903ad9b3feb60595376d1b89b4c5bd/transformed/play-services-auth-15.0.1/AndroidManifest.xml:34:13-89
+646            android:exported="true"
+646-->[com.google.android.gms:play-services-auth:15.0.1] /home/alain/.gradle/caches/transforms-3/af903ad9b3feb60595376d1b89b4c5bd/transformed/play-services-auth-15.0.1/AndroidManifest.xml:35:13-36
+647            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
+647-->[com.google.android.gms:play-services-auth:15.0.1] /home/alain/.gradle/caches/transforms-3/af903ad9b3feb60595376d1b89b4c5bd/transformed/play-services-auth-15.0.1/AndroidManifest.xml:36:13-107
+648
+649        <provider
+649-->[com.squareup.picasso:picasso:2.71828] /home/alain/.gradle/caches/transforms-3/4f0be187715cfb0e34aba82e62e9dbb5/transformed/picasso-2.71828/AndroidManifest.xml:8:9-11:40
+650            android:name="com.squareup.picasso.PicassoProvider"
+650-->[com.squareup.picasso:picasso:2.71828] /home/alain/.gradle/caches/transforms-3/4f0be187715cfb0e34aba82e62e9dbb5/transformed/picasso-2.71828/AndroidManifest.xml:9:13-64
+651            android:authorities="com.handsriver.concierge.com.squareup.picasso"
+651-->[com.squareup.picasso:picasso:2.71828] /home/alain/.gradle/caches/transforms-3/4f0be187715cfb0e34aba82e62e9dbb5/transformed/picasso-2.71828/AndroidManifest.xml:10:13-72
+652            android:exported="false" />
+652-->[com.squareup.picasso:picasso:2.71828] /home/alain/.gradle/caches/transforms-3/4f0be187715cfb0e34aba82e62e9dbb5/transformed/picasso-2.71828/AndroidManifest.xml:11:13-37
+653
+654        <activity
+654-->[com.google.android.gms:play-services-base:15.0.1] /home/alain/.gradle/caches/transforms-3/94b990198e3b9faf53fd0ac4ed2afd58/transformed/play-services-base-15.0.1/AndroidManifest.xml:23:9-26:75
+655            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+655-->[com.google.android.gms:play-services-base:15.0.1] /home/alain/.gradle/caches/transforms-3/94b990198e3b9faf53fd0ac4ed2afd58/transformed/play-services-base-15.0.1/AndroidManifest.xml:24:13-79
+656            android:exported="false"
+656-->[com.google.android.gms:play-services-base:15.0.1] /home/alain/.gradle/caches/transforms-3/94b990198e3b9faf53fd0ac4ed2afd58/transformed/play-services-base-15.0.1/AndroidManifest.xml:25:13-37
+657            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+657-->[com.google.android.gms:play-services-base:15.0.1] /home/alain/.gradle/caches/transforms-3/94b990198e3b9faf53fd0ac4ed2afd58/transformed/play-services-base-15.0.1/AndroidManifest.xml:26:13-72
+658
+659        <meta-data
+659-->[com.google.android.gms:play-services-basement:15.0.1] /home/alain/.gradle/caches/transforms-3/59463a35881d10291b297f2fd43c4629/transformed/play-services-basement-15.0.1/AndroidManifest.xml:23:9-25:69
+660            android:name="com.google.android.gms.version"
+660-->[com.google.android.gms:play-services-basement:15.0.1] /home/alain/.gradle/caches/transforms-3/59463a35881d10291b297f2fd43c4629/transformed/play-services-basement-15.0.1/AndroidManifest.xml:24:13-58
+661            android:value="@integer/google_play_services_version" />
+661-->[com.google.android.gms:play-services-basement:15.0.1] /home/alain/.gradle/caches/transforms-3/59463a35881d10291b297f2fd43c4629/transformed/play-services-basement-15.0.1/AndroidManifest.xml:25:13-66
+662        <meta-data
+662-->[com.android.support:support-v4:26.1.0] /home/alain/.gradle/caches/transforms-3/b37bb97236599011b3b87676b39e32c2/transformed/support-v4-26.1.0/AndroidManifest.xml:26:9-28:38
+663            android:name="android.support.VERSION"
+663-->[com.android.support:support-v4:26.1.0] /home/alain/.gradle/caches/transforms-3/b37bb97236599011b3b87676b39e32c2/transformed/support-v4-26.1.0/AndroidManifest.xml:27:13-51
+664            android:value="26.1.0" />
+664-->[com.android.support:support-v4:26.1.0] /home/alain/.gradle/caches/transforms-3/b37bb97236599011b3b87676b39e32c2/transformed/support-v4-26.1.0/AndroidManifest.xml:28:13-35
+665        <meta-data
+665-->[android.arch.lifecycle:runtime:1.0.0] /home/alain/.gradle/caches/transforms-3/eed57d62c708cba7b35676adbe8d7cdb/transformed/runtime-1.0.0/AndroidManifest.xml:25:9-27:47
+666            android:name="android.arch.lifecycle.VERSION"
+666-->[android.arch.lifecycle:runtime:1.0.0] /home/alain/.gradle/caches/transforms-3/eed57d62c708cba7b35676adbe8d7cdb/transformed/runtime-1.0.0/AndroidManifest.xml:26:13-58
+667            android:value="27.0.0-SNAPSHOT" />
+667-->[android.arch.lifecycle:runtime:1.0.0] /home/alain/.gradle/caches/transforms-3/eed57d62c708cba7b35676adbe8d7cdb/transformed/runtime-1.0.0/AndroidManifest.xml:27:13-44
+668    </application>
+669
+670</manifest>
